@@ -64,4 +64,8 @@ public class PlayerStats : ScriptableObject
     [SerializeField]
     private float runVelocityMult = 2.0f;
     public float RunVelocityMult { get => runVelocityMult; }
+
+    [SerializeField]
+    private float rollVelocityMult = 10.0f;
+    public float RollVelocityMult { get => rollVelocityMult; }
 }

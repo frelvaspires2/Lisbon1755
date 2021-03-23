@@ -1,41 +1,43 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private PlayerStats playerStats;
 
-    private CharacterController _controller;
-    private Vector3 _acceleration;
-    private Vector3 _velocity;
-    private Vector3 _motion;
-    private float   _angularAcceleration;
-    private float   _angularVelocity;
-    private float   _angularMotion;
-    private float   _velocityMult;
-    private bool    _jump;
-    private bool    _autoMove;
-    private bool    _mouseMove;
+    private CharacterController controller;
+    private Vector3 acceleration;
+    private Vector3 velocity;
+    private Vector3 motion;
+    private float   angularAcceleration;
+    private float   angularVelocity;
+    private float   angularMotion;
+    private float   velocityMult;
+    private bool    jump;
+    private bool    autoMove;
+    private bool    mouseMove;
 
-    void Start()
+    private void Start()
     {
         Cursor.lockState        = CursorLockMode.Confined;
-        _controller             = GetComponent<CharacterController>();
-        _acceleration           = Vector3.zero;
-        _velocity               = Vector3.zero;
-        _motion                 = Vector3.zero;
-        _angularAcceleration    = 0f;
-        _angularVelocity        = 0f;
-        _angularMotion          = 0f;
-        _velocityMult           = playerStats.WalkVelocityMult;
-        _jump                   = false;
-        _autoMove               = false;
-        _mouseMove              = false;
+        controller             = GetComponent<CharacterController>();
+        acceleration           = Vector3.zero;
+        velocity               = Vector3.zero;
+        motion                 = Vector3.zero;
+        angularAcceleration    = 0f;
+        angularVelocity        = 0f;
+        angularMotion          = 0f;
+        velocityMult           = playerStats.WalkVelocityMult;
+        jump                   = false;
+        autoMove               = false;
+        mouseMove              = false;
     }
 
-    void Update()
+    private void Update()
     {
         CheckForJump();
+        CheckForRoll();
         CheckForAutoMove();
         CheckForMouseMove();
         CheckForSpeedToggle();
@@ -45,21 +47,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckForJump()
     {
-        if (_controller.isGrounded && Input.GetButtonDown("Jump"))
-            _jump = true;
+        if (controller.isGrounded && Input.GetButtonDown("Jump"))
+            jump = true;
     }
 
     private void CheckForAutoMove()
     {
         if (Input.GetButtonDown("AutoMove"))
-            _autoMove = !_autoMove;
-        else if (_mouseMove || Input.GetAxis("Forward") != 0f)
-            _autoMove = false;
+            autoMove = !autoMove;
+        else if (mouseMove || Input.GetAxis("Forward") != 0f)
+            autoMove = false;
     }
 
     private void CheckForMouseMove()
     {
-        _mouseMove = (Input.GetMouseButton(0) && Input.GetMouseButton(1)) ||
+        mouseMove = (Input.GetMouseButton(0) && Input.GetMouseButton(1)) ||
             Input.GetMouseButton(2);
     }
 
@@ -67,12 +69,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("ToggleWalkSpeed"))
         {
-            _velocityMult = (_velocityMult == playerStats.WalkVelocityMult) ?
+            velocityMult = (velocityMult == playerStats.WalkVelocityMult) ?
                 playerStats.RunVelocityMult : playerStats.WalkVelocityMult;
         }
         else if (Input.GetButtonUp("ToggleWalkSpeed"))
         {
-            _velocityMult = 1f;
+            velocityMult = 1f;
         }
     }
 
@@ -95,26 +97,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateMouseRotation()
     {
-        _angularMotion = Input.GetAxis("Mouse X") * 
+        angularMotion = Input.GetAxis("Mouse X") * 
             playerStats.MouseAngularVelocityMult;
-        transform.Rotate(0f, _angularMotion, 0f);
+        transform.Rotate(0f, angularMotion, 0f);
     }
 
     private void UpdateKeyboardRotation()
     {
-        _angularAcceleration = Input.GetAxis("Rotate") * 
-            playerStats.Max_Angular_Acceleration * _velocityMult;
+        angularAcceleration = Input.GetAxis("Rotate") * 
+            playerStats.Max_Angular_Acceleration * velocityMult;
 
-        _angularVelocity += _angularAcceleration * Time.deltaTime;
-        _angularVelocity = (_angularAcceleration == 0f) ? 0f : Mathf.Clamp
-            (_angularVelocity, -playerStats.MaxAngularVelocity, 
-            playerStats.MaxAngularVelocity) * _velocityMult;
+        angularVelocity += angularAcceleration * Time.deltaTime;
+        angularVelocity = (angularAcceleration == 0f) ? 0f : Mathf.Clamp
+            (angularVelocity, -playerStats.MaxAngularVelocity, 
+            playerStats.MaxAngularVelocity) * velocityMult;
 
-        _angularMotion = _angularVelocity * Time.deltaTime;
-        transform.Rotate(0f, _angularMotion, 0f);
+        angularMotion = angularVelocity * Time.deltaTime;
+        transform.Rotate(0f, angularMotion, 0f);
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         UpdateAcceleration();
         UpdateVelocity();
@@ -123,44 +125,67 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateAcceleration()
     {
-        _acceleration.z = _autoMove || _mouseMove ? 1f : Input.GetAxis("Forward");
-        _acceleration.z *= (_acceleration.z > 0 ? 
+        acceleration.z = autoMove || mouseMove ? 1f : Input.GetAxis("Forward");
+        acceleration.z *= (acceleration.z > 0 ? 
             playerStats.MaxForwardAcceleration : 
-            playerStats.MaxBackwardAcceleration) * _velocityMult;
+            playerStats.MaxBackwardAcceleration) * velocityMult;
 
-        _acceleration.x = Input.GetAxis("Strafe") *
-            playerStats.MaxStrafeAcceleration * _velocityMult;
+        acceleration.x = Input.GetAxis("Strafe") *
+            playerStats.MaxStrafeAcceleration * velocityMult;
 
-        if (_jump)
+        // jump
+        if (jump)
         {
-            _acceleration.y = playerStats.JumpAcceleration;
-            _jump = false;
+            acceleration.y = playerStats.JumpAcceleration;
+            jump = false;
         }
-        else if (_controller.isGrounded)
-            _acceleration.y = 0f;
+        else if (controller.isGrounded)
+            acceleration.y = 0f;
         else
-            _acceleration.y = -playerStats.GravityAcceleration;
+            acceleration.y = -playerStats.GravityAcceleration;
     }
 
     private void UpdateVelocity()
     {
-        _velocity += _acceleration * Time.fixedDeltaTime;
+        velocity += acceleration * Time.fixedDeltaTime;
         
-        _velocity.z = (_acceleration.z == 0f) ? 0f : Mathf.Clamp(_velocity.z,
-            -playerStats.MaxBackwardVelocity * _velocityMult,
-            playerStats.MaxForwardVelocity * _velocityMult);
-        _velocity.x = (_acceleration.x == 0f) ? 0f : Mathf.Clamp(_velocity.x,
-            -playerStats.MaxStrafeVelocity * _velocityMult,
-            playerStats.MaxStrafeVelocity * _velocityMult);
-        _velocity.y = (_acceleration.y == 0f) ? -0.1f : Mathf.Clamp(
-            _velocity.y, -playerStats.MaxFallVelocity,
+        velocity.z = (acceleration.z == 0f) ? 0f : Mathf.Clamp(velocity.z,
+            -playerStats.MaxBackwardVelocity * velocityMult,
+            playerStats.MaxForwardVelocity * velocityMult);
+        velocity.x = (acceleration.x == 0f) ? 0f : Mathf.Clamp(velocity.x,
+            -playerStats.MaxStrafeVelocity * velocityMult,
+            playerStats.MaxStrafeVelocity * velocityMult);
+        velocity.y = (acceleration.y == 0f) ? -0.1f : Mathf.Clamp(
+            velocity.y, -playerStats.MaxFallVelocity,
             playerStats.MaxJumpVelocity);
     }
 
     private void UpdatePosition()
     {
-        _motion = transform.TransformVector(_velocity * Time.fixedDeltaTime);
+        motion = transform.TransformVector(velocity * Time.fixedDeltaTime);
 
-        _controller.Move(_motion);
+        controller.Move(motion);
+    }
+
+    private void CheckForRoll()
+    {
+        if (Input.GetButtonUp("Roll"))
+        {
+            StartCoroutine(RollRoutine());
+        }
+    }
+
+    private IEnumerator RollRoutine()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(0.5f);
+
+        velocityMult = (velocityMult == playerStats.WalkVelocityMult) ?
+                playerStats.RollVelocityMult : playerStats.WalkVelocityMult;
+
+        yield return wfs;
+
+        velocityMult = 1.0f;
+
+        StopCoroutine(RollRoutine());
     }
 }
