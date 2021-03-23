@@ -187,4 +187,59 @@ public class PlayerStats : ScriptableObject
     /// Gets roll time.
     /// </summary>
     public float RollTime { get => rollTime; }
+
+    /// <summary>
+    /// Translation deceleration.
+    /// </summary>
+    [SerializeField]
+    private float translationDeceleration = 10.0f;
+
+    /// <summary>
+    /// Gets the translation decelaration.
+    /// </summary>
+    public float TransLationDeceleration { get => translationDeceleration; }
+
+    /// <summary>
+    /// Max translation velocity.
+    /// </summary>
+    [SerializeField]
+    private float maxTranslationVelocity = 10.0f;
+
+    /// <summary>
+    /// Gets the max translation velocity.
+    /// </summary>
+    public float MaxTranslationVelocity { get => maxTranslationVelocity; }
+
+    /// <summary>
+    /// Minimum distance.
+    /// </summary>
+    [SerializeField]
+    private float minDistance = 0.0f;
+
+    /// <summary>
+    /// Gets the minimum distance.
+    /// </summary>
+    public float MinDistance { get => minDistance; }
+
+    /// <summary>
+    /// Maximum distance.
+    /// </summary>
+    [SerializeField]
+    private float maxDistance = 10.0f;
+
+    /// <summary>
+    /// Gets maximum distance.
+    /// </summary>
+    public float MaxDistance { get => maxDistance; }
+
+    /// <summary>
+    /// Automatic adjust speed.
+    /// </summary>
+    [SerializeField]
+    private float autoAdjustSpeed = 10.0f;
+
+    /// <summary>
+    /// Gets automatic adjust speed.
+    /// </summary>
+    public float AutoAdjustSpeed { get => autoAdjustSpeed; }
 }
