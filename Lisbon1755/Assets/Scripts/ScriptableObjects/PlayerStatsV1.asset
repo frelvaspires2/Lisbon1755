@@ -27,5 +27,12 @@ MonoBehaviour:
   maxFallVelocity: 50
   walkVelocityMult: 1
   runVelocityMult: 2
-  rollVelocityMult: 4
+  rollVelocityMult: 10
   rollTime: 0.5
+  translationDeceleration: 10
+  maxTranslationVelocity: 10
+  minDistance: 0
+  maxDistance: 10
+  autoAdjustSpeed: 10
+  health: 100
+  energy: 90

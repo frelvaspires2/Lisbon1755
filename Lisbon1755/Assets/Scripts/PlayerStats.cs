@@ -242,4 +242,31 @@ public class PlayerStats : ScriptableObject
     /// Gets automatic adjust speed.
     /// </summary>
     public float AutoAdjustSpeed { get => autoAdjustSpeed; }
+
+
+    /// <summary>
+    /// Player's health.
+    /// </summary>
+    [SerializeField]
+    private float health = 100f;
+
+    /// <summary>
+    /// Gets player health.
+    /// </summary>
+    public float Health
+    {
+        get => health;
+        set => health = value;
+    }
+
+    /// <summary>
+    /// Player's energy.
+    /// </summary>
+    [SerializeField]
+    private float energy = 90f;
+
+    /// <summary>
+    /// Get player energy.
+    /// </summary>
+    public float Energy => energy;
 }

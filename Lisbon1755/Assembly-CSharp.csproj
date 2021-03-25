@@ -64,9 +64,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerEnergy.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
