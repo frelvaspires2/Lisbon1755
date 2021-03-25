@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 563203119}
-  health: 0
+  playerHealth: 0
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -577,6 +577,10 @@ PrefabInstance:
       propertyPath: playerStats
       value: 
       objectReference: {fileID: 11400000, guid: 264f649e038935348a5eaeefbdda9063, type: 2}
+    - target: {fileID: 2240583859499855087, guid: 74d09d498ab8c7c41ac6a4db641defcc, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 563203119}
     - target: {fileID: 8871617513773810608, guid: 74d09d498ab8c7c41ac6a4db641defcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

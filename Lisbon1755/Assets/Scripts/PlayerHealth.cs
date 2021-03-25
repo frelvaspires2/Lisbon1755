@@ -23,12 +23,15 @@ public class PlayerHealth : MonoBehaviour
     /// </summary>
     public float Health { get => health; }
 
+    public bool IsInjured { get; private set; }
+
     /// <summary>
     /// To be played on the first frame.
     /// </summary>
     private void Start()
     {
         health = playerStats.Health;
+        IsInjured = false;
     }
 
     /// <summary>
@@ -46,6 +49,14 @@ public class PlayerHealth : MonoBehaviour
     {
         if(health < playerStats.Health)
         {
+            if(health < playerStats.Health / 5)
+            {
+                IsInjured = true;
+            }
+            else
+            {
+                IsInjured = false;
+            }
             StartCoroutine(HealingRoutine());
         }
         else

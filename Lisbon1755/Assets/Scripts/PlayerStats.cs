@@ -151,9 +151,14 @@ public class PlayerStats : ScriptableObject
     private float walkVelocityMult = 1.0f;
 
     /// <summary>
-    /// Gets max velocity multiplier.
+    /// Gets max walk velocity multiplier.
     /// </summary>
     public float WalkVelocityMult { get => walkVelocityMult; }
+
+    /// <summary>
+    /// Gets max walk velocity multiplier when injured.
+    /// </summary>
+    public float InjuredWalkMult { get => walkVelocityMult / 3; }
 
     /// <summary>
     /// Run velocity multiplier.
@@ -167,7 +172,12 @@ public class PlayerStats : ScriptableObject
     public float RunVelocityMult { get => runVelocityMult; }
 
     /// <summary>
-    /// Roll velicity multiplier.
+    /// Gets max run velocity multiplier when injured.
+    /// </summary>
+    public float InjuredRunMult { get => runVelocityMult / 3; }
+
+    /// <summary>
+    /// Roll velocity multiplier.
     /// </summary>
     [SerializeField]
     private float rollVelocityMult = 10.0f;
