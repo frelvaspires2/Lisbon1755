@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(health < playerStats.Health)
         {
-            if(health < playerStats.Health / 5)
+            if(health < playerStats.Health / 2)
             {
                 IsInjured = true;
             }

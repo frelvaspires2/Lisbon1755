@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Velocity multiplier when injured.
     /// </summary>
-    public float injuryVelocityMult;
+    private float injuryVelocityMult;
 
     /// <summary>
     /// Check for jump.
@@ -187,9 +187,8 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-
+                velocityMult = playerStats.WalkVelocityMult;
             }
-            velocityMult = playerStats.WalkVelocityMult;
         }
     }
 
@@ -259,28 +258,29 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void UpdateAcceleration()
     {
+        acceleration.z = autoMove || mouseMove ? 1f : Input.GetAxis("Forward");
+
+        acceleration.x = Input.GetAxis("Strafe");
+
         if (playerHealth.IsInjured)
         {
-            acceleration.z = autoMove || mouseMove ? 1f : Input.GetAxis("Forward");
             acceleration.z *= (acceleration.z > 0 ?
                 playerStats.MaxForwardAcceleration :
                 playerStats.MaxBackwardAcceleration) * injuryVelocityMult;
 
-            acceleration.x = Input.GetAxis("Strafe") *
-                playerStats.MaxStrafeAcceleration * injuryVelocityMult;
+            acceleration.x *= playerStats.MaxStrafeAcceleration * 
+                injuryVelocityMult;
         }
         else
         {
-            acceleration.z = autoMove || mouseMove ? 1f : Input.GetAxis("Forward");
             acceleration.z *= (acceleration.z > 0 ?
                 playerStats.MaxForwardAcceleration :
                 playerStats.MaxBackwardAcceleration) * velocityMult;
 
-            acceleration.x = Input.GetAxis("Strafe") *
-                playerStats.MaxStrafeAcceleration * velocityMult;
+            acceleration.x *= playerStats.MaxStrafeAcceleration * velocityMult;
         }
 
-        if (jump)
+        if (jump && !playerHealth.IsInjured)
         {
             acceleration.y = playerStats.JumpAcceleration;
             jump = false;
@@ -299,34 +299,30 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void UpdateVelocity()
     {
+        velocity += acceleration * Time.fixedDeltaTime;
+
         if (playerHealth.IsInjured)
         {
-            velocity += acceleration * Time.fixedDeltaTime;
-
             velocity.z = (acceleration.z == 0f) ? 0f : Mathf.Clamp(velocity.z,
                 -playerStats.MaxBackwardVelocity * injuryVelocityMult,
                 playerStats.MaxForwardVelocity * injuryVelocityMult);
             velocity.x = (acceleration.x == 0f) ? 0f : Mathf.Clamp(velocity.x,
                 -playerStats.MaxStrafeVelocity * injuryVelocityMult,
                 playerStats.MaxStrafeVelocity * injuryVelocityMult);
-            velocity.y = (acceleration.y == 0f) ? -0.1f : Mathf.Clamp(
-                velocity.y, -playerStats.MaxFallVelocity,
-                playerStats.MaxJumpVelocity);
         }
         else
         {
-            velocity += acceleration * Time.fixedDeltaTime;
-
             velocity.z = (acceleration.z == 0f) ? 0f : Mathf.Clamp(velocity.z,
                 -playerStats.MaxBackwardVelocity * velocityMult,
                 playerStats.MaxForwardVelocity * velocityMult);
             velocity.x = (acceleration.x == 0f) ? 0f : Mathf.Clamp(velocity.x,
                 -playerStats.MaxStrafeVelocity * velocityMult,
                 playerStats.MaxStrafeVelocity * velocityMult);
-            velocity.y = (acceleration.y == 0f) ? -0.1f : Mathf.Clamp(
-                velocity.y, -playerStats.MaxFallVelocity,
-                playerStats.MaxJumpVelocity);
         }
+
+        velocity.y = (acceleration.y == 0f) ? -0.1f : Mathf.Clamp(
+              velocity.y, -playerStats.MaxFallVelocity,
+              playerStats.MaxJumpVelocity);
     }
 
     /// <summary>
