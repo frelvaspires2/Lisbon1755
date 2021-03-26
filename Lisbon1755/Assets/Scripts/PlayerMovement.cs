@@ -13,6 +13,18 @@ public class PlayerMovement : MonoBehaviour
     private PlayerStats playerStats;
 
     /// <summary>
+    /// Access PlayerHealth script.
+    /// </summary>
+    [SerializeField]
+    private PlayerHealth playerHealth;
+
+    /// <summary>
+    /// Access PlayerEnergy script.
+    /// </summary>
+    [SerializeField]
+    private PlayerEnergy playerEnergy;
+
+    /// <summary>
     /// Access CharacterController.
     /// </summary>
     private CharacterController controller;
@@ -35,27 +47,32 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Angular acceleration.
     /// </summary>
-    private float   angularAcceleration;
+    private float angularAcceleration;
 
     /// <summary>
     /// Angular velocity.
     /// </summary>
-    private float   angularVelocity;
+    private float angularVelocity;
 
     /// <summary>
     /// Angular motion.
     /// </summary>
-    private float   angularMotion;
+    private float angularMotion;
 
     /// <summary>
     /// Velocity multiplier.
     /// </summary>
-    private float   velocityMult;
+    private float velocityMult;
+
+    /// <summary>
+    /// Velocity multiplier when injured.
+    /// </summary>
+    private float injuryVelocityMult;
 
     /// <summary>
     /// Check for jump.
     /// </summary>
-    private bool    jump;
+    private bool jump;
 
     /// <summary>
     /// Check if can jump.
@@ -70,12 +87,12 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Check for auto movement.
     /// </summary>
-    private bool    autoMove;
+    private bool autoMove;
 
     /// <summary>
     /// Check for mouse movement.
     /// </summary>
-    private bool    mouseMove;
+    private bool mouseMove;
 
     /// <summary>
     /// The first frame of the game.
@@ -83,20 +100,21 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Cursor.lockState        = CursorLockMode.Confined;
-        controller             = GetComponent<CharacterController>();
-        acceleration           = Vector3.zero;
-        velocity               = Vector3.zero;
-        motion                 = Vector3.zero;
-        angularAcceleration    = 0f;
-        angularVelocity        = 0f;
-        angularMotion          = 0f;
-        velocityMult           = playerStats.WalkVelocityMult;
-        jump                   = false;
-        canJump                = true;
-        canRoll                = true;
-        autoMove               = false;
-        mouseMove              = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        controller = GetComponent<CharacterController>();
+        acceleration = Vector3.zero;
+        velocity = Vector3.zero;
+        motion = Vector3.zero;
+        angularAcceleration = 0f;
+        angularVelocity = 0f;
+        angularMotion = 0f;
+        velocityMult = playerStats.WalkVelocityMult;
+        injuryVelocityMult = playerStats.InjuredWalkMult;
+        jump = false;
+        canJump = true;
+        canRoll = true;
+        autoMove = false;
+        mouseMove = false;
     }
 
     /// <summary>
@@ -152,12 +170,30 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("ToggleWalkSpeed"))
         {
-            velocityMult = (velocityMult == playerStats.WalkVelocityMult) ?
-                playerStats.RunVelocityMult : playerStats.WalkVelocityMult;
+            if (playerHealth.IsInjured)
+            {
+                injuryVelocityMult = (injuryVelocityMult ==
+                    playerStats.InjuredWalkMult) ?
+                                              playerStats.InjuredRunMult :
+                                              playerStats.InjuredWalkMult;
+            }
+            else
+            {
+                velocityMult = (velocityMult == playerStats.WalkVelocityMult) ?
+                                playerStats.RunVelocityMult :
+                                playerStats.WalkVelocityMult;
+            }
         }
         else if (Input.GetButtonUp("ToggleWalkSpeed"))
         {
-            velocityMult = 1f;
+            if (playerHealth.IsInjured)
+            {
+                injuryVelocityMult = playerStats.InjuredWalkMult;
+            }
+            else
+            {
+                velocityMult = playerStats.WalkVelocityMult;
+            }
         }
     }
 
@@ -189,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void UpdateMouseRotation()
     {
-        angularMotion = Input.GetAxis("Mouse X") * 
+        angularMotion = Input.GetAxis("Mouse X") *
             playerStats.MouseAngularVelocityMult;
         transform.Rotate(0f, angularMotion, 0f);
     }
@@ -199,12 +235,13 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void UpdateKeyboardRotation()
     {
-        angularAcceleration = Input.GetAxis("Rotate") * 
+
+        angularAcceleration = Input.GetAxis("Rotate") *
             playerStats.Max_Angular_Acceleration * velocityMult;
 
         angularVelocity += angularAcceleration * Time.deltaTime;
         angularVelocity = (angularAcceleration == 0f) ? 0f : Mathf.Clamp
-            (angularVelocity, -playerStats.MaxAngularVelocity, 
+            (angularVelocity, -playerStats.MaxAngularVelocity,
             playerStats.MaxAngularVelocity) * velocityMult;
 
         angularMotion = angularVelocity * Time.deltaTime;
@@ -227,15 +264,28 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateAcceleration()
     {
         acceleration.z = autoMove || mouseMove ? 1f : Input.GetAxis("Forward");
-        acceleration.z *= (acceleration.z > 0 ? 
-            playerStats.MaxForwardAcceleration : 
-            playerStats.MaxBackwardAcceleration) * velocityMult;
 
-        acceleration.x = Input.GetAxis("Strafe") *
-            playerStats.MaxStrafeAcceleration * velocityMult;
+        acceleration.x = Input.GetAxis("Strafe");
 
+        if (playerHealth.IsInjured)
+        {
+            acceleration.z *= (acceleration.z > 0 ?
+                playerStats.MaxForwardAcceleration :
+                playerStats.MaxBackwardAcceleration) * injuryVelocityMult;
 
-        if (jump)
+            acceleration.x *= playerStats.MaxStrafeAcceleration * 
+                injuryVelocityMult;
+        }
+        else
+        {
+            acceleration.z *= (acceleration.z > 0 ?
+                playerStats.MaxForwardAcceleration :
+                playerStats.MaxBackwardAcceleration) * velocityMult;
+
+            acceleration.x *= playerStats.MaxStrafeAcceleration * velocityMult;
+        }
+
+        if (jump && !playerHealth.IsInjured)
         {
             acceleration.y = playerStats.JumpAcceleration;
             jump = false;
@@ -255,16 +305,29 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateVelocity()
     {
         velocity += acceleration * Time.fixedDeltaTime;
-        
-        velocity.z = (acceleration.z == 0f) ? 0f : Mathf.Clamp(velocity.z,
-            -playerStats.MaxBackwardVelocity * velocityMult,
-            playerStats.MaxForwardVelocity * velocityMult);
-        velocity.x = (acceleration.x == 0f) ? 0f : Mathf.Clamp(velocity.x,
-            -playerStats.MaxStrafeVelocity * velocityMult,
-            playerStats.MaxStrafeVelocity * velocityMult);
+
+        if (playerHealth.IsInjured)
+        {
+            velocity.z = (acceleration.z == 0f) ? 0f : Mathf.Clamp(velocity.z,
+                -playerStats.MaxBackwardVelocity * injuryVelocityMult,
+                playerStats.MaxForwardVelocity * injuryVelocityMult);
+            velocity.x = (acceleration.x == 0f) ? 0f : Mathf.Clamp(velocity.x,
+                -playerStats.MaxStrafeVelocity * injuryVelocityMult,
+                playerStats.MaxStrafeVelocity * injuryVelocityMult);
+        }
+        else
+        {
+            velocity.z = (acceleration.z == 0f) ? 0f : Mathf.Clamp(velocity.z,
+                -playerStats.MaxBackwardVelocity * velocityMult,
+                playerStats.MaxForwardVelocity * velocityMult);
+            velocity.x = (acceleration.x == 0f) ? 0f : Mathf.Clamp(velocity.x,
+                -playerStats.MaxStrafeVelocity * velocityMult,
+                playerStats.MaxStrafeVelocity * velocityMult);
+        }
+
         velocity.y = (acceleration.y == 0f) ? -0.1f : Mathf.Clamp(
-            velocity.y, -playerStats.MaxFallVelocity,
-            playerStats.MaxJumpVelocity);
+              velocity.y, -playerStats.MaxFallVelocity,
+              playerStats.MaxJumpVelocity);
     }
 
     /// <summary>
@@ -282,9 +345,11 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void CheckForRoll()
     {
-        if (Input.GetButtonUp("Roll") && canRoll)
+        if (Input.GetButtonUp("Roll") && canRoll && !playerHealth.IsInjured &&
+            playerEnergy.Energy >= playerStats.EnergyCost)
         {
             canJump = false;
+            playerEnergy.Energy -= playerStats.EnergyCost;
             StartCoroutine(RollRoutine());
         }
     }
@@ -303,7 +368,7 @@ public class PlayerMovement : MonoBehaviour
 
         yield return wfs;
 
-        velocityMult = 1.0f;
+        velocityMult = playerStats.WalkVelocityMult;
 
         canJump = true;
 

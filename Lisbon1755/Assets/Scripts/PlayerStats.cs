@@ -151,9 +151,14 @@ public class PlayerStats : ScriptableObject
     private float walkVelocityMult = 1.0f;
 
     /// <summary>
-    /// Gets max velocity multiplier.
+    /// Gets max walk velocity multiplier.
     /// </summary>
     public float WalkVelocityMult { get => walkVelocityMult; }
+
+    /// <summary>
+    /// Gets max walk velocity multiplier when injured.
+    /// </summary>
+    public float InjuredWalkMult { get => walkVelocityMult / 3; }
 
     /// <summary>
     /// Run velocity multiplier.
@@ -167,7 +172,12 @@ public class PlayerStats : ScriptableObject
     public float RunVelocityMult { get => runVelocityMult; }
 
     /// <summary>
-    /// Roll velicity multiplier.
+    /// Gets max run velocity multiplier when injured.
+    /// </summary>
+    public float InjuredRunMult { get => runVelocityMult / 3; }
+
+    /// <summary>
+    /// Roll velocity multiplier.
     /// </summary>
     [SerializeField]
     private float rollVelocityMult = 10.0f;
@@ -242,4 +252,60 @@ public class PlayerStats : ScriptableObject
     /// Gets automatic adjust speed.
     /// </summary>
     public float AutoAdjustSpeed { get => autoAdjustSpeed; }
+
+
+    /// <summary>
+    /// Player's health.
+    /// </summary>
+    [SerializeField]
+    private float health = 100f;
+
+    /// <summary>
+    /// Gets player health.
+    /// </summary>
+    public float Health
+    {
+        get => health;
+        set => health = value;
+    }
+
+    /// <summary>
+    /// How many health points will regenerate every second.
+    /// </summary>
+    [Tooltip("How many health points will regenerate every second.")]
+    [SerializeField]
+    private float healthRegeneration = 0.001f;
+
+    /// <summary>
+    /// Gets how many health points will regenerate every second.
+    /// </summary>
+    public float HealthRegeneration { get => healthRegeneration; }
+
+    /// <summary>
+    /// Player's energy.
+    /// </summary>
+    [SerializeField]
+    private float energy = 50;
+
+    /// <summary>
+    /// Get player energy.
+    /// </summary>
+    public float Energy { get => energy; }
+
+    /// <summary>
+    /// Get how much energy will drain when rolling.
+    /// </summary>
+    public float EnergyCost { get => energy / 2; }
+
+    /// <summary>
+    /// How many energy points will regenerate every second.
+    /// </summary>
+    [Tooltip("How many energy points will regenerate every second.")]
+    [SerializeField]
+    private float energyRegeneration = 0.01f;
+
+    /// <summary>
+    /// Gets how many energy points will regenerate every second.
+    /// </summary>
+    public float EnergyRegeneration { get => energyRegeneration; }
 }
