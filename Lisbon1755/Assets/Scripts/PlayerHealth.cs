@@ -2,24 +2,24 @@
 using UnityEngine;
 
 /// <summary>
-/// Player health management.
+/// Manage the player's health.
 /// </summary>
 public class PlayerHealth : MonoBehaviour
 {
     /// <summary>
-    /// Access playerStats scriptableObject.
+    /// Access playerStats scriptableobject.
     /// </summary>
     [SerializeField]
     private PlayerStats playerStats;
 
     /// <summary>
-    /// Health points.
+    /// Player's health.
     /// </summary>
     [SerializeField] 
     private float health;
 
     /// <summary>
-    /// Gets health points.
+    /// Gets player health points.
     /// </summary>
     public float Health { get => health; }
 
@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
 
     /// <summary>
     /// To be played on the first frame.
+    /// Initialize variables.
     /// </summary>
     private void Start()
     {
@@ -50,8 +51,10 @@ public class PlayerHealth : MonoBehaviour
     /// </summary>
     private void CheckHealth()
     {
+        // If any health is lost, recover it.
         if(health < playerStats.Health)
         {
+            // If player is below half in health, he becomes injured.
             if(health < playerStats.Health / 2)
             {
                 IsInjured = true;
@@ -62,6 +65,7 @@ public class PlayerHealth : MonoBehaviour
             }
             StartCoroutine(HealingRoutine());
         }
+        // Make sure the health doesn't go up more than it was set.
         else
         {
             health = playerStats.Health;
@@ -71,16 +75,22 @@ public class PlayerHealth : MonoBehaviour
     /// <summary>
     /// Heal any health points that were lost.
     /// </summary>
-    /// <returns> Time.</returns>
+    /// <returns> Recovers energy points every second.</returns>
     private IEnumerator HealingRoutine()
     {
+        // Set how many seconds to recover health points.
         WaitForSeconds wfs = new WaitForSeconds(1);
 
-        if(health < playerStats.Health)
+        // Recover health points every second.
+        if (health < playerStats.Health)
         {
-            health += 0.001f;
+            health += playerStats.HealthRegeneration;
             yield return wfs;
         }
-        StopCoroutine(HealingRoutine());
+        // Stop the coroutine.
+        else
+        {
+            StopCoroutine(HealingRoutine());
+        }
     }
 }

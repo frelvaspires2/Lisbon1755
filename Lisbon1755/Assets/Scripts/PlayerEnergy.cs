@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Manage the player's energy.
+/// </summary>
 public class PlayerEnergy : MonoBehaviour
 {
     /// <summary>
@@ -22,6 +25,7 @@ public class PlayerEnergy : MonoBehaviour
 
     /// <summary>
     /// To be played on the first frame of the game.
+    /// Initialize variables.
     /// </summary>
     private void Start()
     {
@@ -41,15 +45,18 @@ public class PlayerEnergy : MonoBehaviour
     /// </summary>
     private void CheckEnergy()
     {
+        // Make sure the energy doesn't go below 0.
         if(energy < 0)
         {
             energy = 0;
         }
 
+        // If eny energy is lost, recover it.
         if (energy < playerStats.Energy)
         {
             StartCoroutine(RecoveringRoutine());
         }
+        // Make sure the energy doesn't go up more than it was set.
         else
         {
             energy = playerStats.Energy;
@@ -59,16 +66,22 @@ public class PlayerEnergy : MonoBehaviour
     /// <summary>
     /// Recover the energy.
     /// </summary>
-    /// <returns> Time.</returns>
+    /// <returns> Recovers energy points every second.</returns>
     private IEnumerator RecoveringRoutine()
     {
+        // Set how many seconds to recover energy points.
         WaitForSeconds wfs = new WaitForSeconds(1);
 
+        // Recover energy points every second.
         if (energy < playerStats.Energy)
         {
-            energy += 0.01f;
+            energy += playerStats.EnergyRegeneration;
             yield return wfs;
         }
-        StopCoroutine(RecoveringRoutine());
+        // Stop the coroutine.
+        else
+        {
+            StopCoroutine(RecoveringRoutine());
+        }
     }
 }

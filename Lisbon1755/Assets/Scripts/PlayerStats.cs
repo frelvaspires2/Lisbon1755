@@ -270,6 +270,18 @@ public class PlayerStats : ScriptableObject
     }
 
     /// <summary>
+    /// How many health points will regenerate every second.
+    /// </summary>
+    [Tooltip("How many health points will regenerate every second.")]
+    [SerializeField]
+    private float healthRegeneration = 0.001f;
+
+    /// <summary>
+    /// Gets how many health points will regenerate every second.
+    /// </summary>
+    public float HealthRegeneration { get => healthRegeneration; }
+
+    /// <summary>
     /// Player's energy.
     /// </summary>
     [SerializeField]
@@ -284,4 +296,16 @@ public class PlayerStats : ScriptableObject
     /// Get how much energy will drain when rolling.
     /// </summary>
     public float EnergyCost { get => energy / 2; }
+
+    /// <summary>
+    /// How many energy points will regenerate every second.
+    /// </summary>
+    [Tooltip("How many energy points will regenerate every second.")]
+    [SerializeField]
+    private float energyRegeneration = 0.01f;
+
+    /// <summary>
+    /// Gets how many energy points will regenerate every second.
+    /// </summary>
+    public float EnergyRegeneration { get => energyRegeneration; }
 }

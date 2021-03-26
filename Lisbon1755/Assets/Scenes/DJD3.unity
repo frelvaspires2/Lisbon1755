@@ -372,8 +372,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90685e6f972410f41bf1a2c8be9063aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 563203119}
-  playerHealth: 0
+  playerHealth: {fileID: 563203119}
+  playerEnergy: {fileID: 563203120}
+  health: 0
+  isInjured: 0
+  energy: 0
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
