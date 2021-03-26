@@ -23,6 +23,9 @@ public class PlayerHealth : MonoBehaviour
     /// </summary>
     public float Health { get => health; }
 
+    /// <summary>
+    /// Checks whether the player is injured.
+    /// </summary>
     public bool IsInjured { get; private set; }
 
     /// <summary>
@@ -68,7 +71,7 @@ public class PlayerHealth : MonoBehaviour
     /// <summary>
     /// Heal any health points that were lost.
     /// </summary>
-    /// <returns></returns>
+    /// <returns> Time.</returns>
     private IEnumerator HealingRoutine()
     {
         WaitForSeconds wfs = new WaitForSeconds(1);

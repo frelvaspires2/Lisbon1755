@@ -19,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
     private PlayerHealth playerHealth;
 
     /// <summary>
+    /// Access PlayerEnergy script.
+    /// </summary>
+    [SerializeField]
+    private PlayerEnergy playerEnergy;
+
+    /// <summary>
     /// Access CharacterController.
     /// </summary>
     private CharacterController controller;
@@ -96,7 +102,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         controller = GetComponent<CharacterController>();
-        playerHealth = GetComponent<PlayerHealth>();
         acceleration = Vector3.zero;
         velocity = Vector3.zero;
         motion = Vector3.zero;
@@ -340,9 +345,11 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void CheckForRoll()
     {
-        if (Input.GetButtonUp("Roll") && canRoll && !playerHealth.IsInjured)
+        if (Input.GetButtonUp("Roll") && canRoll && !playerHealth.IsInjured &&
+            playerEnergy.Energy >= playerStats.EnergyCost)
         {
             canJump = false;
+            playerEnergy.Energy -= playerStats.EnergyCost;
             StartCoroutine(RollRoutine());
         }
     }

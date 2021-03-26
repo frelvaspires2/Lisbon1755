@@ -273,10 +273,15 @@ public class PlayerStats : ScriptableObject
     /// Player's energy.
     /// </summary>
     [SerializeField]
-    private float energy = 90f;
+    private float energy = 50;
 
     /// <summary>
     /// Get player energy.
     /// </summary>
-    public float Energy => energy;
+    public float Energy { get => energy; }
+
+    /// <summary>
+    /// Get how much energy will drain when rolling.
+    /// </summary>
+    public float EnergyCost { get => energy / 2; }
 }
