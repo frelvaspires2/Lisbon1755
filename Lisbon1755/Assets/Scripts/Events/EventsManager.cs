@@ -147,6 +147,8 @@ public class EventsManager : MonoBehaviour
                 }
                 else
                 {
+                    eventResult = EventResult.Won;
+                    eventState = EventState.Finished;
                     clickCount = setHowManyClicks;
                 }
             }
