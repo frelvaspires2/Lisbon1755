@@ -670,9 +670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a445869404b4ebb4285e34fdae645657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panickedStats: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
   agent: {fileID: 1292949287}
   agentObject: {fileID: 1292949284}
-  dyingTime: 2
 --- !u!114 &1292949290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,8 +698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770a4649c33865c44bd4a1fc01389a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panickedStats: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
   agent: {fileID: 1292949287}
-  speed: 1
   setDestination: {fileID: 245302198}
 --- !u!114 &1292949292
 MonoBehaviour:
@@ -713,9 +713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a66a94d99b90114d914918007a73939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panickedStats: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
   agent: {fileID: 1292949287}
   setDestination: {fileID: 245302198}
-  speed: 5
 --- !u!114 &1292949293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0651a53994738840999cd0dfb4d7a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  panickedStats: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+  health: 0
   statesEnum: 0
 --- !u!850595691 &1583840092
 LightingSettings:

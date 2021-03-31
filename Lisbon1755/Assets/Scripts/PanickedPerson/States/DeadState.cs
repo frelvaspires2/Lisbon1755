@@ -5,13 +5,13 @@ using System.Collections;
 public class DeadState : MonoBehaviour, IState
 {
     [SerializeField]
+    private PanickedStats panickedStats;
+
+    [SerializeField]
     private NavMeshAgent agent;
 
     [SerializeField]
     private GameObject agentObject;
-
-    [SerializeField]
-    private float dyingTime = 2f;
 
     public void State()
     {
@@ -22,7 +22,7 @@ public class DeadState : MonoBehaviour, IState
 
     private IEnumerator Dying()
     {
-        WaitForSeconds wfs = new WaitForSeconds(dyingTime);
+        WaitForSeconds wfs = new WaitForSeconds(panickedStats.DyingTime);
 
         yield return wfs;
 

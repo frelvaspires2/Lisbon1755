@@ -4,10 +4,10 @@ using UnityEngine.AI;
 public class SlowerState : MonoBehaviour, IState
 {
     [SerializeField]
-    private NavMeshAgent agent;
+    private PanickedStats panickedStats;
 
     [SerializeField]
-    private float speed = 1f;
+    private NavMeshAgent agent;
 
     [SerializeField]
     private Transform setDestination;
@@ -15,7 +15,7 @@ public class SlowerState : MonoBehaviour, IState
     public void State()
     {
         agent.destination = setDestination.position;
-        agent.speed = speed;
+        agent.speed = panickedStats.SlowerSpeed;
         //Debug.Log("State: Slower");
     }
 }

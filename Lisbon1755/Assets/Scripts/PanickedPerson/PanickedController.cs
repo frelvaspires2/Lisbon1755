@@ -2,7 +2,8 @@
 
 public class PanickedController : MonoBehaviour
 {
-    private const float setHealth = 100f;
+    [SerializeField]
+    private PanickedStats panickedStats;
 
     [SerializeField]
     private float health;
@@ -14,7 +15,7 @@ public class PanickedController : MonoBehaviour
 
     private void Start()
     {
-        health = setHealth;
+        health = panickedStats.Health;
 
         statesEnum = PanickedState.Running;
     }
