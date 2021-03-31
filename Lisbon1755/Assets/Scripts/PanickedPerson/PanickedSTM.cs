@@ -1,32 +1,38 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Main state machine of the panicked person AI.
+/// </summary>
 public class PanickedSTM : MonoBehaviour
 {
+    /// <summary>
+    /// Access PanickedController script.
+    /// </summary>
     [SerializeField]
     private PanickedController panickedController;
 
-    [SerializeField]
-    private DeadState deadState;
-
-    [SerializeField]
-    private WoundedState woundedState;
-
-    [SerializeField]
-    private SlowerState slowerState;
-
-    [SerializeField]
-    private RunningState runningState;
-
+    /// <summary>
+    /// Access the gameobject's agent.
+    /// </summary>
     [SerializeField]
     private GameObject agent;
 
+    /// <summary>
+    /// Access the IState interface.
+    /// </summary>
     private IState getState;
 
+    /// <summary>
+    /// To be played every frame consistely.
+    /// </summary>
     private void FixedUpdate()
     {
         STM();
     }
 
+    /// <summary>
+    /// Run the state machine.
+    /// </summary>
     private void STM()
     {
         switch(panickedController.GetStates)
