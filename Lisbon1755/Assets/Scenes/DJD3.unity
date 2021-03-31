@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 807f2a6ee32eaad4bbd9429ff1b6fc4c, type: 2}
 --- !u!1 &245302197
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0
+  m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1292949288
@@ -669,6 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a445869404b4ebb4285e34fdae645657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 1292949287}
 --- !u!114 &1292949290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,6 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e870c78e9f99add4781990250a707345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 1292949287}
 --- !u!114 &1292949291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,6 +695,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770a4649c33865c44bd4a1fc01389a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 1292949287}
+  speed: 1
+  setDestination: {fileID: 245302198}
 --- !u!114 &1292949292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +710,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a66a94d99b90114d914918007a73939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 1292949287}
+  setDestination: {fileID: 245302198}
+  speed: 5
 --- !u!850595691 &1583840092
 LightingSettings:
   m_ObjectHideFlags: 0

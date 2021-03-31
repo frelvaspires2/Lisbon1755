@@ -66,21 +66,21 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Events\PlayEvent.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\States\IState.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\States\DeadState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\PanickedSTM.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\States\SlowerState.cs" />
     <Compile Include="Assets\Scripts\Events\EventsManager.cs" />
     <Compile Include="Assets\Scripts\Events\EventResult.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\States\RunningState.cs" />
     <Compile Include="Assets\Scripts\Player\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerEnergy.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\States\PanickedState.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\States\WoundedState.cs" />
     <Compile Include="Assets\Scripts\Events\EventState.cs" />
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\States\PanickedState.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\PanickedSTM.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\States\RunningState.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\States\SlowerState.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\States\WoundedState.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\States\DeadState.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\States\IState.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
