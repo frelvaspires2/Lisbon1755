@@ -581,6 +581,7 @@ GameObject:
   - component: {fileID: 1292949291}
   - component: {fileID: 1292949290}
   - component: {fileID: 1292949289}
+  - component: {fileID: 1292949293}
   m_Layer: 0
   m_Name: PanickedPerson
   m_TagString: Untagged
@@ -651,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f2484579236edc4f81a2f7afb255c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statesEnum: 0
+  panickedController: {fileID: 1292949293}
   deadState: {fileID: 1292949289}
   woundedState: {fileID: 1292949290}
   slowerState: {fileID: 1292949291}
@@ -670,6 +671,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1292949287}
+  agentObject: {fileID: 1292949284}
+  dyingTime: 2
 --- !u!114 &1292949290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,6 +716,20 @@ MonoBehaviour:
   agent: {fileID: 1292949287}
   setDestination: {fileID: 245302198}
   speed: 5
+--- !u!114 &1292949293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292949284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0651a53994738840999cd0dfb4d7a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  statesEnum: 0
 --- !u!850595691 &1583840092
 LightingSettings:
   m_ObjectHideFlags: 0

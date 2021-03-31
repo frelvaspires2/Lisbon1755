@@ -3,7 +3,7 @@
 public class PanickedSTM : MonoBehaviour
 {
     [SerializeField]
-    private PanickedState statesEnum;
+    private PanickedController panickedController;
 
     [SerializeField]
     private DeadState deadState;
@@ -22,11 +22,6 @@ public class PanickedSTM : MonoBehaviour
 
     private IState getState;
 
-    private void Start()
-    {
-        statesEnum = PanickedState.Running;
-    }
-
     private void FixedUpdate()
     {
         STM();
@@ -34,7 +29,7 @@ public class PanickedSTM : MonoBehaviour
 
     private void STM()
     {
-        switch(statesEnum)
+        switch(panickedController.GetStates)
         {
             case PanickedState.Running:
                 getState = gameObject.GetComponent<RunningState>();
