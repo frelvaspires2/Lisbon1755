@@ -7,6 +7,17 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     /// <summary>
+    /// Access the player animation types enum.
+    /// </summary>
+    [SerializeField]
+    private PlayerAnimTypes playerAnimTypes;
+
+    /// <summary>
+    /// Gets the player animation types enum.
+    /// </summary>
+    public PlayerAnimTypes GetPlayerAnimTypes { get => playerAnimTypes; }
+
+    /// <summary>
     /// Access PlayerStats scriptableobject.
     /// </summary>
     [SerializeField]
@@ -122,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        CallAnimations();
         CheckForJump();
         CheckForRoll();
         CheckForAutoMove();
@@ -149,9 +161,13 @@ public class PlayerMovement : MonoBehaviour
     private void CheckForAutoMove()
     {
         if (Input.GetButtonDown("AutoMove"))
+        {
             autoMove = !autoMove;
+        }
         else if (mouseMove || Input.GetAxis("Forward") != 0f)
+        {
             autoMove = false;
+        }
     }
 
     /// <summary>
@@ -203,9 +219,13 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateRotation()
     {
         if (Input.GetMouseButton(1) || Input.GetMouseButton(2))
+        {
             UpdateMouseRotation();
+        }
         else
+        {
             UpdateKeyboardRotation();
+        }
     }
 
     /// <summary>
@@ -296,7 +316,9 @@ public class PlayerMovement : MonoBehaviour
             canRoll = true;
         }
         else
+        {
             acceleration.y = -playerStats.GravityAcceleration;
+        }
     }
 
     /// <summary>
@@ -354,6 +376,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void CallAnimations()
+    {
+        // walk...
+        if (Input.GetAxis("Forward") > 0)
+        {
+            playerAnimTypes = PlayerAnimTypes.walk;
+        }
+        // jump
+        else if(Input.GetButton("Jump"))
+        {
+            playerAnimTypes = PlayerAnimTypes.jump;
+        }
+        // nothing else
+        else
+        {
+            playerAnimTypes = PlayerAnimTypes.idle;
+        }
+    }
+
     /// <summary>
     /// Roll routine.
     /// Roll happens here.
@@ -373,5 +414,16 @@ public class PlayerMovement : MonoBehaviour
         canJump = true;
 
         StopCoroutine(RollRoutine());
+    }
+
+    private IEnumerator ReturnToIdle(float time)
+    {
+        WaitForSeconds wfs = new WaitForSeconds(time);
+
+        yield return wfs;
+
+        playerAnimTypes = PlayerAnimTypes.idle;
+
+        StopCoroutine(ReturnToIdle(time));
     }
 }
