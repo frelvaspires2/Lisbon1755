@@ -105,6 +105,11 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private bool mouseMove;
 
+    private bool isRolling;
+
+    private bool isJumping;
+
+
     /// <summary>
     /// The first frame of the game.
     /// Initialize variables.
@@ -126,6 +131,8 @@ public class PlayerMovement : MonoBehaviour
         canRoll = true;
         autoMove = false;
         mouseMove = false;
+        isRolling = false;
+        isJumping = false;
     }
 
     /// <summary>
@@ -133,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        AnimController();
         CheckForJump();
         CheckForRoll();
         CheckForAutoMove();
@@ -151,7 +159,6 @@ public class PlayerMovement : MonoBehaviour
         {
             canRoll = false;
             jump = true;
-            StartCoroutine(JumpAnim());
         }
     }
 
@@ -309,11 +316,13 @@ public class PlayerMovement : MonoBehaviour
         {
             acceleration.y = playerStats.JumpAcceleration;
             jump = false;
+            isJumping = true;
         }
         else if (controller.isGrounded)
         {
             acceleration.y = 0f;
             canRoll = true;
+            isJumping = false;
         }
         else
         {
@@ -372,7 +381,6 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
             playerEnergy.Energy -= playerStats.EnergyCost;
-            StartCoroutine(RollAnim());
             StartCoroutine(RollRoutine());
         }
     }
@@ -389,13 +397,37 @@ public class PlayerMovement : MonoBehaviour
         velocityMult = (velocityMult == playerStats.WalkVelocityMult) ?
                 playerStats.RollVelocityMult : playerStats.WalkVelocityMult;
 
+        isRolling = true;
+
         yield return wfs;
 
         velocityMult = playerStats.WalkVelocityMult;
 
+        isRolling = false;
+
         canJump = true;
 
         StopCoroutine(RollRoutine());
+    }
+
+    private void AnimController()
+    {
+        if (Input.GetAxis("Forward") > 0 && !isRolling && !isJumping)
+        {
+            playerAnimTypes = PlayerAnimTypes.walk;
+        }
+        else if(isJumping)
+        {
+            StartCoroutine(JumpAnim());
+        }
+        else if(isRolling)
+        {
+            StartCoroutine(RollAnim());
+        }
+        else
+        {
+            playerAnimTypes = PlayerAnimTypes.idle;
+        }
     }
 
     private IEnumerator JumpAnim()
