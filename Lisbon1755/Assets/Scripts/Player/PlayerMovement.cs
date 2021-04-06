@@ -109,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping;
 
+    private bool isRunning;
+
 
     /// <summary>
     /// The first frame of the game.
@@ -133,6 +135,7 @@ public class PlayerMovement : MonoBehaviour
         mouseMove = false;
         isRolling = false;
         isJumping = false;
+        isRunning = false;
     }
 
     /// <summary>
@@ -193,6 +196,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("ToggleWalkSpeed"))
         {
+            isRunning = true;
             if (playerHealth.IsInjured)
             {
                 injuryVelocityMult = (injuryVelocityMult ==
@@ -209,6 +213,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetButtonUp("ToggleWalkSpeed"))
         {
+            isRunning = false;
             if (playerHealth.IsInjured)
             {
                 injuryVelocityMult = playerStats.InjuredWalkMult;
@@ -412,7 +417,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void AnimController()
     {
-        if (Input.GetAxis("Forward") > 0 && !isRolling && !isJumping)
+        if (Input.GetAxis("Forward") > 0 && !isRolling && !isJumping && !isRunning)
         {
             playerAnimTypes = PlayerAnimTypes.walk;
         }
@@ -423,6 +428,10 @@ public class PlayerMovement : MonoBehaviour
         else if(isRolling)
         {
             StartCoroutine(RollAnim());
+        }
+        else if(isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.run;
         }
         else
         {
