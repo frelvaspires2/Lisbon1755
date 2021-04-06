@@ -432,9 +432,13 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(RollAnim());
         }
-        else if(isRunning)
+        else if(isRunning && Input.GetAxis("Forward") > 0)
         {
             playerAnimTypes = PlayerAnimTypes.run;
+        }
+        else if (isRunning && Input.GetAxis("Forward") < 0)
+        {
+            playerAnimTypes = PlayerAnimTypes.runBack;
         }
         else
         {
