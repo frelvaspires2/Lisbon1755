@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerAnimController : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class PlayerAnimController : MonoBehaviour
     private PlayerMovement playerMovement;
 
     [SerializeField]
-    private GameObject[] animations;
+    private List<GameObject> animationList = new List<GameObject>();
 
     private void Update()
     {
@@ -55,166 +56,167 @@ public class PlayerAnimController : MonoBehaviour
 
     private void IdleAnim()
     {
-        animations[0].SetActive(true);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+        for(int i = 0; i < animationList.Count; i++)
+        {
+            if(i == 0)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void WalkAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(true);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 1)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void RunAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(true);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 2)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void JumpAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(true);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 3)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void RollAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(true);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 4)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void BackAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(true);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 5)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void RunBackAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(true);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 6)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void RightStradeAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(true);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 7)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void LeftStradeAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(true);
-        animations[9].SetActive(false);
-        animations[10].SetActive(false);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 8)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void RightStradeRunAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(true);
-        animations[10].SetActive(false);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 9)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 
     private void LeftStradeRunAnim()
     {
-        animations[0].SetActive(false);
-        animations[1].SetActive(false);
-        animations[2].SetActive(false);
-        animations[3].SetActive(false);
-        animations[4].SetActive(false);
-        animations[5].SetActive(false);
-        animations[6].SetActive(false);
-        animations[7].SetActive(false);
-        animations[8].SetActive(false);
-        animations[9].SetActive(false);
-        animations[10].SetActive(true);
+        for (int i = 0; i < animationList.Count; i++)
+        {
+            if (i == 10)
+            {
+                animationList[i].SetActive(true);
+            }
+            else
+            {
+                animationList[i].SetActive(false);
+            }
+        }
     }
 }
