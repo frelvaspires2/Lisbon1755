@@ -424,6 +424,22 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimTypes = PlayerAnimTypes.back;
         }
+        else if(acceleration.x > 0 && !isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.rightstrade;
+        }
+        else if (acceleration.x > 0 && isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.rightstraderun;
+        }
+        else if (acceleration.x < 0 && isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.leftstraderun;
+        }
+        else if (acceleration.x < 0 && !isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.leftstrade;
+        }
         else if(isJumping)
         {
             StartCoroutine(JumpAnim());

@@ -38,6 +38,18 @@ public class PlayerAnimController : MonoBehaviour
             case PlayerAnimTypes.runBack:
                 RunBackAnim();
                 break;
+            case PlayerAnimTypes.rightstrade:
+                RightStradeAnim();
+                break;
+            case PlayerAnimTypes.leftstrade:
+                LeftStradeAnim();
+                break;
+            case PlayerAnimTypes.rightstraderun:
+                RightStradeRunAnim();
+                break;
+            case PlayerAnimTypes.leftstraderun:
+                LeftStradeRunAnim();
+                break;
         }
     }
 
@@ -50,6 +62,10 @@ public class PlayerAnimController : MonoBehaviour
         animations[4].SetActive(false);
         animations[5].SetActive(false);
         animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
     }
 
     private void WalkAnim()
@@ -61,6 +77,10 @@ public class PlayerAnimController : MonoBehaviour
         animations[4].SetActive(false);
         animations[5].SetActive(false);
         animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
     }
 
     private void RunAnim()
@@ -72,6 +92,10 @@ public class PlayerAnimController : MonoBehaviour
         animations[4].SetActive(false);
         animations[5].SetActive(false);
         animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
     }
 
     private void JumpAnim()
@@ -83,6 +107,10 @@ public class PlayerAnimController : MonoBehaviour
         animations[4].SetActive(false);
         animations[5].SetActive(false);
         animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
     }
 
     private void RollAnim()
@@ -94,6 +122,10 @@ public class PlayerAnimController : MonoBehaviour
         animations[4].SetActive(true);
         animations[5].SetActive(false);
         animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
     }
 
     private void BackAnim()
@@ -105,6 +137,10 @@ public class PlayerAnimController : MonoBehaviour
         animations[4].SetActive(false);
         animations[5].SetActive(true);
         animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
     }
 
     private void RunBackAnim()
@@ -116,5 +152,69 @@ public class PlayerAnimController : MonoBehaviour
         animations[4].SetActive(false);
         animations[5].SetActive(false);
         animations[6].SetActive(true);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
+    }
+
+    private void RightStradeAnim()
+    {
+        animations[0].SetActive(false);
+        animations[1].SetActive(false);
+        animations[2].SetActive(false);
+        animations[3].SetActive(false);
+        animations[4].SetActive(false);
+        animations[5].SetActive(false);
+        animations[6].SetActive(false);
+        animations[7].SetActive(true);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
+    }
+
+    private void LeftStradeAnim()
+    {
+        animations[0].SetActive(false);
+        animations[1].SetActive(false);
+        animations[2].SetActive(false);
+        animations[3].SetActive(false);
+        animations[4].SetActive(false);
+        animations[5].SetActive(false);
+        animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(true);
+        animations[9].SetActive(false);
+        animations[10].SetActive(false);
+    }
+
+    private void RightStradeRunAnim()
+    {
+        animations[0].SetActive(false);
+        animations[1].SetActive(false);
+        animations[2].SetActive(false);
+        animations[3].SetActive(false);
+        animations[4].SetActive(false);
+        animations[5].SetActive(false);
+        animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(true);
+        animations[10].SetActive(false);
+    }
+
+    private void LeftStradeRunAnim()
+    {
+        animations[0].SetActive(false);
+        animations[1].SetActive(false);
+        animations[2].SetActive(false);
+        animations[3].SetActive(false);
+        animations[4].SetActive(false);
+        animations[5].SetActive(false);
+        animations[6].SetActive(false);
+        animations[7].SetActive(false);
+        animations[8].SetActive(false);
+        animations[9].SetActive(false);
+        animations[10].SetActive(true);
     }
 }

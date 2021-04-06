@@ -8,4 +8,8 @@ public enum PlayerAnimTypes
     roll,
     back,
     runBack,
+    rightstrade,
+    leftstrade,
+    rightstraderun,
+    leftstraderun,
 }
