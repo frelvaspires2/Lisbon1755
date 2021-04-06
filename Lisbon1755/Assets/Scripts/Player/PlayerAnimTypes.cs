@@ -5,5 +5,6 @@ public enum PlayerAnimTypes
     walk,
     run,
     jump,
-    roll
+    roll,
+    back
 }

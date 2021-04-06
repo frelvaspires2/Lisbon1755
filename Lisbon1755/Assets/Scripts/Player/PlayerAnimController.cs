@@ -32,6 +32,9 @@ public class PlayerAnimController : MonoBehaviour
             case PlayerAnimTypes.roll:
                 RollAnim();
                 break;
+            case PlayerAnimTypes.back:
+                BackAnim();
+                break;
         }
     }
 
@@ -42,6 +45,7 @@ public class PlayerAnimController : MonoBehaviour
         animations[2].SetActive(false);
         animations[3].SetActive(false);
         animations[4].SetActive(false);
+        animations[5].SetActive(false);
     }
 
     private void WalkAnim()
@@ -51,6 +55,7 @@ public class PlayerAnimController : MonoBehaviour
         animations[2].SetActive(false);
         animations[3].SetActive(false);
         animations[4].SetActive(false);
+        animations[5].SetActive(false);
     }
 
     private void RunAnim()
@@ -60,6 +65,7 @@ public class PlayerAnimController : MonoBehaviour
         animations[2].SetActive(true);
         animations[3].SetActive(false);
         animations[4].SetActive(false);
+        animations[5].SetActive(false);
     }
 
     private void JumpAnim()
@@ -69,6 +75,7 @@ public class PlayerAnimController : MonoBehaviour
         animations[2].SetActive(false);
         animations[3].SetActive(true);
         animations[4].SetActive(false);
+        animations[5].SetActive(false);
     }
 
     private void RollAnim()
@@ -78,5 +85,16 @@ public class PlayerAnimController : MonoBehaviour
         animations[2].SetActive(false);
         animations[3].SetActive(false);
         animations[4].SetActive(true);
+        animations[5].SetActive(false);
+    }
+
+    private void BackAnim()
+    {
+        animations[0].SetActive(false);
+        animations[1].SetActive(false);
+        animations[2].SetActive(false);
+        animations[3].SetActive(false);
+        animations[4].SetActive(false);
+        animations[5].SetActive(true);
     }
 }

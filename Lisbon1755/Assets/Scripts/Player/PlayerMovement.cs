@@ -420,6 +420,10 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimTypes = PlayerAnimTypes.walk;
         }
+        else if(Input.GetAxis("Forward") < 0 && !isRolling && !isJumping && !isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.back;
+        }
         else if(isJumping)
         {
             StartCoroutine(JumpAnim());
@@ -446,8 +450,6 @@ public class PlayerMovement : MonoBehaviour
 
         yield return wfs;
 
-        //playerAnimTypes = PlayerAnimTypes.idle;
-
         StopCoroutine(JumpAnim());
     }
 
@@ -458,8 +460,6 @@ public class PlayerMovement : MonoBehaviour
         playerAnimTypes = PlayerAnimTypes.roll;
 
         yield return wfs;
-
-        //playerAnimTypes = PlayerAnimTypes.idle;
 
         StopCoroutine(RollAnim());
     }
