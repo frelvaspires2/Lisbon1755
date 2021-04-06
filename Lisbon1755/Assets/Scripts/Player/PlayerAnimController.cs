@@ -7,7 +7,19 @@ public class PlayerAnimController : MonoBehaviour
     private PlayerMovement playerMovement;
 
     [SerializeField]
-    private List<GameObject> animationList = new List<GameObject>();
+    private SetAnimations[] setAnimation;
+
+    private Dictionary<PlayerAnimTypes, GameObject> animationDic;
+
+    private void Start()
+    {
+        animationDic = new Dictionary<PlayerAnimTypes, GameObject>();
+
+        foreach(SetAnimations item in setAnimation)
+        {
+            animationDic.Add(item.AnimationTypes, item.Animation);
+        }
+    }
 
     private void Update()
     {
@@ -56,30 +68,30 @@ public class PlayerAnimController : MonoBehaviour
 
     private void IdleAnim()
     {
-        for(int i = 0; i < animationList.Count; i++)
+        foreach(KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if(i == 0)
+            if(item.Key == PlayerAnimTypes.idle)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void WalkAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 1)
+            if (item.Key == PlayerAnimTypes.walk)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
@@ -87,135 +99,135 @@ public class PlayerAnimController : MonoBehaviour
     private void RunAnim()
     {
 
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 2)
+            if (item.Key == PlayerAnimTypes.run)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void JumpAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 3)
+            if (item.Key == PlayerAnimTypes.jump)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void RollAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 4)
+            if (item.Key == PlayerAnimTypes.roll)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void BackAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 5)
+            if (item.Key == PlayerAnimTypes.back)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void RunBackAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 6)
+            if (item.Key == PlayerAnimTypes.runBack)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void RightStradeAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 7)
+            if (item.Key == PlayerAnimTypes.rightstrade)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void LeftStradeAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 8)
+            if (item.Key == PlayerAnimTypes.leftstrade)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void RightStradeRunAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 9)
+            if (item.Key == PlayerAnimTypes.rightstraderun)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
 
     private void LeftStradeRunAnim()
     {
-        for (int i = 0; i < animationList.Count; i++)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
-            if (i == 10)
+            if (item.Key == PlayerAnimTypes.leftstraderun)
             {
-                animationList[i].SetActive(true);
+                item.Value.SetActive(true);
             }
             else
             {
-                animationList[i].SetActive(false);
+                item.Value.SetActive(false);
             }
         }
     }
