@@ -133,7 +133,6 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        CallAnimations();
         CheckForJump();
         CheckForRoll();
         CheckForAutoMove();
@@ -152,6 +151,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canRoll = false;
             jump = true;
+            StartCoroutine(JumpAnim());
         }
     }
 
@@ -293,7 +293,7 @@ public class PlayerMovement : MonoBehaviour
                 playerStats.MaxForwardAcceleration :
                 playerStats.MaxBackwardAcceleration) * injuryVelocityMult;
 
-            acceleration.x *= playerStats.MaxStrafeAcceleration * 
+            acceleration.x *= playerStats.MaxStrafeAcceleration *
                 injuryVelocityMult;
         }
         else
@@ -372,26 +372,8 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
             playerEnergy.Energy -= playerStats.EnergyCost;
+            StartCoroutine(RollAnim());
             StartCoroutine(RollRoutine());
-        }
-    }
-
-    private void CallAnimations()
-    {
-        // walk...
-        if (Input.GetAxis("Forward") > 0)
-        {
-            playerAnimTypes = PlayerAnimTypes.walk;
-        }
-        // jump
-        else if(Input.GetButton("Jump"))
-        {
-            playerAnimTypes = PlayerAnimTypes.jump;
-        }
-        // nothing else
-        else
-        {
-            playerAnimTypes = PlayerAnimTypes.idle;
         }
     }
 
@@ -416,14 +398,29 @@ public class PlayerMovement : MonoBehaviour
         StopCoroutine(RollRoutine());
     }
 
-    private IEnumerator ReturnToIdle(float time)
+    private IEnumerator JumpAnim()
     {
-        WaitForSeconds wfs = new WaitForSeconds(time);
+        WaitForSeconds wfs = new WaitForSeconds(playerStats.RollTime);
+
+        playerAnimTypes = PlayerAnimTypes.jump;
 
         yield return wfs;
 
         playerAnimTypes = PlayerAnimTypes.idle;
 
-        StopCoroutine(ReturnToIdle(time));
+        StopCoroutine(JumpAnim());
+    }
+
+    private IEnumerator RollAnim()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(playerStats.RollTime);
+
+        playerAnimTypes = PlayerAnimTypes.roll;
+
+        yield return wfs;
+
+        playerAnimTypes = PlayerAnimTypes.idle;
+
+        StopCoroutine(RollAnim());
     }
 }
