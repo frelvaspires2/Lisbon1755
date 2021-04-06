@@ -121,6 +121,16 @@ public class PlayerMovement : MonoBehaviour
     private bool isRunning;
 
     /// <summary>
+    /// Check if the player is doing strafe.
+    /// </summary>
+    private bool isStrafe;
+
+    /// <summary>
+    /// Check if the player is walking/running backwards.
+    /// </summary>
+    private bool isBackward;
+
+    /// <summary>
     /// The first frame of the game.
     /// Initialize variables.
     /// </summary>
@@ -144,6 +154,8 @@ public class PlayerMovement : MonoBehaviour
         isRolling = false;
         isJumping = false;
         isRunning = false;
+        isStrafe = false;
+        isBackward = false;
     }
 
     /// <summary>
@@ -389,8 +401,27 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void CheckForRoll()
     {
+        if(Input.GetAxis("Forward") < 0)
+        {
+            isBackward = true;
+        }
+        else
+        {
+            isBackward = false;
+        }
+
+        if(acceleration.x > 0 || acceleration.x < 0)
+        {
+            isStrafe = true;
+        }
+        else
+        {
+            isStrafe = false;
+        }
+
         if (Input.GetButtonUp("Roll") && canRoll && !playerHealth.IsInjured &&
-            playerEnergy.Energy >= playerStats.EnergyCost)
+            playerEnergy.Energy >= playerStats.EnergyCost && !isRunning 
+            && !isStrafe && !isBackward)
         {
             canJump = false;
             playerEnergy.Energy -= playerStats.EnergyCost;
