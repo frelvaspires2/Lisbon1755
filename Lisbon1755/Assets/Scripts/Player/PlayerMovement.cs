@@ -111,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isRunning;
 
-
     /// <summary>
     /// The first frame of the game.
     /// Initialize variables.
@@ -441,13 +440,13 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator JumpAnim()
     {
-        WaitForSeconds wfs = new WaitForSeconds(playerStats.RollTime);
+        WaitForSeconds wfs = new WaitForSeconds(1.5f);
 
         playerAnimTypes = PlayerAnimTypes.jump;
 
         yield return wfs;
 
-        playerAnimTypes = PlayerAnimTypes.idle;
+        //playerAnimTypes = PlayerAnimTypes.idle;
 
         StopCoroutine(JumpAnim());
     }
@@ -460,7 +459,7 @@ public class PlayerMovement : MonoBehaviour
 
         yield return wfs;
 
-        playerAnimTypes = PlayerAnimTypes.idle;
+        //playerAnimTypes = PlayerAnimTypes.idle;
 
         StopCoroutine(RollAnim());
     }
