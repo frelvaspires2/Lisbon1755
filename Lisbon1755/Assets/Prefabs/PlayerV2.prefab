@@ -800,18 +800,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 2240583859499855087}
-  animationList:
-  - {fileID: 1293443567}
-  - {fileID: 1356484572}
-  - {fileID: 1128137982}
-  - {fileID: 2111134601}
-  - {fileID: 319660465}
-  - {fileID: 778550622}
-  - {fileID: 1014375365}
-  - {fileID: 1805816989}
-  - {fileID: 214583228}
-  - {fileID: 1882295785}
-  - {fileID: 491963486}
+  setAnimation:
+  - animationType: 0
+    animation: {fileID: 1293443567}
+  - animationType: 1
+    animation: {fileID: 1356484572}
+  - animationType: 2
+    animation: {fileID: 1128137982}
+  - animationType: 3
+    animation: {fileID: 2111134601}
+  - animationType: 4
+    animation: {fileID: 319660465}
+  - animationType: 5
+    animation: {fileID: 778550622}
+  - animationType: 6
+    animation: {fileID: 1014375365}
+  - animationType: 7
+    animation: {fileID: 1805816989}
+  - animationType: 8
+    animation: {fileID: 214583228}
+  - animationType: 9
+    animation: {fileID: 1882295785}
+  - animationType: 10
+    animation: {fileID: 491963486}
 --- !u!1001 &197200847
 PrefabInstance:
   m_ObjectHideFlags: 0

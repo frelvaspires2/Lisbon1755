@@ -105,10 +105,19 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private bool mouseMove;
 
+    /// <summary>
+    /// Check if the player is rolling.
+    /// </summary>
     private bool isRolling;
 
+    /// <summary>
+    /// Check is the player is jumping.
+    /// </summary>
     private bool isJumping;
 
+    /// <summary>
+    /// Check if the player is running.
+    /// </summary>
     private bool isRunning;
 
     /// <summary>
@@ -414,9 +423,16 @@ public class PlayerMovement : MonoBehaviour
         StopCoroutine(RollRoutine());
     }
 
+    /// <summary>
+    /// Call the animations.
+    /// </summary>
     private void AnimController()
     {
         if (Input.GetAxis("Forward") > 0 && !isRolling && !isJumping && !isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.walk;
+        }
+        else if(autoMove || mouseMove && !isRolling && !isJumping && !isRunning)
         {
             playerAnimTypes = PlayerAnimTypes.walk;
         }
@@ -426,27 +442,27 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(acceleration.x > 0 && !isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.rightstrade;
+            playerAnimTypes = PlayerAnimTypes.rightStrade;
         }
         else if (acceleration.x > 0 && isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.rightstraderun;
+            playerAnimTypes = PlayerAnimTypes.rightStradeRun;
         }
         else if (acceleration.x < 0 && isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.leftstraderun;
+            playerAnimTypes = PlayerAnimTypes.leftStradeRun;
         }
         else if (acceleration.x < 0 && !isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.leftstrade;
+            playerAnimTypes = PlayerAnimTypes.leftStrade;
         }
         else if(isJumping)
         {
-            StartCoroutine(JumpAnim());
+            playerAnimTypes = PlayerAnimTypes.jump;
         }
         else if(isRolling)
         {
-            StartCoroutine(RollAnim());
+            playerAnimTypes = PlayerAnimTypes.roll;
         }
         else if(isRunning && Input.GetAxis("Forward") > 0)
         {
@@ -460,27 +476,5 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimTypes = PlayerAnimTypes.idle;
         }
-    }
-
-    private IEnumerator JumpAnim()
-    {
-        WaitForSeconds wfs = new WaitForSeconds(1.5f);
-
-        playerAnimTypes = PlayerAnimTypes.jump;
-
-        yield return wfs;
-
-        StopCoroutine(JumpAnim());
-    }
-
-    private IEnumerator RollAnim()
-    {
-        WaitForSeconds wfs = new WaitForSeconds(playerStats.RollTime);
-
-        playerAnimTypes = PlayerAnimTypes.roll;
-
-        yield return wfs;
-
-        StopCoroutine(RollAnim());
     }
 }
