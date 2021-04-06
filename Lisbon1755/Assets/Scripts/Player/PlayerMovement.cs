@@ -319,6 +319,24 @@ public class PlayerMovement : MonoBehaviour
 
         acceleration.x = Input.GetAxis("Strafe");
 
+        if (Input.GetAxis("Forward") < 0)
+        {
+            isBackward = true;
+        }
+        else
+        {
+            isBackward = false;
+        }
+
+        if (acceleration.x > 0 || acceleration.x < 0)
+        {
+            isStrafe = true;
+        }
+        else
+        {
+            isStrafe = false;
+        }
+
         if (playerHealth.IsInjured)
         {
             acceleration.z *= (acceleration.z > 0 ?
@@ -401,24 +419,6 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void CheckForRoll()
     {
-        if(Input.GetAxis("Forward") < 0)
-        {
-            isBackward = true;
-        }
-        else
-        {
-            isBackward = false;
-        }
-
-        if(acceleration.x > 0 || acceleration.x < 0)
-        {
-            isStrafe = true;
-        }
-        else
-        {
-            isStrafe = false;
-        }
-
         if (Input.GetButtonUp("Roll") && canRoll && !playerHealth.IsInjured &&
             playerEnergy.Energy >= playerStats.EnergyCost && !isRunning 
             && !isStrafe && !isBackward)
