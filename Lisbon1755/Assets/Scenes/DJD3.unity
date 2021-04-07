@@ -727,6 +727,16 @@ MonoBehaviour:
   panickedStats: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
   health: 0
   statesEnum: 0
+--- !u!1 &1429811323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1429811323, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1433826203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1433826203, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1583840092
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1103,6 +1113,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.data[11].animationType
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.data[11].animation
+      value: 
+      objectReference: {fileID: 2063090916}
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.data[12].animationType
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.data[12].animation
+      value: 
+      objectReference: {fileID: 1433826203}
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.data[13].animationType
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.data[13].animation
+      value: 
+      objectReference: {fileID: 2083749694}
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.data[14].animationType
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 263751570, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: setAnimation.Array.data[14].animation
+      value: 
+      objectReference: {fileID: 1429811323}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4609408
@@ -1184,3 +1230,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2063090916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2063090916, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2083749694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2083749694, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}

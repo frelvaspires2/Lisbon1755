@@ -86,6 +86,18 @@ public class PlayerAnimController : MonoBehaviour
             case PlayerAnimTypes.leftStradeRun:
                 LeftStradeRunAnim();
                 break;
+            case PlayerAnimTypes.injuredRunBack:
+                InjuredRunBackAnim();
+                break;
+            case PlayerAnimTypes.InjuredRun:
+                InjuredRunAnim();
+                break;
+            case PlayerAnimTypes.InjuredWalkBack:
+                InjuredWalkBackAnim();
+                break;
+            case PlayerAnimTypes.InjuredWalk:
+                InjuredWalk();
+                break;
         }
     }
 
@@ -278,6 +290,78 @@ public class PlayerAnimController : MonoBehaviour
         foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
             if (item.Key == PlayerAnimTypes.leftStradeRun)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Run the running backwards animation while injured.
+    /// </summary>
+    private void InjuredRunBackAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.injuredRunBack)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Run the running animation while injured.
+    /// </summary>
+    private void InjuredRunAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.InjuredRun)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Run the walking backwards animation while injured.
+    /// </summary>
+    private void InjuredWalkBackAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.InjuredWalkBack)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Run the walking animation while injured.
+    /// </summary>
+    private void InjuredWalk()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.InjuredWalk)
             {
                 item.Value.SetActive(true);
             }

@@ -461,15 +461,36 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetAxis("Forward") > 0 && !isRolling && !isJumping && !isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.walk;
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.walk;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.InjuredWalk;
+            }
         }
         else if(autoMove || mouseMove && !isRolling && !isJumping && !isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.walk;
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.walk;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.InjuredWalk;
+            }
         }
         else if(Input.GetAxis("Forward") < 0 && !isRolling && !isJumping && !isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.back;
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.back;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.InjuredWalkBack;
+            }
         }
         else if(acceleration.x > 0 && !isRunning)
         {
@@ -497,11 +518,25 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(isRunning && Input.GetAxis("Forward") > 0)
         {
-            playerAnimTypes = PlayerAnimTypes.run;
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.run;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.InjuredRun;
+            }
         }
         else if (isRunning && Input.GetAxis("Forward") < 0)
         {
-            playerAnimTypes = PlayerAnimTypes.runBack;
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.runBack;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.injuredRunBack;
+            }
         }
         else
         {

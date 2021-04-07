@@ -48,4 +48,20 @@ public enum PlayerAnimTypes
     /// Left strade run animation.
     /// </summary>
     leftStradeRun,
+    /// <summary>
+    /// Running backwards while injured.
+    /// </summary>
+    injuredRunBack,
+    /// <summary>
+    /// Running while injured.
+    /// </summary>
+    InjuredRun,
+    /// <summary>
+    /// Walking backwards while injured.
+    /// </summary>
+    InjuredWalkBack,
+    /// <summary>
+    /// Walking while injured.
+    /// </summary>
+    InjuredWalk,
 }
