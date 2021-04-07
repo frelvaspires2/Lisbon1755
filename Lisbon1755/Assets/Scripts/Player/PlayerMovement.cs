@@ -7,6 +7,17 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     /// <summary>
+    /// Access the player animation types enum.
+    /// </summary>
+    [SerializeField]
+    private PlayerAnimTypes playerAnimTypes;
+
+    /// <summary>
+    /// Gets the player animation types enum.
+    /// </summary>
+    public PlayerAnimTypes GetPlayerAnimTypes { get => playerAnimTypes; }
+
+    /// <summary>
     /// Access PlayerStats scriptableobject.
     /// </summary>
     [SerializeField]
@@ -95,6 +106,31 @@ public class PlayerMovement : MonoBehaviour
     private bool mouseMove;
 
     /// <summary>
+    /// Check if the player is rolling.
+    /// </summary>
+    private bool isRolling;
+
+    /// <summary>
+    /// Check is the player is jumping.
+    /// </summary>
+    private bool isJumping;
+
+    /// <summary>
+    /// Check if the player is running.
+    /// </summary>
+    private bool isRunning;
+
+    /// <summary>
+    /// Check if the player is doing strafe.
+    /// </summary>
+    private bool isStrafe;
+
+    /// <summary>
+    /// Check if the player is walking/running backwards.
+    /// </summary>
+    private bool isBackward;
+
+    /// <summary>
     /// The first frame of the game.
     /// Initialize variables.
     /// </summary>
@@ -115,6 +151,11 @@ public class PlayerMovement : MonoBehaviour
         canRoll = true;
         autoMove = false;
         mouseMove = false;
+        isRolling = false;
+        isJumping = false;
+        isRunning = false;
+        isStrafe = false;
+        isBackward = false;
     }
 
     /// <summary>
@@ -122,6 +163,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        AnimController();
         CheckForJump();
         CheckForRoll();
         CheckForAutoMove();
@@ -149,9 +191,13 @@ public class PlayerMovement : MonoBehaviour
     private void CheckForAutoMove()
     {
         if (Input.GetButtonDown("AutoMove"))
+        {
             autoMove = !autoMove;
+        }
         else if (mouseMove || Input.GetAxis("Forward") != 0f)
+        {
             autoMove = false;
+        }
     }
 
     /// <summary>
@@ -170,6 +216,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("ToggleWalkSpeed"))
         {
+            isRunning = true;
             if (playerHealth.IsInjured)
             {
                 injuryVelocityMult = (injuryVelocityMult ==
@@ -186,6 +233,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetButtonUp("ToggleWalkSpeed"))
         {
+            isRunning = false;
             if (playerHealth.IsInjured)
             {
                 injuryVelocityMult = playerStats.InjuredWalkMult;
@@ -203,9 +251,13 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateRotation()
     {
         if (Input.GetMouseButton(1) || Input.GetMouseButton(2))
+        {
             UpdateMouseRotation();
+        }
         else
+        {
             UpdateKeyboardRotation();
+        }
     }
 
     /// <summary>
@@ -267,13 +319,31 @@ public class PlayerMovement : MonoBehaviour
 
         acceleration.x = Input.GetAxis("Strafe");
 
+        if (Input.GetAxis("Forward") < 0)
+        {
+            isBackward = true;
+        }
+        else
+        {
+            isBackward = false;
+        }
+
+        if (acceleration.x > 0 || acceleration.x < 0)
+        {
+            isStrafe = true;
+        }
+        else
+        {
+            isStrafe = false;
+        }
+
         if (playerHealth.IsInjured)
         {
             acceleration.z *= (acceleration.z > 0 ?
                 playerStats.MaxForwardAcceleration :
                 playerStats.MaxBackwardAcceleration) * injuryVelocityMult;
 
-            acceleration.x *= playerStats.MaxStrafeAcceleration * 
+            acceleration.x *= playerStats.MaxStrafeAcceleration *
                 injuryVelocityMult;
         }
         else
@@ -289,14 +359,18 @@ public class PlayerMovement : MonoBehaviour
         {
             acceleration.y = playerStats.JumpAcceleration;
             jump = false;
+            isJumping = true;
         }
         else if (controller.isGrounded)
         {
             acceleration.y = 0f;
             canRoll = true;
+            isJumping = false;
         }
         else
+        {
             acceleration.y = -playerStats.GravityAcceleration;
+        }
     }
 
     /// <summary>
@@ -346,7 +420,8 @@ public class PlayerMovement : MonoBehaviour
     private void CheckForRoll()
     {
         if (Input.GetButtonUp("Roll") && canRoll && !playerHealth.IsInjured &&
-            playerEnergy.Energy >= playerStats.EnergyCost)
+            playerEnergy.Energy >= playerStats.EnergyCost && !isRunning 
+            && !isStrafe && !isBackward)
         {
             canJump = false;
             playerEnergy.Energy -= playerStats.EnergyCost;
@@ -366,12 +441,106 @@ public class PlayerMovement : MonoBehaviour
         velocityMult = (velocityMult == playerStats.WalkVelocityMult) ?
                 playerStats.RollVelocityMult : playerStats.WalkVelocityMult;
 
+        isRolling = true;
+
         yield return wfs;
 
         velocityMult = playerStats.WalkVelocityMult;
 
+        isRolling = false;
+
         canJump = true;
 
         StopCoroutine(RollRoutine());
+    }
+
+    /// <summary>
+    /// Call the animations.
+    /// </summary>
+    private void AnimController()
+    {
+        if (Input.GetAxis("Forward") > 0 && !isRolling && !isJumping && !isRunning)
+        {
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.walk;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.InjuredWalk;
+            }
+        }
+        else if(autoMove || mouseMove && !isRolling && !isJumping && !isRunning)
+        {
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.walk;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.InjuredWalk;
+            }
+        }
+        else if(Input.GetAxis("Forward") < 0 && !isRolling && !isJumping && !isRunning)
+        {
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.back;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.InjuredWalkBack;
+            }
+        }
+        else if(acceleration.x > 0 && !isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.rightStrade;
+        }
+        else if (acceleration.x > 0 && isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.rightStradeRun;
+        }
+        else if (acceleration.x < 0 && isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.leftStradeRun;
+        }
+        else if (acceleration.x < 0 && !isRunning)
+        {
+            playerAnimTypes = PlayerAnimTypes.leftStrade;
+        }
+        else if(isJumping)
+        {
+            playerAnimTypes = PlayerAnimTypes.jump;
+        }
+        else if(isRolling)
+        {
+            playerAnimTypes = PlayerAnimTypes.roll;
+        }
+        else if(isRunning && Input.GetAxis("Forward") > 0)
+        {
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.run;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.InjuredRun;
+            }
+        }
+        else if (isRunning && Input.GetAxis("Forward") < 0)
+        {
+            if (!playerHealth.IsInjured)
+            {
+                playerAnimTypes = PlayerAnimTypes.runBack;
+            }
+            else
+            {
+                playerAnimTypes = PlayerAnimTypes.injuredRunBack;
+            }
+        }
+        else
+        {
+            playerAnimTypes = PlayerAnimTypes.idle;
+        }
     }
 }
