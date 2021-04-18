@@ -13,7 +13,7 @@ public class PlayAnim : MonoBehaviour
     // Check if the animation was already played.
     private bool isPlayed;
 
-    /// <summary>
+    /// <summary>s
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// </summary>
@@ -34,7 +34,7 @@ public class PlayAnim : MonoBehaviour
             // Can't play next time.
             isPlayed = true;
             // Play the animation (insert the animation name).
-            animController.Play("");
+            animController.Play("New State");
         }
     }
 }
