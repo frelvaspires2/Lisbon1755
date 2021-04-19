@@ -80,6 +80,25 @@ public class EventsManager : MonoBehaviour
     public EventState GetEventState { get => eventState; }
 
     /// <summary>
+    /// Access the EventAnim enum.
+    /// </summary>
+    [SerializeField]
+    private EventType eventAnim;
+
+    /// <summary>
+    /// Gets the EventAnim enum.
+    /// </summary>
+    public EventType GetEventAnim { get => eventAnim; }
+
+
+    // Checks whether the player animation can be played.
+    [SerializeField]
+    private bool playPlayerAnim;
+
+    // Gets whether the player animation can be played.
+    public bool PlayPlayerAnim { get => playPlayerAnim; }
+
+    /// <summary>
     /// To be played on the first frame.
     /// Initialize variables.
     /// </summary>
@@ -87,6 +106,7 @@ public class EventsManager : MonoBehaviour
     {
         eventState = EventState.Inactive;
         eventResult = EventResult.None;
+        playPlayerAnim = false;
     }
 
     /// <summary>
@@ -141,6 +161,8 @@ public class EventsManager : MonoBehaviour
         {
             if(Input.GetButton("MouseClick"))
             {
+                playPlayerAnim = true;
+
                 if (clickCount < setHowManyClicks)
                 {
                     clickCount += 1 * Time.deltaTime;
@@ -151,6 +173,10 @@ public class EventsManager : MonoBehaviour
                     eventState = EventState.Finished;
                     clickCount = setHowManyClicks;
                 }
+            }
+            else
+            {
+                playPlayerAnim = false;
             }
         }
     }
