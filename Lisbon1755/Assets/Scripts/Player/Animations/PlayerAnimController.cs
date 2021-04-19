@@ -24,6 +24,20 @@ public class PlayerAnimController : MonoBehaviour
     private Dictionary<PlayerAnimTypes, GameObject> animationDic;
 
     /// <summary>
+    /// Access the PlayerAnimTypes enum.
+    /// </summary>
+    [SerializeField]
+    private PlayerAnimTypes playerAnimTypes;
+
+    /// <summary>
+    /// Gets and sets the PlayerAnimTypes
+    /// </summary>
+    public PlayerAnimTypes GetSetPlayerAnimTypes { 
+        get => playerAnimTypes; 
+        set => playerAnimTypes = value; 
+    }
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// Puts the animations in the dictionary.
@@ -51,7 +65,7 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void AnimSTM()
     {
-        switch (playerMovement.GetPlayerAnimTypes)
+        switch (playerAnimTypes)
         {
             case PlayerAnimTypes.idle:
                 IdleAnim();
@@ -387,6 +401,9 @@ public class PlayerAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Run the Push animation in the event of Person Stuck in Objects.
+    /// </summary>
     private void PushAnim()
     {
         foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
@@ -402,6 +419,9 @@ public class PlayerAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Run the Kick animation in the event of Person Stuck in House.
+    /// </summary>
     private void KickDoorAnim()
     {
         foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
@@ -417,6 +437,9 @@ public class PlayerAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Run the Untie animation in the event of the Heretics.
+    /// </summary>
     private void UntieAnim()
     {
         foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
@@ -432,6 +455,9 @@ public class PlayerAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Run the Call Cat animation in the event of Cat in Distress.
+    /// </summary>
     private void CallCatAnim()
     {
         foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
@@ -447,6 +473,9 @@ public class PlayerAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Run the Wake Up animation in the event of Wake Up NPC.
+    /// </summary>
     private void WakeUpNPCAnim()
     {
         foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)

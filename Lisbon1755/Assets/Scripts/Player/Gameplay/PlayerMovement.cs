@@ -7,15 +7,10 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     /// <summary>
-    /// Access the player animation types enum.
+    /// Access the PlayerAnimController script.
     /// </summary>
     [SerializeField]
-    private PlayerAnimTypes playerAnimTypes;
-
-    /// <summary>
-    /// Gets the player animation types enum.
-    /// </summary>
-    public PlayerAnimTypes GetPlayerAnimTypes { get => playerAnimTypes; set => playerAnimTypes = value; }
+    private PlayerAnimController playerAnimController;
 
     /// <summary>
     /// Access PlayerStats scriptableobject.
@@ -463,84 +458,84 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!playerHealth.IsInjured)
             {
-                playerAnimTypes = PlayerAnimTypes.walk;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.walk;
             }
             else
             {
-                playerAnimTypes = PlayerAnimTypes.InjuredWalk;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalk;
             }
         }
         else if(autoMove || mouseMove && !isRolling && !isJumping && !isRunning)
         {
             if (!playerHealth.IsInjured)
             {
-                playerAnimTypes = PlayerAnimTypes.walk;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.walk;
             }
             else
             {
-                playerAnimTypes = PlayerAnimTypes.InjuredWalk;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalk;
             }
         }
         else if(Input.GetAxis("Forward") < 0 && !isRolling && !isJumping && !isRunning)
         {
             if (!playerHealth.IsInjured)
             {
-                playerAnimTypes = PlayerAnimTypes.back;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.back;
             }
             else
             {
-                playerAnimTypes = PlayerAnimTypes.InjuredWalkBack;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalkBack;
             }
         }
         else if(acceleration.x > 0 && !isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.rightStrade;
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStrade;
         }
         else if (acceleration.x > 0 && isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.rightStradeRun;
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStradeRun;
         }
         else if (acceleration.x < 0 && isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.leftStradeRun;
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStradeRun;
         }
         else if (acceleration.x < 0 && !isRunning)
         {
-            playerAnimTypes = PlayerAnimTypes.leftStrade;
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStrade;
         }
         else if(isJumping)
         {
-            playerAnimTypes = PlayerAnimTypes.jump;
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.jump;
         }
         else if(isRolling)
         {
-            playerAnimTypes = PlayerAnimTypes.roll;
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.roll;
         }
         else if(isRunning && Input.GetAxis("Forward") > 0)
         {
             if (!playerHealth.IsInjured)
             {
-                playerAnimTypes = PlayerAnimTypes.run;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.run;
             }
             else
             {
-                playerAnimTypes = PlayerAnimTypes.InjuredRun;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredRun;
             }
         }
         else if (isRunning && Input.GetAxis("Forward") < 0)
         {
             if (!playerHealth.IsInjured)
             {
-                playerAnimTypes = PlayerAnimTypes.runBack;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.runBack;
             }
             else
             {
-                playerAnimTypes = PlayerAnimTypes.injuredRunBack;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.injuredRunBack;
             }
         }
         else
         {
-            playerAnimTypes = PlayerAnimTypes.idle;
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
         }
     }
 }

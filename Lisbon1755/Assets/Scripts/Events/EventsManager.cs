@@ -94,7 +94,7 @@ public class EventsManager : MonoBehaviour
     /// Access the PlayerMovement script.
     /// </summary>
     [SerializeField]
-    private PlayerMovement playerMovement;
+    private PlayerAnimController playerAnimController;
 
     
 
@@ -175,29 +175,32 @@ public class EventsManager : MonoBehaviour
             }
             else
             {
-                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.idle;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
             }
         }
     }
 
+    /// <summary>
+    /// Verify which animation the player will make.
+    /// </summary>
     private void CheckAnimationType()
     {
         switch(eventType)
         {
             case EventType.PersonStuckObjects:
-                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.Push;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Push;
                 break;
             case EventType.PersonStuckHouse:
-                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
                 break;
             case EventType.Heretics:
-                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.Untie;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Untie;
                 break;
             case EventType.Cat:
-                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.CallCat;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.CallCat;
                 break;
             case EventType.WakeUp:
-                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
                 break;
         }
     }

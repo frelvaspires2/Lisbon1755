@@ -64,27 +64,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\Gameplay\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Events\PlayEvent.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerAnimTypes.cs" />
+    <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimTypes.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\States\IState.cs" />
     <Compile Include="Assets\Scripts\Data\PanickedStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\PanickedController.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\States\DeadState.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerAnimController.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimController.cs" />
+    <Compile Include="Assets\Scripts\Player\Gameplay\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\PanickedSTM.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\States\SlowerState.cs" />
     <Compile Include="Assets\Scripts\Events\EventsManager.cs" />
     <Compile Include="Assets\Scripts\Events\EventResult.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\States\RunningState.cs" />
-    <Compile Include="Assets\Scripts\Player\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerEnergy.cs" />
+    <Compile Include="Assets\Scripts\Player\Gameplay\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Gameplay\PlayerEnergy.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\States\PanickedState.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\States\WoundedState.cs" />
     <Compile Include="Assets\Scripts\Events\EventState.cs" />
-    <Compile Include="Assets\Scripts\Player\SetAnimations.cs" />
+    <Compile Include="Assets\Scripts\Player\Animations\SetAnimations.cs" />
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
     <Compile Include="Assets\Scripts\Animations\PlayAnim.cs" />
     <Compile Include="Assets\Scripts\Events\EventType.cs" />
