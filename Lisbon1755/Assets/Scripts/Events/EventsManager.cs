@@ -50,12 +50,12 @@ public class EventsManager : MonoBehaviour
     /// Count how many times the player clicked.
     /// </summary>
     [SerializeField]
-    private int clickCount;
+    private float clickCount;
 
     /// <summary>
     /// Gets the number of clicks the player has clicked.
     /// </summary>
-    public int ClickCount { get => clickCount; }
+    public float ClickCount { get => clickCount; }
 
     /// <summary>
     /// Access the EventResult enum.
@@ -139,11 +139,11 @@ public class EventsManager : MonoBehaviour
     {
         if(playEvent.IsClose)
         {
-            if(Input.GetButtonUp("MouseClick"))
+            if(Input.GetButton("MouseClick"))
             {
                 if (clickCount < setHowManyClicks)
                 {
-                    clickCount++;
+                    clickCount += 1 * Time.deltaTime;
                 }
                 else
                 {
