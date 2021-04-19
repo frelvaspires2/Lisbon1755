@@ -98,6 +98,21 @@ public class PlayerAnimController : MonoBehaviour
             case PlayerAnimTypes.InjuredWalk:
                 InjuredWalk();
                 break;
+            case PlayerAnimTypes.Push:
+                PushAnim();
+                break;
+            case PlayerAnimTypes.KickDoor:
+                KickDoorAnim();
+                break;
+            case PlayerAnimTypes.Untie:
+                UntieAnim();
+                break;
+            case PlayerAnimTypes.CallCat:
+                CallCatAnim();
+                break;
+            case PlayerAnimTypes.WakeUpNPC:
+                WakeUpNPCAnim();
+                break;
         }
     }
 
@@ -362,6 +377,81 @@ public class PlayerAnimController : MonoBehaviour
         foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
             if (item.Key == PlayerAnimTypes.InjuredWalk)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void PushAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.Push)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void KickDoorAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.KickDoor)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void UntieAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.Untie)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void CallCatAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.CallCat)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void WakeUpNPCAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.WakeUpNPC)
             {
                 item.Value.SetActive(true);
             }

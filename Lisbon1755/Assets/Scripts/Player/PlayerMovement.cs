@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Gets the player animation types enum.
     /// </summary>
-    public PlayerAnimTypes GetPlayerAnimTypes { get => playerAnimTypes; }
+    public PlayerAnimTypes GetPlayerAnimTypes { get => playerAnimTypes; set => playerAnimTypes = value; }
 
     /// <summary>
     /// Access PlayerStats scriptableobject.

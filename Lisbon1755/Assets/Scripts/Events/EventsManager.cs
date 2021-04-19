@@ -83,20 +83,20 @@ public class EventsManager : MonoBehaviour
     /// Access the EventAnim enum.
     /// </summary>
     [SerializeField]
-    private EventType eventAnim;
+    private EventType eventType;
 
     /// <summary>
     /// Gets the EventAnim enum.
     /// </summary>
-    public EventType GetEventAnim { get => eventAnim; }
+    public EventType GetEventType { get => eventType; }
 
-
-    // Checks whether the player animation can be played.
+    /// <summary>
+    /// Access the PlayerMovement script.
+    /// </summary>
     [SerializeField]
-    private bool playPlayerAnim;
+    private PlayerMovement playerMovement;
 
-    // Gets whether the player animation can be played.
-    public bool PlayPlayerAnim { get => playPlayerAnim; }
+    
 
     /// <summary>
     /// To be played on the first frame.
@@ -106,7 +106,6 @@ public class EventsManager : MonoBehaviour
     {
         eventState = EventState.Inactive;
         eventResult = EventResult.None;
-        playPlayerAnim = false;
     }
 
     /// <summary>
@@ -161,7 +160,7 @@ public class EventsManager : MonoBehaviour
         {
             if(Input.GetButton("MouseClick"))
             {
-                playPlayerAnim = true;
+                CheckAnimationType();
 
                 if (clickCount < setHowManyClicks)
                 {
@@ -176,8 +175,30 @@ public class EventsManager : MonoBehaviour
             }
             else
             {
-                playPlayerAnim = false;
+                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.idle;
             }
+        }
+    }
+
+    private void CheckAnimationType()
+    {
+        switch(eventType)
+        {
+            case EventType.PersonStuckObjects:
+                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.Push;
+                break;
+            case EventType.PersonStuckHouse:
+                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
+                break;
+            case EventType.Heretics:
+                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.Untie;
+                break;
+            case EventType.Cat:
+                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.CallCat;
+                break;
+            case EventType.WakeUp:
+                playerMovement.GetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
+                break;
         }
     }
 

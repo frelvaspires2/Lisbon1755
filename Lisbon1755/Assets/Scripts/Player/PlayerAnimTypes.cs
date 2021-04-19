@@ -64,4 +64,24 @@ public enum PlayerAnimTypes
     /// Walking while injured.
     /// </summary>
     InjuredWalk,
+    /// <summary>
+    /// Push away the object on top of a person (event).
+    /// </summary>
+    Push,
+    /// <summary>
+    /// Kick door to open (event).
+    /// </summary>
+    KickDoor,
+    /// <summary>
+    /// Untie heretics (event).
+    /// </summary>
+    Untie,
+    /// <summary>
+    /// Call a cat to come (event).
+    /// </summary>
+    CallCat,
+    /// <summary>
+    /// Wake Up the frozen NPC (event).
+    /// </summary>
+    WakeUpNPC,
 }
