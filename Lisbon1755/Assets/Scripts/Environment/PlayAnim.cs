@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Play the animation when the player enters the area.
+/// </summary>
 public class PlayAnim : MonoBehaviour
 {
     // Player's gameobject.
@@ -10,16 +13,22 @@ public class PlayAnim : MonoBehaviour
     [SerializeField]
     private Animator animController;
 
+    // Insert animation name.
+    [SerializeField]
+    private string animName;
+
     // Check if the animation was already played.
+    [SerializeField]
     private bool isPlayed;
 
-    /// <summary>s
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// </summary>
     private void Start()
     {
         isPlayed = false;
+        animController = GetComponent<Animator>();
     }
 
     /// <summary>
@@ -29,12 +38,12 @@ public class PlayAnim : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // If triggers player and the animation hasn't already played.
-        if(other == player && !isPlayed)
+        if(other.gameObject == player && !isPlayed)
         {
             // Can't play next time.
             isPlayed = true;
-            // Play the animation (insert the animation name).
-            animController.Play("New State");
+            // Play the animation.
+            animController.Play(animName);
         }
     }
 }

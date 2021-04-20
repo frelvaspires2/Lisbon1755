@@ -21,7 +21,10 @@ public class PlayerHealth : MonoBehaviour
     /// <summary>
     /// Gets player health points.
     /// </summary>
-    public float Health { get => health; }
+    public float Health {
+        get => health;
+        set => health = value;
+    }
 
     /// <summary>
     /// Checks whether the player is injured.
