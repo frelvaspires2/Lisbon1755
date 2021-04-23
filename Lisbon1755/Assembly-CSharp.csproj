@@ -73,7 +73,6 @@
     <Compile Include="Assets\Scripts\PanickedPerson\States\DeadState.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimController.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\PanickedSTM.cs" />
     <Compile Include="Assets\Scripts\Environment\PlayAnim.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\States\SlowerState.cs" />
@@ -90,6 +89,10 @@
     <Compile Include="Assets\Scripts\Player\Animations\SetAnimations.cs" />
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\FSMs\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\FSMs\State.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\FSMs\Transition.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\PanickedBehavior.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

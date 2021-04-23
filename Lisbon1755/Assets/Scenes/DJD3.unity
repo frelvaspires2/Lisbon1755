@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &245302198
 Transform:
   m_ObjectHideFlags: 0
@@ -362,6 +362,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 54.496, y: -294.033, z: -4.468}
+--- !u!1001 &729470846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: setDestination
+      value: 
+      objectReference: {fileID: 245302198}
+    - target: {fileID: 173703946898641540, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: setDestination
+      value: 
+      objectReference: {fileID: 245302198}
+    - target: {fileID: 173703946898641548, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_Name
+      value: PanickedPersonV2
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
 --- !u!1 &797897694
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +606,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 173703946898641536, guid: 66056e640b64b1d408ac75371698b8b5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 173703946898641539, guid: 66056e640b64b1d408ac75371698b8b5, type: 3}
       propertyPath: setDestination
       value: 
@@ -1010,6 +1079,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1296370480, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: canShake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4609408
