@@ -379,7 +379,7 @@ PrefabInstance:
       objectReference: {fileID: 245302198}
     - target: {fileID: 173703946898641548, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_Name
-      value: PanickedPersonV2
+      value: PanickedPerson
       objectReference: {fileID: 0}
     - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -425,7 +425,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 275051327, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
 --- !u!1 &797897694
 GameObject:
@@ -1056,7 +1057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810611, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_Name
-      value: PlayerV2
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
