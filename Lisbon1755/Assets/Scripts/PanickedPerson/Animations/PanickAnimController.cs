@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Control the animations for panick person agent.
+/// </summary>
 public class PanickAnimController : MonoBehaviour
 {
     [SerializeField]
@@ -79,6 +82,9 @@ public class PanickAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the running animation.
+    /// </summary>
     private void RunningAnim()
     {
         foreach (KeyValuePair<PanickAnimTypes, GameObject> item in animationDic)
@@ -94,6 +100,9 @@ public class PanickAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the running slower animation.
+    /// </summary>
     private void RunningSlowerAnim()
     {
         foreach (KeyValuePair<PanickAnimTypes, GameObject> item in animationDic)
@@ -109,6 +118,9 @@ public class PanickAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the wounded animation.
+    /// </summary>
     private void WoundedAnim()
     {
         foreach (KeyValuePair<PanickAnimTypes, GameObject> item in animationDic)
@@ -124,6 +136,9 @@ public class PanickAnimController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the dying animation.
+    /// </summary>
     private void DyingAnim()
     {
         foreach (KeyValuePair<PanickAnimTypes, GameObject> item in animationDic)

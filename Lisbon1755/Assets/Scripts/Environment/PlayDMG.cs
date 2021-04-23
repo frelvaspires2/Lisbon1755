@@ -31,8 +31,7 @@ public class PlayDMG : MonoBehaviour
         // If it's an NPC, then decrement health.
         if(other.gameObject.tag == "NPC")
         {
-            //Remove agent life when their code is completed.
-            //Debug.Log("Teste - Hit agent");
+            other.GetComponent<PanickedController>().Health -= dmg;
         }
     }
 }

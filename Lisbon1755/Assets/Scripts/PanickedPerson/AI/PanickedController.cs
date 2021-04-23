@@ -17,6 +17,8 @@ public class PanickedController : MonoBehaviour
     [SerializeField]
     private float health;
 
+    public float Health { get => health; set => health = value; }
+
     /// <summary>
     /// Access the states enums.
     /// </summary>
