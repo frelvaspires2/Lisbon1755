@@ -28,6 +28,9 @@ public class PanickedController : MonoBehaviour
     /// </summary>
     public PanickedState GetStates { get => statesEnum; }
 
+    [SerializeField]
+    private PanickAnimController panickAnimController;
+
     /// <summary>
     /// To be played in the first frame.
     /// Initialize variables.
@@ -55,19 +58,23 @@ public class PanickedController : MonoBehaviour
         if(health > (panickedStats.Health / 1.3f))
         {
             statesEnum = PanickedState.Running;
+            panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.Running;
         }
         else if(health < (panickedStats.Health / 1.3f) &&
             health > (panickedStats.Health / 2f))
         {
             statesEnum = PanickedState.RunningSlower;
+            panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.RunningSlower;
         }
         else if(health <= (panickedStats.Health / 2f) && health > 0)
         {
             statesEnum = PanickedState.WoundedInTheGround;
+            panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.Wounded;
         }
         else if (health <= 0)
         {
             statesEnum = PanickedState.Dead;
+            panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.Dying;
         }
     }
 }
