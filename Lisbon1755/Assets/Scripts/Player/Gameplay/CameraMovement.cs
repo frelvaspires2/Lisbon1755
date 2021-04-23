@@ -64,19 +64,10 @@ public class CameraMovement : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        UpdateCameraRotation();
+        UpdateRotation();
+        //UpdateCameraRotation();
         UpdateCameraPosition();
         PreventCharacterOcclusion();
-    }
-
-    /// <summary>
-    /// Update the camera's rotation.
-    /// </summary>
-    private void UpdateCameraRotation()
-    {
-        newRotation = transform.localEulerAngles;
-
-        transform.localEulerAngles = newRotation;
     }
 
     /// <summary>
@@ -111,5 +102,27 @@ public class CameraMovement : MonoBehaviour
             camera.transform.position = Vector3.Lerp(camera.transform.position, raycastHitInfo.point, playerStats.AutoAdjustSpeed * Time.deltaTime);
         else
             camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, intendedPosition, playerStats.AutoAdjustSpeed * Time.deltaTime);
+    }
+
+    /// <summary>
+    /// Update the camer'a rotation.
+    /// </summary>
+    private void UpdateRotation()
+    {
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2))
+        {
+            newRotation = transform.localEulerAngles;
+            newRotation.x -= Input.GetAxis("Mouse Y") * playerStats.MouseAngularVelocityMult;
+
+            if (newRotation.x > 180)
+                newRotation.x = Mathf.Max(newRotation.x, playerStats.MinRotationX);
+            else
+                newRotation.x = Mathf.Min(newRotation.x, playerStats.MaxRotationX);
+
+            if (Input.GetMouseButton(0) && !Input.GetMouseButton(1))
+                newRotation.y += Input.GetAxis("Mouse X") * playerStats.MouseAngularVelocityMult;
+
+            transform.localEulerAngles = newRotation;
+        }
     }
 }

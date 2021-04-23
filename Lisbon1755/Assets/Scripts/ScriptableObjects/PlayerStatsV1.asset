@@ -19,6 +19,8 @@ MonoBehaviour:
   jumpAcceleration: 500
   gravityAcceleration: 30
   mouseAngularVelocityMult: 5
+  maxRotationX: 60
+  minRotationX: 300
   maxAngularVelocity: 50
   maxForwardVelocity: 4
   maxBackwardVelocity: 2
@@ -35,4 +37,6 @@ MonoBehaviour:
   maxDistance: 10
   autoAdjustSpeed: 10
   health: 100
+  healthRegeneration: 0.001
   energy: 50
+  energyRegeneration: 0.01
