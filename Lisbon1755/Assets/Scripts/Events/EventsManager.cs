@@ -12,6 +12,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+    [SerializeField]
+    private Transform interact;
+
     /// <summary>
     /// Access the PlayEvent enum.
     /// </summary>
@@ -161,6 +164,9 @@ public class EventsManager : MonoBehaviour
             if(Input.GetButton("MouseClick"))
             {
                 CheckAnimationType();
+
+                player.transform.position = interact.position;
+                player.transform.rotation = interact.rotation;
 
                 if (clickCount < setHowManyClicks)
                 {
