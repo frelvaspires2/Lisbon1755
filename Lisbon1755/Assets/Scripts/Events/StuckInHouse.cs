@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StuckInHouse : MonoBehaviour
@@ -51,7 +50,10 @@ public class StuckInHouse : MonoBehaviour
     {
         obstacle.SetActive(false);
         npcInDanger.SetActive(false);
-        npcSafe.SetActive(true);
+        if (npcSafe != null)
+        {
+            npcSafe.SetActive(true);
+        }
 
         StartCoroutine(Disappear(npcSafe));
     }

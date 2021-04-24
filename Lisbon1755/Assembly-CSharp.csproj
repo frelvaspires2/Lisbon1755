@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Events\EventResult.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\Transition.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\RunningState.cs" />
+    <Compile Include="Assets\Scripts\Events\StuckInHouse.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Events\EventType.cs" />
@@ -97,7 +98,7 @@
     <Compile Include="Assets\Scripts\Events\StuckInObjects.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
-    <Compile Include="Assets\Scripts\Events\StuckInHouse.cs" />
+    <Compile Include="Assets\Scripts\Events\Heretics.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

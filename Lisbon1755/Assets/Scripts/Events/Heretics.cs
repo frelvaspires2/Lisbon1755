@@ -1,25 +1,22 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
-public class StuckInObjects : MonoBehaviour
+public class Heretics : MonoBehaviour
 {
     [SerializeField]
     private EventsManager eventManager;
 
     [SerializeField]
-    private GameObject obstacle;
-
-    [SerializeField]
-    private GameObject finished;
+    private GameObject stick;
 
     [SerializeField]
     private GameObject npcInDanger;
 
     [SerializeField]
-    private GameObject npcDead;
+    private GameObject npcSafe;
 
     [SerializeField]
-    private GameObject npcSafe;
+    private GameObject npcDead;
 
     [SerializeField]
     private float timeToDisappear = 5f;
@@ -31,7 +28,7 @@ public class StuckInObjects : MonoBehaviour
 
     private void STM()
     {
-        switch(eventManager.GetEventResult)
+        switch (eventManager.GetEventResult)
         {
             case EventResult.None:
                 NoneState();
@@ -47,8 +44,7 @@ public class StuckInObjects : MonoBehaviour
 
     private void NoneState()
     {
-        obstacle.SetActive(true);
-        finished.SetActive(false);
+        stick.SetActive(true);
         npcInDanger.SetActive(true);
         npcSafe.SetActive(false);
         npcDead.SetActive(false);
@@ -56,8 +52,7 @@ public class StuckInObjects : MonoBehaviour
 
     private void WonState()
     {
-        obstacle.SetActive(false);
-        finished.SetActive(true);
+        stick.SetActive(true);
         npcInDanger.SetActive(false);
         if (npcSafe != null)
         {
@@ -70,8 +65,7 @@ public class StuckInObjects : MonoBehaviour
 
     private void LostState()
     {
-        obstacle.SetActive(true);
-        finished.SetActive(false);
+        stick.SetActive(true);
         npcInDanger.SetActive(false);
         npcSafe.SetActive(false);
         npcDead.SetActive(true);

@@ -12,6 +12,7 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+
     [SerializeField]
     private Transform interact;
 
