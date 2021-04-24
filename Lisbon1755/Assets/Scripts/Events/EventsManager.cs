@@ -12,6 +12,10 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+
+    [SerializeField]
+    private Transform interact;
+
     /// <summary>
     /// Access the PlayEvent enum.
     /// </summary>
@@ -50,12 +54,12 @@ public class EventsManager : MonoBehaviour
     /// Count how many times the player clicked.
     /// </summary>
     [SerializeField]
-    private int clickCount;
+    private float clickCount;
 
     /// <summary>
     /// Gets the number of clicks the player has clicked.
     /// </summary>
-    public int ClickCount { get => clickCount; }
+    public float ClickCount { get => clickCount; }
 
     /// <summary>
     /// Access the EventResult enum.
@@ -80,11 +84,32 @@ public class EventsManager : MonoBehaviour
     public EventState GetEventState { get => eventState; }
 
     /// <summary>
+    /// Access the EventAnim enum.
+    /// </summary>
+    [SerializeField]
+    private EventType eventType;
+
+    /// <summary>
+    /// Gets the EventAnim enum.
+    /// </summary>
+    public EventType GetEventType { get => eventType; }
+
+    /// <summary>
+    /// Access the PlayerMovement script.
+    /// </summary>
+    [SerializeField]
+    private PlayerAnimController playerAnimController;
+
+    public bool isClick { get; private set; }
+    
+
+    /// <summary>
     /// To be played on the first frame.
     /// Initialize variables.
     /// </summary>
     private void Start()
     {
+        isClick = false;
         eventState = EventState.Inactive;
         eventResult = EventResult.None;
     }
@@ -139,19 +164,56 @@ public class EventsManager : MonoBehaviour
     {
         if(playEvent.IsClose)
         {
-            if(Input.GetButtonUp("MouseClick"))
+            if(Input.GetButton("MouseClick"))
             {
+                isClick = true;
+                CheckAnimationType();
+
+                player.transform.position = interact.position;
+                player.transform.rotation = interact.rotation;
+
                 if (clickCount < setHowManyClicks)
                 {
-                    clickCount++;
+                    clickCount += 1 * Time.deltaTime;
                 }
                 else
                 {
+                    isClick = false;
                     eventResult = EventResult.Won;
                     eventState = EventState.Finished;
                     clickCount = setHowManyClicks;
                 }
             }
+            else
+            {
+                isClick = false;
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Verify which animation the player will make.
+    /// </summary>
+    private void CheckAnimationType()
+    {
+        switch(eventType)
+        {
+            case EventType.PersonStuckObjects:
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Push;
+                break;
+            case EventType.PersonStuckHouse:
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
+                break;
+            case EventType.Heretics:
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Untie;
+                break;
+            case EventType.Cat:
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.CallCat;
+                break;
+            case EventType.WakeUp:
+                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
+                break;
         }
     }
 
@@ -161,10 +223,19 @@ public class EventsManager : MonoBehaviour
     /// <param name="other"> Chosen collider.</param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player && eventState == EventState.Inactive)
+        if (other.gameObject == player && eventState != EventState.Finished)
         {
             // começar evento
             StartEvent();
+            other.GetComponent<PlayerMovement>().eventsManager = this;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject == player)
+        {
+            other.GetComponent<PlayerMovement>().eventsManager = null;
         }
     }
 

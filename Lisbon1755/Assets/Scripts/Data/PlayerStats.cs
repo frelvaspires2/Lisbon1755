@@ -85,6 +85,28 @@ public class PlayerStats : ScriptableObject
     public float MouseAngularVelocityMult { get => mouseAngularVelocityMult; }
 
     /// <summary>
+    /// Max rotation in x axis for camera.
+    /// </summary>
+    [SerializeField]
+    private float maxRotationX = 60.0f;
+
+    /// <summary>
+    /// Gets max rotation in x axis for camera.
+    /// </summary>
+    public float MaxRotationX { get => maxRotationX; }
+
+    /// <summary>
+    /// Min rotation in x axis for comera.
+    /// </summary>
+    [SerializeField]
+    private float minRotationX = 300.00f;
+
+    /// <summary>
+    /// Gets min rotation in x axis for camera.
+    /// </summary>
+    public float MinRotationX { get => minRotationX; }
+
+    /// <summary>
     /// Max angular velocity.
     /// </summary>
     [SerializeField]
