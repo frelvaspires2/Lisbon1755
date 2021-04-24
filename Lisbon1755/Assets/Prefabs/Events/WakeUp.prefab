@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8105914559225378119}
   m_Layer: 0
-  m_Name: Dead
+  m_Name: NPCDead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,25 +298,6 @@ Transform:
   m_Father: {fileID: 490498461067893478}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8105914559377320977
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8988225573798482255}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a3e627f0f78a4364cac2b6a04bdf2b73, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8105914559641606526
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +358,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.5, y: 2.0359304, z: 3.5}
   m_Center: {x: -0, y: 1.0218849, z: 0}
+--- !u!65 &469598746
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988225573798482255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.693738, y: 2, z: 0.5303936}
+  m_Center: {x: -0.069217205, y: 1, z: 0.05036497}
+--- !u!95 &8105914559377320977
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988225573798482255}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3e627f0f78a4364cac2b6a04bdf2b73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &11167228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988225574145160865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.66919756, y: 1.9008543, z: 0.7045245}
+  m_Center: {x: -0.020780802, y: 0.96525633, z: 0.11274457}
 --- !u!95 &8105914559724637171
 Animator:
   serializedVersion: 3
@@ -449,15 +475,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83a47bb3df218014cab485e7d4640586, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83a47bb3df218014cab485e7d4640586, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83a47bb3df218014cab485e7d4640586, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 83a47bb3df218014cab485e7d4640586, type: 3}
       propertyPath: m_Name
@@ -523,19 +549,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd845e806de30a2479d4e31ec5cbad7c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd845e806de30a2479d4e31ec5cbad7c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd845e806de30a2479d4e31ec5cbad7c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fd845e806de30a2479d4e31ec5cbad7c, type: 3}
       propertyPath: m_Name
-      value: Terrified
+      value: NPCinDanger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd845e806de30a2479d4e31ec5cbad7c, type: 3}
@@ -602,19 +628,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c6a4e6cae2109c4aa2c74be14f91d3f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c6a4e6cae2109c4aa2c74be14f91d3f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c6a4e6cae2109c4aa2c74be14f91d3f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6c6a4e6cae2109c4aa2c74be14f91d3f, type: 3}
       propertyPath: m_Name
-      value: Quick Informal Bow
+      value: NPCSafe
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6c6a4e6cae2109c4aa2c74be14f91d3f, type: 3}
       propertyPath: m_IsActive

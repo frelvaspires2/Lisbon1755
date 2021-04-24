@@ -19,6 +19,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &782042727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794470691175151933}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9999998, y: 1.7717767, z: 0.8591428}
+  m_Center: {x: 0, y: 0.9432586, z: 0.16782285}
 --- !u!95 &1451940597866987818
 Animator:
   serializedVersion: 3
@@ -38,6 +51,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &615296488
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794470692325047126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9999998, y: 1.7603469, z: 0.528768}
+  m_Center: {x: 0, y: 0.9228978, z: 0.08771658}
 --- !u!1 &5932982482128618337
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 89708397239b17045b89897dbadab758, type: 3}
       propertyPath: m_Name
-      value: Waving
+      value: NPCDanger
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 89708397239b17045b89897dbadab758, type: 3}
       propertyPath: m_IsActive
@@ -481,7 +507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3200e17fb0703bc4d958b30345c118d3, type: 3}
       propertyPath: m_Name
-      value: 'Quick Informal Bow '
+      value: NPCSafe
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3200e17fb0703bc4d958b30345c118d3, type: 3}
       propertyPath: m_IsActive
