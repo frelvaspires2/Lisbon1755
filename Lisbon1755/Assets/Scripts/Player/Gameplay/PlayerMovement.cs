@@ -6,6 +6,9 @@ using System.Collections;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    private EventsManager eventsManager;
+
     /// <summary>
     /// Access the PlayerAnimController script.
     /// </summary>
@@ -532,6 +535,26 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.injuredRunBack;
             }
+        }
+        else if(eventsManager.GetEventType == EventType.PersonStuckObjects)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Push;
+        }
+        else if (eventsManager.GetEventType == EventType.PersonStuckHouse)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
+        }
+        else if (eventsManager.GetEventType == EventType.Heretics)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Untie;
+        }
+        else if (eventsManager.GetEventType == EventType.Cat)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.CallCat;
+        }
+        else if (eventsManager.GetEventType == EventType.WakeUp)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
         }
         else
         {

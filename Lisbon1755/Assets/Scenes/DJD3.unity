@@ -914,6 +914,10 @@ PrefabInstance:
       propertyPath: playerAnimController
       value: 
       objectReference: {fileID: 2078701756}
+    - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
+      propertyPath: eventType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5345862640850990582, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: m_Name
       value: StuckInObjects
