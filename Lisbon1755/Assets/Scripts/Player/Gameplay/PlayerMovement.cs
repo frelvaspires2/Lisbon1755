@@ -6,6 +6,8 @@ using System.Collections;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    public EventsManager eventsManager { get; set; }
+
     /// <summary>
     /// Access the PlayerAnimController script.
     /// </summary>
@@ -151,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
         isRunning = false;
         isStrafe = false;
         isBackward = false;
+        eventsManager = null;
     }
 
     /// <summary>
@@ -532,6 +535,26 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.injuredRunBack;
             }
+        }
+        else if (eventsManager != null && eventsManager.GetEventType == EventType.PersonStuckObjects && eventsManager.isClick)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Push;
+        }
+        else if (eventsManager != null && eventsManager.GetEventType == EventType.PersonStuckHouse && eventsManager.isClick)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
+        }
+        else if (eventsManager != null && eventsManager.GetEventType == EventType.Heretics && eventsManager.isClick)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Untie;
+        }
+        else if (eventsManager != null && eventsManager.GetEventType == EventType.Cat && eventsManager.isClick)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.CallCat;
+        }
+        else if (eventsManager != null && eventsManager.GetEventType == EventType.WakeUp && eventsManager.isClick)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
         }
         else
         {

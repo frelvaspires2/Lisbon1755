@@ -99,6 +99,7 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private PlayerAnimController playerAnimController;
 
+    public bool isClick { get; private set; }
     
 
     /// <summary>
@@ -107,6 +108,7 @@ public class EventsManager : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        isClick = false;
         eventState = EventState.Inactive;
         eventResult = EventResult.None;
     }
@@ -163,6 +165,7 @@ public class EventsManager : MonoBehaviour
         {
             if(Input.GetButton("MouseClick"))
             {
+                isClick = true;
                 CheckAnimationType();
 
                 player.transform.position = interact.position;
@@ -174,6 +177,7 @@ public class EventsManager : MonoBehaviour
                 }
                 else
                 {
+                    isClick = false;
                     eventResult = EventResult.Won;
                     eventState = EventState.Finished;
                     clickCount = setHowManyClicks;
@@ -181,6 +185,7 @@ public class EventsManager : MonoBehaviour
             }
             else
             {
+                isClick = false;
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
             }
         }
@@ -217,10 +222,19 @@ public class EventsManager : MonoBehaviour
     /// <param name="other"> Chosen collider.</param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player && eventState == EventState.Inactive)
+        if (other.gameObject == player && eventState != EventState.Finished)
         {
             // começar evento
             StartEvent();
+            other.GetComponent<PlayerMovement>().eventsManager = this;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject == player)
+        {
+            other.GetComponent<PlayerMovement>().eventsManager = null;
         }
     }
 
