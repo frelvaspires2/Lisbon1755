@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 30
+  fallingObject: {fileID: 6970431839419384652}
 --- !u!135 &7339966155255882140
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -138,5 +139,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
