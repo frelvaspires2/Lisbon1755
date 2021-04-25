@@ -19,6 +19,15 @@ public class ThrowObject : MonoBehaviour
     [SerializeField]
     private bool isThrowed;
 
+    [SerializeField]
+    private float speed = 4;
+
+    [SerializeField]
+    private float rotateY;
+
+    [SerializeField]
+    private bool addForce;
+
     private void Start()
     {
         isThrowed = false;
@@ -37,8 +46,14 @@ public class ThrowObject : MonoBehaviour
     {
         spawn = spawnLocation.position;
 
-        Instantiate(fallingObject, 
-            new Vector3(spawnLocation.position.x, spawnLocation.position.y, 
+        Rigidbody rb = Instantiate(fallingObject.GetComponent<Rigidbody>(),
+            new Vector3(spawnLocation.position.x, spawnLocation.position.y,
             spawnLocation.position.z), Quaternion.identity);
+
+        if (addForce)
+        {
+            transform.Rotate(new Vector3(0, rotateY, 0), Space.World);
+            rb.velocity = transform.forward * speed;
+        }
     }
 }
