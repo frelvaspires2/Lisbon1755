@@ -65,9 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\Events\PlayEvent.cs" />
+    <Compile Include="Assets\Scripts\Events\Global\PlayEvent.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimTypes.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\IState.cs" />
+    <Compile Include="Assets\Scripts\Events\Specific\WakeUp.cs" />
     <Compile Include="Assets\Scripts\Data\PanickedStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedController.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\StateMachine.cs" />
@@ -79,28 +80,27 @@
     <Compile Include="Assets\Scripts\Environment\PlayAnim.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\SlowerState.cs" />
-    <Compile Include="Assets\Scripts\Events\EventsManager.cs" />
+    <Compile Include="Assets\Scripts\Events\Global\EventsManager.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\PanickAnimController.cs" />
-    <Compile Include="Assets\Scripts\Events\EventResult.cs" />
+    <Compile Include="Assets\Scripts\Events\Global\EventResult.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\Transition.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\RunningState.cs" />
-    <Compile Include="Assets\Scripts\Events\StuckInHouse.cs" />
+    <Compile Include="Assets\Scripts\Events\Specific\StuckInHouse.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\CameraShake.cs" />
-    <Compile Include="Assets\Scripts\Events\EventType.cs" />
+    <Compile Include="Assets\Scripts\Events\Global\EventType.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerEnergy.cs" />
     <Compile Include="Assets\Scripts\Environment\PlayDMG.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\PanickedState.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\WoundedState.cs" />
-    <Compile Include="Assets\Scripts\Events\EventState.cs" />
+    <Compile Include="Assets\Scripts\Events\Global\EventState.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\SetAnimations.cs" />
+    <Compile Include="Assets\Scripts\Events\Specific\Heretics.cs" />
+    <Compile Include="Assets\Scripts\Events\Specific\CatEvent.cs" />
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
-    <Compile Include="Assets\Scripts\Events\StuckInObjects.cs" />
+    <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
-    <Compile Include="Assets\Scripts\Events\Heretics.cs" />
-    <Compile Include="Assets\Scripts\Events\CatEvent.cs" />
-    <Compile Include="Assets\Scripts\Events\WakeUp.cs" />
     <None Include="Assets\Animations\Events\Cat\Ladymito\Free_cat\Animations\low_poly_cat_animation_list.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
