@@ -9,10 +9,15 @@ using SRandom = System.Random;
 public class RandomThrow : MonoBehaviour
 {
     /// <summary>
-    /// Location of the spawner.
+    /// Setup the spawners.
     /// </summary>
     [SerializeField]
-    private List<Transform> spawnLocations;
+    private SpawnerStats[] spawners;
+
+    /// <summary>
+    /// Location of the spawners.
+    /// </summary>
+    private Dictionary<int, SpawnerStats> spawnLocations;
 
     /// <summary>
     /// Falling object prefab.
@@ -32,33 +37,31 @@ public class RandomThrow : MonoBehaviour
     private Vector3 spawn;
 
     /// <summary>
-    /// Set the speed if force is going to be added.
+    /// Set the time of spawn.
     /// </summary>
-    [SerializeField]
-    private float speed = 4;
-
-    /// <summary>
-    /// Set the direction (y) which the spawner will spawn the object.
-    /// </summary>
-    [SerializeField]
-    private float directionY;
-
-    /// <summary>
-    /// Checks whether the game designer is going to add force.
-    /// </summary>
-    [SerializeField]
-    private bool addForce;
-
     [SerializeField]
     private float time;
 
-
+    /// <summary>
+    /// Checks whether the spawner already spawned.
+    /// </summary>
     private bool isSpawned;
 
 
     private void Start()
     {
         isSpawned = false;
+        SetUpSpawners();
+    }
+
+    private void SetUpSpawners()
+    {
+        spawnLocations = new Dictionary<int, SpawnerStats>();
+
+        for(int i = 0; i < spawners.Length; i++)
+        {
+            spawnLocations.Add(i, spawners[i]);
+        }
     }
 
     private void Update()
@@ -69,31 +72,35 @@ public class RandomThrow : MonoBehaviour
     /// <summary>
     /// Throw the object.
     /// </summary>
-    private void Throw(Transform spawnLocation)
+    private void Throw(int key)
     {
-        spawn = spawnLocation.position;
-
         Rigidbody rb = Instantiate(fallingObject.GetComponent<Rigidbody>(),
-            new Vector3(spawnLocation.position.x, spawnLocation.position.y,
-            spawnLocation.position.z), Quaternion.identity);
+            new Vector3(spawnLocations[key].Position.position.x,
+            spawnLocations[key].Position.position.y,
+            spawnLocations[key].Position.position.z), Quaternion.identity);
 
-        if (addForce)
+        if (spawnLocations[key].AddForce)
         {
-            transform.Rotate(new Vector3(0, directionY, 0), Space.World);
-            rb.velocity = transform.forward * speed;
+            transform.Rotate(new Vector3(0, spawnLocations[key].DirectionY, 0),
+                Space.World);
+            rb.velocity = transform.forward * spawnLocations[key].Speed;
         }
+
+        transform.Rotate(new Vector3(0, -spawnLocations[key].DirectionY, 0),
+               Space.World);
     }
 
     private void Spawners()
     {
         SRandom rnd = new SRandom();
 
-        Transform selectedSpawner;
+        int selectedSpawner;
 
         if (!isSpawned)
         {
-            selectedSpawner = spawnLocations[rnd.Next(0, spawnLocations.Count)];
+            selectedSpawner = rnd.Next(0, spawnLocations.Count);
             Throw(selectedSpawner);
+            Debug.Log("Selected spawner: " + selectedSpawner);
             isSpawned = true;
             StartCoroutine(Wait());
         }
@@ -106,5 +113,7 @@ public class RandomThrow : MonoBehaviour
         yield return wfs;
 
         isSpawned = false;
+
+        StopCoroutine(Wait());
     }
 }
