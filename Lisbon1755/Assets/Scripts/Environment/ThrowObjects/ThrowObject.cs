@@ -13,17 +13,15 @@ public class ThrowObject : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-    [SerializeField]
     private Vector3 spawn;
 
-    [SerializeField]
     private bool isThrowed;
 
     [SerializeField]
     private float speed = 4;
 
     [SerializeField]
-    private float rotateY;
+    private float directionY;
 
     [SerializeField]
     private bool addForce;
@@ -52,7 +50,7 @@ public class ThrowObject : MonoBehaviour
 
         if (addForce)
         {
-            transform.Rotate(new Vector3(0, rotateY, 0), Space.World);
+            transform.Rotate(new Vector3(0, directionY, 0), Space.World);
             rb.velocity = transform.forward * speed;
         }
     }

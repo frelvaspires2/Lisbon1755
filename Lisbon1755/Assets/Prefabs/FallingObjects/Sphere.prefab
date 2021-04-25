@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5455069177110976154}
   - component: {fileID: 7053190198144701818}
   - component: {fileID: 5518885472969056022}
-  - component: {fileID: 168045613378786541}
   - component: {fileID: 594259200064403802}
+  - component: {fileID: 4855587587453901152}
+  - component: {fileID: 7339966155255882140}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -97,23 +98,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &168045613378786541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6970431839419384652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a33be8a68180cf4da5f3ee5438c1da2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnLocation: {fileID: 0}
-  fallingObject: {fileID: 0}
-  player: {fileID: 0}
-  spawn: {x: 0, y: 0, z: 0}
-  isThrowed: 0
 --- !u!54 &594259200064403802
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,3 +114,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4855587587453901152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970431839419384652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04aa3711e13259a489360b53bd678d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 30
+--- !u!135 &7339966155255882140
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970431839419384652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

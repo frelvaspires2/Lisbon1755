@@ -623,10 +623,9 @@ MonoBehaviour:
   spawnLocation: {fileID: 520079018}
   fallingObject: {fileID: 6970431839419384652, guid: a345a60d8a0576d4896909dea66cc539, type: 3}
   player: {fileID: 2078701755}
-  spawn: {x: 0, y: 0, z: 0}
-  isThrowed: 0
   speed: 4
-  rotateY: 0
+  directionY: 0
+  addForce: 1
 --- !u!65 &1563653815
 BoxCollider:
   m_ObjectHideFlags: 0
