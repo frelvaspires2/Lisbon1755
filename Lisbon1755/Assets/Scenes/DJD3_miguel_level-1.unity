@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.4449776, g: 0.49455935, b: 0.5736864, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 19e2dffda3a28a447b81e00e99ead015, type: 2}
   m_LightingSettings: {fileID: 1583840092}
 --- !u!196 &4
 NavMeshSettings:
@@ -242,11 +242,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
---- !u!1 &43134258 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8871617513773810611, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-  m_PrefabInstance: {fileID: 43134257}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &45509845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8390680405410486442, guid: b0d315d145ef7bc4988f7f7220f1e661, type: 3}
@@ -5647,7 +5642,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -6672,11 +6667,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 44, y: 23.517246, z: 10.050007}
   m_Center: {x: -22, y: 11.758623, z: -4.975004}
---- !u!95 &1017580997 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1017580997, guid: 697cfef8b7613f149b153dbd0477a0da, type: 3}
-  m_PrefabInstance: {fileID: 6846170711582828676}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1028361498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1210334328554751383, guid: b0d315d145ef7bc4988f7f7220f1e661, type: 3}
@@ -6999,8 +6989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254cb16dcc2968a499ab80a9b412cfbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 43134258}
-  animController: {fileID: 1017580997}
 --- !u!65 &1311806858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12661,7 +12649,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 563203120, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
   m_PrefabInstance: {fileID: 43134257}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43134258}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5b8b70eea7e32746aa40405dc1e35d0, type: 3}
@@ -12672,7 +12660,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 563203119, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
   m_PrefabInstance: {fileID: 43134257}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43134258}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b30d6410683d51a4aadf948574ec2b2f, type: 3}
