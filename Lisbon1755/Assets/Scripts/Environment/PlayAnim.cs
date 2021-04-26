@@ -22,12 +22,29 @@ public class PlayAnim : MonoBehaviour
     private bool isPlayed;
 
     /// <summary>
+    /// Gets whether the animation already started.
+    /// </summary>
+    public bool IsPlayed { get => isPlayed; }
+
+    /// <summary>
+    /// Check if the animation is finished.
+    /// </summary>
+    [SerializeField]
+    private bool isDone;
+
+    /// <summary>
+    /// Gets whether the animation is finished.
+    /// </summary>
+    public bool IsDone { get => isDone; }
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// </summary>
     private void Start()
     {
         isPlayed = false;
+        isDone = false;
         animController = GetComponent<Animator>();
     }
 
@@ -45,5 +62,10 @@ public class PlayAnim : MonoBehaviour
             // Play the animation.
             animController.Play(animName);
         }
+    }
+
+    public void AnimationDone()
+    {
+        isDone = true;
     }
 }
