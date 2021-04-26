@@ -76,6 +76,9 @@ public class GameData : MonoBehaviour
         CheckIfDead();
     }
 
+    /// <summary>
+    /// Check if the player died, if so, reload the current scene.
+    /// </summary>
     private void CheckIfDead()
     {
         if (health <= 0)
@@ -84,6 +87,9 @@ public class GameData : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Update the variables.
+    /// </summary>
     private void UpdateVariables()
     {
         health = playerHealth.Health;
