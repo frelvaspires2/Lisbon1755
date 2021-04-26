@@ -37,6 +37,10 @@ public class PlayAnim : MonoBehaviour
     /// </summary>
     public bool IsDone { get => isDone; }
 
+
+    [SerializeField]
+    private CameraShake cameraShake;
+
     /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
@@ -61,11 +65,13 @@ public class PlayAnim : MonoBehaviour
             isPlayed = true;
             // Play the animation.
             animController.Play(animName);
+            cameraShake.CanShake = true;
         }
     }
 
     public void AnimationDone()
     {
         isDone = true;
+        cameraShake.CanShake = false;
     }
 }
