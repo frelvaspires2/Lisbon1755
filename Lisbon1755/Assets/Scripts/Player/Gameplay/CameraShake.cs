@@ -6,10 +6,19 @@
 public class CameraShake : MonoBehaviour
 {
     /// <summary>
-    /// Turn on/off the shake in inspector (for testing purposes).
+    /// Check whether the camera can shake.
     /// </summary>
     [SerializeField]
     private bool canShake;
+
+    /// <summary>
+    /// Gets or sets whether the camera can shake.
+    /// </summary>
+    public bool CanShake
+    {
+        get => canShake;
+        set => canShake = value;
+    }
 
     /// <summary>
     /// Access the position of the camera.
@@ -26,8 +35,8 @@ public class CameraShake : MonoBehaviour
     /// <summary>
     /// Access the coordinates of the original position.
     /// </summary>
-    [SerializeField]
     private Vector3 originalPos;
+
 
     /// <summary>
     /// Set the original position equal to the camera position.
@@ -46,7 +55,13 @@ public class CameraShake : MonoBehaviour
     {
         if(canShake)
         {
-            camera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+            InfiniteShake();
         }
     }
+
+    private void InfiniteShake()
+    {
+            camera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+    }
+
 }
