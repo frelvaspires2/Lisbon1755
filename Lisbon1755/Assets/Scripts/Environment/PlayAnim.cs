@@ -52,6 +52,14 @@ public class PlayAnim : MonoBehaviour
         animController = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if(!isDone && IsPlayed)
+        {
+            cameraShake.CanShake = true;
+        }
+    }
+
     /// <summary>
     /// Detect trigger when enters.
     /// </summary>
@@ -65,7 +73,6 @@ public class PlayAnim : MonoBehaviour
             isPlayed = true;
             // Play the animation.
             animController.Play(animName);
-            cameraShake.CanShake = true;
         }
     }
 
