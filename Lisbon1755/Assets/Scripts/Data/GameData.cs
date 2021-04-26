@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Game data (to be accessed by UIs etc).
@@ -51,10 +52,45 @@ public class GameData : MonoBehaviour
     public float Energy { get => energy; }
 
     /// <summary>
+    /// Access the current scene.
+    /// </summary>
+    private Scene scene;
+
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize variables.
+    /// </summary>
+    private void Start()
+    {
+        scene = SceneManager.GetActiveScene();
+    }
+
+    /// <summary>
     /// To be played every frame.
     /// Update the variables.
+    /// Check if the player is dead.
     /// </summary>
     private void Update()
+    {
+        UpdateVariables();
+        CheckIfDead();
+    }
+
+    /// <summary>
+    /// Check if the player died, if so, reload the current scene.
+    /// </summary>
+    private void CheckIfDead()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(scene.name);
+        }
+    }
+
+    /// <summary>
+    /// Update the variables.
+    /// </summary>
+    private void UpdateVariables()
     {
         health = playerHealth.Health;
         isInjured = playerHealth.IsInjured;

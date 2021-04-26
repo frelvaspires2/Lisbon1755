@@ -78,7 +78,7 @@
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\State.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\PanickAnimTypes.cs" />
-    <Compile Include="Assets\Scripts\Environment\PlayAnim.cs" />
+    <Compile Include="Assets\Scripts\Environment\Play\PlayAnim.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\SlowerState.cs" />
     <Compile Include="Assets\Scripts\Events\Global\EventsManager.cs" />
@@ -93,7 +93,7 @@
     <Compile Include="Assets\Scripts\Player\Gameplay\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Events\Global\EventType.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerEnergy.cs" />
-    <Compile Include="Assets\Scripts\Environment\PlayDMG.cs" />
+    <Compile Include="Assets\Scripts\Environment\Play\PlayDMG.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\PanickedState.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\WoundedState.cs" />
     <Compile Include="Assets\Scripts\Events\Global\EventState.cs" />
@@ -105,6 +105,8 @@
     <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
+    <Compile Include="Assets\Scripts\Environment\Play\PlayDMGAnim.cs" />
+    <Compile Include="Assets\Scripts\Environment\BlockArea.cs" />
     <None Include="Assets\Animations\Events\Cat\Ladymito\Free_cat\Animations\low_poly_cat_animation_list.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
