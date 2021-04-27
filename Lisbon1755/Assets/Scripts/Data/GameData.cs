@@ -57,12 +57,81 @@ public class GameData : MonoBehaviour
     private Scene scene;
 
     /// <summary>
+    /// Access the EventsManager script.
+    /// </summary>
+    [SerializeField]
+    private EventsManager eventsManager;
+
+    /// <summary>
+    /// Checks whether the player is clicking in the event.
+    /// </summary>
+    [SerializeField]
+    private bool isPlayerClickingEvent;
+
+    /// <summary>
+    /// Access the PlayerMovement script.
+    /// </summary>
+    [SerializeField]
+    private PlayerMovement playerMovement;
+
+    /// <summary>
+    /// Check how many clicks the player has done in the event.
+    /// </summary>
+    [SerializeField]
+    private int howManyClicks;
+
+    /// <summary>
+    /// Gets how many clicks the player has done in the event.
+    /// </summary>
+    public int HowManyClicks { get => howManyClicks; }
+
+    /// <summary>
+    /// Check the event countdown.
+    /// </summary>
+    [SerializeField]
+    private float clickCount;
+
+    /// <summary>
+    /// Gets the event countdown.
+    /// </summary>
+    public float ClickCount { get => clickCount; }
+
+    /// <summary>
+    /// Gets whether the player is clicking in the event.
+    /// </summary>
+    public bool IsPlayerClickingEvent { get => isPlayerClickingEvent; }
+
+    /// <summary>
+    /// Check the event time counter.
+    /// </summary>
+    [SerializeField]
+    private int eventTimeCounter;
+
+    /// <summary>
+    /// Gets the event time counter.
+    /// </summary>
+    public int EventTimeCounter { get => eventTimeCounter; }
+
+    /// <summary>
+    /// Check the initial event time.
+    /// </summary>
+    [SerializeField]
+    private int setEventTime;
+
+    /// <summary>
+    /// Get the initial event time.
+    /// </summary>
+    public int SetEventTime { get => setEventTime; }
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// </summary>
     private void Start()
     {
         scene = SceneManager.GetActiveScene();
+        eventsManager = null;
+        ResetValues();
     }
 
     /// <summary>
@@ -95,5 +164,47 @@ public class GameData : MonoBehaviour
         health = playerHealth.Health;
         isInjured = playerHealth.IsInjured;
         energy = playerEnergy.Energy;
+
+        CheckIfTheresEvent();
+    }
+
+    /// <summary>
+    /// Check if the player is inside of an event.
+    /// </summary>
+    private void CheckIfTheresEvent()
+    {
+        if(playerMovement.eventsManager != null)
+        {
+            eventsManager = playerMovement.eventsManager;
+            AccessEventValues();
+        }
+        else
+        {
+            ResetValues();
+        }
+    }
+
+    /// <summary>
+    /// Access the event values.
+    /// </summary>
+    private void AccessEventValues()
+    {
+        isPlayerClickingEvent = eventsManager.isClick;
+        howManyClicks = eventsManager.HowManyClicks;
+        clickCount = eventsManager.ClickCount;
+        eventTimeCounter = eventsManager.EventTimeCounter;
+        setEventTime = eventsManager.SetEventTime;
+    }
+
+    /// <summary>
+    /// Reset the event values.
+    /// </summary>
+    private void ResetValues()
+    {
+        isPlayerClickingEvent = default;
+        howManyClicks = default;
+        clickCount = default;
+        eventTimeCounter = default;
+        setEventTime = default;
     }
 }

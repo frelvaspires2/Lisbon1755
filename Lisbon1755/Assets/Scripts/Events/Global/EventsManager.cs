@@ -12,7 +12,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-
+    /// <summary>
+    /// Access the transform of the interaction point.
+    /// </summary>
     [SerializeField]
     private Transform interact;
 
@@ -38,6 +40,11 @@ public class EventsManager : MonoBehaviour
     /// </summary>
     [SerializeField]
     private int setEventTime = 10;
+
+    /// <summary>
+    /// Get the event maximum time to complete.
+    /// </summary>
+    public int SetEventTime { get => setEventTime; }
 
     /// <summary>
     /// Set how many times the player must click to complete it.
@@ -100,6 +107,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private PlayerAnimController playerAnimController;
 
+    /// <summary>
+    /// Gets whether the player is clicking in event.
+    /// </summary>
     public bool isClick { get; private set; }
     
 
@@ -231,6 +241,10 @@ public class EventsManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Exit the event.
+    /// </summary>
+    /// <param name="other"> Chosen collider.</param>
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject == player)
