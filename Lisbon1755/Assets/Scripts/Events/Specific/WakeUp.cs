@@ -18,6 +18,18 @@ public class WakeUp : MonoBehaviour
     [SerializeField]
     private float timeToDisappear = 5f;
 
+    [SerializeField]
+    private Animator buildingAnim;
+
+    [SerializeField]
+    private string animStateName;
+
+    [SerializeField]
+    private CameraShake cameraShake;
+
+    [SerializeField]
+    private EndAnim endAnim;
+
     private void Update()
     {
         STM();
@@ -60,9 +72,21 @@ public class WakeUp : MonoBehaviour
 
     private void LostState()
     {
-        npcInDanger.SetActive(false);
+        npcInDanger.SetActive(true);
         npcSafe.SetActive(false);
-        npcDead.SetActive(true);
+        npcDead.SetActive(false);
+
+        buildingAnim.Play(animStateName);
+
+        if(endAnim.IsAnimationFinished)
+        {
+            cameraShake.CanShake = false;
+            npcInDanger.SetActive(false);
+        }
+        else
+        {
+            cameraShake.CanShake = true;
+        }
     }
 
     private IEnumerator Disappear(GameObject gameObject)
