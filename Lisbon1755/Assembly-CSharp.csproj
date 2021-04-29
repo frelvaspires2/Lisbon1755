@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Player\Gameplay\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_GotHitScreen.cs" />
      <Compile Include="Assets\Scripts\Events\Global\PlayEvent.cs" />
      <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimTypes.cs" />
      <Compile Include="Assets\Scripts\PanickedPerson\AI\States\IState.cs" />
