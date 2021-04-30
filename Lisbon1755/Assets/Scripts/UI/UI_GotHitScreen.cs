@@ -38,5 +38,4 @@ public class UI_GotHitScreen : MonoBehaviour
             }
         }
     }
-}
- 
+} 
