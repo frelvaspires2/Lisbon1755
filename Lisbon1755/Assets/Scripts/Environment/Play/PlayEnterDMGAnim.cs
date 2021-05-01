@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Play the damage when enters a target in house animations.
+/// </summary>
 public class PlayEnterDMGAnim : MonoBehaviour
 {
     /// <summary>
@@ -31,6 +34,10 @@ public class PlayEnterDMGAnim : MonoBehaviour
     /// </summary>
     private bool isNPCHit;
 
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize variables.
+    /// </summary>
     private void Start()
     {
         isPlayerHit = false;
