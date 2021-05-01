@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 /// <summary>
 /// Manage the got hit ui.
@@ -19,7 +20,7 @@ public class UI_GotHitScreen : MonoBehaviour
     private GameData gameData;
 
     /// <summary>
-    /// Make the screen red.
+    /// Make the screen red while the player is injured.
     /// </summary>
     private void GotHurt()
     {
@@ -28,6 +29,20 @@ public class UI_GotHitScreen : MonoBehaviour
         color.a = 0.8f;
 
         gotHitScreen.color = color;
+    }
+
+    /// <summary>
+    /// Make the screen red for a bit when the player is hit.
+    /// </summary>
+    public void GotHit()
+    {
+        Color color = gotHitScreen.color;
+
+        color.a = 0.8f;
+
+        gotHitScreen.color = color;
+
+        StartCoroutine(HitRoutine());
     }
 
     /// <summary>
@@ -45,10 +60,27 @@ public class UI_GotHitScreen : MonoBehaviour
         {
             if (gotHitScreen.color.a > 0)
             {
-                var color = gotHitScreen.color;
+                Color color = gotHitScreen.color;
                 color.a -= 0.01f;
                 gotHitScreen.color = color;
             }
         }
+    }
+
+    /// <summary>
+    /// Make the screen return to normal after the player being hit.
+    /// </summary>
+    /// <returns> Wait for seconds.</returns>
+    private IEnumerator HitRoutine()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(0.5f);
+
+        yield return wfs;
+
+        Color color = gotHitScreen.color;
+
+        color.a = 0.0f;
+
+        gotHitScreen.color = color;
     }
 }

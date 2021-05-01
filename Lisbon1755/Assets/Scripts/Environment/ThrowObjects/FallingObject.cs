@@ -27,6 +27,7 @@ public class FallingObject : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             other.GetComponent<PlayerHealth>().Health -= dmg;
+            other.GetComponent<UI_GotHitScreen>().GotHit();
             Destroy(fallingObject);
         }
         // In case it's an NPC.

@@ -66,6 +66,7 @@ public class PlayCartDMG : MonoBehaviour
         if (other.gameObject == player && !isPlayerHit && !isDone)
         {
             player.GetComponent<PlayerHealth>().Health -= dmg;
+            player.GetComponent<UI_GotHitScreen>().GotHit();
             isPlayerHit = true;
         }
         // If it's an NPC, then decrement health.

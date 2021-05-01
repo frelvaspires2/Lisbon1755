@@ -60,6 +60,7 @@ public class PlayDMGAnim : MonoBehaviour
         if (other.gameObject == player && playAnim.IsDone && !isPlayerHit)
         {
             player.GetComponent<PlayerHealth>().Health -= dmg;
+            player.GetComponent<UI_GotHitScreen>().GotHit();
             isPlayerHit = true;
         }
         // If it's an NPC, then decrement health.
