@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 /// <summary>
 /// Shake the camera (to look like an earthquake is happening).
@@ -37,6 +38,13 @@ public class CameraShake : MonoBehaviour
     /// </summary>
     private Vector3 originalPos;
 
+    [SerializeField]
+    private bool canRandomShake;
+
+    private void Start()
+    {
+        canRandomShake = false;
+    }
 
     /// <summary>
     /// Set the original position equal to the camera position.
@@ -57,6 +65,11 @@ public class CameraShake : MonoBehaviour
         {
             InfiniteShake();
         }
+        else if(canRandomShake)
+        {
+            StartCoroutine(ShakeRoutine());
+            InfiniteShake();
+        }
     }
 
     private void InfiniteShake()
@@ -64,4 +77,14 @@ public class CameraShake : MonoBehaviour
             camera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
     }
 
+    private IEnumerator ShakeRoutine()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(2);
+
+        yield return wfs;
+
+        canRandomShake = false;
+
+        StopCoroutine(ShakeRoutine());
+    }
 }
