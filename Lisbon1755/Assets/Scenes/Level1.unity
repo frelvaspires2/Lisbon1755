@@ -311,7 +311,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.324664, y: 5.285448, z: 0.32073662}
   m_Center: {x: 0.0000038146973, y: 2.642724, z: -0.0000038146973}
---- !u!114 &6090694
+--- !u!114 &6090693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,11 +320,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6090690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d98c2e29a2eff45b727051a316037d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 100
+  dmg: 30
+  playAnim: {fileID: 1448743051}
 --- !u!1 &7274082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1147576628384393477, guid: 23bf8bcfefd3a7949b32f565aff0bd82, type: 3}
@@ -1686,11 +1687,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 75763248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &75763253
 BoxCollider:
@@ -2161,7 +2162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 97713304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -2419,11 +2420,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 112647418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!1 &114190009 stripped
 GameObject:
@@ -2575,11 +2576,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 122578070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &122578075
 BoxCollider:
@@ -2752,6 +2753,7 @@ MonoBehaviour:
   animName: Anim
   isPlayed: 0
   isDone: 0
+  hasStarted: 0
   cameraShake: {fileID: 353155770}
 --- !u!65 &127660356
 BoxCollider:
@@ -3934,7 +3936,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6212130897515726410, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &192410312
+--- !u!114 &192410308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3943,7 +3945,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 192410307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -4035,7 +4037,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1205043, y: 1.7419337, z: 0.030269751}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &195815401
+--- !u!114 &195815400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4044,11 +4046,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 195815397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d98c2e29a2eff45b727051a316037d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
+  playAnim: {fileID: 1448743051}
 --- !u!1001 &199123281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4183,11 +4186,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 204570200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &204570205
 BoxCollider:
@@ -5080,11 +5083,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 259784032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &259784037
 BoxCollider:
@@ -5718,7 +5721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &304119415
 Transform:
   m_ObjectHideFlags: 0
@@ -5948,11 +5951,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 323467618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!1 &324973329 stripped
 GameObject:
@@ -6040,7 +6043,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1205041, y: 1.7419337, z: 0.030269751}
   m_Center: {x: 0, y: 0, z: -0.0000038146973}
---- !u!114 &327418454
+--- !u!114 &327418453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6049,11 +6052,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 327418450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d98c2e29a2eff45b727051a316037d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
+  playAnim: {fileID: 1448743051}
 --- !u!1 &328870552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3687528809995965172, guid: 23bf8bcfefd3a7949b32f565aff0bd82, type: 3}
@@ -6503,7 +6507,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8575368361226818902, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &348091776
+--- !u!114 &348091772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6512,7 +6516,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 348091771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -7129,6 +7133,7 @@ MonoBehaviour:
   animName: Anim
   isPlayed: 0
   isDone: 0
+  hasStarted: 0
   cameraShake: {fileID: 353155770}
 --- !u!1 &404756462 stripped
 GameObject:
@@ -13684,7 +13689,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7047738, y: 2.7898648, z: 0.9259376}
   m_Center: {x: -9.230888e-24, y: 1.3949343, z: -0.0000038146973}
---- !u!114 &490755765
+--- !u!114 &490755764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13693,11 +13698,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 490755761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d98c2e29a2eff45b727051a316037d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 50
+  dmg: 40
+  playAnim: {fileID: 1448743051}
 --- !u!1 &492078555 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9177381165210631531, guid: 23bf8bcfefd3a7949b32f565aff0bd82, type: 3}
@@ -14821,11 +14827,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 548169991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &548169996
 BoxCollider:
@@ -14854,11 +14860,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 549387633}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!1 &549545797 stripped
 GameObject:
@@ -14908,11 +14914,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 551732074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &551732079
 BoxCollider:
@@ -14975,11 +14981,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 569892590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &569892595
 BoxCollider:
@@ -16304,11 +16310,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 637743076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &637743081
 BoxCollider:
@@ -18181,6 +18187,7 @@ MonoBehaviour:
   animName: Anim
   isPlayed: 0
   isDone: 0
+  hasStarted: 0
   cameraShake: {fileID: 353155770}
 --- !u!65 &736238561
 BoxCollider:
@@ -21878,7 +21885,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8659806411462906515, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &973632145
+--- !u!114 &973632141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21887,7 +21894,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 973632140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -21941,11 +21948,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 977871318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!1 &980935084
 GameObject:
@@ -24114,7 +24121,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6293917356265522126, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1048008611
+--- !u!114 &1048008607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24123,7 +24130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048008606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -24382,11 +24389,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1085726506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!1 &1089646950 stripped
 GameObject:
@@ -24777,11 +24784,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1110979145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &1110979150
 BoxCollider:
@@ -27490,11 +27497,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291719695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!65 &1291719700
 BoxCollider:
@@ -27839,7 +27846,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7342502753709156295, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1323309300
+--- !u!114 &1323309296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27848,7 +27855,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1323309295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -28076,7 +28083,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.324663, y: 0.3444144, z: 0.1911145}
   m_Center: {x: -5.1623316, y: 0.1722072, z: -0.095561065}
---- !u!114 &1329539465
+--- !u!114 &1329539464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28085,11 +28092,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1329539461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d98c2e29a2eff45b727051a316037d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
   dmg: 30
+  playAnim: {fileID: 1448743051}
 --- !u!1 &1334492918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6431643707541063210, guid: 23bf8bcfefd3a7949b32f565aff0bd82, type: 3}
@@ -28665,6 +28673,7 @@ MonoBehaviour:
   animName: Anim
   isPlayed: 0
   isDone: 0
+  hasStarted: 0
   cameraShake: {fileID: 353155770}
 --- !u!65 &1364649573
 BoxCollider:
@@ -29743,7 +29752,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.324663, y: 6.494266, z: 0.29914466}
   m_Center: {x: -0.0000038146973, y: 3.2458951, z: 0.0000002682209}
---- !u!114 &1410139454
+--- !u!114 &1410139453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29752,11 +29761,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1410139450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d98c2e29a2eff45b727051a316037d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 100
+  dmg: 30
+  playAnim: {fileID: 1448743051}
 --- !u!1 &1414672107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6604150902388788610, guid: 23bf8bcfefd3a7949b32f565aff0bd82, type: 3}
@@ -30607,6 +30617,7 @@ MonoBehaviour:
   animName: Anim
   isPlayed: 0
   isDone: 0
+  hasStarted: 0
   cameraShake: {fileID: 353155770}
 --- !u!65 &1445702946
 BoxCollider:
@@ -30695,6 +30706,7 @@ MonoBehaviour:
   animName: Anim
   isPlayed: 0
   isDone: 0
+  hasStarted: 0
   cameraShake: {fileID: 353155770}
 --- !u!208 &1448743052
 NavMeshObstacle:
@@ -37520,11 +37532,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1585544487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
-  dmg: 20
+  dmg: 15
   playAnim: {fileID: 127660355}
 --- !u!1 &1588531643 stripped
 GameObject:
@@ -38051,7 +38063,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5952457194777118940, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1612185925
+--- !u!114 &1612185921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38060,7 +38072,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1612185920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -38275,7 +38287,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6447867439351511377, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1632636479
+--- !u!114 &1632636475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38284,7 +38296,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1632636474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -39401,6 +39413,7 @@ MonoBehaviour:
   animName: Anim
   isPlayed: 0
   isDone: 0
+  hasStarted: 0
   cameraShake: {fileID: 353155770}
 --- !u!1 &1680893816 stripped
 GameObject:
@@ -46226,6 +46239,7 @@ MonoBehaviour:
   animName: Anim
   isPlayed: 0
   isDone: 0
+  hasStarted: 0
   cameraShake: {fileID: 353155770}
 --- !u!65 &2052282335
 BoxCollider:
@@ -46526,7 +46540,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4854419013369699094, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2060658936
+--- !u!114 &2060658932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46535,7 +46549,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2060658931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
@@ -46818,7 +46832,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6406337882798523489, guid: b847982216e1ee9408dff6e0eccf9715, type: 3}
   m_PrefabInstance: {fileID: 232222436623742245}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2087883160
+--- !u!114 &2087883156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46827,7 +46841,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2087883155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855e657e540811d40a6a62464f59a361, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a05c91ad8f7a44d801767a489faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827875487}
