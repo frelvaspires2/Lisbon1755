@@ -1,47 +1,81 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Control the energy bar.
+/// </summary>
 public class UI_EnergyBar : MonoBehaviour
 {
+    /// <summary>
+    /// Access the energy bar.
+    /// </summary>
+    [SerializeField]
     public Slider energyBar;
-    public GameObject MyObject;
 
-    private int maxEnergy = 50;
-    private int currentEnergy;
+    /// <summary>
+    /// Set the max energy value.
+    /// </summary>
+    [SerializeField]
+    private float maxEnergy;
 
-    public static UI_EnergyBar instance;
+    /// <summary>
+    /// Check what is the current energy value.
+    /// </summary>
+    [SerializeField]
+    private float currentEnergy;
 
-    private void Awake()
+    /// <summary>
+    /// Access the slider.
+    /// </summary>
+    [SerializeField]
+    private Slider slider;
+
+    /// <summary>
+    /// Access the GameData script.
+    /// </summary>
+    [SerializeField]
+    private GameData gameData;
+
+    /// <summary>
+    /// Access the PlayerStats scriptable object.
+    /// </summary>
+    [SerializeField]
+    private PlayerStats playerStats;
+
+    /// <summary>
+    /// To be played in the first frame.
+    /// Setup variables.
+    /// </summary>
+    private void Start()
     {
-        instance = this;
-    }
+        maxEnergy = playerStats.Energy;
 
-    void Start()
-    {
         currentEnergy = maxEnergy;
+
         energyBar.maxValue = maxEnergy;
+
         energyBar.value = maxEnergy;
     }
 
-    void SliderEnergy()
+    /// <summary>
+    /// Refill the slider.
+    /// </summary>
+    private void SliderEnergy()
     {
-        var value = energyBar.GetComponent<Slider>().value;
-        value = MyObject.GetComponent<GameData>().Energy;
+        currentEnergy = gameData.Energy;
 
-        energyBar.GetComponent<Slider>().value = value;
+        energyBar.value = currentEnergy;
     }
 
-    void Update()
+    /// <summary>
+    /// To be played in every frame.
+    /// Check whether any energy was spent.
+    /// </summary>
+    private void Update()
     {
-        if (MyObject.GetComponent<GameData>().Energy > 0)
+        if(gameData.Energy < playerStats.Energy)
         {
             SliderEnergy();
-        }
-        else
-        {
-            Debug.Log("Not enough Energy");
         }
     }
 }

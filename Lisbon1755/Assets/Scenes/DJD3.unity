@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44497764, g: 0.49455893, b: 0.5736863, a: 1}
+  m_IndirectSpecularColor: {r: 0.4449776, g: 0.49455935, b: 0.5736864, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -314,9 +314,9 @@ RectTransform:
   m_Father: {fileID: 859039797}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -10}
   m_SizeDelta: {x: 200, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &524664640
@@ -382,7 +382,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyBar: {fileID: 524664640}
-  MyObject: {fileID: 980935084}
+  maxEnergy: 0
+  currentEnergy: 0
+  uiEnergyBar: {fileID: 524664641}
+  slider: {fileID: 524664640}
+  gameData: {fileID: 980935085}
+  playerStats: {fileID: 11400000, guid: 264f649e038935348a5eaeefbdda9063, type: 2}
 --- !u!1 &585630720
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,10 +723,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -866,7 +871,7 @@ MonoBehaviour:
   energy: 0
   eventsManager: {fileID: 0}
   isPlayerClickingEvent: 0
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 2078701758}
   howManyClicks: 0
   clickCount: 0
   eventTimeCounter: 0
@@ -905,7 +910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1062599461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,14 +1039,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083086639}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4609408, y: -0.88, z: -1.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 859039797}
   - {fileID: 1327011218}
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 2078701757}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1170554196
 GameObject:
@@ -1892,6 +1897,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
   m_PrefabInstance: {fileID: 1851343025}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2078701758 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2240583859499855087, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078701755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0757f5fedc7c4499917de0c3b1c497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2078701759
 MonoBehaviour:
   m_ObjectHideFlags: 0
