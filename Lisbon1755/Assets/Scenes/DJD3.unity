@@ -382,12 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyBar: {fileID: 524664640}
-  maxEnergy: 0
-  currentEnergy: 0
-  uiEnergyBar: {fileID: 524664641}
-  slider: {fileID: 524664640}
   gameData: {fileID: 980935085}
-  playerStats: {fileID: 11400000, guid: 264f649e038935348a5eaeefbdda9063, type: 2}
 --- !u!1 &585630720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,8 +1915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e905603852328449983342aa256041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_GotHitScreen: {fileID: 343107492}
-  MyObject: {fileID: 980935084}
+  gotHitScreen: {fileID: 343107494}
+  gameData: {fileID: 980935085}
 --- !u!1001 &743876142240183587
 PrefabInstance:
   m_ObjectHideFlags: 0

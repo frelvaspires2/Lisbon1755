@@ -1,41 +1,54 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manage the got hit ui.
+/// </summary>
 public class UI_GotHitScreen : MonoBehaviour
 {
-    public GameObject m_GotHitScreen;
-    public GameObject MyObject;
+    /// <summary>
+    /// Access the got hit image.
+    /// </summary>
+    [SerializeField]
+    private Image gotHitScreen;
 
-    void Start()
-    {
-        
-    }
+    /// <summary>
+    /// Access the GameData script.
+    /// </summary>
+    [SerializeField]
+    private GameData gameData;
 
-    void gotHurt()
+    /// <summary>
+    /// Make the screen red.
+    /// </summary>
+    private void GotHurt()
     {
-        var color = m_GotHitScreen.GetComponent<Image>().color;
+        var color = gotHitScreen.color;
+
         color.a = 0.8f;
 
-        m_GotHitScreen.GetComponent<Image>().color = color;
+        gotHitScreen.color = color;
     }
 
-    void Update()
+    /// <summary>
+    /// To be played in every frame.
+    /// Checks whether the player was hit.
+    /// </summary>
+    private void Update()
     {
-        if (MyObject.GetComponent<GameData>().IsInjured == true)
-            {
-                gotHurt();
-            }
-
-        if (m_GotHitScreen != null)
+        if (gameData.IsInjured == true)
         {
-            if (m_GotHitScreen.GetComponent<Image>().color.a > 0)
+            GotHurt();
+        }
+
+        if (gotHitScreen != null)
+        {
+            if (gotHitScreen.color.a > 0)
             {
-                var color = m_GotHitScreen.GetComponent<Image>().color;
+                var color = gotHitScreen.color;
                 color.a -= 0.01f;
-                m_GotHitScreen.GetComponent<Image>().color = color;
+                gotHitScreen.color = color;
             }
         }
     }
-} 
+}
