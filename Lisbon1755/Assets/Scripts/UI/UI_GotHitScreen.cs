@@ -26,7 +26,7 @@ public class UI_GotHitScreen : MonoBehaviour
     {
         var color = gotHitScreen.color;
 
-        color.a = 0.8f;
+        color.a = 0.5f;
 
         gotHitScreen.color = color;
     }
@@ -38,7 +38,7 @@ public class UI_GotHitScreen : MonoBehaviour
     {
         Color color = gotHitScreen.color;
 
-        color.a = 0.8f;
+        color.a = 0.5f;
 
         gotHitScreen.color = color;
 
