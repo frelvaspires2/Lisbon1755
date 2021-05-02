@@ -41,6 +41,12 @@ public class CameraShake : MonoBehaviour
     [SerializeField]
     private bool canRandomShake;
 
+    [SerializeField]
+    private float shakeDuration = 2;
+
+    [SerializeField]
+    private float waitTime = 5;
+
     private void Start()
     {
         canRandomShake = false;
@@ -67,18 +73,48 @@ public class CameraShake : MonoBehaviour
         }
         else if (canRandomShake)
         {
-            StartCoroutine(ShakeRoutine());
-            InfiniteShake();
+            waitTime = 5f;
+            RandomShake();
         }
-        else if (!canRandomShake)
+        else if(!canRandomShake)
         {
-            StartCoroutine(Wait());
+            shakeDuration = 2f;
+            WaitShake();
+        }
+    }
+
+    private void WaitShake()
+    {
+        if(waitTime > 0)
+        {
+            waitTime -= Time.deltaTime * 1.0f;
+        }
+        else
+        {
+            waitTime = 0f;
+            canRandomShake = true;
+        }
+    }
+
+    private void RandomShake()
+    {
+        if(shakeDuration > 0)
+        {
+            InfiniteShake();
+
+            shakeDuration -= Time.deltaTime * 1.0f;
+        }
+        else
+        {
+            shakeDuration = 0f;
+            camera.localPosition = originalPos;
+            canRandomShake = false;
         }
     }
 
     private IEnumerator Wait()
     {
-        WaitForSeconds wfs = new WaitForSeconds(2);
+        WaitForSeconds wfs = new WaitForSeconds(5);
 
         yield return wfs;
 
