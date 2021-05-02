@@ -1,41 +1,86 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
+/// <summary>
+/// Manage the got hit ui.
+/// </summary>
 public class UI_GotHitScreen : MonoBehaviour
 {
-    public GameObject m_GotHitScreen;
-    public GameObject MyObject;
+    /// <summary>
+    /// Access the got hit image.
+    /// </summary>
+    [SerializeField]
+    private Image gotHitScreen;
 
-    void Start()
+    /// <summary>
+    /// Access the GameData script.
+    /// </summary>
+    [SerializeField]
+    private GameData gameData;
+
+    /// <summary>
+    /// Make the screen red while the player is injured.
+    /// </summary>
+    private void GotHurt()
     {
-        
+        var color = gotHitScreen.color;
+
+        color.a = 0.5f;
+
+        gotHitScreen.color = color;
     }
 
-    void gotHurt()
+    /// <summary>
+    /// Make the screen red for a bit when the player is hit.
+    /// </summary>
+    public void GotHit()
     {
-        var color = m_GotHitScreen.GetComponent<Image>().color;
-        color.a = 0.8f;
+        Color color = gotHitScreen.color;
 
-        m_GotHitScreen.GetComponent<Image>().color = color;
+        color.a = 0.5f;
+
+        gotHitScreen.color = color;
+
+        StartCoroutine(HitRoutine());
     }
 
-    void Update()
+    /// <summary>
+    /// To be played in every frame.
+    /// Checks whether the player was hit.
+    /// </summary>
+    private void Update()
     {
-        if (MyObject.GetComponent<GameData>().IsInjured == true)
-            {
-                gotHurt();
-            }
-
-        if (m_GotHitScreen != null)
+        if (gameData.IsInjured == true)
         {
-            if (m_GotHitScreen.GetComponent<Image>().color.a > 0)
+            GotHurt();
+        }
+
+        if (gotHitScreen != null)
+        {
+            if (gotHitScreen.color.a > 0)
             {
-                var color = m_GotHitScreen.GetComponent<Image>().color;
+                Color color = gotHitScreen.color;
                 color.a -= 0.01f;
-                m_GotHitScreen.GetComponent<Image>().color = color;
+                gotHitScreen.color = color;
             }
         }
     }
-} 
+
+    /// <summary>
+    /// Make the screen return to normal after the player being hit.
+    /// </summary>
+    /// <returns> Wait for seconds.</returns>
+    private IEnumerator HitRoutine()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(0.5f);
+
+        yield return wfs;
+
+        Color color = gotHitScreen.color;
+
+        color.a = 0.0f;
+
+        gotHitScreen.color = color;
+    }
+}

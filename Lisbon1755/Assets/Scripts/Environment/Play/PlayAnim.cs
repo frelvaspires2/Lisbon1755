@@ -37,6 +37,11 @@ public class PlayAnim : MonoBehaviour
     /// </summary>
     public bool IsDone { get => isDone; }
 
+    [SerializeField]
+    private bool hasStarted;
+
+    public bool HasStarted { get => hasStarted; }
+
 
     [SerializeField]
     private CameraShake cameraShake;
@@ -73,12 +78,14 @@ public class PlayAnim : MonoBehaviour
             isPlayed = true;
             // Play the animation.
             animController.Play(animName);
+            hasStarted = true;
         }
     }
 
     public void AnimationDone()
     {
         isDone = true;
+        hasStarted = false;
         cameraShake.CanShake = false;
     }
 }

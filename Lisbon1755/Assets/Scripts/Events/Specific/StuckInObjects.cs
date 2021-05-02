@@ -24,6 +24,9 @@ public class StuckInObjects : MonoBehaviour
     [SerializeField]
     private float timeToDisappear = 5f;
 
+    [SerializeField]
+    private EventsResultStats eventsResultStats;
+
     private void Update()
     {
         STM();
@@ -34,12 +37,15 @@ public class StuckInObjects : MonoBehaviour
         switch(eventManager.GetEventResult)
         {
             case EventResult.None:
+                eventsResultStats.EventsResult[0] = EventResult.None;
                 NoneState();
                 break;
             case EventResult.Won:
+                eventsResultStats.EventsResult[0] = EventResult.Won;
                 WonState();
                 break;
             case EventResult.Lost:
+                eventsResultStats.EventsResult[0] = EventResult.Lost;
                 LostState();
                 break;
         }

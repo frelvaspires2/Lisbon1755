@@ -60,6 +60,9 @@ public class WakeUp : MonoBehaviour
     [SerializeField]
     private EndAnim endAnim;
 
+    [SerializeField]
+    private EventsResultStats eventsResultStats;
+
     /// <summary>
     /// To be played in every frame.
     /// </summary>
@@ -76,12 +79,15 @@ public class WakeUp : MonoBehaviour
         switch (eventManager.GetEventResult)
         {
             case EventResult.None:
+                eventsResultStats.EventsResult[4] = EventResult.None;
                 NoneState();
                 break;
             case EventResult.Won:
+                eventsResultStats.EventsResult[4] = EventResult.Won;
                 WonState();
                 break;
             case EventResult.Lost:
+                eventsResultStats.EventsResult[4] = EventResult.Lost;
                 LostState();
                 break;
         }

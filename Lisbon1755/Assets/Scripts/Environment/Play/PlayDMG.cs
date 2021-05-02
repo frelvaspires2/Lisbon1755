@@ -27,6 +27,7 @@ public class PlayDMG : MonoBehaviour
         if(other.gameObject == player)
         {
             player.GetComponent<PlayerHealth>().Health -= dmg;
+            player.GetComponent<UI_GotHitScreen>().GotHit();
         }
         // If it's an NPC, then decrement health.
         if(other.gameObject.tag == "NPC")

@@ -1,47 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Control the energy bar.
+/// </summary>
 public class UI_EnergyBar : MonoBehaviour
 {
+    /// <summary>
+    /// Access the slider UI.
+    /// </summary>
+    [SerializeField]
     public Slider energyBar;
-    public GameObject MyObject;
 
-    private int maxEnergy = 50;
-    private int currentEnergy;
+    /// <summary>
+    /// Access the GameData script.
+    /// </summary>
+    [SerializeField]
+    private GameData gameData;
 
-    public static UI_EnergyBar instance;
 
-    private void Awake()
+    /// <summary>
+    /// To be played in every frame.
+    /// Check whether any energy was spent.
+    /// </summary>
+    private void Update()
     {
-        instance = this;
-    }
-
-    void Start()
-    {
-        currentEnergy = maxEnergy;
-        energyBar.maxValue = maxEnergy;
-        energyBar.value = maxEnergy;
-    }
-
-    void SliderEnergy()
-    {
-        var value = energyBar.GetComponent<Slider>().value;
-        value = MyObject.GetComponent<GameData>().Energy;
-
-        energyBar.GetComponent<Slider>().value = value;
-    }
-
-    void Update()
-    {
-        if (MyObject.GetComponent<GameData>().Energy > 0)
-        {
-            SliderEnergy();
-        }
-        else
-        {
-            Debug.Log("Not enough Energy");
-        }
+        energyBar.value = gameData.Energy;
     }
 }

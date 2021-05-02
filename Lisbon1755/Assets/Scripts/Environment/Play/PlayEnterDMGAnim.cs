@@ -1,8 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayDMGAnim : MonoBehaviour
+/// <summary>
+/// Play the damage when enters a target in house animations.
+/// </summary>
+public class PlayEnterDMGAnim : MonoBehaviour
 {
     /// <summary>
     /// Access the player gameobject.
@@ -32,6 +34,10 @@ public class PlayDMGAnim : MonoBehaviour
     /// </summary>
     private bool isNPCHit;
 
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize variables.
+    /// </summary>
     private void Start()
     {
         isPlayerHit = false;
@@ -44,7 +50,7 @@ public class PlayDMGAnim : MonoBehaviour
     private void Update()
     {
         // Check if the animation finished playing.
-        if(playAnim.IsDone)
+        if (playAnim.IsDone)
         {
             StartCoroutine(Destroy());
         }
@@ -54,17 +60,17 @@ public class PlayDMGAnim : MonoBehaviour
     /// Check if something entered on the trigger.
     /// </summary>
     /// <param name="other"> Collider</param>
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         // If it's the player, then decrement health.
-        if (other.gameObject == player && playAnim.IsDone && !isPlayerHit)
+        if (other.gameObject == player && !isPlayerHit && playAnim.HasStarted)
         {
             player.GetComponent<PlayerHealth>().Health -= dmg;
             player.GetComponent<UI_GotHitScreen>().GotHit();
             isPlayerHit = true;
         }
         // If it's an NPC, then decrement health.
-        if (other.gameObject.tag == "NPC" && playAnim.IsDone && !isNPCHit)
+        if (other.gameObject.tag == "NPC" && !isNPCHit && playAnim.HasStarted)
         {
             other.GetComponent<PanickedController>().Health -= dmg;
             isNPCHit = true;

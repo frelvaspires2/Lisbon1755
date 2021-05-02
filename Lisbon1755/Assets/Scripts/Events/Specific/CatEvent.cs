@@ -21,9 +21,11 @@ public class CatEvent : MonoBehaviour
     [SerializeField]
     private GameObject catLadySad;
 
-
     [SerializeField]
     private float timeToDisappear = 5f;
+
+    [SerializeField]
+    private EventsResultStats eventsResultStats;
 
     private void Update()
     {
@@ -35,12 +37,15 @@ public class CatEvent : MonoBehaviour
         switch (eventManager.GetEventResult)
         {
             case EventResult.None:
+                eventsResultStats.EventsResult[3] = EventResult.None;
                 NoneState();
                 break;
             case EventResult.Won:
+                eventsResultStats.EventsResult[3] = EventResult.Won;
                 WonState();
                 break;
             case EventResult.Lost:
+                eventsResultStats.EventsResult[3] = EventResult.Lost;
                 LostState();
                 break;
         }
