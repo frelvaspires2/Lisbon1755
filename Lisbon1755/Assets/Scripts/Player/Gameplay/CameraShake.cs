@@ -70,6 +70,21 @@ public class CameraShake : MonoBehaviour
             StartCoroutine(ShakeRoutine());
             InfiniteShake();
         }
+        else if(!canRandomShake)
+        {
+            StartCoroutine(Wait());
+        }
+    }
+
+    private IEnumerator Wait()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(2);
+
+        yield return wfs;
+
+        canRandomShake = true;
+
+        StopCoroutine(Wait());
     }
 
     private void InfiniteShake()
