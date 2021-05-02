@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using SRandom = System.Random;
 
 /// <summary>
 /// Shake the camera (to look like an earthquake is happening).
@@ -38,12 +38,51 @@ public class CameraShake : MonoBehaviour
     /// </summary>
     private Vector3 originalPos;
 
+    /// <summary>
+    /// Check whether a random shake will happen.
+    /// </summary>
     [SerializeField]
     private bool canRandomShake;
 
+    /// <summary>
+    /// Set the random shake time.
+    /// </summary>
+    [SerializeField]
+    private float setShakeDuration;
+
+    /// <summary>
+    /// Track the random shake duration.
+    /// </summary>
+    [SerializeField]
+    private float shakeDuration;
+
+    /// <summary>
+    /// Set the minimum time to start a random shake.
+    /// </summary>
+    [SerializeField]
+    private int minWaitTime;
+
+    /// <summary>
+    /// Set the maximum time to start a random shake.
+    /// </summary>
+    [SerializeField]
+    private int maxWaitTime;
+
+    /// <summary>
+    /// Track the time for the random shake.
+    /// </summary>
+    [SerializeField]
+    private float waitTime;
+
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize variables.
+    /// </summary>
     private void Start()
     {
         canRandomShake = false;
+        waitTime = 0f;
+        shakeDuration = setShakeDuration;
     }
 
     /// <summary>
@@ -67,39 +106,65 @@ public class CameraShake : MonoBehaviour
         }
         else if (canRandomShake)
         {
-            StartCoroutine(ShakeRoutine());
-            InfiniteShake();
+            RandomTime();
+            RandomShake();
         }
-        else if (!canRandomShake)
+        else if(!canRandomShake)
         {
-            StartCoroutine(Wait());
+            shakeDuration = setShakeDuration;
+            WaitShake();
         }
     }
 
-    private IEnumerator Wait()
+    /// <summary>
+    /// Set a random time to shake the camera.
+    /// </summary>
+    private void RandomTime()
     {
-        WaitForSeconds wfs = new WaitForSeconds(2);
-
-        yield return wfs;
-
-        canRandomShake = true;
-
-        StopCoroutine(Wait());
+        SRandom rnd = new SRandom();
+        waitTime = rnd.Next(minWaitTime, maxWaitTime);
     }
 
+    /// <summary>
+    /// Wait for the camera to shake (random shake).
+    /// </summary>
+    private void WaitShake()
+    {
+        if(waitTime > 0)
+        {
+            waitTime -= Time.deltaTime * 1.0f;
+        }
+        else
+        {
+            waitTime = 0f;
+            canRandomShake = true;
+        }
+    }
+
+    /// <summary>
+    /// Random shake.
+    /// </summary>
+    private void RandomShake()
+    {
+        if(shakeDuration > 0)
+        {
+            InfiniteShake();
+
+            shakeDuration -= Time.deltaTime * 1.0f;
+        }
+        else
+        {
+            shakeDuration = 0f;
+            camera.localPosition = originalPos;
+            canRandomShake = false;
+        }
+    }
+
+    /// <summary>
+    /// Shake.
+    /// </summary>
     private void InfiniteShake()
     {
         camera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
-    }
-
-    private IEnumerator ShakeRoutine()
-    {
-        WaitForSeconds wfs = new WaitForSeconds(2);
-
-        yield return wfs;
-
-        canRandomShake = false;
-
-        StopCoroutine(ShakeRoutine());
     }
 }
