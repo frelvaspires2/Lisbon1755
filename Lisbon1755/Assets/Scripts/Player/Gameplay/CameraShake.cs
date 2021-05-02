@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using SRandom = System.Random;
 
 /// <summary>
 /// Shake the camera (to look like an earthquake is happening).
@@ -42,14 +43,25 @@ public class CameraShake : MonoBehaviour
     private bool canRandomShake;
 
     [SerializeField]
-    private float shakeDuration = 2;
+    private float setShakeDuration;
 
     [SerializeField]
-    private float waitTime = 5;
+    private float shakeDuration;
+
+    [SerializeField]
+    private int minWaitTime;
+
+    [SerializeField]
+    private int maxWaitTime;
+
+    [SerializeField]
+    private float waitTime;
 
     private void Start()
     {
         canRandomShake = false;
+        waitTime = 0f;
+        shakeDuration = setShakeDuration;
     }
 
     /// <summary>
@@ -73,14 +85,20 @@ public class CameraShake : MonoBehaviour
         }
         else if (canRandomShake)
         {
-            waitTime = 5f;
+            RandomTime();
             RandomShake();
         }
         else if(!canRandomShake)
         {
-            shakeDuration = 2f;
+            shakeDuration = setShakeDuration;
             WaitShake();
         }
+    }
+
+    private void RandomTime()
+    {
+        SRandom rnd = new SRandom();
+        waitTime = rnd.Next(minWaitTime, maxWaitTime);
     }
 
     private void WaitShake()
