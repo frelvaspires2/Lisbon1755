@@ -18,6 +18,9 @@ public class StuckInHouse : MonoBehaviour
     [SerializeField]
     private float timeToDisappear = 5f;
 
+    [SerializeField]
+    private EventsResultStats eventsResultStats;
+
     private void Update()
     {
         STM();
@@ -28,12 +31,15 @@ public class StuckInHouse : MonoBehaviour
         switch (eventManager.GetEventResult)
         {
             case EventResult.None:
+                eventsResultStats.EventsResult[1] = EventResult.None;
                 NoneState();
                 break;
             case EventResult.Won:
+                eventsResultStats.EventsResult[1] = EventResult.Won;
                 WonState();
                 break;
             case EventResult.Lost:
+                eventsResultStats.EventsResult[1] = EventResult.Lost;
                 LostState();
                 break;
         }

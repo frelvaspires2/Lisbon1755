@@ -10260,6 +10260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatEvent
       objectReference: {fileID: 0}
+    - target: {fileID: 4721129192993306941, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: eventsResultStats
+      value: 
+      objectReference: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
     - target: {fileID: 4981979243995762018, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -11201,7 +11205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 43134258}
-  isEnd: 1
+  isEnd: 0
 --- !u!1 &659697400
 GameObject:
   m_ObjectHideFlags: 0
@@ -14020,6 +14024,7 @@ MonoBehaviour:
   clickCount: 0
   eventTimeCounter: 0
   setEventTime: 0
+  eventsResultsStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -17202,6 +17207,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.221
       objectReference: {fileID: 0}
+    - target: {fileID: 2869754939703770281, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: eventsResultStats
+      value: 
+      objectReference: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
     - target: {fileID: 2869754939703770282, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_Name
       value: Heretics
@@ -33116,6 +33125,7 @@ MonoBehaviour:
   animStateName: Anim
   cameraShake: {fileID: 712044495}
   endAnim: {fileID: 807815031}
+  eventsResultStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!1 &2164083786240991325
 GameObject:
   m_ObjectHideFlags: 0

@@ -112,7 +112,6 @@ public class EventsManager : MonoBehaviour
     /// </summary>
     public bool isClick { get; private set; }
     
-
     /// <summary>
     /// To be played on the first frame.
     /// Initialize variables.
