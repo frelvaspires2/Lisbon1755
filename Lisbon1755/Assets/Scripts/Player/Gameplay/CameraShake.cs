@@ -61,16 +61,16 @@ public class CameraShake : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if(canShake)
+        if (canShake)
         {
             InfiniteShake();
         }
-        else if(canRandomShake)
+        else if (canRandomShake)
         {
             StartCoroutine(ShakeRoutine());
             InfiniteShake();
         }
-        else if(!canRandomShake)
+        else if (!canRandomShake)
         {
             StartCoroutine(Wait());
         }
@@ -89,7 +89,7 @@ public class CameraShake : MonoBehaviour
 
     private void InfiniteShake()
     {
-            camera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+        camera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
     }
 
     private IEnumerator ShakeRoutine()
