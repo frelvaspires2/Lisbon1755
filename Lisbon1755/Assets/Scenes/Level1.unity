@@ -48734,6 +48734,7 @@ MonoBehaviour:
   npcDead: {fileID: 1092768453378322313}
   npcSafe: {fileID: 1092768452195358094}
   timeToDisappear: 5
+  eventsResultStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!65 &282357678086673880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51828,6 +51829,7 @@ MonoBehaviour:
   npcInDanger: {fileID: 7822050522804130459}
   npcSafe: {fileID: 7822050521788453104}
   timeToDisappear: 5
+  eventsResultStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!4 &2755231234473880240
 Transform:
   m_ObjectHideFlags: 0
