@@ -11,4 +11,12 @@ public class EventsResultStats : ScriptableObject
         get => eventsResult;
         set => eventsResult = value;
     }
+
+    public void ResetStats()
+    {
+        for(int i = 0; i < eventsResult.Length; i++)
+        {
+            eventsResult[i] = EventResult.None;
+        }
+    }
 }

@@ -123,6 +123,9 @@ public class GameData : MonoBehaviour
     /// </summary>
     public int SetEventTime { get => setEventTime; }
 
+    [SerializeField]
+    private EventsResultStats eventsResultsStats;
+
     /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
@@ -152,6 +155,7 @@ public class GameData : MonoBehaviour
     {
         if (health <= 0)
         {
+            eventsResultsStats.ResetStats();
             SceneManager.LoadScene(scene.name);
         }
     }
