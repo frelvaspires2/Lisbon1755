@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\State.cs" />
      <Compile Include="Assets\Scripts\PanickedPerson\Animations\PanickAnimTypes.cs" />
      <Compile Include="Assets\Scripts\Environment\Play\PlayAnim.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_EnergyBar.cs" />
      <Compile Include="Assets\Scripts\Data\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\PanickedPerson\AI\States\SlowerState.cs" />
      <Compile Include="Assets\Scripts\Events\Global\EventsManager.cs" />
@@ -93,6 +94,7 @@
      <Compile Include="Assets\Scripts\PanickedPerson\AI\States\WoundedState.cs" />
      <Compile Include="Assets\Scripts\Events\Global\EventState.cs" />
      <Compile Include="Assets\Scripts\Player\Animations\SetAnimations.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_Timer.cs" />
      <Compile Include="Assets\Scripts\Events\Specific\Heretics.cs" />
      <Compile Include="Assets\Scripts\Events\Specific\CatEvent.cs" />
      <Compile Include="Assets\Scripts\Environment\Play\PlayCart.cs" />
@@ -102,7 +104,7 @@
      <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
      <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
      <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
-     <Compile Include="Assets\Scripts\UI\UI_StaminaBar.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_QTE.cs" />
      <None Include="Assets\Animations\Events\Cat\Ladymito\Free_cat\Animations\low_poly_cat_animation_list.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Acer/Documents/DJD3/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
