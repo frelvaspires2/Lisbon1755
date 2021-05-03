@@ -5,38 +5,52 @@ using UnityEngine.UI;
 
 public class UI_EventMarker : MonoBehaviour
 {
-    public Image img;
-    public Transform target;
-    public Text meter;
-    public Vector3 offset;
+    [SerializeField]
+    private Markers[] markers;
 
     void Update()
     {
-        float minX = img.GetPixelAdjustedRect().width / 2;
-        float maxX = Screen.width - minX;
+        UpdateMarkers();
+    }
 
-        float minY = img.GetPixelAdjustedRect().height / 2;
-        float maxY = Screen.height - minY;
+    private void UpdateMarkers()
+    {
+        float minX = 0;
+        float maxX = 0;
 
-        Vector2 pos = Camera.main.WorldToScreenPoint(target.position + offset); 
+        float minY = 0;
+        float maxY = 0;
 
-        if(Vector3.Dot((target.position - transform.position), transform.forward) < 0)
+        Vector2 pos = default;
+
+        foreach(Markers item in markers)
         {
-            //Target is behind the player
-            if (pos.x < Screen.width /2)
+            minX = item.GetSetImg.GetPixelAdjustedRect().width / 2;
+            maxX = Screen.width - minX;
+
+            minY = item.GetSetImg.GetPixelAdjustedRect().height / 2;
+            maxY = Screen.height - minY;
+
+            pos = Camera.main.WorldToScreenPoint(item.GetSetTarget.position + item.GetSetOffset);
+
+            if (Vector3.Dot((item.GetSetTarget.position - transform.position), transform.forward) < 0)
             {
-                pos.x = maxX;
+                //Target is behind the player
+                if (pos.x < Screen.width / 2)
+                {
+                    pos.x = maxX;
+                }
+                else
+                {
+                    pos.x = minX;
+                }
             }
-            else
-            {
-                pos.x = minX;
-            }
+
+            pos.x = Mathf.Clamp(pos.x, minX, maxX);
+            pos.y = Mathf.Clamp(pos.y, minY, maxY);
+
+            item.GetSetImg.transform.position = pos;
+            item.GetSetMeter.text = ((int)Vector3.Distance(item.GetSetTarget.position, transform.position)).ToString() + "m";
         }
-
-        pos.x = Mathf.Clamp (pos.x, minX, maxX);
-        pos.y = Mathf.Clamp (pos.y, minY, maxY);
-
-        img.transform.position = pos;
-        meter.text = ((int)Vector3.Distance(target.position, transform.position)).ToString() + "m";
     }
 }

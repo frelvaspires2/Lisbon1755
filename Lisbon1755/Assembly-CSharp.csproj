@@ -120,6 +120,8 @@
     <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
+    <Compile Include="Assets\Scripts\UI\Markers.cs" />
+    <Compile Include="Assets\Scripts\UI\UnlockMarker.cs" />
     <None Include="Assets\Animations\Events\Cat\Ladymito\Free_cat\Animations\low_poly_cat_animation_list.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -590,17 +590,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 275051327, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
---- !u!114 &815176275 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2224066720151151268, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-  m_PrefabInstance: {fileID: 1851343025}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &829923033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2224066718196130820, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
@@ -1318,16 +1307,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 287800122, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 524664641, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
+    - target: {fileID: 663958095, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227890545, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1269505724, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1269505724, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601251973, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: markers.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2078701759, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
@@ -1763,7 +1768,7 @@ PrefabInstance:
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: timerText
       value: 
-      objectReference: {fileID: 815176275}
+      objectReference: {fileID: 0}
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: qteImage
       value: 
@@ -1908,7 +1913,7 @@ PrefabInstance:
     - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: timerText
       value: 
-      objectReference: {fileID: 815176275}
+      objectReference: {fileID: 0}
     - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: qteImage
       value: 

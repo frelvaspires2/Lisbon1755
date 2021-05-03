@@ -108,6 +108,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private PlayerAnimController playerAnimController;
 
+    [SerializeField]
+    private GameObject eventMarker;
+
     /// <summary>
     /// Gets whether the player is clicking in event.
     /// </summary>
@@ -189,6 +192,7 @@ public class EventsManager : MonoBehaviour
                 {
                     eventResult = EventResult.Lost;
                 }
+                eventMarker.SetActive(false);
                 break;
         }
     }
@@ -276,6 +280,7 @@ public class EventsManager : MonoBehaviour
             // começar evento
             StartEvent();
             other.GetComponent<PlayerMovement>().eventsManager = this;
+            eventMarker.SetActive(false);
         }
     }
 
@@ -320,6 +325,10 @@ public class EventsManager : MonoBehaviour
         {
             other.GetComponent<PlayerMovement>().eventsManager = null;
             timer.SetActive(false);
+        }
+        if (other.gameObject == player && eventState != EventState.Finished)
+        {
+            eventMarker.SetActive(true);
         }
     }
 
