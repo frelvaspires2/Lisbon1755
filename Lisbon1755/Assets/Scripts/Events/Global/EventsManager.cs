@@ -120,6 +120,9 @@ public class EventsManager : MonoBehaviour
     private Text timerText;
 
     [SerializeField]
+    private Slider timerSlider;
+
+    [SerializeField]
     private GameObject qte;
 
     [SerializeField]
@@ -257,7 +260,6 @@ public class EventsManager : MonoBehaviour
             // começar evento
             StartEvent();
             other.GetComponent<PlayerMovement>().eventsManager = this;
-            timer.SetActive(true);
         }
     }
 
@@ -265,8 +267,15 @@ public class EventsManager : MonoBehaviour
     {
         if(other.gameObject == player && eventState != EventState.Finished)
         {
-            timer.GetComponent<Slider>().maxValue = setEventTime;
-            timer.GetComponent<Slider>().value = eventTimeCounter;
+            timer.SetActive(true);
+            timerSlider.maxValue = setEventTime;
+            timerSlider.GetComponent<Slider>().value = eventTimeCounter;
+        }
+
+        if(other.gameObject == player && eventState == EventState.Finished)
+        {
+            timer.SetActive(false);
+            qte.SetActive(false);
         }
     }
 
@@ -287,7 +296,7 @@ public class EventsManager : MonoBehaviour
         {
             //timer.GetComponent<Text>().text = textTime;
             timerText.text = textTime.ToString();
-            timer.GetComponent<Slider>().value = time;
+            timerSlider.value = time;
         }
     }
 
