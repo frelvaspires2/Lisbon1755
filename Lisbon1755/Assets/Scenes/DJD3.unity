@@ -1339,12 +1339,20 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
-    - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 2224066718196130820, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066719971898260, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
@@ -1727,7 +1735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5932982482128618337, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: player
@@ -1924,7 +1932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5345862640850990582, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5345862640850990583, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: eventsResultStats
