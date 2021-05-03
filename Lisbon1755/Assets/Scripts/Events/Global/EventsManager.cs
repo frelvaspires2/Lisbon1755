@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Manage the event.
@@ -116,13 +117,14 @@ public class EventsManager : MonoBehaviour
     private GameObject timer;
 
     [SerializeField]
-    private UI_QTE ui_Qte;
+    private Text timerText;
 
     [SerializeField]
     private GameObject qte;
 
     [SerializeField]
-    private UI_Timer ui_Timer;
+    private bool stopTimer;
+
     
     /// <summary>
     /// To be played on the first frame.
@@ -135,6 +137,7 @@ public class EventsManager : MonoBehaviour
         eventResult = EventResult.None;
         timer.SetActive(false);
         qte.SetActive(false);
+        stopTimer = false;
     }
 
     /// <summary>
@@ -143,6 +146,7 @@ public class EventsManager : MonoBehaviour
     private void Update()
     {
         EventSTM();
+        TimerUI();
     }
 
     /// <summary>
@@ -254,6 +258,36 @@ public class EventsManager : MonoBehaviour
             StartEvent();
             other.GetComponent<PlayerMovement>().eventsManager = this;
             timer.SetActive(true);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject == player && eventState != EventState.Finished)
+        {
+            timer.GetComponent<Slider>().maxValue = setEventTime;
+            timer.GetComponent<Slider>().value = eventTimeCounter;
+        }
+    }
+
+    private void TimerUI()
+    {
+        float time = eventTimeCounter;
+
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time - minutes * 60f);
+
+        string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+
+        if (eventTimeCounter <= 0)
+        {
+            stopTimer = true;
+        }
+       if(!stopTimer)
+        {
+            //timer.GetComponent<Text>().text = textTime;
+            timerText.text = textTime.ToString();
+            timer.GetComponent<Slider>().value = time;
         }
     }
 
