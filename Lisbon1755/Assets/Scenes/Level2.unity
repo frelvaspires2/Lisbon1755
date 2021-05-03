@@ -746,6 +746,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2224066718196130820, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
   m_PrefabInstance: {fileID: 43134257}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &43134265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 663958095, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &43134266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 287800122, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &43134267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1227890545, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &45509845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8390680405410486442, guid: b0d315d145ef7bc4988f7f7220f1e661, type: 3}
@@ -10320,6 +10335,10 @@ PrefabInstance:
       propertyPath: qteImage
       value: 
       objectReference: {fileID: 43134261}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: eventMarker
+      value: 
+      objectReference: {fileID: 43134266}
     - target: {fileID: 4721129192993306938, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_Name
       value: CatEvent
@@ -17411,6 +17430,10 @@ PrefabInstance:
       propertyPath: qteImage
       value: 
       objectReference: {fileID: 43134261}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: eventMarker
+      value: 
+      objectReference: {fileID: 43134267}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
 --- !u!4 &1258250416 stripped
@@ -33452,6 +33475,7 @@ MonoBehaviour:
   eventState: 0
   eventType: 4
   playerAnimController: {fileID: 43134259}
+  eventMarker: {fileID: 43134265}
   timer: {fileID: 43134264}
   timerSlider: {fileID: 43134263}
   qte: {fileID: 43134262}

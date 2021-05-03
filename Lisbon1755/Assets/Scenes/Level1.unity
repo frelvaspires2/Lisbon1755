@@ -1031,7 +1031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.28
+      value: 24.49
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1039,7 +1039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -98.02
+      value: -96.75
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -49171,6 +49171,7 @@ MonoBehaviour:
   eventState: 0
   eventType: 0
   playerAnimController: {fileID: 1827875488}
+  eventMarker: {fileID: 804693887}
   timer: {fileID: 43134261}
   timerSlider: {fileID: 43134262}
   qte: {fileID: 43134260}
@@ -52364,6 +52365,7 @@ MonoBehaviour:
   eventState: 0
   eventType: 1
   playerAnimController: {fileID: 1827875488}
+  eventMarker: {fileID: 1614287981}
   timer: {fileID: 43134261}
   timerSlider: {fileID: 43134262}
   qte: {fileID: 43134260}
