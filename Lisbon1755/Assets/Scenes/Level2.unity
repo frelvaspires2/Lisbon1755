@@ -629,6 +629,14 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
+    - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -127.05
@@ -706,6 +714,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0757f5fedc7c4499917de0c3b1c497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &43134261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2224066718674564032, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &43134262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2224066719971898260, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &43134263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2224066718196130822, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43134264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &43134264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2224066718196130820, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &45509845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8390680405410486442, guid: b0d315d145ef7bc4988f7f7220f1e661, type: 3}
@@ -10051,7 +10091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 43134258}
-  dmg: 70
+  dmg: 55
   playAnim: {fileID: 2092332794}
 --- !u!65 &571032724
 BoxCollider:
@@ -10345,6 +10385,22 @@ PrefabInstance:
       propertyPath: setHowManyClicks
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 43134264}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: timerSlider
+      value: 
+      objectReference: {fileID: 43134263}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134262}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134261}
     - target: {fileID: 4721129192993306938, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_Name
       value: CatEvent
@@ -17499,6 +17555,22 @@ PrefabInstance:
       propertyPath: setHowManyClicks
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 43134264}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: timerSlider
+      value: 
+      objectReference: {fileID: 43134263}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134262}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134261}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
 --- !u!4 &1258250416 stripped
@@ -33561,6 +33633,11 @@ MonoBehaviour:
   eventState: 0
   eventType: 4
   playerAnimController: {fileID: 43134259}
+  timer: {fileID: 43134264}
+  timerSlider: {fileID: 43134263}
+  qte: {fileID: 43134262}
+  qteImage: {fileID: 43134261}
+  stopTimer: 0
 --- !u!4 &2164083786240991297
 Transform:
   m_ObjectHideFlags: 0

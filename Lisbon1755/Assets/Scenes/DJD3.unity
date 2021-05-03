@@ -776,10 +776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fd8dde09f83194fbdb30546dfba174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerSlider: {fileID: 206268935}
-  TimerText: {fileID: 1911729317}
-  gameTime: 60
-  stopTimer: 0
 --- !u!1 &1062599460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,22 +1334,6 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
-    - target: {fileID: 2224066718196130820, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718196130823, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718196130823, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718196130823, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1361,42 +1341,6 @@ PrefabInstance:
     - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718674564033, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718674564033, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718674564033, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718674564034, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066719339507367, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066719339507367, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066719339507367, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066719971898260, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066720151151266, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1446,8 +1390,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2224066718674564034, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
 --- !u!1 &1884194218
 GameObject:
