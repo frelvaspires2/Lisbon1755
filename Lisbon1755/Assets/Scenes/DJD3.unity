@@ -779,6 +779,7 @@ MonoBehaviour:
   timerSlider: {fileID: 206268935}
   TimerText: {fileID: 1911729317}
   gameTime: 60
+  stopTimer: 0
 --- !u!1 &1062599460
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,17 +906,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1438167287 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2224066718674564034, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-  m_PrefabInstance: {fileID: 1851343025}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0448a67040cfe7a43afe36d73cfa78d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1563653809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2224066720151151266, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1456,7 +1446,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2224066718674564034, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
 --- !u!1 &1884194218
 GameObject:
@@ -1809,7 +1800,7 @@ PrefabInstance:
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: ui_Qte
       value: 
-      objectReference: {fileID: 1438167287}
+      objectReference: {fileID: 0}
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: ui_Timer
       value: 
@@ -1950,7 +1941,7 @@ PrefabInstance:
     - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: ui_Qte
       value: 
-      objectReference: {fileID: 1438167287}
+      objectReference: {fileID: 0}
     - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: ui_Timer
       value: 

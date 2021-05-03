@@ -113,21 +113,33 @@ public class EventsManager : MonoBehaviour
     /// </summary>
     public bool isClick { get; private set; }
 
+    /// <summary>
+    /// Access the timer gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject timer;
 
-    [SerializeField]
-    private Text timerText;
-
+    /// <summary>
+    /// Access the time slider.
+    /// </summary>
     [SerializeField]
     private Slider timerSlider;
 
+    /// <summary>
+    /// Access the quick time event gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject qte;
 
+    /// <summary>
+    /// Access the quick time event image.
+    /// </summary>
     [SerializeField]
     private Image qteImage;
 
+    /// <summary>
+    /// Checks whether the time must be stopped.
+    /// </summary>
     [SerializeField]
     private bool stopTimer;
 
@@ -283,24 +295,18 @@ public class EventsManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Update the timer UI.
+    /// </summary>
     private void TimerUI()
     {
-        float time = eventTimeCounter;
-
-        int minutes = Mathf.FloorToInt(time / 60);
-        int seconds = Mathf.FloorToInt(time - minutes * 60f);
-
-        string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
-
         if (eventTimeCounter <= 0)
         {
             stopTimer = true;
         }
        if(!stopTimer)
         {
-            //timer.GetComponent<Text>().text = textTime;
-            timerText.text = textTime;
-            timerSlider.value = time;
+            timerSlider.value = eventTimeCounter;
         }
     }
 

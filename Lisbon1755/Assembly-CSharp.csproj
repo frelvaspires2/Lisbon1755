@@ -66,7 +66,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\UI\UI_GotHitScreen.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_QTE.cs" />
     <Compile Include="Assets\Scripts\Events\Global\PlayEvent.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimTypes.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\IState.cs" />
@@ -112,7 +111,6 @@
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\WoundedState.cs" />
     <Compile Include="Assets\Scripts\Events\Global\EventState.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\SetAnimations.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_Timer.cs" />
     <Compile Include="Assets\Scripts\Events\Specific\Heretics.cs" />
     <Compile Include="Assets\Scripts\Events\Specific\CatEvent.cs" />
     <Compile Include="Assets\Scripts\Environment\Play\PlayCart.cs" />
