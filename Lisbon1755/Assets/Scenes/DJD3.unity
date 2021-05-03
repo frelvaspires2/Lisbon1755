@@ -1406,7 +1406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2224066720151151266, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1520,6 +1520,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894537128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2224066718674564032, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1911729315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1830,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 815176275}
+    - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 1894537128}
     - target: {fileID: 5932982482128618365, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -1960,6 +1975,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 815176275}
+    - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 1894537128}
     - target: {fileID: 5345862640850990582, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: m_Name
       value: StuckInObjects

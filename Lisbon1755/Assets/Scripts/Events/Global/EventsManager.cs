@@ -126,6 +126,9 @@ public class EventsManager : MonoBehaviour
     private GameObject qte;
 
     [SerializeField]
+    private Image qteImage;
+
+    [SerializeField]
     private bool stopTimer;
 
     
@@ -206,6 +209,7 @@ public class EventsManager : MonoBehaviour
                 if (clickCount < setHowManyClicks)
                 {
                     clickCount += 1 * Time.deltaTime;
+                    qteImage.fillAmount = (clickCount / setHowManyClicks);
                 }
                 else
                 {
@@ -295,7 +299,7 @@ public class EventsManager : MonoBehaviour
        if(!stopTimer)
         {
             //timer.GetComponent<Text>().text = textTime;
-            timerText.text = textTime.ToString();
+            timerText.text = textTime;
             timerSlider.value = time;
         }
     }
