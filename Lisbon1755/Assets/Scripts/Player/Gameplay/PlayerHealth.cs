@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
     /// <summary>
     /// Checks whether the player is injured.
     /// </summary>
-    public bool IsInjured { get; private set; }
+    public bool IsInjured { get; set; }
 
     /// <summary>
     /// To be played on the first frame.
