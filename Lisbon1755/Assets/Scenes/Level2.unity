@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 43134258}
-  dmg: 100
+  dmg: 1000
 --- !u!65 &18359356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -257,7 +257,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18359353}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -18469,7 +18469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 43134258}
-  dmg: 100
+  dmg: 1000
   playAnim: {fileID: 140859906}
 --- !u!65 &1257936946
 BoxCollider:
@@ -19186,7 +19186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 43134258}
-  dmg: 100
+  dmg: 1000
   playAnim: {fileID: 1047641827}
 --- !u!65 &1310586935
 BoxCollider:
@@ -26233,7 +26233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 43134258}
-  dmg: 100
+  dmg: 1000
   playCart: {fileID: 42543990}
   isDone: 0
 --- !u!4 &1501079370 stripped

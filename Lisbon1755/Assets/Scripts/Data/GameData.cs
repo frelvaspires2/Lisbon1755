@@ -158,6 +158,12 @@ public class GameData : MonoBehaviour
             eventsResultsStats.ResetStats();
             SceneManager.LoadScene(scene.name);
         }
+
+        // cheat core to restart the game
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(scene.name);
+        }
     }
 
     /// <summary>
