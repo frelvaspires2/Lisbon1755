@@ -111,6 +111,18 @@ public class EventsManager : MonoBehaviour
     /// Gets whether the player is clicking in event.
     /// </summary>
     public bool isClick { get; private set; }
+
+    [SerializeField]
+    private GameObject timer;
+
+    [SerializeField]
+    private UI_QTE ui_Qte;
+
+    [SerializeField]
+    private GameObject qte;
+
+    [SerializeField]
+    private UI_Timer ui_Timer;
     
     /// <summary>
     /// To be played on the first frame.
@@ -121,6 +133,8 @@ public class EventsManager : MonoBehaviour
         isClick = false;
         eventState = EventState.Inactive;
         eventResult = EventResult.None;
+        timer.SetActive(false);
+        qte.SetActive(false);
     }
 
     /// <summary>
@@ -175,6 +189,7 @@ public class EventsManager : MonoBehaviour
         {
             if(Input.GetButton("MouseClick"))
             {
+                qte.SetActive(true);
                 isClick = true;
                 CheckAnimationType();
 
@@ -195,6 +210,7 @@ public class EventsManager : MonoBehaviour
             }
             else
             {
+                qte.SetActive(false);
                 isClick = false;
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
             }
@@ -237,6 +253,7 @@ public class EventsManager : MonoBehaviour
             // começar evento
             StartEvent();
             other.GetComponent<PlayerMovement>().eventsManager = this;
+            timer.SetActive(true);
         }
     }
 
@@ -249,6 +266,7 @@ public class EventsManager : MonoBehaviour
         if(other.gameObject == player)
         {
             other.GetComponent<PlayerMovement>().eventsManager = null;
+            timer.SetActive(false);
         }
     }
 

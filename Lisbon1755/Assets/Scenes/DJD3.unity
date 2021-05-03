@@ -390,6 +390,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &362774004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2224066719971898260, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &520079017
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +590,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 275051327, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+--- !u!1 &829923033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2224066718196130820, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &851901912
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +883,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1438167287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2224066718674564034, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0448a67040cfe7a43afe36d73cfa78d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1563653809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,6 +1326,58 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
+    - target: {fileID: 2224066718196130820, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718196130823, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718196130823, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718196130823, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718674564033, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718674564033, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066718674564033, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066719339507367, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066719339507367, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066719339507367, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224066719971898260, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4609408
@@ -1684,6 +1757,22 @@ PrefabInstance:
       propertyPath: playerAnimController
       value: 
       objectReference: {fileID: 2078701756}
+    - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 829923033}
+    - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 362774004}
+    - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
+      propertyPath: ui_Qte
+      value: 
+      objectReference: {fileID: 1438167287}
+    - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
+      propertyPath: ui_Timer
+      value: 
+      objectReference: {fileID: 980935087}
     - target: {fileID: 5932982482128618365, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -1793,6 +1882,22 @@ PrefabInstance:
       propertyPath: playerAnimController
       value: 
       objectReference: {fileID: 2078701756}
+    - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 829923033}
+    - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
+      propertyPath: ui_Qte
+      value: 
+      objectReference: {fileID: 1438167287}
+    - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
+      propertyPath: ui_Timer
+      value: 
+      objectReference: {fileID: 980935087}
+    - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 362774004}
     - target: {fileID: 5345862640850990582, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: m_Name
       value: StuckInObjects
