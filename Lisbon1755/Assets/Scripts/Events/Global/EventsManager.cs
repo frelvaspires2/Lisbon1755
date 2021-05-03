@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Manage the event.
@@ -111,6 +112,37 @@ public class EventsManager : MonoBehaviour
     /// Gets whether the player is clicking in event.
     /// </summary>
     public bool isClick { get; private set; }
+
+    /// <summary>
+    /// Access the timer gameobject.
+    /// </summary>
+    [SerializeField]
+    private GameObject timer;
+
+    /// <summary>
+    /// Access the time slider.
+    /// </summary>
+    [SerializeField]
+    private Slider timerSlider;
+
+    /// <summary>
+    /// Access the quick time event gameobject.
+    /// </summary>
+    [SerializeField]
+    private GameObject qte;
+
+    /// <summary>
+    /// Access the quick time event image.
+    /// </summary>
+    [SerializeField]
+    private Image qteImage;
+
+    /// <summary>
+    /// Checks whether the time must be stopped.
+    /// </summary>
+    [SerializeField]
+    private bool stopTimer;
+
     
     /// <summary>
     /// To be played on the first frame.
@@ -121,6 +153,9 @@ public class EventsManager : MonoBehaviour
         isClick = false;
         eventState = EventState.Inactive;
         eventResult = EventResult.None;
+        timer.SetActive(false);
+        qte.SetActive(false);
+        stopTimer = false;
     }
 
     /// <summary>
@@ -129,6 +164,7 @@ public class EventsManager : MonoBehaviour
     private void Update()
     {
         EventSTM();
+        TimerUI();
     }
 
     /// <summary>
@@ -175,6 +211,7 @@ public class EventsManager : MonoBehaviour
         {
             if(Input.GetButton("MouseClick"))
             {
+                qte.SetActive(true);
                 isClick = true;
                 CheckAnimationType();
 
@@ -184,6 +221,7 @@ public class EventsManager : MonoBehaviour
                 if (clickCount < setHowManyClicks)
                 {
                     clickCount += 1 * Time.deltaTime;
+                    qteImage.fillAmount = (clickCount / setHowManyClicks);
                 }
                 else
                 {
@@ -195,6 +233,7 @@ public class EventsManager : MonoBehaviour
             }
             else
             {
+                qte.SetActive(false);
                 isClick = false;
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
             }
@@ -240,6 +279,37 @@ public class EventsManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject == player && eventState != EventState.Finished)
+        {
+            timer.SetActive(true);
+            timerSlider.maxValue = setEventTime;
+            timerSlider.GetComponent<Slider>().value = eventTimeCounter;
+        }
+
+        if(other.gameObject == player && eventState == EventState.Finished)
+        {
+            timer.SetActive(false);
+            qte.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Update the timer UI.
+    /// </summary>
+    private void TimerUI()
+    {
+        if (eventTimeCounter <= 0)
+        {
+            stopTimer = true;
+        }
+       if(!stopTimer)
+        {
+            timerSlider.value = eventTimeCounter;
+        }
+    }
+
     /// <summary>
     /// Exit the event.
     /// </summary>
@@ -249,6 +319,7 @@ public class EventsManager : MonoBehaviour
         if(other.gameObject == player)
         {
             other.GetComponent<PlayerMovement>().eventsManager = null;
+            timer.SetActive(false);
         }
     }
 
