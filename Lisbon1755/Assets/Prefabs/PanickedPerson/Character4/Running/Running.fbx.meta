@@ -6,7 +6,27 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PT_Medieval_Eyes_mat
+    second: {fileID: 2100000, guid: 59271840c22c21f419490203ef9c07bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PT_Medieval_Hair_mat
+    second: {fileID: 2100000, guid: ab313c45439b96947a3b25cb768b0ef8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PT_Medieval_Skin_mat
+    second: {fileID: 2100000, guid: 0c19e9d91b62d6240a3b5caa3a5f7f28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PT_Medieval_mat
+    second: {fileID: 2100000, guid: 9d6ce576becf3ab4693774f68db667fb, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
