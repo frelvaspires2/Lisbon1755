@@ -62,6 +62,34 @@ public class SoundController : MonoBehaviour
             case SoundTypes.Roll:
                 RollSound();
                 break;
+
+            case SoundTypes.InjuredWalk:
+                InjuredWalkSound();
+                break;
+
+            case SoundTypes.InjuredRun:
+                InjuredRunSound();
+                break;
+
+            case SoundTypes.Push:
+                PushSound();
+                break;
+
+            case SoundTypes.KickDoor:
+                KickDoorSound();
+                break;
+
+            case SoundTypes.Untie:
+                UntieSound();
+                break;
+
+            case SoundTypes.CallCat:
+                CallCatSound();
+                break;
+
+            case SoundTypes.WakeUp:
+                WakeUpSound();
+                break;
         }
     }
 
@@ -130,6 +158,111 @@ public class SoundController : MonoBehaviour
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
         {
             if (item.Key == SoundTypes.Roll)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void InjuredWalkSound()
+    {
+        foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == SoundTypes.InjuredWalk)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void InjuredRunSound()
+    {
+        foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == SoundTypes.InjuredRun)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void PushSound()
+    {
+        foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == SoundTypes.Push)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void KickDoorSound()
+    {
+        foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == SoundTypes.KickDoor)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void UntieSound()
+    {
+        foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == SoundTypes.Untie)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void CallCatSound()
+    {
+        foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == SoundTypes.CallCat)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void WakeUpSound()
+    {
+        foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == SoundTypes.WakeUp)
             {
                 item.Value.SetActive(true);
             }

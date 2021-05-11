@@ -6,4 +6,11 @@ public enum SoundTypes
     Run,
     Jump,
     Roll,
+    InjuredWalk,
+    InjuredRun,
+    Push,
+    KickDoor,
+    Untie,
+    CallCat,
+    WakeUp,
 }

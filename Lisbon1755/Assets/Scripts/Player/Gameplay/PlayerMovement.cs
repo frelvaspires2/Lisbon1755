@@ -465,56 +465,79 @@ public class PlayerMovement : MonoBehaviour
             if (!playerHealth.IsInjured)
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.walk;
+                soundController.GetSetSoundTypes = SoundTypes.Walk;
             }
             else
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalk;
+                soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
             }
-            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if(autoMove || mouseMove && !isRolling && !isJumping && !isRunning)
         {
             if (!playerHealth.IsInjured)
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.walk;
+                soundController.GetSetSoundTypes = SoundTypes.Walk;
             }
             else
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalk;
-            }
-            soundController.GetSetSoundTypes = SoundTypes.Walk;
+                soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
+            }       
         }
         else if(Input.GetAxis("Forward") < 0 && !isRolling && !isJumping && !isRunning)
         {
             if (!playerHealth.IsInjured)
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.back;
+                soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
             }
             else
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalkBack;
+                soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
             }
-            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
-        else if(acceleration.x > 0 && !isRunning)
+        else if(acceleration.x > 0 && !isRunning && !playerHealth.IsInjured)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStrade;
             soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
-        else if (acceleration.x > 0 && isRunning)
+        else if (acceleration.x > 0 && !isRunning && playerHealth.IsInjured)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStrade;
+            soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
+        }
+        else if (acceleration.x > 0 && isRunning && !playerHealth.IsInjured)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStradeRun;
             soundController.GetSetSoundTypes = SoundTypes.Run;
         }
-        else if (acceleration.x < 0 && isRunning)
+        else if (acceleration.x > 0 && isRunning && playerHealth.IsInjured)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStradeRun;
+            soundController.GetSetSoundTypes = SoundTypes.InjuredRun;
+        }
+        else if (acceleration.x < 0 && isRunning && !playerHealth.IsInjured)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStradeRun;
             soundController.GetSetSoundTypes = SoundTypes.Run;
         }
-        else if (acceleration.x < 0 && !isRunning)
+        else if (acceleration.x < 0 && isRunning && playerHealth.IsInjured)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStradeRun;
+            soundController.GetSetSoundTypes = SoundTypes.InjuredRun;
+        }
+        else if (acceleration.x < 0 && !isRunning && !playerHealth.IsInjured)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStrade;
             soundController.GetSetSoundTypes = SoundTypes.Walk;
+        }
+        else if (acceleration.x < 0 && !isRunning && playerHealth.IsInjured)
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStrade;
+            soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
         }
         else if(isJumping)
         {
@@ -531,44 +554,51 @@ public class PlayerMovement : MonoBehaviour
             if (!playerHealth.IsInjured)
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.run;
+                soundController.GetSetSoundTypes = SoundTypes.Run;
             }
             else
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredRun;
+                soundController.GetSetSoundTypes = SoundTypes.InjuredRun;
             }
-            soundController.GetSetSoundTypes = SoundTypes.Run;
         }
         else if (isRunning && Input.GetAxis("Forward") < 0)
         {
             if (!playerHealth.IsInjured)
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.runBack;
+                soundController.GetSetSoundTypes = SoundTypes.Run;
             }
             else
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.injuredRunBack;
+                soundController.GetSetSoundTypes = SoundTypes.InjuredRun;
             }
-            soundController.GetSetSoundTypes = SoundTypes.Run;
         }
         else if (eventsManager != null && eventsManager.GetEventType == EventType.PersonStuckObjects && eventsManager.isClick)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Push;
+            soundController.GetSetSoundTypes = SoundTypes.Push;
         }
         else if (eventsManager != null && eventsManager.GetEventType == EventType.PersonStuckHouse && eventsManager.isClick)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
+            soundController.GetSetSoundTypes = SoundTypes.KickDoor;
         }
         else if (eventsManager != null && eventsManager.GetEventType == EventType.Heretics && eventsManager.isClick)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Untie;
+            soundController.GetSetSoundTypes = SoundTypes.Untie;
         }
         else if (eventsManager != null && eventsManager.GetEventType == EventType.Cat && eventsManager.isClick)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.CallCat;
+            soundController.GetSetSoundTypes = SoundTypes.CallCat;
         }
         else if (eventsManager != null && eventsManager.GetEventType == EventType.WakeUp && eventsManager.isClick)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
+            soundController.GetSetSoundTypes = SoundTypes.WakeUp;
         }
         else
         {
