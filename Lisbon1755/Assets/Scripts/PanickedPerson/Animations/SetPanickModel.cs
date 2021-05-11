@@ -60,6 +60,7 @@ public class SetPanickModel : MonoBehaviour
     private void Start()
     {
         InitializeCharacters();
+        ChooseCharacter();
         SetCharacter();
     }
 
@@ -81,6 +82,41 @@ public class SetPanickModel : MonoBehaviour
         TurnOff(ref character5);
 
         TurnOff(ref character6);
+    }
+
+    /// <summary>
+    /// Choose a random character.
+    /// </summary>
+    private void ChooseCharacter()
+    {
+        int rndCharacter = Random.Range(0, 6);
+
+        switch(rndCharacter)
+        {
+            case 0:
+                panickModelTypes = PanickModelTypes.Character1;
+                break;
+
+            case 1:
+                panickModelTypes = PanickModelTypes.Character2;
+                break;
+
+            case 2:
+                panickModelTypes = PanickModelTypes.Character3;
+                break;
+
+            case 3:
+                panickModelTypes = PanickModelTypes.Character4;
+                break;
+
+            case 4:
+                panickModelTypes = PanickModelTypes.Character5;
+                break;
+
+            case 5:
+                panickModelTypes = PanickModelTypes.Character6;
+                break;
+        }
     }
 
     /// <summary>
