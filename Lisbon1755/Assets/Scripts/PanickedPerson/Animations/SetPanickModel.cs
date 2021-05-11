@@ -25,6 +25,9 @@ public class SetPanickModel : MonoBehaviour
     [SerializeField]
     private GameObject[] character5;
 
+    [SerializeField]
+    private GameObject[] character6;
+
     private void Start()
     {
         InitializeModels();
@@ -61,6 +64,11 @@ public class SetPanickModel : MonoBehaviour
         for (int i = 0; i < character5.Length; i++)
         {
             character5[i].SetActive(false);
+        }
+
+        for (int i = 0; i < character6.Length; i++)
+        {
+            character6[i].SetActive(false);
         }
     }
 
@@ -100,6 +108,13 @@ public class SetPanickModel : MonoBehaviour
                 for (int i = 0; i < character5.Length; i++)
                 {
                     character5[i].SetActive(true);
+                }
+                break;
+
+            case PanickModelTypes.Character6:
+                for (int i = 0; i < character6.Length; i++)
+                {
+                    character6[i].SetActive(true);
                 }
                 break;
         }
