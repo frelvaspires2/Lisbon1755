@@ -6,6 +6,9 @@ using System.Collections;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    private SoundController soundController;
+
     public EventsManager eventsManager { get; set; }
 
     /// <summary>
@@ -467,6 +470,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalk;
             }
+            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if(autoMove || mouseMove && !isRolling && !isJumping && !isRunning)
         {
@@ -478,6 +482,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalk;
             }
+            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if(Input.GetAxis("Forward") < 0 && !isRolling && !isJumping && !isRunning)
         {
@@ -489,30 +494,37 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredWalkBack;
             }
+            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if(acceleration.x > 0 && !isRunning)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStrade;
+            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if (acceleration.x > 0 && isRunning)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStradeRun;
+            soundController.GetSetSoundTypes = SoundTypes.Run;
         }
         else if (acceleration.x < 0 && isRunning)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStradeRun;
+            soundController.GetSetSoundTypes = SoundTypes.Run;
         }
         else if (acceleration.x < 0 && !isRunning)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStrade;
+            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if(isJumping)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.jump;
+            soundController.GetSetSoundTypes = SoundTypes.Jump;
         }
         else if(isRolling)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.roll;
+            soundController.GetSetSoundTypes = SoundTypes.Roll;
         }
         else if(isRunning && Input.GetAxis("Forward") > 0)
         {
@@ -524,6 +536,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.InjuredRun;
             }
+            soundController.GetSetSoundTypes = SoundTypes.Run;
         }
         else if (isRunning && Input.GetAxis("Forward") < 0)
         {
@@ -535,6 +548,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.injuredRunBack;
             }
+            soundController.GetSetSoundTypes = SoundTypes.Run;
         }
         else if (eventsManager != null && eventsManager.GetEventType == EventType.PersonStuckObjects && eventsManager.isClick)
         {
@@ -559,6 +573,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
+            soundController.GetSetSoundTypes = SoundTypes.Idle;
         }
     }
 }

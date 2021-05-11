@@ -31,6 +31,8 @@ public class SoundController : MonoBehaviour
     {
         soundDic = new Dictionary<SoundTypes, GameObject>();
 
+        soundTypes = SoundTypes.Idle;
+
         foreach(SoundStats item in soundStats)
         {
             soundDic.Add(item.GetSoundTypes, item.SoundSource);
@@ -41,6 +43,10 @@ public class SoundController : MonoBehaviour
     {
         switch(soundTypes)
         {
+            case SoundTypes.Idle:
+                IdleSound();
+                break;
+
             case SoundTypes.Walk:
                 WalkSound();
                 break;
@@ -56,6 +62,21 @@ public class SoundController : MonoBehaviour
             case SoundTypes.Roll:
                 RollSound();
                 break;
+        }
+    }
+
+    private void IdleSound()
+    {
+        foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == SoundTypes.Idle)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
         }
     }
 
