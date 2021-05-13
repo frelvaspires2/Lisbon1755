@@ -20,6 +20,21 @@ public class UI_GotHitScreen : MonoBehaviour
     private GameData gameData;
 
     /// <summary>
+    /// Access the sound.
+    /// </summary>
+    [SerializeField]
+    private GameObject sound;
+
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize variables.
+    /// </summary>
+    private void Start()
+    {
+        sound.SetActive(false);
+    }
+
+    /// <summary>
     /// Make the screen red while the player is injured.
     /// </summary>
     private void GotHurt()
@@ -41,6 +56,8 @@ public class UI_GotHitScreen : MonoBehaviour
         color.a = 0.5f;
 
         gotHitScreen.color = color;
+
+        sound.SetActive(true);
 
         StartCoroutine(HitRoutine());
     }
@@ -76,6 +93,8 @@ public class UI_GotHitScreen : MonoBehaviour
         WaitForSeconds wfs = new WaitForSeconds(0.5f);
 
         yield return wfs;
+
+        sound.SetActive(false);
 
         Color color = gotHitScreen.color;
 

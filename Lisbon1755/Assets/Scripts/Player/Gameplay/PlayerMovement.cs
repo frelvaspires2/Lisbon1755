@@ -6,6 +6,9 @@ using System.Collections;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    /// <summary>
+    /// Access the sound controller script.
+    /// </summary>
     [SerializeField]
     private SoundController soundController;
 

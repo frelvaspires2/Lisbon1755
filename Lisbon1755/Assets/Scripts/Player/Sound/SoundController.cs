@@ -1,32 +1,58 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+/// <summary>
+/// Controller of the player's sound.
+/// </summary>
 public class SoundController : MonoBehaviour
 {
+    /// <summary>
+    /// Access the sound types.
+    /// </summary>
     [SerializeField]
     private SoundTypes soundTypes;
 
+    /// <summary>
+    /// Gets and sets the sound types.
+    /// </summary>
     public SoundTypes GetSetSoundTypes
     {
         get => soundTypes;
         set => soundTypes = value;
     }
 
+    /// <summary>
+    /// Access the SoundStats struct.
+    /// </summary>
     [SerializeField]
     private SoundStats[] soundStats;
 
+    /// <summary>
+    /// Organize all the sounds.
+    /// </summary>
     private Dictionary<SoundTypes, GameObject> soundDic;
 
+    /// <summary>
+    /// To be played in the first frame.
+    /// Initialize the sounds.
+    /// </summary>
     private void Start()
     {
         InitializeSounds();
     }
 
+    /// <summary>
+    /// To be played in every frame.
+    /// Control the sounds.
+    /// </summary>
     private void Update()
     {
         SoundSTM();
     }
 
+    /// <summary>
+    /// Initialize the sounds.
+    /// </summary>
     private void InitializeSounds()
     {
         soundDic = new Dictionary<SoundTypes, GameObject>();
@@ -39,6 +65,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Control the sounds.
+    /// </summary>
     private void SoundSTM()
     {
         switch(soundTypes)
@@ -93,6 +122,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the idle sound.
+    /// </summary>
     private void IdleSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -108,6 +140,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the walk sound.
+    /// </summary>
     private void WalkSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -123,6 +158,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the run sound.
+    /// </summary>
     private void RunSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -138,6 +176,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the jump sound.
+    /// </summary>
     private void JumpSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -153,6 +194,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the roll sound.
+    /// </summary>
     private void RollSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -168,6 +212,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the walk while injured sound.
+    /// </summary>
     private void InjuredWalkSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -183,6 +230,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the run while injured sound.
+    /// </summary>
     private void InjuredRunSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -198,6 +248,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the push sound.
+    /// </summary>
     private void PushSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -213,6 +266,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the kick door sound.
+    /// </summary>
     private void KickDoorSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -228,6 +284,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the untie sound.
+    /// </summary>
     private void UntieSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -243,6 +302,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the call cat sound.
+    /// </summary>
     private void CallCatSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
@@ -258,6 +320,9 @@ public class SoundController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the wake up sound.
+    /// </summary>
     private void WakeUpSound()
     {
         foreach (KeyValuePair<SoundTypes, GameObject> item in soundDic)
