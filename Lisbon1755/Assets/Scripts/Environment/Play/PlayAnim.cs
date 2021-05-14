@@ -37,14 +37,28 @@ public class PlayAnim : MonoBehaviour
     /// </summary>
     public bool IsDone { get => isDone; }
 
+    /// <summary>
+    /// Check if the animation has started.
+    /// </summary>
     [SerializeField]
     private bool hasStarted;
 
+    /// <summary>
+    /// Gets whether the animation has started.
+    /// </summary>
     public bool HasStarted { get => hasStarted; }
 
-
+    /// <summary>
+    /// Access the CameraShake script.
+    /// </summary>
     [SerializeField]
     private CameraShake cameraShake;
+
+    /// <summary>
+    /// Access the fall sound.
+    /// </summary>
+    [SerializeField]
+    private GameObject fallSound;
 
     /// <summary>
     /// To be played in the first frame of the game.
@@ -55,6 +69,7 @@ public class PlayAnim : MonoBehaviour
         isPlayed = false;
         isDone = false;
         animController = GetComponent<Animator>();
+        fallSound.SetActive(false);
     }
 
     private void Update()
@@ -79,6 +94,7 @@ public class PlayAnim : MonoBehaviour
             // Play the animation.
             animController.Play(animName);
             hasStarted = true;
+            fallSound.SetActive(true);
         }
     }
 
@@ -87,5 +103,6 @@ public class PlayAnim : MonoBehaviour
         isDone = true;
         hasStarted = false;
         cameraShake.CanShake = false;
+        fallSound.SetActive(false);
     }
 }

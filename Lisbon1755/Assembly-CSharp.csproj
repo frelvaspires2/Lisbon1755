@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\GameManager\ChangeLevel.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Other\RemoveAgent.cs" />
     <Compile Include="Assets\Scripts\UI\UI_EventMarker.cs" />
+    <Compile Include="Assets\Scripts\Player\Sound\SoundTypes.cs" />
     <Compile Include="Assets\Scripts\Data\EventsResultStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\RunningState.cs" />
     <Compile Include="Assets\Scripts\UI\UnlockMarker.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\PanickedState.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickModel.cs" />
     <Compile Include="Assets\Scripts\Environment\Play\PlayDMGAnim.cs" />
+    <Compile Include="Assets\Scripts\Player\Sound\SoundStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\WoundedState.cs" />
     <Compile Include="Assets\Scripts\Events\Global\EventState.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\SetAnimations.cs" />
@@ -122,6 +124,7 @@
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
     <Compile Include="Assets\Scripts\Environment\Play\PlayCartDMG.cs" />
     <Compile Include="Assets\Scripts\Environment\ThrowObjects\RandomThrow.cs" />
+    <Compile Include="Assets\Scripts\Player\Sound\SoundController.cs" />
     <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
