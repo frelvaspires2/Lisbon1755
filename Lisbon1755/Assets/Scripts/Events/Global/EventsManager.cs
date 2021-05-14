@@ -146,12 +146,21 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private bool stopTimer;
 
+    /// <summary>
+    /// Access the idle sound of the event.
+    /// </summary>
     [SerializeField]
     private GameObject idleSound;
 
+    /// <summary>
+    /// Access the sound in case of loss in the event.
+    /// </summary>
     [SerializeField]
     private GameObject lossSound;
 
+    /// <summary>
+    /// Access the sound in case of win in the event.
+    /// </summary>
     [SerializeField]
     private GameObject winSound;
 
@@ -327,6 +336,9 @@ public class EventsManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play the idle sound.
+    /// </summary>
     private void IdleSound()
     {
         idleSound.SetActive(true);
@@ -334,6 +346,9 @@ public class EventsManager : MonoBehaviour
         winSound.SetActive(false);
     }
 
+    /// <summary>
+    /// Play the loss sound.
+    /// </summary>
     private void LossSound()
     {
         idleSound.SetActive(false);
@@ -341,6 +356,9 @@ public class EventsManager : MonoBehaviour
         winSound.SetActive(false);
     }
 
+    /// <summary>
+    /// Play the win sound.
+    /// </summary>
     private void WinSound()
     {
         if (winSound != null)
