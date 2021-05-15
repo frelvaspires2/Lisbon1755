@@ -88,6 +88,10 @@ public class AISoundController : MonoBehaviour
             case AISoundTypes.Wounded:
                 WoundedSound();
                 break;
+
+            case AISoundTypes.GotHit:
+                GotHitSound();
+                break;
         }
     }
 
@@ -153,6 +157,21 @@ public class AISoundController : MonoBehaviour
         foreach (KeyValuePair<AISoundTypes, GameObject> item in soundDic)
         {
             if (item.Key == AISoundTypes.Dying)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    private void GotHitSound()
+    {
+        foreach (KeyValuePair<AISoundTypes, GameObject> item in soundDic)
+        {
+            if (item.Key == AISoundTypes.GotHit)
             {
                 item.Value.SetActive(true);
             }
