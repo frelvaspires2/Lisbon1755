@@ -146,6 +146,24 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private bool stopTimer;
 
+    /// <summary>
+    /// Access the idle sound of the event.
+    /// </summary>
+    [SerializeField]
+    private GameObject idleSound;
+
+    /// <summary>
+    /// Access the sound in case of loss in the event.
+    /// </summary>
+    [SerializeField]
+    private GameObject lossSound;
+
+    /// <summary>
+    /// Access the sound in case of win in the event.
+    /// </summary>
+    [SerializeField]
+    private GameObject winSound;
+
     
     /// <summary>
     /// To be played on the first frame.
@@ -179,6 +197,7 @@ public class EventsManager : MonoBehaviour
         {
             case EventState.Inactive:
                 eventResult = EventResult.None;
+                IdleSound();
                 break;
             case EventState.Active:
                 PlayEvent();
@@ -187,10 +206,12 @@ public class EventsManager : MonoBehaviour
                 if(clickCount == setHowManyClicks)
                 {
                     eventResult = EventResult.Won;
+                    WinSound();
                 }
                 else
                 {
                     eventResult = EventResult.Lost;
+                    LossSound();
                 }
                 eventMarker.SetActive(false);
                 break;
@@ -312,6 +333,42 @@ public class EventsManager : MonoBehaviour
        if(!stopTimer)
         {
             timerSlider.value = eventTimeCounter;
+        }
+    }
+
+    /// <summary>
+    /// Play the idle sound.
+    /// </summary>
+    private void IdleSound()
+    {
+        idleSound.SetActive(true);
+        lossSound.SetActive(false);
+        winSound.SetActive(false);
+    }
+
+    /// <summary>
+    /// Play the loss sound.
+    /// </summary>
+    private void LossSound()
+    {
+        if (lossSound != null)
+        {
+            idleSound.SetActive(false);
+            lossSound.SetActive(true);
+            winSound.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Play the win sound.
+    /// </summary>
+    private void WinSound()
+    {
+        if (winSound != null)
+        {
+            idleSound.SetActive(false);
+            lossSound.SetActive(false);
+            winSound.SetActive(true);
         }
     }
 

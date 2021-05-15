@@ -72,7 +72,10 @@ public class CatEvent : MonoBehaviour
         {
             catLadyThankful.SetActive(true);
         }
-        catLadySad.SetActive(false);
+        if (catLadySad != null)
+        {
+            catLadySad.SetActive(false);
+        }
 
         StartCoroutine(Disappear(catSafe, catLadyThankful));
     }

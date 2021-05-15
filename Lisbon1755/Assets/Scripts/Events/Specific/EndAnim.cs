@@ -35,6 +35,9 @@ public class EndAnim : MonoBehaviour
     [SerializeField]
     private GameObject blockZone;
 
+    [SerializeField]
+    private GameObject sound;
+
     /// <summary>
     /// To be played in the first frame of the game.
     /// Setup variables.
@@ -54,6 +57,7 @@ public class EndAnim : MonoBehaviour
     {
         isAnimationFinished = true;
         dmgZone.SetActive(true);
+        Destroy(sound);
         StartCoroutine(StopDMG());
     }
 
