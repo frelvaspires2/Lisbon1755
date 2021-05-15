@@ -67,6 +67,7 @@ public class PlayDMGAnim : MonoBehaviour
         if (other.gameObject.tag == "NPC" && playAnim.IsDone && !isNPCHit)
         {
             other.GetComponent<PanickedController>().Health -= dmg;
+            other.GetComponent<AISoundController>().GotHitSound();
             isNPCHit = true;
         }
     }

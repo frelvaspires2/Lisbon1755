@@ -33,6 +33,7 @@ public class PlayDMG : MonoBehaviour
         if(other.gameObject.tag == "NPC")
         {
             other.GetComponent<PanickedController>().Health -= dmg;
+            other.GetComponent<AISoundController>().GotHitSound();
         }
     }
 }

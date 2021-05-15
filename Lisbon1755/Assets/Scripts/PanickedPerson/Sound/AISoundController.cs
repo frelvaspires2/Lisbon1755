@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -34,6 +35,19 @@ public class AISoundController : MonoBehaviour
 
 
     /// <summary>
+    /// Access the got hit sound gameobject.
+    /// </summary>
+    [SerializeField]
+    private GameObject gotHitSound;
+
+    /// <summary>
+    /// Got hit sound time.
+    /// To be set by the game designer in inspector.
+    /// </summary>
+    [SerializeField]
+    private float hitSoundTime = 1f;
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize the sounds.
     /// </summary>
@@ -64,6 +78,8 @@ public class AISoundController : MonoBehaviour
         {
             soundDic.Add(aiSoundStats[i].GetAISoundType, aiSoundStats[i].Sound);
         }
+
+        gotHitSound.SetActive(false);
     }
 
     /// <summary>
@@ -87,10 +103,6 @@ public class AISoundController : MonoBehaviour
 
             case AISoundTypes.Wounded:
                 WoundedSound();
-                break;
-
-            case AISoundTypes.GotHit:
-                GotHitSound();
                 break;
         }
     }
@@ -167,18 +179,26 @@ public class AISoundController : MonoBehaviour
         }
     }
 
-    private void GotHitSound()
+    /// <summary>
+    /// Play the got hit sound.
+    /// </summary>
+    public void GotHitSound()
     {
-        foreach (KeyValuePair<AISoundTypes, GameObject> item in soundDic)
-        {
-            if (item.Key == AISoundTypes.GotHit)
-            {
-                item.Value.SetActive(true);
-            }
-            else
-            {
-                item.Value.SetActive(false);
-            }
-        }
+        StartCoroutine(HitRoutine());
+    }
+
+    /// <summary>
+    /// Got hit sound routine.
+    /// </summary>
+    /// <returns> Wait for seconds.</returns>
+    private IEnumerator HitRoutine()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(hitSoundTime);
+
+        gotHitSound.SetActive(true);
+
+        yield return wfs;
+
+        gotHitSound.SetActive(false);
     }
 }
