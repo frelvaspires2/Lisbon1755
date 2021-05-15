@@ -351,9 +351,12 @@ public class EventsManager : MonoBehaviour
     /// </summary>
     private void LossSound()
     {
-        idleSound.SetActive(false);
-        lossSound.SetActive(true);
-        winSound.SetActive(false);
+        if (lossSound != null)
+        {
+            idleSound.SetActive(false);
+            lossSound.SetActive(true);
+            winSound.SetActive(false);
+        }
     }
 
     /// <summary>
