@@ -20,8 +20,4 @@ public enum AISoundTypes
     /// Dying sound.
     /// </summary>
     Dying,
-    /// <summary>
-    /// Got hit sound.
-    /// </summary>
-    GotHit,
 }
