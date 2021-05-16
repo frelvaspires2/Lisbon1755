@@ -19,13 +19,21 @@ public class LoadGame : MonoBehaviour
     /// </summary>
     private string path; //= Application.persistentDataPath + "/save.csv";
 
+    private string level2Path; //= Application.persistentDataPath + "/level2.txt";
+
     /// <summary>
     /// To be played before the game stats.
     /// Set the file path.
     /// </summary>
     private void Awake()
     {
-        path = "C:/Users/Francisco/Documents/GitHub/Lisbon1755/save.csv";
+        //path = "C:/Users/Francisco/Documents/GitHub/Lisbon1755/save.csv";
+        //level2Path = "C:/Users/Francisco/Documents/GitHub/Lisbon1755/level2.txt";
+
+        path = Application.persistentDataPath + "/save.csv";
+        level2Path = Application.persistentDataPath + "/level2.txt";
+
+        Debug.Log("Path: " + Application.persistentDataPath);
     }
 
     /// <summary>
@@ -87,6 +95,22 @@ public class LoadGame : MonoBehaviour
                     Convert.ToBoolean(checkIfFinished),
                     Convert.ToInt32(peopleSavedNumber)));
             }
+        }
+    }
+
+
+    /// <summary>
+    /// Check if level 2 was unlocked.
+    /// </summary>
+    public bool CheckIfLevel2IsUnlocked()
+    {
+        if (File.Exists(level2Path))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

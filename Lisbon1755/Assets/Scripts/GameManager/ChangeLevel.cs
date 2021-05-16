@@ -30,6 +30,7 @@ public class ChangeLevel : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Level1")
         {
             gameStats.GameStatsDic.Add(new SaveData(1, true, scoreStats.Level1Score));
+            saveGame.UnlockLevel2();
         }
         else if(SceneManager.GetActiveScene().name == "Level2")
         {
