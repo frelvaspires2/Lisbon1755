@@ -29,89 +29,10 @@ Transform:
   m_Children:
   - {fileID: 3238581376901979560}
   - {fileID: 3238581376939641134}
-  - {fileID: 3238581378290917259}
   - {fileID: 3238581377178918945}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3133232001688336480
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3133232002007382625}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -80.06
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19.82
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_Name
-      value: decorativeStoneColumn_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
---- !u!4 &3238581378290917259 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
-  m_PrefabInstance: {fileID: 3133232001688336480}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3133232002775156682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c49e96e167bdaef499019be557f3ae04, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
