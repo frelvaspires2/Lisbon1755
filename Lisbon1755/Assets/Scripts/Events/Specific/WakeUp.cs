@@ -61,7 +61,14 @@ public class WakeUp : MonoBehaviour
     private EndAnim endAnim;
 
     [SerializeField]
-    private EventsResultStats eventsResultStats;
+    private ScoreStats scoreStats;
+
+    private bool hasWon;
+
+    private void Start()
+    {
+        hasWon = false;
+    }
 
     /// <summary>
     /// To be played in every frame.
@@ -79,15 +86,17 @@ public class WakeUp : MonoBehaviour
         switch (eventManager.GetEventResult)
         {
             case EventResult.None:
-                eventsResultStats.EventsResult[4] = EventResult.None;
                 NoneState();
                 break;
             case EventResult.Won:
-                eventsResultStats.EventsResult[4] = EventResult.Won;
+                if (!hasWon)
+                {
+                    scoreStats.Level2Score += 1;
+                    hasWon = true;
+                }
                 WonState();
                 break;
             case EventResult.Lost:
-                eventsResultStats.EventsResult[4] = EventResult.Lost;
                 LostState();
                 break;
         }
