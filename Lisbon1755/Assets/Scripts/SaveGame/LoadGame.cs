@@ -1,25 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
-using System.Linq;
 
+/// <summary>
+/// Load the game.
+/// </summary>
 public class LoadGame : MonoBehaviour
 {
+    /// <summary>
+    /// Access the GameStats scriptableobject.
+    /// </summary>
     [SerializeField]
     private GameStats gameStats;
 
+    /// <summary>
+    /// Set the file path.
+    /// </summary>
     private string path; //= Application.persistentDataPath + "/save.csv";
 
-    // Start is called before the first frame update
-    private void Start()
+    /// <summary>
+    /// To be played before the game stats.
+    /// Set the file path.
+    /// </summary>
+    private void Awake()
     {
         path = "C:/Users/Francisco/Documents/GitHub/Lisbon1755/save.csv";
-        ReadFile();
     }
 
-    private void ReadFile()
+    /// <summary>
+    /// Read the file.
+    /// </summary>
+    public void LoadTheGame()
     {
         string content = "";
         string[] lines;
@@ -37,12 +49,6 @@ public class LoadGame : MonoBehaviour
 
         using (StreamReader sr = File.OpenText(path))
         {
-            /*while ((content = sr.ReadLine()) != null)
-            {
-                lines = (content.Split(','));
-                Debug.Log(content);
-            }*/
-
             // Divide the first line and put each type in the array.
             content = sr.ReadLine();
             lines = new string[content.Length];
@@ -73,13 +79,13 @@ public class LoadGame : MonoBehaviour
                 count++;
 
                 lines = (content.Split(','));
-                //Debug.Log(content);
 
                 levelNumber = lines[index[0]];
                 checkIfFinished = lines[index[1]];
                 peopleSavedNumber = lines[index[2]];
 
-                gameStats.DataDic.Add(count, new SaveData(
+                // Add the data to the scriptableobject.
+                gameStats.GameStatsDic.Add(count, new SaveData(
                     Convert.ToInt32(levelNumber),
                     Convert.ToBoolean(checkIfFinished),
                     Convert.ToInt32(peopleSavedNumber)));
@@ -87,12 +93,12 @@ public class LoadGame : MonoBehaviour
         }
 
         // Testing...
-        foreach(KeyValuePair<int, SaveData> item in gameStats.DataDic)
+        /*foreach(KeyValuePair<int, SaveData> item in gameStats.GameStatsDic)
         {
             Debug.Log($"Key: {item.Key}.  " +
                 $"Level: {item.Value.Level}.  " +
                 $"IsFinished: {item.Value.IsFinished}.  " +
                 $"PeopleSaved: {item.Value.PeopleSaved}");
-        }
+        }*/
     }
 }

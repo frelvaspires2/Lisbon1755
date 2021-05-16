@@ -1,15 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Keep game stats dictionary.
+/// </summary>
 [CreateAssetMenu(menuName = "GameStats")]
 public class GameStats : ScriptableObject
 {
-    private Dictionary<int, SaveData> dataDic = new Dictionary<int, SaveData>();
+    /// <summary>
+    /// Game stats.
+    /// </summary>
+    private Dictionary<int, SaveData> gameStatsDic = new Dictionary<int, SaveData>();
 
-    public Dictionary<int, SaveData> DataDic
+    /// <summary>
+    /// Gets game stats.
+    /// </summary>
+    public Dictionary<int, SaveData> GameStatsDic
     {
-        get => dataDic;
-        set => dataDic = value;
+        get => gameStatsDic;
+        set => gameStatsDic = value;
     }
 }
