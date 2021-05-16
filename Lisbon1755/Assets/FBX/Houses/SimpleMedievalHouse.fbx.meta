@@ -3,7 +3,77 @@ guid: 995806c74d4d0a540aeee9b1b381d722
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick
+    second: {fileID: 2100000, guid: 12901b01663eae0439e9cf44c281a352, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hatch_Wood
+    second: {fileID: 2100000, guid: 6773680a672c8c34b9067a8d8bf11f9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ornament_wood
+    second: {fileID: 2100000, guid: afa318d2f9647cf4a86c278b876c9028, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaster_Clean
+    second: {fileID: 2100000, guid: df7ec79bd2c5622418dcb10b44cbc02c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaster_Wood
+    second: {fileID: 2100000, guid: 784a27a2fd8854443be525e68a99f7cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sandstone_brick
+    second: {fileID: 2100000, guid: 32d959d1f14146246ab91de1cba07ebe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_bar_material
+    second: {fileID: 2100000, guid: 33d74aeef2346ed43a84ca8da531821a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_wood
+    second: {fileID: 2100000, guid: ea75643e47dc7d844b32491ebf4aa081, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_wood_dirt
+    second: {fileID: 2100000, guid: 9945aaec7972ade4391ab0b959458fe7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hatch_hook
+    second: {fileID: 2100000, guid: e66cf0020393d3a4584ab410f273a15a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: medieval_window
+    second: {fileID: 2100000, guid: 567b6e05de2289243bf06bc621b9770f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plaster_broken
+    second: {fileID: 2100000, guid: 63c1b2ec747311649b3a16c8c53c4bd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof_tiles
+    second: {fileID: 2100000, guid: 4a44deda44b9e6142aeaf37b5b10a75c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof_tin
+    second: {fileID: 2100000, guid: 8c36fcf470a7b9548a2706c2e8d87d8c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

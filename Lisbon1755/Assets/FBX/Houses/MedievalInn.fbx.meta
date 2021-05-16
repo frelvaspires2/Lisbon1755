@@ -3,7 +3,67 @@ guid: d018ef6a6c3b5e649b45b18ec0397350
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: 7ff85260b367cba418eb92cd90a8f19f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof_shingles
+    second: {fileID: 2100000, guid: ead0cce248d6337478d641d527ed8f8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone
+    second: {fileID: 2100000, guid: 30c16872e08d83b49ab544f55afab502, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: 2100000, guid: ac07a16a77185914c9411bcb2deaafbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_beam
+    second: {fileID: 2100000, guid: 9d912bb2d7fce024aa0ba2e6ad28ad14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_planks
+    second: {fileID: 2100000, guid: 74f843cf475066f47abd16d7d5b7c5d0, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Medieval_doortexture
+    second: {fileID: 2800000, guid: 38266b696ff886c4da2532ab553ae512, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Rockywall
+    second: {fileID: 2800000, guid: 33887e1a3fcc8db479a64bf07384887c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Window_light
+    second: {fileID: 2800000, guid: 252ffbe52cd91b4488364959223ca13a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: darkwoodbeams
+    second: {fileID: 2800000, guid: c578247ef3717d94a8d06116eb2559f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: woodplanksgrey
+    second: {fileID: 2800000, guid: 90b3697a5c3e06a4f9e2938b894b4a53, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: woodroof
+    second: {fileID: 2800000, guid: 730a4efbf44e63f478bf752da291b810, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -85,7 +145,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.03
+    globalScale: 3
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

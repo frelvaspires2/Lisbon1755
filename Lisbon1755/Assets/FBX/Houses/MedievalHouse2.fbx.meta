@@ -6,7 +6,17 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Doors__House3DoorsTexture_png
+    second: {fileID: 2100000, guid: b44e1e1e0570c2a449c9ce3be5478609, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__House3Texture_png
+    second: {fileID: 2100000, guid: 697079788cb36cc4ea921626d807213a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
