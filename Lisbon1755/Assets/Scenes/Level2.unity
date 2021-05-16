@@ -6887,8 +6887,17 @@ PrefabInstance:
       propertyPath: trigger
       value: 
       objectReference: {fileID: 249356643}
+    - target: {fileID: 9034412282497480538, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: gotHitSound
+      value: 
+      objectReference: {fileID: 374940258}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+--- !u!1 &374940258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1731830238341105499, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+  m_PrefabInstance: {fileID: 374940257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &376021876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
@@ -15306,6 +15315,10 @@ PrefabInstance:
       propertyPath: catLadySad
       value: 
       objectReference: {fileID: 249645514}
+    - target: {fileID: 4721129192993306941, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: scoreStats
+      value: 
+      objectReference: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
     - target: {fileID: 4842483424320468064, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -16888,6 +16901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ef8a6bdfb5d5647b6bacfb7258fddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
+  saveGame: {fileID: 980935087}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
   player: {fileID: 43134258}
   isEnd: 0
 --- !u!4 &657920089 stripped
@@ -22573,6 +22589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 980935086}
   - component: {fileID: 980935085}
+  - component: {fileID: 980935087}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -22604,7 +22621,7 @@ MonoBehaviour:
   clickCount: 0
   eventTimeCounter: 0
   setEventTime: 0
-  eventsResultsStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -22619,6 +22636,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &980935087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980935084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be863a6ba1a84ec43a28ec3a66be596c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
 --- !u!1 &984710232
 GameObject:
   m_ObjectHideFlags: 0
@@ -28133,6 +28163,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2869754939703770281, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: eventsResultStats
+      value: 
+      objectReference: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+    - target: {fileID: 2869754939703770281, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: scoreStats
       value: 
       objectReference: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
     - target: {fileID: 2869754939703770282, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
@@ -50601,7 +50635,7 @@ MonoBehaviour:
   animStateName: Anim
   cameraShake: {fileID: 712044495}
   endAnim: {fileID: 807815031}
-  eventsResultStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!1 &2164083786240991325
 GameObject:
   m_ObjectHideFlags: 0

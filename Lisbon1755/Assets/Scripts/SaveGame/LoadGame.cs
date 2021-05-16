@@ -36,7 +36,6 @@ public class LoadGame : MonoBehaviour
         string content = "";
         string[] lines;
         int[] index = new int[3];
-        int count = 0;
 
         string levelNumber = "";
         string checkIfFinished = "";
@@ -76,8 +75,6 @@ public class LoadGame : MonoBehaviour
             // Verify the values of cells
             while ((content = sr.ReadLine()) != null)
             {
-                count++;
-
                 lines = (content.Split(','));
 
                 levelNumber = lines[index[0]];
@@ -85,20 +82,11 @@ public class LoadGame : MonoBehaviour
                 peopleSavedNumber = lines[index[2]];
 
                 // Add the data to the scriptableobject.
-                gameStats.GameStatsDic.Add(count, new SaveData(
+                gameStats.GameStatsDic.Add(new SaveData(
                     Convert.ToInt32(levelNumber),
                     Convert.ToBoolean(checkIfFinished),
                     Convert.ToInt32(peopleSavedNumber)));
             }
         }
-
-        // Testing...
-        /*foreach(KeyValuePair<int, SaveData> item in gameStats.GameStatsDic)
-        {
-            Debug.Log($"Key: {item.Key}.  " +
-                $"Level: {item.Value.Level}.  " +
-                $"IsFinished: {item.Value.IsFinished}.  " +
-                $"PeopleSaved: {item.Value.PeopleSaved}");
-        }*/
     }
 }

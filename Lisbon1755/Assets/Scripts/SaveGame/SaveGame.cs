@@ -31,7 +31,7 @@ public class SaveGame : MonoBehaviour
     /// Save the game by creating/overwrite a save file.
     /// </summary>
     /// <param name="info"> The game stats to be saved.</param>
-    public void SaveTheGame(Dictionary<int, SaveData> info)
+    public void SaveTheGame(List<SaveData> info)
     {
         using(StreamWriter sw = File.CreateText(path))
         {
