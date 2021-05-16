@@ -932,6 +932,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ef8a6bdfb5d5647b6bacfb7258fddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
+  saveGame: {fileID: 846233873461295066}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
   player: {fileID: 1827875487}
   isEnd: 0
 --- !u!65 &34870976
@@ -28934,7 +28937,7 @@ MonoBehaviour:
   clickCount: 0
   eventTimeCounter: 0
   setEventTime: 0
-  eventsResultsStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -62860,7 +62863,7 @@ MonoBehaviour:
   npcDead: {fileID: 1471753574}
   npcSafe: {fileID: 290025613}
   timeToDisappear: 5
-  eventsResultStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!65 &282357678086673880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63213,6 +63216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 846233873461295067}
   - component: {fileID: 846233873461295064}
+  - component: {fileID: 846233873461295066}
   m_Layer: 0
   m_Name: CheatCodes
   m_TagString: Untagged
@@ -63220,6 +63224,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &846233873461295066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846233873461295065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be863a6ba1a84ec43a28ec3a66be596c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
 --- !u!4 &846233873461295067
 Transform:
   m_ObjectHideFlags: 0
@@ -63305,7 +63322,7 @@ MonoBehaviour:
   npcInDanger: {fileID: 1522075901}
   npcSafe: {fileID: 902666049}
   timeToDisappear: 5
-  eventsResultStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!4 &2755231234473880240
 Transform:
   m_ObjectHideFlags: 0

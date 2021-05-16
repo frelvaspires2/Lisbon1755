@@ -8,14 +8,14 @@ using UnityEngine;
 public class GameStats : ScriptableObject
 {
     /// <summary>
-    /// Game stats.
+    /// Final game stats.
     /// </summary>
-    private Dictionary<int, SaveData> gameStatsDic = new Dictionary<int, SaveData>();
+    private List<SaveData> gameStatsDic = new List<SaveData>();
 
     /// <summary>
-    /// Gets game stats.
+    /// Gets final game stats.
     /// </summary>
-    public Dictionary<int, SaveData> GameStatsDic
+    public List<SaveData> GameStatsDic
     {
         get => gameStatsDic;
         set => gameStatsDic = value;
