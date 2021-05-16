@@ -124,7 +124,7 @@ public class GameData : MonoBehaviour
     public int SetEventTime { get => setEventTime; }
 
     [SerializeField]
-    private EventsResultStats eventsResultsStats;
+    private ScoreStats scoreStats;
 
     /// <summary>
     /// To be played in the first frame of the game.
@@ -155,8 +155,16 @@ public class GameData : MonoBehaviour
     {
         if (health <= 0)
         {
-            eventsResultsStats.ResetStats();
-            SceneManager.LoadScene(scene.name);
+            if(scene.name == "Level1")
+            {
+                scoreStats.ResetLevel1Stats();
+                SceneManager.LoadScene(scene.name);
+            }
+            else if(scene.name == "Level2")
+            {
+                scoreStats.ResetLevel2Stats();
+                SceneManager.LoadScene(scene.name);
+            }
         }
 
         // cheat core to restart the game
