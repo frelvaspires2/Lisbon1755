@@ -72,8 +72,10 @@
     <Compile Include="Assets\Scripts\Environment\ThrowObjects\FallingObject.cs" />
     <Compile Include="Assets\Scripts\Events\Specific\WakeUp.cs" />
     <Compile Include="Assets\Scripts\Environment\Play\PlayEnterDMGAnim.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\Sound\PanickVoiceTypes.cs" />
     <Compile Include="Assets\Scripts\Data\PanickedStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedController.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\Sound\AISoundStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Menus\Score\Score.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\DeadState.cs" />
@@ -84,8 +86,11 @@
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\UI\Markers.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\State.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\Sound\AISoundTypes.cs" />
+    <Compile Include="Assets\Scripts\Data\GameStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\PanickAnimTypes.cs" />
     <Compile Include="Assets\Scripts\Environment\Play\PlayAnim.cs" />
+    <Compile Include="Assets\Scripts\SaveGame\LoadGame.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Other\TriggerPanick.cs" />
     <Compile Include="Assets\Scripts\UI\UI_EnergyBar.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerStats.cs" />
@@ -97,14 +102,18 @@
     <Compile Include="Assets\Scripts\Events\Global\EventResult.cs" />
     <Compile Include="Assets\Scripts\Environment\ThrowObjects\ThrowObject.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\Transition.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\Sound\SetPanickVoice.cs" />
+    <Compile Include="Assets\Scripts\SaveGame\SaveGame.cs" />
     <Compile Include="Assets\Scripts\GameManager\ChangeLevel.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Other\RemoveAgent.cs" />
+    <Compile Include="Assets\Scripts\PanickedPerson\Sound\AISoundController.cs" />
     <Compile Include="Assets\Scripts\UI\UI_EventMarker.cs" />
     <Compile Include="Assets\Scripts\Player\Sound\SoundTypes.cs" />
-    <Compile Include="Assets\Scripts\Data\EventsResultStats.cs" />
+    <Compile Include="Assets\Scripts\Data\ScoreStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\RunningState.cs" />
     <Compile Include="Assets\Scripts\UI\UnlockMarker.cs" />
     <Compile Include="Assets\Scripts\Events\Specific\StuckInHouse.cs" />
+    <Compile Include="Assets\Scripts\SaveGame\SaveData.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Events\Global\EventType.cs" />
@@ -128,11 +137,6 @@
     <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\Sound\AISoundController.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\Sound\AISoundStats.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\Sound\AISoundTypes.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\Sound\PanickVoiceTypes.cs" />
-    <Compile Include="Assets\Scripts\PanickedPerson\Sound\SetPanickVoice.cs" />
     <None Include="Assets\Animations\Events\Cat\Ladymito\Free_cat\Animations\low_poly_cat_animation_list.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

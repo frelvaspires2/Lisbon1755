@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 980935086}
   - component: {fileID: 980935085}
   - component: {fileID: 980935087}
+  - component: {fileID: 980935088}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -781,11 +782,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980935084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8fd8dde09f83194fbdb30546dfba174, type: 3}
+  m_Script: {fileID: 11500000, guid: be863a6ba1a84ec43a28ec3a66be596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
+--- !u!114 &980935088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980935084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc26cf761983d04991ac0309d18368c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
 --- !u!1 &991859510 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1731830238341105499, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
@@ -1996,7 +2011,7 @@ PrefabInstance:
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: ui_Timer
       value: 
-      objectReference: {fileID: 980935087}
+      objectReference: {fileID: 0}
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: setEventTime
       value: 15
@@ -2137,7 +2152,7 @@ PrefabInstance:
     - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: ui_Timer
       value: 
-      objectReference: {fileID: 980935087}
+      objectReference: {fileID: 0}
     - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: qte
       value: 

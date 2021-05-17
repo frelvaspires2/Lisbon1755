@@ -629,6 +629,8 @@ MonoBehaviour:
     aiSoundTypes: 3
   - sound: {fileID: 1731830238341105499}
     aiSoundTypes: 4
+  gotHitSound: {fileID: 1731830238341105499}
+  hitSoundTime: 1
 --- !u!114 &3013981174778872319
 MonoBehaviour:
   m_ObjectHideFlags: 0
