@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 34870977}
   - component: {fileID: 34870976}
   - component: {fileID: 34870975}
+  - component: {fileID: 34870979}
   m_Layer: 0
   m_Name: EndLevel
   m_TagString: Untagged
@@ -933,7 +934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
-  saveGame: {fileID: 846233873461295066}
+  saveGame: {fileID: 34870979}
   scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
   player: {fileID: 1827875487}
   isEnd: 0
@@ -999,6 +1000,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34870973}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &34870979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34870973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be863a6ba1a84ec43a28ec3a66be596c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
 --- !u!1 &35410847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2776272368970777472, guid: 23bf8bcfefd3a7949b32f565aff0bd82, type: 3}
@@ -63216,7 +63230,6 @@ GameObject:
   m_Component:
   - component: {fileID: 846233873461295067}
   - component: {fileID: 846233873461295064}
-  - component: {fileID: 846233873461295066}
   m_Layer: 0
   m_Name: CheatCodes
   m_TagString: Untagged
@@ -63224,19 +63237,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &846233873461295066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846233873461295065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be863a6ba1a84ec43a28ec3a66be596c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
 --- !u!4 &846233873461295067
 Transform:
   m_ObjectHideFlags: 0
