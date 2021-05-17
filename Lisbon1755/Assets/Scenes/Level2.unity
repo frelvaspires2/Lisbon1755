@@ -20757,6 +20757,7 @@ GameObject:
   - component: {fileID: 656036841}
   - component: {fileID: 656036840}
   - component: {fileID: 656036844}
+  - component: {fileID: 656036845}
   m_Layer: 0
   m_Name: endGame
   m_TagString: Untagged
@@ -20853,10 +20854,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
-  saveGame: {fileID: 980935087}
+  saveGame: {fileID: 656036845}
   scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
   player: {fileID: 43134258}
   isEnd: 0
+--- !u!114 &656036845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656036839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be863a6ba1a84ec43a28ec3a66be596c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
 --- !u!4 &657920089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
@@ -28035,7 +28049,6 @@ GameObject:
   m_Component:
   - component: {fileID: 980935086}
   - component: {fileID: 980935085}
-  - component: {fileID: 980935087}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
