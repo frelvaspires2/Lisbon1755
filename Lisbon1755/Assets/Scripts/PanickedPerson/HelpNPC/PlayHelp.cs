@@ -30,12 +30,6 @@ public class PlayHelp : MonoBehaviour
     private Transform setPosition;
 
     /// <summary>
-    /// Checks whether the agent is wounded.
-    /// </summary>
-    [SerializeField]
-    private bool isWounded;
-
-    /// <summary>
     /// Checks whether the player is inside the helping area.
     /// </summary>
     [SerializeField]
@@ -60,7 +54,6 @@ public class PlayHelp : MonoBehaviour
     private void Start()
     {
         isInside = false;
-        isWounded = false;
         clickCount = 0;
     }
 
@@ -69,24 +62,27 @@ public class PlayHelp : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        CheckState();
-        Help();
+        if (CheckState())
+        {
+            Help();
+        }
     }
 
     /// <summary>
-    /// Checks if the opponent is in wounded state.
+    /// Check whether the opponent is in the wounded state.
     /// </summary>
-    private void CheckState()
+    /// <returns> Returns true if the opponent is wounded.</returns>
+    private bool CheckState()
     {
         if(panickedController.GetStates == PanickedState.WoundedInTheGround)
         {
-            isWounded = true;
+            return true;
         }
         else
         {
-            isWounded = false;
             isInside = false;
             clickCount = 0;
+            return false;
         }
     }
 
@@ -123,7 +119,7 @@ public class PlayHelp : MonoBehaviour
     /// <param name="other"> Collider.</param>
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject == player && isWounded)
+        if(other.gameObject == player && CheckState())
         {
             isInside = true;
         }
@@ -135,7 +131,7 @@ public class PlayHelp : MonoBehaviour
     /// <param name="other"> Collider.</param>
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject == player && isWounded)
+        if(other.gameObject == player && CheckState())
         {
             isInside = false;
         }
