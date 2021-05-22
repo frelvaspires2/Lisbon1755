@@ -540,6 +540,14 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 2078701758}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 362774004}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 1894537128}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -1355,6 +1363,10 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
+    - target: {fileID: 2224066719971898260, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4609408

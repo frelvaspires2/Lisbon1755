@@ -1,10 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Help the agent when he's in the wounded state.
 /// </summary>
 public class PlayHelp : MonoBehaviour
 {
+    /// <summary>
+    /// Access the quick time event gameobject.
+    /// </summary>
+    [SerializeField]
+    private GameObject qte;
+
+    /// <summary>
+    /// Access the quick time event image.
+    /// </summary>
+    [SerializeField]
+    private Image qteImage;
+
     /// <summary>
     /// Access the player gameobject.
     /// </summary>
@@ -107,17 +120,24 @@ public class PlayHelp : MonoBehaviour
                 {
                     clickCount += 1 * Time.deltaTime;
                     playerMovement.IsPlayHelp = true;
+                    qte.SetActive(true);
+                    qteImage.fillAmount = (clickCount / setClicks);
                 }
-
-                if(clickCount >= setClicks)
+                else if(clickCount >= setClicks)
                 {
                     panickedController.Health = panickedStats.Health / 1.5f;
                     playerMovement.IsPlayHelp = false;
+                    qte.SetActive(false);
+                }
+                else
+                {
+                    qte.SetActive(false);
                 }
             }
             else
             {
                 playerMovement.IsPlayHelp = false;
+                qte.SetActive(false);
             }
         }
     }
