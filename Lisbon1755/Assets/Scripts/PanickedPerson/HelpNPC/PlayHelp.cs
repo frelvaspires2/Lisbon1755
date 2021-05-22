@@ -17,6 +17,9 @@ public class PlayHelp : MonoBehaviour
     [SerializeField]
     private PanickedController panickedController;
 
+    [SerializeField]
+    private PlayerMovement playerMovement;
+
     /// <summary>
     /// Access the PanickedStats scriptableobject.
     /// </summary>
@@ -103,12 +106,18 @@ public class PlayHelp : MonoBehaviour
                 if(clickCount < setClicks)
                 {
                     clickCount += 1 * Time.deltaTime;
+                    playerMovement.IsPlayHelp = true;
                 }
 
                 if(clickCount >= setClicks)
                 {
                     panickedController.Health = panickedStats.Health / 1.5f;
+                    playerMovement.IsPlayHelp = false;
                 }
+            }
+            else
+            {
+                playerMovement.IsPlayHelp = false;
             }
         }
     }

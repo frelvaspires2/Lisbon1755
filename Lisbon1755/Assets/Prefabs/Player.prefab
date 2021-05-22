@@ -4519,6 +4519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0757f5fedc7c4499917de0c3b1c497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsPlayHelp: 0
   soundController: {fileID: 4638739632894238061}
   playerAnimController: {fileID: 263751570}
   playerStats: {fileID: 11400000, guid: 264f649e038935348a5eaeefbdda9063, type: 2}
@@ -4606,6 +4607,8 @@ MonoBehaviour:
     animation: {fileID: 1593789778}
   - animationType: 19
     animation: {fileID: 1211556259}
+  - animationType: 20
+    animation: {fileID: 1247546939}
   playerAnimTypes: 0
 --- !u!114 &2078701759
 MonoBehaviour:

@@ -532,30 +532,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 162147300, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 162147300, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 162147300, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2078701755}
     - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-      propertyPath: panickedStats
+      propertyPath: playerMovement
       value: 
-      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
-    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-      propertyPath: setClicks
-      value: 5
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2078701758}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -1355,6 +1339,10 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
+    - target: {fileID: 1247546939, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1269505724, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
