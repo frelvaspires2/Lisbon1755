@@ -31,6 +31,7 @@ public class DeadState : MonoBehaviour, IState
     public void State()
     {
         agent.ResetPath();
+        agent.radius = 0;
         StartCoroutine(Dying());
         //Debug.Log("State: Dead");
     }

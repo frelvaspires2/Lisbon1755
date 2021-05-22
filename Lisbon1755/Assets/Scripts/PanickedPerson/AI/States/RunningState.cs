@@ -31,5 +31,6 @@ public class RunningState : MonoBehaviour, IState
     {
         agent.destination = setDestination.position;
         agent.speed = panickedStats.RunningSpeed;
+        agent.radius = 1;
     }
 }

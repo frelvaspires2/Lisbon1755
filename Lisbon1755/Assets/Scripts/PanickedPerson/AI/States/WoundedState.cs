@@ -18,5 +18,6 @@ public class WoundedState : MonoBehaviour, IState
     public void State()
     {
         agent.ResetPath();
+        agent.radius = 0;
     }
 }
