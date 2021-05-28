@@ -31,5 +31,6 @@ public class SlowerState : MonoBehaviour, IState
     {
         agent.destination = setDestination.position;
         agent.speed = panickedStats.SlowerSpeed;
+        agent.radius = 1;
     }
 }

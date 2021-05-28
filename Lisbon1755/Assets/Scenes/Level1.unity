@@ -494,6 +494,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -704,6 +724,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -1065,6 +1105,7 @@ GameObject:
   - component: {fileID: 34870977}
   - component: {fileID: 34870976}
   - component: {fileID: 34870975}
+  - component: {fileID: 34870979}
   m_Layer: 0
   m_Name: EndLevel
   m_TagString: Untagged
@@ -1098,6 +1139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ef8a6bdfb5d5647b6bacfb7258fddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
+  saveGame: {fileID: 34870979}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
   player: {fileID: 1827875487}
   isEnd: 0
 --- !u!65 &34870976
@@ -1162,6 +1206,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34870973}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &34870979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34870973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be863a6ba1a84ec43a28ec3a66be596c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
 --- !u!1 &35410847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2776272368970777472, guid: 23bf8bcfefd3a7949b32f565aff0bd82, type: 3}
@@ -2727,6 +2784,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -3332,6 +3409,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -4607,6 +4704,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -5809,6 +5926,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -10121,6 +10258,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -10585,6 +10742,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -12001,6 +12178,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -12209,6 +12406,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -12932,6 +13149,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -20607,6 +20844,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -20729,6 +20986,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -21787,6 +22064,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -22817,6 +23114,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -24817,6 +25134,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -28880,6 +29217,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -29214,6 +29571,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -30863,6 +31240,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -31430,7 +31827,7 @@ MonoBehaviour:
   clickCount: 0
   eventTimeCounter: 0
   setEventTime: 0
-  eventsResultsStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -32000,6 +32397,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -32244,6 +32661,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -33693,6 +34130,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -34281,6 +34738,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -34913,6 +35390,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -36441,6 +36938,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -36612,6 +37129,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -39402,6 +39939,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -40147,6 +40704,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -42545,6 +43122,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -43098,6 +43695,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -48731,6 +49348,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -49629,6 +50266,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -49810,6 +50467,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -50071,6 +50748,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -50907,6 +51604,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1073908691}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -51980,6 +52697,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -54301,6 +55038,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -54696,6 +55453,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -55298,6 +56075,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -55367,6 +56164,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -56891,6 +57708,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -58467,6 +59304,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -58536,6 +59393,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -61838,6 +62715,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -62691,6 +63588,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 514376336}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1827875487}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 43134258}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: panickedStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 69095274cfcd9414d93ece3f75b02630, type: 2}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 43134260}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 43134259}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -65493,7 +66410,7 @@ MonoBehaviour:
   npcDead: {fileID: 1471753574}
   npcSafe: {fileID: 290025613}
   timeToDisappear: 5
-  eventsResultStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!65 &282357678086673880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66009,7 +66926,7 @@ MonoBehaviour:
   npcInDanger: {fileID: 1522075901}
   npcSafe: {fileID: 902666049}
   timeToDisappear: 5
-  eventsResultStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!4 &2755231234473880240
 Transform:
   m_ObjectHideFlags: 0

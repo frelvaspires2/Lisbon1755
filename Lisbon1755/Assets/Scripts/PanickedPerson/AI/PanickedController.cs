@@ -30,8 +30,17 @@ public class PanickedController : MonoBehaviour
     /// </summary>
     public PanickedState GetStates { get => statesEnum; }
 
+    /// <summary>
+    /// Access the animation controller script.
+    /// </summary>
     [SerializeField]
     private PanickAnimController panickAnimController;
+
+    /// <summary>
+    /// Access the sound controller script.
+    /// </summary>
+    [SerializeField]
+    private AISoundController aiSoundController;
 
     /// <summary>
     /// To be played in the first frame.
@@ -61,22 +70,27 @@ public class PanickedController : MonoBehaviour
         {
             statesEnum = PanickedState.Running;
             panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.Running;
+            aiSoundController.GetSetAISoundTypes = AISoundTypes.Running;
+           
         }
         else if(health < (panickedStats.Health / 1.3f) &&
             health > (panickedStats.Health / 2f))
         {
             statesEnum = PanickedState.RunningSlower;
             panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.RunningSlower;
+            aiSoundController.GetSetAISoundTypes = AISoundTypes.RunningSlow;
         }
         else if(health <= (panickedStats.Health / 2f) && health > 0)
         {
             statesEnum = PanickedState.WoundedInTheGround;
             panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.Wounded;
+            aiSoundController.GetSetAISoundTypes = AISoundTypes.Wounded;
         }
         else if (health <= 0)
         {
             statesEnum = PanickedState.Dead;
             panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.Dying;
+            aiSoundController.GetSetAISoundTypes = AISoundTypes.Dying;
         }
     }
 }

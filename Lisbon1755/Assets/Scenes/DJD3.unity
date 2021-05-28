@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -532,6 +532,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2078701755}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 2078701758}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qte
+      value: 
+      objectReference: {fileID: 362774004}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: qteImage
+      value: 
+      objectReference: {fileID: 1894537128}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -543,10 +559,6 @@ PrefabInstance:
     - target: {fileID: 173703946898641548, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_Name
       value: PanickedPerson
-      objectReference: {fileID: 0}
-    - target: {fileID: 173703946898641548, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -592,16 +604,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 835990445145067075, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-      propertyPath: panickModelTypes
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132147670223554, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5001175034201125164, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
 --- !u!1 &829923033 stripped
 GameObject:
@@ -720,6 +723,7 @@ GameObject:
   - component: {fileID: 980935086}
   - component: {fileID: 980935085}
   - component: {fileID: 980935087}
+  - component: {fileID: 980935088}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -751,7 +755,7 @@ MonoBehaviour:
   clickCount: 0
   eventTimeCounter: 0
   setEventTime: 0
-  eventsResultsStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  scoreStats: {fileID: 0}
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -773,11 +777,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980935084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8fd8dde09f83194fbdb30546dfba174, type: 3}
+  m_Script: {fileID: 11500000, guid: be863a6ba1a84ec43a28ec3a66be596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
+--- !u!114 &980935088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980935084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc26cf761983d04991ac0309d18368c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
 --- !u!1 &1062599460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563955645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.345, y: 0.99, z: -0.69}
+  m_LocalPosition: {x: -16.345, y: 0.99, z: 3.68}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1156,7 +1174,7 @@ LightingSettings:
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
   serializedVersion: 2
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 0
   m_RealtimeEnvironmentLighting: 1
@@ -1329,6 +1347,10 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
+    - target: {fileID: 1247546939, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1269505724, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1341,16 +1363,8 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 980935085}
-    - target: {fileID: 2224066718196130820, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+    - target: {fileID: 2224066719971898260, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
@@ -1983,7 +1997,7 @@ PrefabInstance:
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: ui_Timer
       value: 
-      objectReference: {fileID: 980935087}
+      objectReference: {fileID: 0}
     - target: {fileID: 5932982482128618364, guid: b58a303084696b746a04e517744f927f, type: 3}
       propertyPath: setEventTime
       value: 15
@@ -2124,7 +2138,7 @@ PrefabInstance:
     - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: ui_Timer
       value: 
-      objectReference: {fileID: 980935087}
+      objectReference: {fileID: 0}
     - target: {fileID: 5345862640850990571, guid: 43f6f99ed2f38cb4d84273ea90a3276f, type: 3}
       propertyPath: qte
       value: 

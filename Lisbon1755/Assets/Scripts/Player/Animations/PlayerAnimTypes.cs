@@ -84,4 +84,8 @@ public enum PlayerAnimTypes
     /// Wake Up the frozen NPC (event).
     /// </summary>
     WakeUpNPC,
+    /// <summary>
+    /// Help wounded panicked person.
+    /// </summary>
+    HelpNPC,
 }
