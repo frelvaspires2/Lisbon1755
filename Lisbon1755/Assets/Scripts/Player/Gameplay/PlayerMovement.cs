@@ -6,6 +6,8 @@ using System.Collections;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    public bool IsPlayHelp;
+
     /// <summary>
     /// Access the sound controller script.
     /// </summary>
@@ -602,6 +604,10 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
             soundController.GetSetSoundTypes = SoundTypes.WakeUp;
+        }
+        else if(IsPlayHelp) 
+        {
+            playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.HelpNPC;
         }
         else
         {

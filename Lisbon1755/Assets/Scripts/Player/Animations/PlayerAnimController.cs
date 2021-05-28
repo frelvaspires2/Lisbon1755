@@ -127,6 +127,9 @@ public class PlayerAnimController : MonoBehaviour
             case PlayerAnimTypes.WakeUpNPC:
                 WakeUpNPCAnim();
                 break;
+            case PlayerAnimTypes.HelpNPC:
+                HelpNPCAnim();
+                break;
         }
     }
 
@@ -481,6 +484,24 @@ public class PlayerAnimController : MonoBehaviour
         foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
         {
             if (item.Key == PlayerAnimTypes.WakeUpNPC)
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Run the Help animation in the event of Wake Up NPC.
+    /// </summary>
+    private void HelpNPCAnim()
+    {
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        {
+            if (item.Key == PlayerAnimTypes.HelpNPC)
             {
                 item.Value.SetActive(true);
             }
