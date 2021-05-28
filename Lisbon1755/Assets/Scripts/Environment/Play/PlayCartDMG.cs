@@ -73,6 +73,7 @@ public class PlayCartDMG : MonoBehaviour
         if (other.gameObject.tag == "NPC" && !isNPCHit && !isDone)
         {
             other.GetComponent<PanickedController>().Health -= dmg;
+            other.GetComponent<AISoundController>().GotHitSound();
             isNPCHit = true;
         }
     }

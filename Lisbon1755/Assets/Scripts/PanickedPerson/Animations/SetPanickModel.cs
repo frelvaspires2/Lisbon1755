@@ -12,6 +12,15 @@ public class SetPanickModel : MonoBehaviour
     private PanickModelTypes panickModelTypes;
 
     /// <summary>
+    /// Gets or sets the character type enum.
+    /// </summary>
+    public PanickModelTypes GetSetPanickModelTypes
+    {
+        get => panickModelTypes;
+        set => panickModelTypes = value;
+    }
+
+    /// <summary>
     /// Access the prototype characters.
     /// </summary>
     [SerializeField]
@@ -52,6 +61,12 @@ public class SetPanickModel : MonoBehaviour
     /// </summary>
     [SerializeField]
     private GameObject[] character6;
+
+    /// <summary>
+    /// Access the SetPanickVoice script.
+    /// </summary>
+    [SerializeField]
+    private SetPanickVoice setPanickVoice;
 
     /// <summary>
     /// To be played in the first frame.
@@ -95,26 +110,32 @@ public class SetPanickModel : MonoBehaviour
         {
             case 0:
                 panickModelTypes = PanickModelTypes.Character1;
+                //setPanickVoice.ChooseVoice(PanickVoiceTypes.FVoice2);
                 break;
 
             case 1:
                 panickModelTypes = PanickModelTypes.Character2;
+                //setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice1);
                 break;
 
             case 2:
                 panickModelTypes = PanickModelTypes.Character3;
+                //setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice3);
                 break;
 
             case 3:
                 panickModelTypes = PanickModelTypes.Character4;
+                //setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice1);
                 break;
 
             case 4:
                 panickModelTypes = PanickModelTypes.Character5;
+                //setPanickVoice.ChooseVoice(PanickVoiceTypes.FVoice2);
                 break;
 
             case 5:
                 panickModelTypes = PanickModelTypes.Character6;
+                //setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice3);
                 break;
         }
     }
@@ -128,26 +149,32 @@ public class SetPanickModel : MonoBehaviour
         {
             case PanickModelTypes.Character1:
                 TurnOn(ref character1);
+                setPanickVoice.ChooseVoice(PanickVoiceTypes.FVoice2);
                 break;
 
             case PanickModelTypes.Character2:
                 TurnOn(ref character2);
+                setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice1);
                 break;
 
             case PanickModelTypes.Character3:
                 TurnOn(ref character3);
+                setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice3);
                 break;
 
             case PanickModelTypes.Character4:
                 TurnOn(ref character4);
+                setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice1);
                 break;
 
             case PanickModelTypes.Character5:
                 TurnOn(ref character5);
+                setPanickVoice.ChooseVoice(PanickVoiceTypes.FVoice2);
                 break;
 
             case PanickModelTypes.Character6:
                 TurnOn(ref character6);
+                setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice3);
                 break;
         }
     }
