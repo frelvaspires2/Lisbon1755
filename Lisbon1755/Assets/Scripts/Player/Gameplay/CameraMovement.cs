@@ -119,8 +119,8 @@ public class CameraMovement : MonoBehaviour
             else
                 newRotation.x = Mathf.Min(newRotation.x, playerStats.MaxRotationX);
 
-            if (Input.GetMouseButton(0) && !Input.GetMouseButton(1))
-                newRotation.y += Input.GetAxis("Mouse X") * playerStats.MouseAngularVelocityMult;
+            //if (Input.GetMouseButton(0) && !Input.GetMouseButton(1))
+                //newRotation.y += Input.GetAxis("Mouse X") * playerStats.MouseAngularVelocityMult;
 
             transform.localEulerAngles = newRotation;
         }
