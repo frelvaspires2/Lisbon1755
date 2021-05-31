@@ -24,7 +24,6 @@ public class MarkController : MonoBehaviour
     private void Start()
     {
         Setup();
-        StartMarks();
     }
 
     /// <summary>
@@ -44,7 +43,7 @@ public class MarkController : MonoBehaviour
     /// <summary>
     /// Start the marks routine.
     /// </summary>
-    private void StartMarks()
+    public void StartMarks()
     {
         for(int i = 0; i < markDic.Count; i++)
         {
