@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using SRandom = System.Random;
+using URandom = UnityEngine.Random;
 
 /// <summary>
 /// Falling object script.
@@ -31,13 +33,43 @@ public class FallingObject : MonoBehaviour
     private bool hasFallen;
 
     /// <summary>
+    /// Access the models.
+    /// </summary>
+    [SerializeField]
+    private GameObject[] models;
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
+    /// Choose a random model.
     /// </summary>
     private void Start()
     {
         hasFallen = false;
         sound.SetActive(false);
+        ChooseModel();
+    }
+
+    /// <summary>
+    /// Choose a random model.
+    /// </summary>
+    private void ChooseModel()
+    {
+        GameObject chosenModel;
+
+        chosenModel = models[URandom.Range(0, models.Length)];
+
+        foreach(GameObject item in models)
+        {
+            if(item == chosenModel)
+            {
+                item.SetActive(true);
+            }
+            else
+            {
+                item.SetActive(false);
+            }
+        }
     }
 
     /// <summary>
@@ -66,6 +98,7 @@ public class FallingObject : MonoBehaviour
         {
             hasFallen = true;
             sound.SetActive(true);
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
             StartCoroutine(DestroyObject());
         }
     }
