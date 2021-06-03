@@ -164,6 +164,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private GameObject winSound;
 
+    [SerializeField]
+    private GameObject clickUI;
+
     
     /// <summary>
     /// To be played on the first frame.
@@ -177,6 +180,7 @@ public class EventsManager : MonoBehaviour
         timer.SetActive(false);
         qte.SetActive(false);
         stopTimer = false;
+        clickUI.SetActive(false);
     }
 
     /// <summary>
@@ -213,6 +217,7 @@ public class EventsManager : MonoBehaviour
                     eventResult = EventResult.Lost;
                     LossSound();
                 }
+                clickUI.SetActive(false);
                 eventMarker.SetActive(false);
                 break;
         }
@@ -234,6 +239,8 @@ public class EventsManager : MonoBehaviour
     {
         if(playEvent.IsClose)
         {
+            clickUI.SetActive(true);
+
             if(Input.GetButton("MouseClick"))
             {
                 qte.SetActive(true);
@@ -262,6 +269,10 @@ public class EventsManager : MonoBehaviour
                 isClick = false;
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
             }
+        }
+        else
+        {
+            clickUI.SetActive(false);
         }
     }
 

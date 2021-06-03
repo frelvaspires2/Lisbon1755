@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayCartDMG : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject cartMarker;
+
+    [SerializeField]
+    private BoxCollider cartCollider;
+
     /// <summary>
     /// Access the player gameobject.
     /// </summary>
@@ -50,10 +56,10 @@ public class PlayCartDMG : MonoBehaviour
     private void Update()
     {
         // Check if the animation finished playing.
-        if (isDone)
+        /*if (isDone)
         {
             StartCoroutine(Destroy());
-        }
+        }*/
     }
 
     /// <summary>
@@ -81,6 +87,8 @@ public class PlayCartDMG : MonoBehaviour
     public void AnimationDone()
     {
         isDone = true;
+        cartMarker.SetActive(false);
+        cartCollider.isTrigger = false;
     }
 
     /// <summary>

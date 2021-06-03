@@ -4,8 +4,7 @@
 /// Play the animation when the player enters the area.
 /// </summary>
 public class PlayAnim : MonoBehaviour
-{
-    // Player's gameobject.
+{    // Player's gameobject.
     [SerializeField]
     private GameObject player;
 
