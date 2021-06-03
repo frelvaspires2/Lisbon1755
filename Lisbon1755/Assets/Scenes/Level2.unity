@@ -2181,6 +2181,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808672211789068841, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4638739632894238061, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: soundTypes
       value: 0
@@ -2365,6 +2369,11 @@ MonoBehaviour:
 --- !u!224 &43134271 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 859039797, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &43134272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5109520362898627238, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
   m_PrefabInstance: {fileID: 43134257}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &45168086
@@ -25034,6 +25043,10 @@ PrefabInstance:
       propertyPath: eventMarker
       value: 
       objectReference: {fileID: 43134266}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: clickUI
+      value: 
+      objectReference: {fileID: 43134272}
     - target: {fileID: 4721129192993306938, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_Name
       value: CatEvent
@@ -48472,6 +48485,10 @@ PrefabInstance:
       propertyPath: eventMarker
       value: 
       objectReference: {fileID: 43134267}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: clickUI
+      value: 
+      objectReference: {fileID: 43134272}
     - target: {fileID: 4852372242677418162, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -82593,6 +82610,7 @@ MonoBehaviour:
   idleSound: {fileID: 1042043830}
   lossSound: {fileID: 746336605}
   winSound: {fileID: 1743056570}
+  clickUI: {fileID: 43134272}
 --- !u!4 &2164083786240991297
 Transform:
   m_ObjectHideFlags: 0
