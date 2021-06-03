@@ -47,7 +47,6 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.1.0f1</UnityVersion>
@@ -67,6 +66,7 @@
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\UI\UI_GotHitScreen.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\HelpNPC\PlayHelp.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Events\Global\PlayEvent.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimTypes.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\IState.cs" />
@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Menus\Score\Score.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\DeadState.cs" />
+    <Compile Include="Assets\Scripts\UI\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\Score\ScoreMenu.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimController.cs" />
     <Compile Include="Assets\Scripts\Events\Specific\EndAnim.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickModel.cs" />
     <Compile Include="Assets\Scripts\Environment\Play\PlayDMGAnim.cs" />
     <Compile Include="Assets\Scripts\Player\Sound\SoundStats.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\WoundedState.cs" />
     <Compile Include="Assets\Scripts\Events\Global\EventState.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\SetAnimations.cs" />
@@ -141,33 +143,30 @@
     <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
-    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\UI\SettingsMenu.cs" />
-    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <None Include="Assets\Animations\Events\Cat\Ladymito\Free_cat\Animations\low_poly_cat_animation_list.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/frelv/Documents/Github/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/frelv/Documents/Github/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/frelv/Documents/Github/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/frelv/Documents/Github/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/frelv/Documents/Github/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/frelv/Documents/Github/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/frelv/Documents/Github/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/frelv/Documents/Github/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
