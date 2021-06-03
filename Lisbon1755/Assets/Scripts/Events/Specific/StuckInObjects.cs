@@ -27,6 +27,15 @@ public class StuckInObjects : MonoBehaviour
     [SerializeField]
     private ScoreStats scoreStats;
 
+    [SerializeField]
+    private Animator animator;
+
+    [SerializeField]
+    private string animationName;
+
+    [SerializeField]
+    private string idleName;
+
     private bool hasWon;
 
     private void Start()
@@ -67,6 +76,16 @@ public class StuckInObjects : MonoBehaviour
         npcInDanger.SetActive(true);
         npcSafe.SetActive(false);
         npcDead.SetActive(false);
+
+        if(eventManager.isClick)
+        {
+            Debug.Log("Correr animação");
+            animator.Play(animationName);
+        }
+        else
+        {
+            animator.Play(idleName);
+        }
     }
 
     private void WonState()
