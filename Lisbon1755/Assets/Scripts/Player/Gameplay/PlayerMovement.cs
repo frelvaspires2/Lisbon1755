@@ -496,7 +496,7 @@ public class PlayerMovement : MonoBehaviour
             if (!playerHealth.IsInjured)
             {
                 playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.back;
-                soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
+                soundController.GetSetSoundTypes = SoundTypes.Walk;
             }
             else
             {
