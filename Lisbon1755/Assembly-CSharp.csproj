@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Menus\Score\Score.cs" />
      <Compile Include="Assets\Scripts\PanickedPerson\AI\States\DeadState.cs" />
+     <Compile Include="Assets\Scripts\UI\SettingsMenu.cs" />
      <Compile Include="Assets\Scripts\Menus\Score\ScoreMenu.cs" />
      <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimController.cs" />
      <Compile Include="Assets\Scripts\Events\Specific\EndAnim.cs" />
@@ -131,7 +132,7 @@
      <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
      <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
      <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
-     <Compile Include="Assets\Scripts\UI\SettingsMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
      <None Include="Assets\Animations\Events\Cat\Ladymito\Free_cat\Animations\low_poly_cat_animation_list.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Acer/Documents/DJD3/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
