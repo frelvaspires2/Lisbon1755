@@ -6,6 +6,9 @@ public class ChangeLevel : MonoBehaviour
     private int scene;
 
     [SerializeField]
+    private LevelLoader leverLoader;
+
+    [SerializeField]
     private GameStats gameStats;
 
     [SerializeField]
@@ -49,7 +52,8 @@ public class ChangeLevel : MonoBehaviour
             if (!isEnd)
             {
                 SaveGame();
-                SceneManager.LoadScene(scene + 1);
+                //SceneManager.LoadScene(scene + 1);
+                leverLoader.LoadLevel(scene + 1);
             }
             else
             {
