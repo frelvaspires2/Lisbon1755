@@ -7,6 +7,12 @@ using UnityEngine.UI;
 /// </summary>
 public class EventsManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject wonUI;
+
+    [SerializeField]
+    private GameObject lostUI;
+
     /// <summary>
     /// Access the player's gameobject.
     /// </summary>
@@ -181,6 +187,8 @@ public class EventsManager : MonoBehaviour
         qte.SetActive(false);
         stopTimer = false;
         clickUI.SetActive(false);
+        wonUI.SetActive(false);
+        lostUI.SetActive(false);
     }
 
     /// <summary>
@@ -330,6 +338,18 @@ public class EventsManager : MonoBehaviour
             timer.SetActive(false);
             qte.SetActive(false);
         }
+
+        if(other.gameObject == player && eventResult == EventResult.Won)
+        {
+            wonUI.SetActive(true);
+            lostUI.SetActive(false);
+        }
+
+        if (other.gameObject == player && eventResult == EventResult.Lost)
+        {
+            wonUI.SetActive(false);
+            lostUI.SetActive(true);
+        }
     }
 
     /// <summary>
@@ -398,6 +418,9 @@ public class EventsManager : MonoBehaviour
         {
             eventMarker.SetActive(true);
         }
+
+        wonUI.SetActive(false);
+        lostUI.SetActive(false);
     }
 
     /// <summary>
