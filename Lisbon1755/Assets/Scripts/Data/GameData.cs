@@ -126,6 +126,13 @@ public class GameData : MonoBehaviour
     [SerializeField]
     private ScoreStats scoreStats;
 
+    [SerializeField]
+    private LevelLoader levelLoader;
+
+    private bool isDead;
+
+    private bool isCheatCode;
+
     /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
@@ -134,6 +141,8 @@ public class GameData : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene();
         eventsManager = null;
+        isDead = false;
+        isCheatCode = false;
         ResetValues();
     }
 
@@ -155,22 +164,46 @@ public class GameData : MonoBehaviour
     {
         if (health <= 0)
         {
-            if(scene.name == "Level1")
+            if (!isDead && !isCheatCode)
             {
-                scoreStats.ResetLevel1Stats();
-                SceneManager.LoadScene(scene.name);
-            }
-            else if(scene.name == "Level2")
-            {
-                scoreStats.ResetLevel2Stats();
-                SceneManager.LoadScene(scene.name);
+                if (scene.name == "Level1")
+                {
+                    isDead = true;
+                    scoreStats.ResetLevel1Stats();
+                    //SceneManager.LoadScene(scene.name);
+                    levelLoader.LoadLevel(1);
+                }
+                else if (scene.name == "Level2")
+                {
+                    isDead = true;
+                    scoreStats.ResetLevel2Stats();
+                    //SceneManager.LoadScene(scene.name);
+                    levelLoader.LoadLevel(2);
+                }
             }
         }
 
         // cheat core to restart the game
         if(Input.GetKeyDown(KeyCode.P))
         {
-            SceneManager.LoadScene(scene.name);
+            if (!isCheatCode && !isDead)
+            {
+                //SceneManager.LoadScene(scene.name);
+                if (scene.name == "Level1")
+                {
+                    isCheatCode = true;
+                    scoreStats.ResetLevel1Stats();
+                    //SceneManager.LoadScene(scene.name);
+                    levelLoader.LoadLevel(1);
+                }
+                else if (scene.name == "Level2")
+                {
+                    isCheatCode = true;
+                    scoreStats.ResetLevel2Stats();
+                    //SceneManager.LoadScene(scene.name);
+                    levelLoader.LoadLevel(2);
+                }
+            }
         }
     }
 

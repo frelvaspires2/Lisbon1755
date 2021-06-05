@@ -8310,7 +8310,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -39909,6 +39909,7 @@ MonoBehaviour:
   eventTimeCounter: 0
   setEventTime: 0
   scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  levelLoader: {fileID: 980935088}
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -66687,7 +66688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1658267275
 Transform:
   m_ObjectHideFlags: 0
