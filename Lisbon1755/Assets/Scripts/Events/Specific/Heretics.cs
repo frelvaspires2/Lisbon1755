@@ -19,6 +19,9 @@ public class Heretics : MonoBehaviour
     private GameObject npcDead;
 
     [SerializeField]
+    private GameObject fire;
+
+    [SerializeField]
     private float timeToDisappear = 5f;
 
     [SerializeField]
@@ -29,6 +32,7 @@ public class Heretics : MonoBehaviour
     private void Start()
     {
         hasWon = false;
+        fire.SetActive(false);
     }
 
     private void Update()
@@ -84,6 +88,7 @@ public class Heretics : MonoBehaviour
         npcInDanger.SetActive(false);
         npcSafe.SetActive(false);
         npcDead.SetActive(true);
+        fire.SetActive(true);
     }
 
     private IEnumerator Disappear(GameObject gameObject)
