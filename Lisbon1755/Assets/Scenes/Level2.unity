@@ -2195,11 +2195,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 86d4ddc05f3b81a46a0524a14f211299, type: 3}
     - target: {fileID: 5818079349780858537, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5836773529354667976, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6210783340331193844, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_audioClip
@@ -25053,6 +25053,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.89
       objectReference: {fileID: 0}
+    - target: {fileID: 4721129192993306916, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3c2a6ece4d88384fb27dd4beb344fb4, type: 2}
     - target: {fileID: 4721129192993306918, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -201.25
@@ -48763,6 +48767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heretics
       objectReference: {fileID: 0}
+    - target: {fileID: 2869754939703770292, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3c2a6ece4d88384fb27dd4beb344fb4, type: 2}
     - target: {fileID: 2869754939703770294, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -264.4
@@ -83181,7 +83189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b3c2a6ece4d88384fb27dd4beb344fb4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
