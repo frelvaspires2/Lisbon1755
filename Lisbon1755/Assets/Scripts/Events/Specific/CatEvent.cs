@@ -10,6 +10,9 @@ public class CatEvent : MonoBehaviour
     private GameObject catInDanger;
 
     [SerializeField]
+    private GameObject dyingCat;
+
+    [SerializeField]
     private GameObject catSafe;
 
     [SerializeField]
@@ -67,11 +70,13 @@ public class CatEvent : MonoBehaviour
         catLadyScared.SetActive(true);
         catLadyThankful.SetActive(false);
         catLadySad.SetActive(false);
+        dyingCat.SetActive(false);
     }
 
     private void WonState()
     {
         catInDanger.SetActive(false);
+        dyingCat.SetActive(false);
         if (catSafe != null)
         {
             catSafe.SetActive(true);
@@ -96,6 +101,7 @@ public class CatEvent : MonoBehaviour
         catLadyScared.SetActive(false);
         catLadyThankful.SetActive(false);
         catLadySad.SetActive(true);
+        dyingCat.SetActive(true);
     }
 
     private IEnumerator Disappear(GameObject gameObject1, GameObject gameObject2)
