@@ -16,6 +16,9 @@ public class StuckInHouse : MonoBehaviour
     private GameObject npcSafe;
 
     [SerializeField]
+    private GameObject fire;
+
+    [SerializeField]
     private float timeToDisappear = 5f;
 
     [SerializeField]
@@ -58,12 +61,14 @@ public class StuckInHouse : MonoBehaviour
         obstacle.SetActive(true);
         npcInDanger.SetActive(true);
         npcSafe.SetActive(false);
+        fire.SetActive(false);
     }
 
     private void WonState()
     {
         obstacle.SetActive(false);
         npcInDanger.SetActive(false);
+        fire.SetActive(false);
         if (npcSafe != null)
         {
             npcSafe.SetActive(true);
@@ -77,6 +82,7 @@ public class StuckInHouse : MonoBehaviour
         obstacle.SetActive(true);
         npcInDanger.SetActive(false);
         npcSafe.SetActive(false);
+        fire.SetActive(true);
     }
 
     private IEnumerator Disappear(GameObject gameObject)

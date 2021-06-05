@@ -2076,7 +2076,7 @@ PrefabInstance:
     - target: {fileID: 1426695510, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2b35c074e6c0b3c46af7d4f2085dbde5, type: 3}
+      objectReference: {fileID: 8300000, guid: 14fb5cf01dbd58e44960dd6a1b7d6d54, type: 3}
     - target: {fileID: 1601251973, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: markers.Array.size
       value: 5
@@ -2164,7 +2164,7 @@ PrefabInstance:
     - target: {fileID: 1711197262, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 1d244b09708d54746934ecddfa823e78, type: 3}
+      objectReference: {fileID: 8300000, guid: 88120d99aaa68fe4aa2608da8bf49e92, type: 3}
     - target: {fileID: 2078701759, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: gameData
       value: 
@@ -25319,6 +25319,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 838128916}
     m_Modifications:
+    - target: {fileID: 1548490390, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548490390, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1944424518190038653, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -26592,6 +26600,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7c0c40fdca7a4a44bbb69cde42191cfe, type: 3}
       propertyPath: m_Name
       value: Stake_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c0c40fdca7a4a44bbb69cde42191cfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1929146673307548392, guid: 7c0c40fdca7a4a44bbb69cde42191cfe, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -33504,6 +33516,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7c0c40fdca7a4a44bbb69cde42191cfe, type: 3}
       propertyPath: m_Name
       value: Stake_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c0c40fdca7a4a44bbb69cde42191cfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1929146673307548392, guid: 7c0c40fdca7a4a44bbb69cde42191cfe, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -42664,18 +42680,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7e92f1701a4acec4a924c4533b194742, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 12
-  MaxDistance: 15
+  MinDistance: 7
+  MaxDistance: 8
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -42710,7 +42726,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -49000,11 +49016,19 @@ PrefabInstance:
     - target: {fileID: 997420481, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_audioClip
       value: 
+      objectReference: {fileID: 8300000, guid: 170fa9e17ec8d06488961433545811a8, type: 3}
+    - target: {fileID: 997420481, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690212128, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1690212130, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 2be00e1943c26ac49bba6eb3ba43fb48, type: 3}
     - target: {fileID: 1915617546, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_audioClip
       value: 
