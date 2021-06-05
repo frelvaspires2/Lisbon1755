@@ -13,6 +13,18 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private GameObject lostUI;
 
+    [SerializeField]
+    private Material defaultColor;
+
+    [SerializeField]
+    private Material wonColor;
+
+    [SerializeField]
+    private Material lostColor;
+
+    [SerializeField]
+    private Material eventArea;
+
     /// <summary>
     /// Access the player's gameobject.
     /// </summary>
@@ -189,6 +201,7 @@ public class EventsManager : MonoBehaviour
         clickUI.SetActive(false);
         wonUI.SetActive(false);
         lostUI.SetActive(false);
+        eventArea.color = defaultColor.color;
     }
 
     /// <summary>
@@ -209,20 +222,24 @@ public class EventsManager : MonoBehaviour
         {
             case EventState.Inactive:
                 eventResult = EventResult.None;
+                eventArea.color = defaultColor.color;
                 IdleSound();
                 break;
             case EventState.Active:
+                eventArea.color = defaultColor.color;
                 PlayEvent();
                 break;
             case EventState.Finished:
                 if(clickCount == setHowManyClicks)
                 {
                     eventResult = EventResult.Won;
+                    eventArea.color = wonColor.color;
                     WinSound();
                 }
                 else
                 {
                     eventResult = EventResult.Lost;
+                    eventArea.color = lostColor.color;
                     LossSound();
                 }
                 clickUI.SetActive(false);

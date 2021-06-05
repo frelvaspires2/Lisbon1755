@@ -1478,6 +1478,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 923198f5295f081468d93b6aab8df6a7, type: 3}
+    - target: {fileID: 1418697603701560896, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2224066718364526760, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1498,6 +1502,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 86d4ddc05f3b81a46a0524a14f211299, type: 3}
+    - target: {fileID: 5698425851918921912, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5818079349780858537, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -85782,7 +85790,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3c2a6ece4d88384fb27dd4beb344fb4, type: 2}
+  - {fileID: 2100000, guid: fb8828122aa000946a526d3da9c9e95b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85844,6 +85852,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wonUI: {fileID: 1982057697}
   lostUI: {fileID: 619152860}
+  defaultColor: {fileID: 2100000, guid: c6a12a30002d2a84badbabf0005c5a59, type: 2}
+  wonColor: {fileID: 2100000, guid: 4ba939e4900ec194b816d6e2f6592122, type: 2}
+  lostColor: {fileID: 2100000, guid: 9406d72b9d9dffd4da98e303890609aa, type: 2}
+  eventArea: {fileID: 2100000, guid: fb8828122aa000946a526d3da9c9e95b, type: 2}
   player: {fileID: 1827875487}
   interact: {fileID: 282357676906739679}
   playEvent: {fileID: 282357676415121200}
@@ -86459,6 +86471,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wonUI: {fileID: 1982057697}
   lostUI: {fileID: 619152860}
+  defaultColor: {fileID: 2100000, guid: c6a12a30002d2a84badbabf0005c5a59, type: 2}
+  wonColor: {fileID: 2100000, guid: 4ba939e4900ec194b816d6e2f6592122, type: 2}
+  lostColor: {fileID: 2100000, guid: 9406d72b9d9dffd4da98e303890609aa, type: 2}
+  eventArea: {fileID: 2100000, guid: 4c714c7767d818f438cbbbe9ecd47af5, type: 2}
   player: {fileID: 1827875487}
   interact: {fileID: 2755231234978672041}
   playEvent: {fileID: 1576424295}
@@ -86499,7 +86515,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3c2a6ece4d88384fb27dd4beb344fb4, type: 2}
+  - {fileID: 2100000, guid: 4c714c7767d818f438cbbbe9ecd47af5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -2183,7 +2183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3808672211789068841, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3810474371794700055, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
@@ -2216,6 +2216,10 @@ PrefabInstance:
     - target: {fileID: 7161291577612107459, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_Pitch
       value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366560059329940836, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8871617511939630472, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22148,8 +22152,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493020317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.599, y: 0.14, z: 23.813}
-  m_LocalScale: {x: 1.7881752, y: 0.20024945, z: 2.3541}
+  m_LocalPosition: {x: -13.599, y: 0.21, z: 23.813}
+  m_LocalScale: {x: 1.7881752, y: 0.36639643, z: 2.3541}
   m_Children: []
   m_Father: {fileID: 1497304418}
   m_RootOrder: 0
@@ -25423,6 +25427,22 @@ PrefabInstance:
       propertyPath: lostUI
       value: 
       objectReference: {fileID: 43134273}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: defaultColor
+      value: 
+      objectReference: {fileID: 2100000, guid: c6a12a30002d2a84badbabf0005c5a59, type: 2}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: wonColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ba939e4900ec194b816d6e2f6592122, type: 2}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: lostColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 9406d72b9d9dffd4da98e303890609aa, type: 2}
+    - target: {fileID: 4721129192993306919, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: eventArea
+      value: 
+      objectReference: {fileID: 2100000, guid: b3c2a6ece4d88384fb27dd4beb344fb4, type: 2}
     - target: {fileID: 4721129192993306938, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_Name
       value: CatEvent
@@ -49048,7 +49068,7 @@ PrefabInstance:
     - target: {fileID: 2869754939703770292, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b3c2a6ece4d88384fb27dd4beb344fb4, type: 2}
+      objectReference: {fileID: 2100000, guid: cf86128396f139a448ede6dc1cacc4ff, type: 2}
     - target: {fileID: 2869754939703770294, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -264.4
@@ -49149,6 +49169,22 @@ PrefabInstance:
       propertyPath: lostUI
       value: 
       objectReference: {fileID: 43134273}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: defaultColor
+      value: 
+      objectReference: {fileID: 2100000, guid: c6a12a30002d2a84badbabf0005c5a59, type: 2}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: wonColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ba939e4900ec194b816d6e2f6592122, type: 2}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: lostColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 9406d72b9d9dffd4da98e303890609aa, type: 2}
+    - target: {fileID: 2869754939703770295, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
+      propertyPath: eventArea
+      value: 
+      objectReference: {fileID: 2100000, guid: cf86128396f139a448ede6dc1cacc4ff, type: 2}
     - target: {fileID: 4852372242677418162, guid: 81200299b8ea7ee4ab24ee1024d326cf, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -84437,6 +84473,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wonUI: {fileID: 43134274}
   lostUI: {fileID: 43134273}
+  defaultColor: {fileID: 2100000, guid: c6a12a30002d2a84badbabf0005c5a59, type: 2}
+  wonColor: {fileID: 2100000, guid: 4ba939e4900ec194b816d6e2f6592122, type: 2}
+  lostColor: {fileID: 2100000, guid: 9406d72b9d9dffd4da98e303890609aa, type: 2}
+  eventArea: {fileID: 2100000, guid: e0f62bbabfd133b4eb8b4df748c848b4, type: 2}
   player: {fileID: 43134258}
   interact: {fileID: 7546688430147554574}
   playEvent: {fileID: 7546688431311201238}
@@ -84505,7 +84545,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3c2a6ece4d88384fb27dd4beb344fb4, type: 2}
+  - {fileID: 2100000, guid: e0f62bbabfd133b4eb8b4df748c848b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
