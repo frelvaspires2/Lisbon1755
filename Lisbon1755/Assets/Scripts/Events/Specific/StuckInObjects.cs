@@ -22,6 +22,9 @@ public class StuckInObjects : MonoBehaviour
     private GameObject npcSafe;
 
     [SerializeField]
+    private GameObject animatedRock;
+
+    [SerializeField]
     private float timeToDisappear = 5f;
 
     [SerializeField]
@@ -36,11 +39,18 @@ public class StuckInObjects : MonoBehaviour
     [SerializeField]
     private string idleName;
 
+    [SerializeField]
+    private float rockAnimTime;
+
     private bool hasWon;
+
+    private bool isAnimDone;
 
     private void Start()
     {
         hasWon = false;
+        animatedRock.SetActive(false);
+        isAnimDone = false;
     }
 
     private void Update()
@@ -79,7 +89,7 @@ public class StuckInObjects : MonoBehaviour
 
         if(eventManager.isClick)
         {
-            Debug.Log("Correr animação");
+            //Debug.Log("Correr animação");
             animator.Play(animationName);
         }
         else
@@ -91,13 +101,19 @@ public class StuckInObjects : MonoBehaviour
     private void WonState()
     {
         obstacle.SetActive(false);
-        finished.SetActive(true);
-        npcInDanger.SetActive(false);
-        if (npcSafe != null)
+        //finished.SetActive(true);
+        //npcInDanger.SetActive(false);
+        /*if (npcSafe != null)
         {
             npcSafe.SetActive(true);
-        }
+        }*/
         npcDead.SetActive(false);
+
+        if(!isAnimDone)
+        {
+            StartCoroutine(RockAnimation());
+            isAnimDone = true;
+        }
 
         StartCoroutine(Disappear(npcSafe));
     }
@@ -120,5 +136,31 @@ public class StuckInObjects : MonoBehaviour
         Destroy(gameObject);
 
         StopCoroutine(Disappear(gameObject));
+    }
+    
+    private IEnumerator RockAnimation()
+    {
+        WaitForSeconds wfs1 = new WaitForSeconds(0);
+
+        WaitForSeconds wfs2 = new WaitForSeconds(rockAnimTime);
+
+        yield return wfs1;
+
+        animatedRock.SetActive(true);
+
+        yield return wfs2;
+
+        animatedRock.SetActive(false);
+
+        finished.SetActive(true);
+
+        npcInDanger.SetActive(false);
+
+        if (npcSafe != null)
+        {
+            npcSafe.SetActive(true);
+        }
+
+        StopCoroutine(RockAnimation());
     }
 }

@@ -25,6 +25,15 @@ public class CatEvent : MonoBehaviour
     private GameObject catLadySad;
 
     [SerializeField]
+    private Animator catAnim;
+
+    [SerializeField]
+    private float catAnimTime;
+
+    [SerializeField]
+    private string animName;
+
+    [SerializeField]
     private float timeToDisappear = 5f;
 
     [SerializeField]
@@ -32,9 +41,12 @@ public class CatEvent : MonoBehaviour
 
     private bool hasWon;
 
+    private bool hasAnimRun;
+
     private void Start()
     {
         hasWon = false;
+        hasAnimRun = false;
     }
 
     private void Update()
@@ -75,20 +87,10 @@ public class CatEvent : MonoBehaviour
 
     private void WonState()
     {
-        catInDanger.SetActive(false);
-        dyingCat.SetActive(false);
-        if (catSafe != null)
+        if(!hasAnimRun)
         {
-            catSafe.SetActive(true);
-        }
-        catLadyScared.SetActive(false);
-        if (catSafe != null)
-        {
-            catLadyThankful.SetActive(true);
-        }
-        if (catLadySad != null)
-        {
-            catLadySad.SetActive(false);
+            StartCoroutine(CatAnim());
+            hasAnimRun = true;
         }
 
         StartCoroutine(Disappear(catSafe, catLadyThankful));
@@ -114,5 +116,36 @@ public class CatEvent : MonoBehaviour
         Destroy(gameObject2);
 
         StopCoroutine(Disappear(gameObject1, gameObject2));
+    }
+
+    private IEnumerator CatAnim()
+    {
+        WaitForSeconds wfs1 = new WaitForSeconds(0);
+
+        WaitForSeconds wfs2 = new WaitForSeconds(catAnimTime);
+
+        yield return wfs1;
+
+        catAnim.Play(animName);
+
+        yield return wfs2;
+
+        catInDanger.SetActive(false);
+        dyingCat.SetActive(false);
+        if (catSafe != null)
+        {
+            catSafe.SetActive(true);
+        }
+        catLadyScared.SetActive(false);
+        if (catSafe != null)
+        {
+            catLadyThankful.SetActive(true);
+        }
+        if (catLadySad != null)
+        {
+            catLadySad.SetActive(false);
+        }
+
+        StopCoroutine(CatAnim());
     }
 }

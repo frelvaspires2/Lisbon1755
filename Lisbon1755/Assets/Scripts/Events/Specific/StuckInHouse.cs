@@ -16,6 +16,9 @@ public class StuckInHouse : MonoBehaviour
     private GameObject npcSafe;
 
     [SerializeField]
+    private Animator doorAnimator;
+
+    [SerializeField]
     private GameObject fire;
 
     [SerializeField]
@@ -23,6 +26,9 @@ public class StuckInHouse : MonoBehaviour
 
     [SerializeField]
     private ScoreStats scoreStats;
+
+    [SerializeField]
+    private string doorAnimName;
 
     private bool hasWon;
 
@@ -66,13 +72,15 @@ public class StuckInHouse : MonoBehaviour
 
     private void WonState()
     {
-        obstacle.SetActive(false);
+        //obstacle.SetActive(false);
         npcInDanger.SetActive(false);
         fire.SetActive(false);
         if (npcSafe != null)
         {
             npcSafe.SetActive(true);
         }
+
+        doorAnimator.Play(doorAnimName);
 
         StartCoroutine(Disappear(npcSafe));
     }

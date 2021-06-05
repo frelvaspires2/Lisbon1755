@@ -2187,7 +2187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3810474371794700055, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4638739632894238061, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: soundTypes
@@ -2199,11 +2199,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 86d4ddc05f3b81a46a0524a14f211299, type: 3}
     - target: {fileID: 5818079349780858537, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5836773529354667976, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6210783340331193844, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_audioClip
@@ -2219,7 +2219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7366560059329940836, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8871617511939630472, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25471,6 +25471,18 @@ PrefabInstance:
       propertyPath: dyingCat
       value: 
       objectReference: {fileID: 1989194847}
+    - target: {fileID: 4721129192993306941, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: animName
+      value: Anim
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721129192993306941, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: catAnimTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721129192993306941, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: catAnim
+      value: 
+      objectReference: {fileID: 1954140690}
     - target: {fileID: 4842483424320468064, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -25523,6 +25535,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4981979244710689310, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.074
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981979244710689310, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981979244710689310, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981979244710689310, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7374568615446342393, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -25533,7 +25561,7 @@ PrefabInstance:
       objectReference: {fileID: 43134258}
     - target: {fileID: 8320631633726832497, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
@@ -75108,6 +75136,30 @@ Transform:
   m_Father: {fileID: 1266589596}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1954140688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8320631633553098765, guid: 1aa986b583fe03a4dbaad8840328cca2, type: 3}
+  m_PrefabInstance: {fileID: 583851309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1954140690
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954140688}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78736afac2f1d8f4089037cc3af0b757, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1954776262
 PrefabInstance:
   m_ObjectHideFlags: 0
