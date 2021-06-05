@@ -6,6 +6,12 @@ using UnityEngine.UI;
 /// </summary>
 public class PlayHelp : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject helpUI;
+
+    [SerializeField]
+    private GameObject signal;
+
     /// <summary>
     /// Access the quick time event gameobject.
     /// </summary>
@@ -71,6 +77,7 @@ public class PlayHelp : MonoBehaviour
     {
         isInside = false;
         clickCount = 0;
+        signal.SetActive(false);
     }
 
     /// <summary>
@@ -92,10 +99,12 @@ public class PlayHelp : MonoBehaviour
     {
         if(panickedController.GetStates == PanickedState.WoundedInTheGround)
         {
+            signal.SetActive(true);
             return true;
         }
         else
         {
+            signal.SetActive(false);
             isInside = false;
             clickCount = 0;
             return false;
@@ -109,8 +118,12 @@ public class PlayHelp : MonoBehaviour
     {
         if(isInside)
         {
+            helpUI.SetActive(true);
+
             if(Input.GetButton("MouseClick"))
             {
+                helpUI.SetActive(false);
+
                 player.GetComponent<CharacterController>().enabled = false;
                 player.transform.position = setPosition.position;
                 player.transform.rotation = setPosition.rotation;
@@ -139,6 +152,10 @@ public class PlayHelp : MonoBehaviour
                 playerMovement.IsPlayHelp = false;
                 qte.SetActive(false);
             }
+        }
+        else
+        {
+            helpUI.SetActive(false);
         }
     }
 
