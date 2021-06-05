@@ -14322,7 +14322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &510752484
 Transform:
   m_ObjectHideFlags: 0
@@ -21361,6 +21361,7 @@ MonoBehaviour:
   eventTimeCounter: 0
   setEventTime: 0
   scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+  levelLoader: {fileID: 980935087}
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -87753,7 +87754,6 @@ MonoBehaviour:
   timeToDisappear: 5
   scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
   doorAnimName: Anim
-  doorAnimTime: 0
 --- !u!4 &2755231234473880240
 Transform:
   m_ObjectHideFlags: 0
