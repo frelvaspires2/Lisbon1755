@@ -102,6 +102,6 @@ public class PlayAnim : MonoBehaviour
         isDone = true;
         hasStarted = false;
         cameraShake.CanShake = false;
-        fallSound.SetActive(false);
+        //fallSound.SetActive(false);
     }
 }

@@ -57,7 +57,8 @@ public class EndAnim : MonoBehaviour
     {
         isAnimationFinished = true;
         dmgZone.SetActive(true);
-        Destroy(sound);
+        //Destroy(sound);
+        sound.SetActive(false);
         StartCoroutine(StopDMG());
     }
 
