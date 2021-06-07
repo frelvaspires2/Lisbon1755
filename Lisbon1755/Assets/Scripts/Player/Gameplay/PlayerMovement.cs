@@ -512,7 +512,8 @@ public class PlayerMovement : MonoBehaviour
         else if (acceleration.x > 0 && !isRunning && playerHealth.IsInjured)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStrade;
-            soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
+            //soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
+            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if (acceleration.x > 0 && isRunning && !playerHealth.IsInjured)
         {
@@ -522,7 +523,8 @@ public class PlayerMovement : MonoBehaviour
         else if (acceleration.x > 0 && isRunning && playerHealth.IsInjured)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.rightStradeRun;
-            soundController.GetSetSoundTypes = SoundTypes.InjuredRun;
+            //soundController.GetSetSoundTypes = SoundTypes.InjuredRun;
+            soundController.GetSetSoundTypes = SoundTypes.Run;
         }
         else if (acceleration.x < 0 && isRunning && !playerHealth.IsInjured)
         {
@@ -532,7 +534,8 @@ public class PlayerMovement : MonoBehaviour
         else if (acceleration.x < 0 && isRunning && playerHealth.IsInjured)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStradeRun;
-            soundController.GetSetSoundTypes = SoundTypes.InjuredRun;
+            //soundController.GetSetSoundTypes = SoundTypes.InjuredRun;
+            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if (acceleration.x < 0 && !isRunning && !playerHealth.IsInjured)
         {
@@ -542,7 +545,8 @@ public class PlayerMovement : MonoBehaviour
         else if (acceleration.x < 0 && !isRunning && playerHealth.IsInjured)
         {
             playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.leftStrade;
-            soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
+            //soundController.GetSetSoundTypes = SoundTypes.InjuredWalk;
+            soundController.GetSetSoundTypes = SoundTypes.Walk;
         }
         else if(isJumping)
         {
