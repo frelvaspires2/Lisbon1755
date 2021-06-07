@@ -320,6 +320,17 @@ public class PlayerStats : ScriptableObject
     public float EnergyCost { get => energy / 2; }
 
     /// <summary>
+    /// Set how much energy per frame running will spend.
+    /// </summary>
+    [SerializeField]
+    private float runEnergyCost;
+
+    /// <summary>
+    /// Gets how mych energy running will spend per frame.
+    /// </summary>
+    public float RunEnergyCost { get => runEnergyCost; }
+
+    /// <summary>
     /// How many energy points will regenerate every second.
     /// </summary>
     [Tooltip("How many energy points will regenerate every second.")]

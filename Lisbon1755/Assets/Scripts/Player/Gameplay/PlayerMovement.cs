@@ -220,34 +220,46 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void CheckForSpeedToggle()
     {
-        if (Input.GetButtonDown("ToggleWalkSpeed"))
-        {
-            isRunning = true;
-            if (playerHealth.IsInjured)
+        if (playerEnergy.Energy >= playerStats.RunEnergyCost) {
+            if (Input.GetButtonDown("ToggleWalkSpeed"))
             {
-                injuryVelocityMult = (injuryVelocityMult ==
-                    playerStats.InjuredWalkMult) ?
-                                              playerStats.InjuredRunMult :
-                                              playerStats.InjuredWalkMult;
+                isRunning = true;
+                if (playerHealth.IsInjured)
+                {
+                    injuryVelocityMult = (injuryVelocityMult ==
+                        playerStats.InjuredWalkMult) ?
+                                                  playerStats.InjuredRunMult :
+                                                  playerStats.InjuredWalkMult;
+                }
+                else
+                {
+                    velocityMult = (velocityMult == playerStats.WalkVelocityMult) ?
+                                    playerStats.RunVelocityMult :
+                                    playerStats.WalkVelocityMult;
+                }
             }
-            else
+            else if (Input.GetButtonUp("ToggleWalkSpeed"))
             {
-                velocityMult = (velocityMult == playerStats.WalkVelocityMult) ?
-                                playerStats.RunVelocityMult :
-                                playerStats.WalkVelocityMult;
+                isRunning = false;
+                if (playerHealth.IsInjured)
+                {
+                    injuryVelocityMult = playerStats.InjuredWalkMult;
+                }
+                else
+                {
+                    velocityMult = playerStats.WalkVelocityMult;
+                }
+            }
+
+            if (isRunning)
+            {
+                playerEnergy.Energy -= playerStats.RunEnergyCost;
             }
         }
-        else if (Input.GetButtonUp("ToggleWalkSpeed"))
+        else
         {
             isRunning = false;
-            if (playerHealth.IsInjured)
-            {
-                injuryVelocityMult = playerStats.InjuredWalkMult;
-            }
-            else
-            {
-                velocityMult = playerStats.WalkVelocityMult;
-            }
+            velocityMult = playerStats.WalkVelocityMult;
         }
     }
 
