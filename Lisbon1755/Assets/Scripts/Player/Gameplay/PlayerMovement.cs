@@ -448,7 +448,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonUp("Roll") && canRoll && !playerHealth.IsInjured &&
             playerEnergy.Energy >= playerStats.EnergyCost && !isRunning 
-            && !isStrafe && !isBackward)
+            && !isStrafe && !isBackward && Input.GetAxis("Forward") > 0)
         {
             canJump = false;
             playerEnergy.Energy -= playerStats.EnergyCost;
