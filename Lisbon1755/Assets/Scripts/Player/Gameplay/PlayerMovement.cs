@@ -305,9 +305,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void UpdateKeyboardRotation()
     {
-
-        angularAcceleration = Input.GetAxis("Rotate") *
-            playerStats.Max_Angular_Acceleration * velocityMult;
+            angularAcceleration = Input.GetAxis("Rotate") *
+                playerStats.Max_Angular_Acceleration * velocityMult;
 
         angularVelocity += angularAcceleration * Time.deltaTime;
         angularVelocity = (angularAcceleration == 0f) ? 0f : Mathf.Clamp
@@ -336,6 +335,16 @@ public class PlayerMovement : MonoBehaviour
         acceleration.z = autoMove || mouseMove ? 1f : Input.GetAxis("Forward");
 
         acceleration.x = Input.GetAxis("Strafe");
+
+        // Another way to do strafe.
+        if(Input.GetMouseButton(1) && Input.GetKey(KeyCode.A))
+        {
+            acceleration.x = -10;
+        }
+        else if (Input.GetMouseButton(1) && Input.GetKey(KeyCode.D))
+        {
+            acceleration.x = 10;
+        }
 
         if (Input.GetAxis("Forward") < 0)
         {
