@@ -639,6 +639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanickedPerson
       objectReference: {fileID: 0}
+    - target: {fileID: 173703946898641548, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.81
@@ -835,6 +839,7 @@ MonoBehaviour:
   eventTimeCounter: 0
   setEventTime: 0
   scoreStats: {fileID: 0}
+  levelLoader: {fileID: 0}
 --- !u!4 &980935086
 Transform:
   m_ObjectHideFlags: 0
@@ -1451,6 +1456,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3810474371794700055, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818079349780858537, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4609408
@@ -1517,7 +1530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1884194219
 MonoBehaviour:
   m_ObjectHideFlags: 0
