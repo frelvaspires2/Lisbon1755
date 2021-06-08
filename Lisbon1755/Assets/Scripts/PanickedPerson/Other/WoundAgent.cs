@@ -25,9 +25,16 @@ public class WoundAgent : MonoBehaviour
 
     private bool CheckIfActive(GameObject agent)
     {
-        if (agent.activeSelf)
+        if (agent != null)
         {
-            return true;
+            if (agent.activeSelf)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         else
         {
