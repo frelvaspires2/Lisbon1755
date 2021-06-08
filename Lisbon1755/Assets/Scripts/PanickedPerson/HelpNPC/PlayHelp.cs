@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Help the agent when he's in the wounded state.
 /// </summary>
 public class PlayHelp : MonoBehaviour
 {
+    [SerializeField]
+    private ScoreStats scoreStats;
+
     [SerializeField]
     private GameObject helpUI;
 
@@ -69,6 +73,12 @@ public class PlayHelp : MonoBehaviour
     [SerializeField]
     private float clickCount;
 
+    private bool isScoreAdded;
+
+    private bool isLevel1;
+
+    private Scene currentScene;
+
     /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
@@ -78,6 +88,18 @@ public class PlayHelp : MonoBehaviour
         isInside = false;
         clickCount = 0;
         signal.SetActive(false);
+        isScoreAdded = false;
+
+        currentScene = SceneManager.GetActiveScene();
+
+        if(currentScene.name == "Level1")
+        {
+            isLevel1 = true;
+        }
+        else if(currentScene.name == "Level2")
+        {
+            isLevel1 = false;
+        }
     }
 
     /// <summary>
@@ -141,6 +163,20 @@ public class PlayHelp : MonoBehaviour
                     panickedController.Health = panickedStats.Health / 1.5f;
                     playerMovement.IsPlayHelp = false;
                     qte.SetActive(false);
+
+                    if(!isScoreAdded)
+                    {
+                        if(isLevel1)
+                        {
+                            scoreStats.Level1Score += 1;
+                        }
+                        else if(!isLevel1)
+                        {
+                            scoreStats.Level2Score += 1;
+                        }
+
+                        isScoreAdded = true;
+                    }
                 }
                 else
                 {
