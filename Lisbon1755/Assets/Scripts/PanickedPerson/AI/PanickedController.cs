@@ -17,6 +17,9 @@ public class PanickedController : MonoBehaviour
     [SerializeField]
     private float health;
 
+    /// <summary>
+    /// Gets or sets the current health.
+    /// </summary>
     public float Health { get => health; set => health = value; }
 
     /// <summary>
@@ -69,7 +72,8 @@ public class PanickedController : MonoBehaviour
         if(health > (panickedStats.Health / 1.3f))
         {
             statesEnum = PanickedState.Running;
-            panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.Running;
+            panickAnimController.GetSetPanickAnimTypes = 
+                PanickAnimTypes.Running;
             aiSoundController.GetSetAISoundTypes = AISoundTypes.Running;
            
         }
@@ -77,13 +81,15 @@ public class PanickedController : MonoBehaviour
             health > (panickedStats.Health / 2f))
         {
             statesEnum = PanickedState.RunningSlower;
-            panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.RunningSlower;
+            panickAnimController.GetSetPanickAnimTypes = 
+                PanickAnimTypes.RunningSlower;
             aiSoundController.GetSetAISoundTypes = AISoundTypes.RunningSlow;
         }
         else if(health <= (panickedStats.Health / 2f) && health > 0)
         {
             statesEnum = PanickedState.WoundedInTheGround;
-            panickAnimController.GetSetPanickAnimTypes = PanickAnimTypes.Wounded;
+            panickAnimController.GetSetPanickAnimTypes = 
+                PanickAnimTypes.Wounded;
             aiSoundController.GetSetAISoundTypes = AISoundTypes.Wounded;
         }
         else if (health <= 0)

@@ -161,8 +161,15 @@ public class PlayerStats : ScriptableObject
     /// </summary>
     public float MaxJumpVelocity { get => maxJumpVelocity; }
 
+    /// <summary>
+    /// Max falling velocity.
+    /// </summary>
     [SerializeField]
     private float maxFallVelocity = 50.0f;
+
+    /// <summary>
+    /// Gets the max falling velocity.
+    /// </summary>
     public float MaxFallVelocity { get => maxFallVelocity; }
 
 

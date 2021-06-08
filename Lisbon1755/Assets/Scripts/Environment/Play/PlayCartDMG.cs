@@ -1,12 +1,20 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Play the cart damage.
+/// </summary>
 public class PlayCartDMG : MonoBehaviour
 {
+    /// <summary>
+    /// Access the cart marker UI.
+    /// </summary>
     [SerializeField]
     private GameObject cartMarker;
 
+    /// <summary>
+    /// Access the cart collider.
+    /// </summary>
     [SerializeField]
     private BoxCollider cartCollider;
 
@@ -44,22 +52,14 @@ public class PlayCartDMG : MonoBehaviour
     /// </summary>
     private bool isNPCHit;
 
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize variables.
+    /// </summary>
     private void Start()
     {
         isPlayerHit = false;
         isNPCHit = false;
-    }
-
-    /// <summary>
-    /// To be played in every frame.
-    /// </summary>
-    private void Update()
-    {
-        // Check if the animation finished playing.
-        /*if (isDone)
-        {
-            StartCoroutine(Destroy());
-        }*/
     }
 
     /// <summary>
@@ -84,23 +84,14 @@ public class PlayCartDMG : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// To be played when the animation is finished.
+    /// Update stuff.
+    /// </summary>
     public void AnimationDone()
     {
         isDone = true;
         cartMarker.SetActive(false);
         cartCollider.isTrigger = false;
-    }
-
-    /// <summary>
-    /// Time for the destruction of the script.
-    /// </summary>
-    /// <returns> Wait for seconds.</returns>
-    private IEnumerator Destroy()
-    {
-        WaitForSeconds wfs = new WaitForSeconds(1);
-
-        yield return wfs;
-
-        Destroy(gameObject);
     }
 }

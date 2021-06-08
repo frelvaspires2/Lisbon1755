@@ -65,7 +65,6 @@ public class CameraMovement : MonoBehaviour
     private void Update()
     {
         UpdateRotation();
-        //UpdateCameraRotation();
         UpdateCameraPosition();
         PreventCharacterOcclusion();
     }
@@ -76,15 +75,20 @@ public class CameraMovement : MonoBehaviour
     private void UpdateCameraPosition()
     {
         if (translationAcceleration != 0f)
-            translationVelocity = Mathf.Clamp(translationVelocity + translationAcceleration * Time.deltaTime,
-                -playerStats.MaxTranslationVelocity, playerStats.MaxTranslationVelocity);
+            translationVelocity = Mathf.Clamp(translationVelocity + 
+                translationAcceleration * Time.deltaTime,
+                -playerStats.MaxTranslationVelocity, 
+                playerStats.MaxTranslationVelocity);
         else if (translationVelocity > 0)
-            translationVelocity = Mathf.Max(translationVelocity - playerStats.TransLationDeceleration * Time.deltaTime, 0f);
+            translationVelocity = Mathf.Max(translationVelocity -
+                playerStats.TransLationDeceleration * Time.deltaTime, 0f);
         else
-            translationVelocity = Mathf.Min(translationVelocity + playerStats.TransLationDeceleration * Time.deltaTime, 0f);
+            translationVelocity = Mathf.Min(translationVelocity +
+                playerStats.TransLationDeceleration * Time.deltaTime, 0f);
 
         newPosition = camera.transform.localPosition;
-        newPosition.z = Mathf.Clamp(newPosition.z + translationVelocity * Time.deltaTime,
+        newPosition.z = Mathf.Clamp(newPosition.z + translationVelocity * 
+            Time.deltaTime,
             -playerStats.MaxDistance, -playerStats.MinDistance);
 
         camera.transform.localPosition = newPosition;
@@ -98,10 +102,15 @@ public class CameraMovement : MonoBehaviour
     /// </summary>
     private void PreventCharacterOcclusion()
     {
-        if (Physics.Linecast(transform.position, camera.transform.TransformPoint(intendedPosition), out raycastHitInfo))
-            camera.transform.position = Vector3.Lerp(camera.transform.position, raycastHitInfo.point, playerStats.AutoAdjustSpeed * Time.deltaTime);
+        if (Physics.Linecast(transform.position, camera.transform
+            .TransformPoint(intendedPosition), out raycastHitInfo))
+            camera.transform.position = Vector3.Lerp(camera.transform.position,
+                raycastHitInfo.point, playerStats.AutoAdjustSpeed *
+                Time.deltaTime);
         else
-            camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, intendedPosition, playerStats.AutoAdjustSpeed * Time.deltaTime);
+            camera.transform.localPosition = Vector3.Lerp(camera.transform
+                .localPosition, intendedPosition, playerStats.AutoAdjustSpeed 
+                * Time.deltaTime);
     }
 
     /// <summary>
@@ -109,18 +118,19 @@ public class CameraMovement : MonoBehaviour
     /// </summary>
     private void UpdateRotation()
     {
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2))
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(1) || 
+            Input.GetMouseButton(2))
         {
             newRotation = transform.localEulerAngles;
-            newRotation.x -= Input.GetAxis("Mouse Y") * playerStats.MouseAngularVelocityMult;
+            newRotation.x -= Input.GetAxis("Mouse Y") * 
+                playerStats.MouseAngularVelocityMult;
 
             if (newRotation.x > 180)
-                newRotation.x = Mathf.Max(newRotation.x, playerStats.MinRotationX);
+                newRotation.x = Mathf.Max(newRotation.x, 
+                    playerStats.MinRotationX);
             else
-                newRotation.x = Mathf.Min(newRotation.x, playerStats.MaxRotationX);
-
-            //if (Input.GetMouseButton(0) && !Input.GetMouseButton(1))
-                //newRotation.y += Input.GetAxis("Mouse X") * playerStats.MouseAngularVelocityMult;
+                newRotation.x = Mathf.Min(newRotation.x, 
+                    playerStats.MaxRotationX);
 
             transform.localEulerAngles = newRotation;
         }

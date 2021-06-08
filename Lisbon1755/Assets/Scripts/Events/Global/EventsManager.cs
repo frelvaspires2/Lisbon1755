@@ -7,21 +7,39 @@ using UnityEngine.UI;
 /// </summary>
 public class EventsManager : MonoBehaviour
 {
+    /// <summary>
+    /// Access the won UI.
+    /// </summary>
     [SerializeField]
     private GameObject wonUI;
 
+    /// <summary>
+    /// Access the lost UI.
+    /// </summary>
     [SerializeField]
     private GameObject lostUI;
 
+    /// <summary>
+    /// Access the default ground material.
+    /// </summary>
     [SerializeField]
     private Material defaultColor;
 
+    /// <summary>
+    /// Access the won ground material.
+    /// </summary>
     [SerializeField]
     private Material wonColor;
 
+    /// <summary>
+    /// Access the lost ground material.
+    /// </summary>
     [SerializeField]
     private Material lostColor;
 
+    /// <summary>
+    /// Access the event area ground material.
+    /// </summary>
     [SerializeField]
     private Material eventArea;
 
@@ -126,6 +144,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private PlayerAnimController playerAnimController;
 
+    /// <summary>
+    /// Access the event marker UI.
+    /// </summary>
     [SerializeField]
     private GameObject eventMarker;
 
@@ -182,6 +203,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private GameObject winSound;
 
+    /// <summary>
+    /// Access the ask for click UI.
+    /// </summary>
     [SerializeField]
     private GameObject clickUI;
 
@@ -292,7 +316,8 @@ public class EventsManager : MonoBehaviour
             {
                 qte.SetActive(false);
                 isClick = false;
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.idle;
             }
         }
         else
@@ -309,19 +334,24 @@ public class EventsManager : MonoBehaviour
         switch(eventType)
         {
             case EventType.PersonStuckObjects:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Push;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.Push;
                 break;
             case EventType.PersonStuckHouse:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.KickDoor;
                 break;
             case EventType.Heretics:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Untie;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.Untie;
                 break;
             case EventType.Cat:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.CallCat;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.CallCat;
                 break;
             case EventType.WakeUp:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.WakeUpNPC;
                 break;
         }
     }
@@ -341,6 +371,10 @@ public class EventsManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// While staying inside the event.
+    /// </summary>
+    /// <param name="other"> Collider.</param>
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject == player && eventState != EventState.Finished)

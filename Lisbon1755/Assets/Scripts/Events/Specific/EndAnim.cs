@@ -35,6 +35,9 @@ public class EndAnim : MonoBehaviour
     [SerializeField]
     private GameObject blockZone;
 
+    /// <summary>
+    /// Access the sound gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject sound;
 

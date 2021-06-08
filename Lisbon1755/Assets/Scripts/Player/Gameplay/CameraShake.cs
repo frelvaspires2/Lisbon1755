@@ -165,6 +165,7 @@ public class CameraShake : MonoBehaviour
     /// </summary>
     private void InfiniteShake()
     {
-        camera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+        camera.localPosition = originalPos + Random.insideUnitSphere * 
+            shakeAmount;
     }
 }

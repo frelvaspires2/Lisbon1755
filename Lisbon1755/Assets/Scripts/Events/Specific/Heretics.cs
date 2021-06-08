@@ -1,45 +1,86 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Heretic event specific stuff.
+/// </summary>
 public class Heretics : MonoBehaviour
 {
+    /// <summary>
+    /// Access the EventsManager.
+    /// </summary>
     [SerializeField]
     private EventsManager eventManager;
 
+    /// <summary>
+    /// Access the stick gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject stick;
 
+    /// <summary>
+    /// Access the npc in danger gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject npcInDanger;
 
+    /// <summary>
+    /// Access the npc in safety gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject npcSafe;
 
+    /// <summary>
+    /// Access the dead npc gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject npcDead;
 
+    /// <summary>
+    /// Access the fire gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject fire;
 
+    /// <summary>
+    /// Set the time for the NPC to disappear.
+    /// </summary>
     [SerializeField]
     private float timeToDisappear = 5f;
 
+    /// <summary>
+    /// Access the score stats scriptableobject.
+    /// </summary>
     [SerializeField]
     private ScoreStats scoreStats;
 
+    /// <summary>
+    /// Checks whether the player has won.
+    /// </summary>
     private bool hasWon;
 
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize stuff.
+    /// </summary>
     private void Start()
     {
         hasWon = false;
         fire.SetActive(false);
     }
 
+    /// <summary>
+    /// To be played in every frame of the game.
+    /// Run the state machine.
+    /// </summary>
     private void Update()
     {
         STM();
     }
 
+    /// <summary>
+    /// The state machine.
+    /// </summary>
     private void STM()
     {
         switch (eventManager.GetEventResult)
@@ -61,6 +102,9 @@ public class Heretics : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// The state when nothing has hapenned yet.
+    /// </summary>
     private void NoneState()
     {
         stick.SetActive(true);
@@ -69,6 +113,9 @@ public class Heretics : MonoBehaviour
         npcDead.SetActive(false);
     }
 
+    /// <summary>
+    /// The state when the player won.
+    /// </summary>
     private void WonState()
     {
         stick.SetActive(true);
@@ -82,6 +129,9 @@ public class Heretics : MonoBehaviour
         StartCoroutine(Disappear(npcSafe));
     }
 
+    /// <summary>
+    /// The state when the player lost.
+    /// </summary>
     private void LostState()
     {
         stick.SetActive(true);
@@ -91,6 +141,11 @@ public class Heretics : MonoBehaviour
         fire.SetActive(true);
     }
 
+    /// <summary>
+    /// Disappear the NPC.
+    /// </summary>
+    /// <param name="gameObject"> The heretic.</param>
+    /// <returns> Wait for seconds.</returns>
     private IEnumerator Disappear(GameObject gameObject)
     {
         WaitForSeconds wfs = new WaitForSeconds(timeToDisappear);

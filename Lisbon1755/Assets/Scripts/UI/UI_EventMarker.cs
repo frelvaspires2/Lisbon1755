@@ -1,18 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
+/// <summary>
+/// Manage the UI markers.
+/// </summary>
 public class UI_EventMarker : MonoBehaviour
 {
+    /// <summary>
+    /// Access the markers.
+    /// </summary>
     [SerializeField]
     private Markers[] markers;
 
-    void Update()
+    /// <summary>
+    /// To be played in every frame.
+    /// Update the markers.
+    /// </summary>
+    private void Update()
     {
         UpdateMarkers();
     }
 
+    /// <summary>
+    /// Update the markers.
+    /// </summary>
     private void UpdateMarkers()
     {
         float minX = 0;
@@ -31,9 +41,11 @@ public class UI_EventMarker : MonoBehaviour
             minY = item.GetSetImg.GetPixelAdjustedRect().height / 2;
             maxY = Screen.height - minY;
 
-            pos = Camera.main.WorldToScreenPoint(item.GetSetTarget.position + item.GetSetOffset);
+            pos = Camera.main.WorldToScreenPoint(item.GetSetTarget.position + 
+                item.GetSetOffset);
 
-            if (Vector3.Dot((item.GetSetTarget.position - transform.position), transform.forward) < 0)
+            if (Vector3.Dot((item.GetSetTarget.position - transform.position),
+                transform.forward) < 0)
             {
                 //Target is behind the player
                 if (pos.x < Screen.width / 2)
@@ -50,7 +62,8 @@ public class UI_EventMarker : MonoBehaviour
             pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
             item.GetSetImg.transform.position = pos;
-            item.GetSetMeter.text = ((int)Vector3.Distance(item.GetSetTarget.position, transform.position)).ToString() + "m";
+            item.GetSetMeter.text = ((int)Vector3.Distance(item.GetSetTarget
+                .position, transform.position)).ToString() + "m";
         }
     }
 }

@@ -7,12 +7,21 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class PlayHelp : MonoBehaviour
 {
+    /// <summary>
+    /// Access the score stats scriptableobject.
+    /// </summary>
     [SerializeField]
     private ScoreStats scoreStats;
 
+    /// <summary>
+    /// Access the help UI gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject helpUI;
 
+    /// <summary>
+    /// Access the signal gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject signal;
 
@@ -40,6 +49,9 @@ public class PlayHelp : MonoBehaviour
     [SerializeField]
     private PanickedController panickedController;
 
+    /// <summary>
+    /// Access the PlayerMovement script.
+    /// </summary>
     [SerializeField]
     private PlayerMovement playerMovement;
 
@@ -73,10 +85,19 @@ public class PlayHelp : MonoBehaviour
     [SerializeField]
     private float clickCount;
 
+    /// <summary>
+    /// Checks whether the score was added.
+    /// </summary>
     private bool isScoreAdded;
 
+    /// <summary>
+    /// Checks whether the level 1 was finished.
+    /// </summary>
     private bool isLevel1;
 
+    /// <summary>
+    /// Access the current scene.
+    /// </summary>
     private Scene currentScene;
 
     /// <summary>
@@ -114,9 +135,9 @@ public class PlayHelp : MonoBehaviour
     }
 
     /// <summary>
-    /// Check whether the opponent is in the wounded state.
+    /// Check whether the agent is in the wounded state.
     /// </summary>
-    /// <returns> Returns true if the opponent is wounded.</returns>
+    /// <returns> Returns true if the agent is wounded.</returns>
     private bool CheckState()
     {
         if(panickedController.GetStates == PanickedState.WoundedInTheGround)
@@ -208,7 +229,7 @@ public class PlayHelp : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks whether the player is close to the agent.
+    /// Checks whether the player left the agent.
     /// </summary>
     /// <param name="other"> Collider.</param>
     private void OnTriggerExit(Collider other)
