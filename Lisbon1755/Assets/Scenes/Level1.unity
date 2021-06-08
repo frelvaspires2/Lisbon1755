@@ -403,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.009995
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -411,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.546
+      value: 14.54
       objectReference: {fileID: 0}
     - target: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7122,6 +7122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85949bcd71d844c46a84db2741ef9c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &359682535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173703946898641548, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+  m_PrefabInstance: {fileID: 8486887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &364379118
 GameObject:
   m_ObjectHideFlags: 0
@@ -21329,6 +21334,7 @@ GameObject:
   - component: {fileID: 980935086}
   - component: {fileID: 980935085}
   - component: {fileID: 980935087}
+  - component: {fileID: 980935088}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -21390,6 +21396,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 302263175}
   slider: {fileID: 1240053309}
+--- !u!114 &980935088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980935084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95163692207f7754284fb63eddca55ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedAgent:
+  - selectedAgent: {fileID: 359682535}
+    isDMG: 0
+  dmg: 70
 --- !u!4 &985055477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
