@@ -5998,7 +5998,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 267789420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2070803469}
+        m_TargetAssemblyTypeName: LockController, Assembly-CSharp
+        m_MethodName: PlayLevel2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &267789420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27149,7 +27161,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 8.475101, y: 5.0850596, z: 0}
+    m_Extent: {x: 14.438504, y: 8.663101, z: 0}
   m_DirtyAABB: 0
 --- !u!4 &702554574 stripped
 Transform:
@@ -96975,7 +96987,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1403808792}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2070803469}
+        m_TargetAssemblyTypeName: LockController, Assembly-CSharp
+        m_MethodName: PlayLevel1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1403808792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97678,7 +97702,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 8.475101, y: 5.08506, z: 0}
+    m_Extent: {x: 14.438504, y: 8.663101, z: 0}
   m_DirtyAABB: 0
 --- !u!4 &1634223922 stripped
 Transform:

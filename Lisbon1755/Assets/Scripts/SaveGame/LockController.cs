@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LockController : MonoBehaviour
 {
@@ -20,5 +21,18 @@ public class LockController : MonoBehaviour
         {
             lockUI[0].SetActive(true);
         }
+    }
+
+    public void PlayLevel2()
+    {
+        if (!lockUI[0].activeSelf)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        }
+    }
+
+    public void PlayLevel1()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
