@@ -8,6 +8,9 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+
+    [SerializeField]
+    private LevelLoader levelLoader;
        
     void Update()
     {
@@ -41,7 +44,8 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
+        levelLoader.LoadLevel(0);
     }
 
     public void QuitGame()

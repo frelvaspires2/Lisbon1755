@@ -18,8 +18,17 @@ public class LockController : MonoBehaviour
     [SerializeField]
     private LoadGame loadGame;
 
+    /// <summary>
+    /// Access the score stats scriptableobject.
+    /// </summary>
     [SerializeField]
     private ScoreStats scoreStats;
+
+    /// <summary>
+    /// Access LevelLoader script.
+    /// </summary>
+    [SerializeField]
+    private LevelLoader levelLoader;
 
     /// <summary>
     /// To be played in the first frame of the game.
@@ -45,7 +54,8 @@ public class LockController : MonoBehaviour
         {
             loadGame.LoadTheGame();
             scoreStats.Level2Score = default;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            levelLoader.LoadLevel(2);
         }
     }
 
@@ -55,6 +65,7 @@ public class LockController : MonoBehaviour
     public void PlayLevel1()
     {
         scoreStats.Level1Score = default;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        levelLoader.LoadLevel(1);
     }
 }
