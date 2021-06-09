@@ -1455,10 +1455,10 @@ MonoBehaviour:
   camera: {fileID: 963194228}
   shakeAmount: 0.1
   canRandomShake: 0
-  setShakeDuration: 0
+  setShakeDuration: 1
   shakeDuration: 0
-  minWaitTime: 0
-  maxWaitTime: 0
+  minWaitTime: 5
+  maxWaitTime: 10
   waitTime: 0
 --- !u!114 &1601251973
 MonoBehaviour:
