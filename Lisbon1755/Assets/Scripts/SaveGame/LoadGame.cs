@@ -25,12 +25,15 @@ public class LoadGame : MonoBehaviour
     /// </summary>
     private string path; 
 
+<<<<<<< HEAD
     /// <summary>
     /// Set the level 2 file path.
     /// </summary>
 =======
     private string path; 
 
+>>>>>>> MergeStuff4
+=======
 >>>>>>> MergeStuff4
     private string level2Path; 
 
