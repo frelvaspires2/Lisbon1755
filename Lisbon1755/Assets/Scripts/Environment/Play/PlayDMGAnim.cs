@@ -1,7 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Play damage in falling buildings animation.
+/// </summary>
 public class PlayDMGAnim : MonoBehaviour
 {
     /// <summary>
@@ -32,6 +34,10 @@ public class PlayDMGAnim : MonoBehaviour
     /// </summary>
     private bool isNPCHit;
 
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize variables.
+    /// </summary>
     private void Start()
     {
         isPlayerHit = false;

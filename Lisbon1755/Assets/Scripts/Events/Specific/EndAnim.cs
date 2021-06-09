@@ -35,6 +35,9 @@ public class EndAnim : MonoBehaviour
     [SerializeField]
     private GameObject blockZone;
 
+    /// <summary>
+    /// Access the sound gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject sound;
 
@@ -57,7 +60,8 @@ public class EndAnim : MonoBehaviour
     {
         isAnimationFinished = true;
         dmgZone.SetActive(true);
-        Destroy(sound);
+        //Destroy(sound);
+        sound.SetActive(false);
         StartCoroutine(StopDMG());
     }
 

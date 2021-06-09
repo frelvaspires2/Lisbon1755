@@ -2,7 +2,9 @@
 using LibGameAI.FSMs;
 using System;
 
-
+/// <summary>
+/// Behavior of the agent.
+/// </summary>
 public class PanickedBehavior : MonoBehaviour
 {
     /// <summary>
@@ -22,7 +24,9 @@ public class PanickedBehavior : MonoBehaviour
     /// </summary>
     private IState getState;
 
-    // Reference to the state machine.
+    /// <summary>
+    /// Access the StateMachine script.
+    /// </summary>
     private StateMachine stateMachine;
 
     /// <summary>

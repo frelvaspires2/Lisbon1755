@@ -16,6 +16,7 @@ public class LoadGame : MonoBehaviour
     /// <summary>
     /// Access the score stats scriptableobject.
     /// </summary>
+<<<<<<< HEAD
     [SerializeField]
     private ScoreStats scoreStats;
 
@@ -27,6 +28,10 @@ public class LoadGame : MonoBehaviour
     /// <summary>
     /// Set the level 2 file path.
     /// </summary>
+=======
+    private string path; 
+
+>>>>>>> MergeStuff4
     private string level2Path; 
 
     /// <summary>

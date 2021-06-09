@@ -4,19 +4,28 @@
 /// Play the animation when the player enters the area.
 /// </summary>
 public class PlayAnim : MonoBehaviour
-{    // Player's gameobject.
+{  
+    /// <summary>
+    /// Access the player's gameobject.
+    /// </summary>
     [SerializeField]
     private GameObject player;
 
-    // Animation controller.
+    /// <summary>
+    /// Access the animation controller.
+    /// </summary>
     [SerializeField]
     private Animator animController;
 
-    // Insert animation name.
+    /// <summary>
+    /// Insert the animation name.
+    /// </summary>
     [SerializeField]
     private string animName;
 
-    // Check if the animation was already played.
+    /// <summary>
+    /// Check whether the animation was already played.
+    /// </summary>
     [SerializeField]
     private bool isPlayed;
 
@@ -71,6 +80,10 @@ public class PlayAnim : MonoBehaviour
         fallSound.SetActive(false);
     }
 
+    /// <summary>
+    /// To be played in every frame of the game.
+    /// Activate the camera shake.
+    /// </summary>
     private void Update()
     {
         if(!isDone && IsPlayed)
@@ -97,11 +110,14 @@ public class PlayAnim : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// To be played when the animation is finished.
+    /// Update the variables and properties.
+    /// </summary>
     public void AnimationDone()
     {
         isDone = true;
         hasStarted = false;
         cameraShake.CanShake = false;
-        fallSound.SetActive(false);
     }
 }

@@ -60,11 +60,21 @@ public class WakeUp : MonoBehaviour
     [SerializeField]
     private EndAnim endAnim;
 
+    /// <summary>
+    /// Access the score stats scriptableobject.
+    /// </summary>
     [SerializeField]
     private ScoreStats scoreStats;
 
+    /// <summary>
+    /// Checks whether the player has won.
+    /// </summary>
     private bool hasWon;
 
+    /// <summary>
+    /// To be played in the first frame of the game.
+    /// Initialize variables.
+    /// </summary>
     private void Start()
     {
         hasWon = false;

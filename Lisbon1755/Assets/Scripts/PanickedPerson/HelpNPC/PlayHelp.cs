@@ -1,11 +1,38 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Help the agent when he's in the wounded state.
 /// </summary>
 public class PlayHelp : MonoBehaviour
 {
+    /// <summary>
+    /// Access the won UI gameobject.
+    /// </summary>
+    [SerializeField]
+    private GameObject wonUI;
+
+    /// <summary>
+    /// Access the score stats scriptableobject.
+    /// </summary>
+    [SerializeField]
+    private ScoreStats scoreStats;
+
+    /// <summary>
+    /// Access the help UI gameobject.
+    /// </summary>
+    [SerializeField]
+    private GameObject helpUI;
+
+    /// <summary>
+    /// Access the signal gameobject.
+    /// </summary>
+    [SerializeField]
+    private GameObject signal;
+
     /// <summary>
     /// Access the quick time event gameobject.
     /// </summary>
@@ -30,6 +57,9 @@ public class PlayHelp : MonoBehaviour
     [SerializeField]
     private PanickedController panickedController;
 
+    /// <summary>
+    /// Access the PlayerMovement script.
+    /// </summary>
     [SerializeField]
     private PlayerMovement playerMovement;
 
@@ -64,6 +94,27 @@ public class PlayHelp : MonoBehaviour
     private float clickCount;
 
     /// <summary>
+    /// Checks whether the score was added.
+    /// </summary>
+    private bool isScoreAdded;
+
+    /// <summary>
+    /// Checks whether the level 1 was finished.
+    /// </summary>
+    private bool isLevel1;
+
+    /// <summary>
+    /// Access the current scene.
+    /// </summary>
+    private Scene currentScene;
+
+    /// <summary>
+    /// Set the time of showing the won UI.
+    /// </summary>
+    [SerializeField]
+    private float wonTime = 2f;
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// </summary>
@@ -71,6 +122,20 @@ public class PlayHelp : MonoBehaviour
     {
         isInside = false;
         clickCount = 0;
+        signal.SetActive(false);
+        isScoreAdded = false;
+        wonUI.SetActive(false);
+
+        currentScene = SceneManager.GetActiveScene();
+
+        if(currentScene.name == "Level1")
+        {
+            isLevel1 = true;
+        }
+        else if(currentScene.name == "Level2")
+        {
+            isLevel1 = false;
+        }
     }
 
     /// <summary>
@@ -85,17 +150,19 @@ public class PlayHelp : MonoBehaviour
     }
 
     /// <summary>
-    /// Check whether the opponent is in the wounded state.
+    /// Check whether the agent is in the wounded state.
     /// </summary>
-    /// <returns> Returns true if the opponent is wounded.</returns>
+    /// <returns> Returns true if the agent is wounded.</returns>
     private bool CheckState()
     {
         if(panickedController.GetStates == PanickedState.WoundedInTheGround)
         {
+            signal.SetActive(true);
             return true;
         }
         else
         {
+            signal.SetActive(false);
             isInside = false;
             clickCount = 0;
             return false;
@@ -109,8 +176,12 @@ public class PlayHelp : MonoBehaviour
     {
         if(isInside)
         {
+            helpUI.SetActive(true);
+
             if(Input.GetButton("MouseClick"))
             {
+                helpUI.SetActive(false);
+
                 player.GetComponent<CharacterController>().enabled = false;
                 player.transform.position = setPosition.position;
                 player.transform.rotation = setPosition.rotation;
@@ -128,6 +199,21 @@ public class PlayHelp : MonoBehaviour
                     panickedController.Health = panickedStats.Health / 1.5f;
                     playerMovement.IsPlayHelp = false;
                     qte.SetActive(false);
+                    StartCoroutine(WonRoutine());
+
+                    if(!isScoreAdded)
+                    {
+                        if(isLevel1)
+                        {
+                            scoreStats.Level1Score += 1;
+                        }
+                        else if(!isLevel1)
+                        {
+                            scoreStats.Level2Score += 1;
+                        }
+
+                        isScoreAdded = true;
+                    }
                 }
                 else
                 {
@@ -139,6 +225,10 @@ public class PlayHelp : MonoBehaviour
                 playerMovement.IsPlayHelp = false;
                 qte.SetActive(false);
             }
+        }
+        else
+        {
+            helpUI.SetActive(false);
         }
     }
 
@@ -155,7 +245,7 @@ public class PlayHelp : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks whether the player is close to the agent.
+    /// Checks whether the player left the agent.
     /// </summary>
     /// <param name="other"> Collider.</param>
     private void OnTriggerExit(Collider other)
@@ -164,5 +254,18 @@ public class PlayHelp : MonoBehaviour
         {
             isInside = false;
         }
+    }
+
+    private IEnumerator WonRoutine()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(wonTime);
+
+        wonUI.SetActive(true);
+
+        yield return wfs;
+
+        wonUI.SetActive(false);
+
+        StopCoroutine(WonRoutine());
     }
 }

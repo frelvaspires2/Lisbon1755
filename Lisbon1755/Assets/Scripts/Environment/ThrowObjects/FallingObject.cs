@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using SRandom = System.Random;
 using URandom = UnityEngine.Random;
 
 /// <summary>

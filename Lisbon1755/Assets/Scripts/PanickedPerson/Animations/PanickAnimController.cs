@@ -87,7 +87,8 @@ public class PanickAnimController : MonoBehaviour
     /// </summary>
     private void RunningAnim()
     {
-        foreach (KeyValuePair<PanickAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PanickAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PanickAnimTypes.Running)
             {
@@ -105,7 +106,8 @@ public class PanickAnimController : MonoBehaviour
     /// </summary>
     private void RunningSlowerAnim()
     {
-        foreach (KeyValuePair<PanickAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PanickAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PanickAnimTypes.RunningSlower)
             {
@@ -123,7 +125,8 @@ public class PanickAnimController : MonoBehaviour
     /// </summary>
     private void WoundedAnim()
     {
-        foreach (KeyValuePair<PanickAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PanickAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PanickAnimTypes.Wounded)
             {
@@ -141,7 +144,8 @@ public class PanickAnimController : MonoBehaviour
     /// </summary>
     private void DyingAnim()
     {
-        foreach (KeyValuePair<PanickAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PanickAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PanickAnimTypes.Dying)
             {

@@ -161,8 +161,15 @@ public class PlayerStats : ScriptableObject
     /// </summary>
     public float MaxJumpVelocity { get => maxJumpVelocity; }
 
+    /// <summary>
+    /// Max falling velocity.
+    /// </summary>
     [SerializeField]
     private float maxFallVelocity = 50.0f;
+
+    /// <summary>
+    /// Gets the max falling velocity.
+    /// </summary>
     public float MaxFallVelocity { get => maxFallVelocity; }
 
 
@@ -318,6 +325,17 @@ public class PlayerStats : ScriptableObject
     /// Get how much energy will drain when rolling.
     /// </summary>
     public float EnergyCost { get => energy / 2; }
+
+    /// <summary>
+    /// Set how much energy per frame running will spend.
+    /// </summary>
+    [SerializeField]
+    private float runEnergyCost;
+
+    /// <summary>
+    /// Gets how mych energy running will spend per frame.
+    /// </summary>
+    public float RunEnergyCost { get => runEnergyCost; }
 
     /// <summary>
     /// How many energy points will regenerate every second.
