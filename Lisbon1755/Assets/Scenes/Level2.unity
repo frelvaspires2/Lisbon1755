@@ -25869,7 +25869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 43134258}
-  dmg: 55
+  dmg: 80
   playAnim: {fileID: 2092332794}
 --- !u!65 &571032724
 BoxCollider:
@@ -64174,7 +64174,7 @@ MonoBehaviour:
   cartMarker: {fileID: 2049385527}
   cartCollider: {fileID: 1495963052}
   player: {fileID: 43134258}
-  dmg: 1000
+  dmg: 80
   playCart: {fileID: 42543990}
   isDone: 0
 --- !u!1001 &1497020815
