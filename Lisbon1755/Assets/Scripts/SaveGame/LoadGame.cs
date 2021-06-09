@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 using System.IO;
 
@@ -15,11 +14,20 @@ public class LoadGame : MonoBehaviour
     private GameStats gameStats;
 
     /// <summary>
-    /// Set the file path.
+    /// Access the score stats scriptableobject.
     /// </summary>
-    private string path; //= Application.persistentDataPath + "/save.csv";
+    [SerializeField]
+    private ScoreStats scoreStats;
 
-    private string level2Path; //= Application.persistentDataPath + "/level2.txt";
+    /// <summary>
+    /// Set the save file path.
+    /// </summary>
+    private string path; 
+
+    /// <summary>
+    /// Set the level 2 file path.
+    /// </summary>
+    private string level2Path; 
 
     /// <summary>
     /// To be played before the game stats.
@@ -27,9 +35,6 @@ public class LoadGame : MonoBehaviour
     /// </summary>
     private void Awake()
     {
-        //path = "C:/Users/Francisco/Documents/GitHub/Lisbon1755/save.csv";
-        //level2Path = "C:/Users/Francisco/Documents/GitHub/Lisbon1755/level2.txt";
-
         path = Application.persistentDataPath + "/save.csv";
         level2Path = Application.persistentDataPath + "/level2.txt";
 
@@ -89,12 +94,16 @@ public class LoadGame : MonoBehaviour
                 checkIfFinished = lines[index[1]];
                 peopleSavedNumber = lines[index[2]];
 
-                // Add the data to the scriptableobject.
+                // Add the data to the game stats scriptableobject.
                 gameStats.GameStatsDic.Add(new SaveData(
                     Convert.ToInt32(levelNumber),
                     Convert.ToBoolean(checkIfFinished),
                     Convert.ToInt32(peopleSavedNumber)));
             }
+
+            // Add the data to the score stats scriptableobject.
+            scoreStats.Level1Score = gameStats.GameStatsDic[0].PeopleSaved;
+            scoreStats.Level2Score = gameStats.GameStatsDic[1].PeopleSaved;
         }
     }
 

@@ -287,12 +287,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33197062}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 --- !u!65 &33197066
 BoxCollider:
+=======
+--- !u!1 &95007865
+GameObject:
+>>>>>>> MainMenuImprov
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 33197062}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -301,11 +307,46 @@ BoxCollider:
   m_Size: {x: 350, y: 60, z: 400}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &33197067
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95007866}
+  - component: {fileID: 95007868}
+  - component: {fileID: 95007867}
+  m_Layer: 5
+  m_Name: Lock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &95007866
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95007865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 267789418}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -13, y: 15}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &95007867
+>>>>>>> MainMenuImprov
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 33197062}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -315,6 +356,40 @@ MonoBehaviour:
   m_EffectColor: {r: 0.13725491, g: 0.0627451, b: 0.078431375, a: 0.5}
   m_EffectDistance: {x: 1.5, y: -1.5}
   m_UseGraphicAlpha: 1
+=======
+  m_GameObject: {fileID: 95007865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d1cf32e39691dd64796c018b4e50d4b1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &95007868
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95007865}
+  m_CullTransparentMesh: 0
+>>>>>>> MainMenuImprov
 --- !u!1 &115548389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,6 +5479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621ff77e87880424eb3e72f231d94c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreStats: {fileID: 0}
 --- !u!1 &156792828
 GameObject:
   m_ObjectHideFlags: 0
@@ -5809,7 +5885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &267789418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5823,6 +5899,7 @@ RectTransform:
   m_Children:
   - {fileID: 173469887}
   - {fileID: 1634223922}
+  - {fileID: 95007866}
   m_Father: {fileID: 2103157878}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3}
@@ -5873,7 +5950,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 267789420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2070803469}
+        m_TargetAssemblyTypeName: LockController, Assembly-CSharp
+        m_MethodName: PlayLevel2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &267789420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26878,7 +26967,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 18.000002, y: 5.9999995, z: 0}
+    m_Extent: {x: 34.652412, y: 11.550802, z: 0}
   m_DirtyAABB: 0
 --- !u!4 &670104725 stripped
 Transform:
@@ -27051,7 +27140,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 7.500001, y: 4.5, z: 0}
+    m_Extent: {x: 14.438504, y: 8.663101, z: 0}
   m_DirtyAABB: 0
 --- !u!4 &702554574 stripped
 Transform:
@@ -96750,7 +96839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1403808790
 RectTransform:
   m_ObjectHideFlags: 0
@@ -96814,7 +96903,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1403808792}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2070803469}
+        m_TargetAssemblyTypeName: LockController, Assembly-CSharp
+        m_MethodName: PlayLevel1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1403808792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97680,7 +97781,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7df96ab756eac794b95f53f90b806802, type: 2}
+  - {fileID: 2100000, guid: b4097e18fdd94fa40a04dca55bd7c40f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97711,7 +97812,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 7.500001, y: 4.4999995, z: 0}
+    m_Extent: {x: 14.438504, y: 8.663101, z: 0}
   m_DirtyAABB: 0
 --- !u!4 &1634223922 stripped
 Transform:
@@ -98209,7 +98310,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 14.999996, y: 5.9999995, z: 0}
+    m_Extent: {x: 28.876999, y: 11.550802, z: 0}
   m_DirtyAABB: 0
 --- !u!4 &1752300509 stripped
 Transform:
@@ -108706,7 +108807,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 12.000008, y: 6.000001, z: 0}
+    m_Extent: {x: 23.101618, y: 11.550803, z: 0}
   m_DirtyAABB: 0
 --- !u!4 &1979991914 stripped
 Transform:
@@ -114028,6 +114129,8 @@ GameObject:
   - component: {fileID: 2070803467}
   - component: {fileID: 2070803466}
   - component: {fileID: 2070803465}
+  - component: {fileID: 2070803468}
+  - component: {fileID: 2070803469}
   m_Layer: 5
   m_Name: LoadLevelButton
   m_TagString: Untagged
@@ -114161,6 +114264,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070803463}
   m_CullTransparentMesh: 0
+--- !u!114 &2070803468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070803463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc26cf761983d04991ac0309d18368c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 83fbb667fd91d4e4abe4bc4dabecc9f1, type: 2}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
+--- !u!114 &2070803469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070803463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10055188e71bc854f8a1d970b4723b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockUI:
+  - {fileID: 95007865}
+  loadGame: {fileID: 2070803468}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!1001 &2080643375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114418,7 +114551,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 11.999997, y: 5.9999995, z: 0}
+    m_Extent: {x: 23.101599, y: 11.550802, z: 0}
   m_DirtyAABB: 0
 --- !u!4 &2093473602 stripped
 Transform:
@@ -114588,6 +114721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621ff77e87880424eb3e72f231d94c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!1 &2114993208
 GameObject:
   m_ObjectHideFlags: 0
