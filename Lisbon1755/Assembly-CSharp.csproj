@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\Environment\Play\PlayAnim.cs" />
     <Compile Include="Assets\Scripts\SaveGame\LoadGame.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Other\TriggerPanick.cs" />
+    <Compile Include="Assets\Scripts\SaveGame\LockController.cs" />
     <Compile Include="Assets\Scripts\UI\UI_EnergyBar.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\SlowerState.cs" />
@@ -145,7 +146,6 @@
     <Compile Include="Assets\Scripts\Events\Specific\StuckInObjects.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickAnimations.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\PanickedBehavior.cs" />
-    <Compile Include="Assets\Scripts\SaveGame\LockController.cs" />
     <None Include="Assets\Animations\Events\Cat\Ladymito\Free_cat\Animations\low_poly_cat_animation_list.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -167,6 +167,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>C:/Users/Francisco/Documents/GitHub/Lisbon1755/Lisbon1755/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
