@@ -1198,13 +1198,6 @@ RectTransform:
   - {fileID: 3810474371794700055}
   - {fileID: 5818079349780858537}
   - {fileID: 5712816504544177627}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> MergeStuff4
-=======
->>>>>>> MergeStuff4
-=======
->>>>>>> MergeStuff4
   m_Father: {fileID: 1083086640}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2848,14 +2841,6 @@ Transform:
   m_Father: {fileID: 8871617511939630472}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> MergeStuff4
-=======
->>>>>>> MergeStuff4
 --- !u!1 &617434458718270379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,10 +3076,6 @@ MonoBehaviour:
   m_Text: Option A
 --- !u!1 &854089302481601911
 GameObject:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3960,8 +3941,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1157760068473956666
-<<<<<<< HEAD
-<<<<<<< HEAD
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4751,8 +4730,6 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: QUIT
 --- !u!1 &3021602106588404110
-<<<<<<< HEAD
-=======
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5765,13 +5742,6 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: a9abe59494c1a83489211f2bf416bfb8, type: 2}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> MergeStuff4
-=======
->>>>>>> MergeStuff4
-=======
->>>>>>> MergeStuff4
   m_audioClip: {fileID: 8300000, guid: 86d4ddc05f3b81a46a0524a14f211299, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -7186,13 +7156,8 @@ AudioSource:
   m_GameObject: {fileID: 7673102176780412815}
   m_Enabled: 1
   serializedVersion: 4
-<<<<<<< HEAD
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c838412ee9983b34188498549a97491d, type: 3}
-=======
   OutputAudioMixerGroup: {fileID: 24300002, guid: a9abe59494c1a83489211f2bf416bfb8, type: 2}
   m_audioClip: {fileID: 8300000, guid: 78e3b49cf18175049bc05eb538932434, type: 3}
->>>>>>> MergeStuff4
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -9422,132 +9387,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6047c729f2e02454dac3b010d8e9e7ac, type: 3}
   m_PrefabInstance: {fileID: 2052821702}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
---- !u!1001 &7384698576181633412
-=======
 --- !u!1001 &2245563578826674340
->>>>>>> MergeStuff4
-=======
---- !u!1001 &2245563578826674340
->>>>>>> MergeStuff4
-=======
---- !u!1001 &2245563578826674340
->>>>>>> MergeStuff4
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 859039797}
     m_Modifications:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.5368481
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.000061035156
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9199525272793263053, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-      propertyPath: m_Name
-      value: 'PauseMenu '
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
---- !u!224 &357832965153438878 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7101331179026423066, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-  m_PrefabInstance: {fileID: 7384698576181633412}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1860267314661919305 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9199525272793263053, guid: fbcaad5be3f6a144c957a3ee31e2c402, type: 3}
-  m_PrefabInstance: {fileID: 7384698576181633412}
-=======
-=======
->>>>>>> MergeStuff4
-=======
->>>>>>> MergeStuff4
     - target: {fileID: 5781839290556440604, guid: 04c5cbd9bdbdd214e9f7de00c09e5107, type: 3}
       propertyPath: m_Name
       value: LoadingScreen
@@ -9646,11 +9492,4 @@ GameObject:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8724210754312854976, guid: 04c5cbd9bdbdd214e9f7de00c09e5107, type: 3}
   m_PrefabInstance: {fileID: 2245563578826674340}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> MergeStuff4
-=======
->>>>>>> MergeStuff4
-=======
->>>>>>> MergeStuff4
   m_PrefabAsset: {fileID: 0}
