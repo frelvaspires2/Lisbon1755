@@ -8,6 +8,42 @@ using UnityEngine.UI;
 public class EventsManager : MonoBehaviour
 {
     /// <summary>
+    /// Access the won UI.
+    /// </summary>
+    [SerializeField]
+    private GameObject wonUI;
+
+    /// <summary>
+    /// Access the lost UI.
+    /// </summary>
+    [SerializeField]
+    private GameObject lostUI;
+
+    /// <summary>
+    /// Access the default ground material.
+    /// </summary>
+    [SerializeField]
+    private Material defaultColor;
+
+    /// <summary>
+    /// Access the won ground material.
+    /// </summary>
+    [SerializeField]
+    private Material wonColor;
+
+    /// <summary>
+    /// Access the lost ground material.
+    /// </summary>
+    [SerializeField]
+    private Material lostColor;
+
+    /// <summary>
+    /// Access the event area ground material.
+    /// </summary>
+    [SerializeField]
+    private Material eventArea;
+
+    /// <summary>
     /// Access the player's gameobject.
     /// </summary>
     [SerializeField]
@@ -108,6 +144,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private PlayerAnimController playerAnimController;
 
+    /// <summary>
+    /// Access the event marker UI.
+    /// </summary>
     [SerializeField]
     private GameObject eventMarker;
 
@@ -164,6 +203,9 @@ public class EventsManager : MonoBehaviour
     [SerializeField]
     private GameObject winSound;
 
+    /// <summary>
+    /// Access the ask for click UI.
+    /// </summary>
     [SerializeField]
     private GameObject clickUI;
 
@@ -181,6 +223,9 @@ public class EventsManager : MonoBehaviour
         qte.SetActive(false);
         stopTimer = false;
         clickUI.SetActive(false);
+        wonUI.SetActive(false);
+        lostUI.SetActive(false);
+        eventArea.color = defaultColor.color;
     }
 
     /// <summary>
@@ -201,20 +246,24 @@ public class EventsManager : MonoBehaviour
         {
             case EventState.Inactive:
                 eventResult = EventResult.None;
+                eventArea.color = defaultColor.color;
                 IdleSound();
                 break;
             case EventState.Active:
+                eventArea.color = defaultColor.color;
                 PlayEvent();
                 break;
             case EventState.Finished:
                 if(clickCount == setHowManyClicks)
                 {
                     eventResult = EventResult.Won;
+                    eventArea.color = wonColor.color;
                     WinSound();
                 }
                 else
                 {
                     eventResult = EventResult.Lost;
+                    eventArea.color = lostColor.color;
                     LossSound();
                 }
                 clickUI.SetActive(false);
@@ -267,7 +316,8 @@ public class EventsManager : MonoBehaviour
             {
                 qte.SetActive(false);
                 isClick = false;
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.idle;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.idle;
             }
         }
         else
@@ -284,19 +334,24 @@ public class EventsManager : MonoBehaviour
         switch(eventType)
         {
             case EventType.PersonStuckObjects:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Push;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.Push;
                 break;
             case EventType.PersonStuckHouse:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.KickDoor;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.KickDoor;
                 break;
             case EventType.Heretics:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.Untie;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.Untie;
                 break;
             case EventType.Cat:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.CallCat;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.CallCat;
                 break;
             case EventType.WakeUp:
-                playerAnimController.GetSetPlayerAnimTypes = PlayerAnimTypes.WakeUpNPC;
+                playerAnimController.GetSetPlayerAnimTypes = 
+                    PlayerAnimTypes.WakeUpNPC;
                 break;
         }
     }
@@ -316,6 +371,10 @@ public class EventsManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// While staying inside the event.
+    /// </summary>
+    /// <param name="other"> Collider.</param>
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject == player && eventState != EventState.Finished)
@@ -329,6 +388,18 @@ public class EventsManager : MonoBehaviour
         {
             timer.SetActive(false);
             qte.SetActive(false);
+        }
+
+        if(other.gameObject == player && eventResult == EventResult.Won)
+        {
+            wonUI.SetActive(true);
+            lostUI.SetActive(false);
+        }
+
+        if (other.gameObject == player && eventResult == EventResult.Lost)
+        {
+            wonUI.SetActive(false);
+            lostUI.SetActive(true);
         }
     }
 
@@ -398,6 +469,9 @@ public class EventsManager : MonoBehaviour
         {
             eventMarker.SetActive(true);
         }
+
+        wonUI.SetActive(false);
+        lostUI.SetActive(false);
     }
 
     /// <summary>

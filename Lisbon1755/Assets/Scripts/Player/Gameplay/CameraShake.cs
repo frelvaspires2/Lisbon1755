@@ -104,7 +104,7 @@ public class CameraShake : MonoBehaviour
         {
             InfiniteShake();
         }
-        /*else if (canRandomShake)
+        else if (canRandomShake)
         {
             RandomTime();
             RandomShake();
@@ -113,7 +113,7 @@ public class CameraShake : MonoBehaviour
         {
             shakeDuration = setShakeDuration;
             WaitShake();
-        }*/
+        }
     }
 
     /// <summary>
@@ -165,6 +165,7 @@ public class CameraShake : MonoBehaviour
     /// </summary>
     private void InfiniteShake()
     {
-        camera.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+        camera.localPosition = originalPos + Random.insideUnitSphere * 
+            shakeAmount;
     }
 }

@@ -138,7 +138,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void IdleAnim()
     {
-        foreach(KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach(KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if(item.Key == PlayerAnimTypes.idle)
             {
@@ -156,7 +157,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void WalkAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.walk)
             {
@@ -175,7 +177,8 @@ public class PlayerAnimController : MonoBehaviour
     private void RunAnim()
     {
 
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.run)
             {
@@ -193,7 +196,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void JumpAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.jump)
             {
@@ -211,7 +215,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void RollAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.roll)
             {
@@ -229,7 +234,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void BackAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.back)
             {
@@ -247,7 +253,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void RunBackAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.runBack)
             {
@@ -265,7 +272,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void RightStradeAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.rightStrade)
             {
@@ -283,7 +291,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void LeftStradeAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.leftStrade)
             {
@@ -301,7 +310,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void RightStradeRunAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.rightStradeRun)
             {
@@ -319,7 +329,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void LeftStradeRunAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.leftStradeRun)
             {
@@ -337,7 +348,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void InjuredRunBackAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.injuredRunBack)
             {
@@ -355,7 +367,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void InjuredRunAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.InjuredRun)
             {
@@ -373,7 +386,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void InjuredWalkBackAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.InjuredWalkBack)
             {
@@ -391,7 +405,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void InjuredWalk()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.InjuredWalk)
             {
@@ -409,7 +424,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void PushAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.Push)
             {
@@ -427,7 +443,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void KickDoorAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.KickDoor)
             {
@@ -445,7 +462,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void UntieAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.Untie)
             {
@@ -463,7 +481,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void CallCatAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.CallCat)
             {
@@ -481,7 +500,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void WakeUpNPCAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.WakeUpNPC)
             {
@@ -499,7 +519,8 @@ public class PlayerAnimController : MonoBehaviour
     /// </summary>
     private void HelpNPCAnim()
     {
-        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in animationDic)
+        foreach (KeyValuePair<PlayerAnimTypes, GameObject> item in 
+            animationDic)
         {
             if (item.Key == PlayerAnimTypes.HelpNPC)
             {

@@ -110,32 +110,26 @@ public class SetPanickModel : MonoBehaviour
         {
             case 0:
                 panickModelTypes = PanickModelTypes.Character1;
-                //setPanickVoice.ChooseVoice(PanickVoiceTypes.FVoice2);
                 break;
 
             case 1:
                 panickModelTypes = PanickModelTypes.Character2;
-                //setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice1);
                 break;
 
             case 2:
                 panickModelTypes = PanickModelTypes.Character3;
-                //setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice3);
                 break;
 
             case 3:
                 panickModelTypes = PanickModelTypes.Character4;
-                //setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice1);
                 break;
 
             case 4:
                 panickModelTypes = PanickModelTypes.Character5;
-                //setPanickVoice.ChooseVoice(PanickVoiceTypes.FVoice2);
                 break;
 
             case 5:
                 panickModelTypes = PanickModelTypes.Character6;
-                //setPanickVoice.ChooseVoice(PanickVoiceTypes.MVoice3);
                 break;
         }
     }
