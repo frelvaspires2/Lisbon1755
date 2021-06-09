@@ -627,6 +627,14 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 2078701758}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: wonUI
+      value: 
+      objectReference: {fileID: 1851343026}
+    - target: {fileID: 942796203, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
+      propertyPath: wonTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 173703946898641539, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
       propertyPath: setDestination
       value: 
@@ -1462,7 +1470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5818079349780858537, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8871617513773810608, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1514,6 +1522,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+--- !u!1 &1851343026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8063402420263554968, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 1851343025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1884194218
 GameObject:
   m_ObjectHideFlags: 0

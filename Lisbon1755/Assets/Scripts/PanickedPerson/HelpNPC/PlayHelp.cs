@@ -1,12 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Help the agent when he's in the wounded state.
 /// </summary>
 public class PlayHelp : MonoBehaviour
 {
+    /// <summary>
+    /// Access the won UI gameobject.
+    /// </summary>
+    [SerializeField]
+    private GameObject wonUI;
+
     /// <summary>
     /// Access the score stats scriptableobject.
     /// </summary>
@@ -101,6 +109,12 @@ public class PlayHelp : MonoBehaviour
     private Scene currentScene;
 
     /// <summary>
+    /// Set the time of showing the won UI.
+    /// </summary>
+    [SerializeField]
+    private float wonTime = 2f;
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// </summary>
@@ -110,6 +124,7 @@ public class PlayHelp : MonoBehaviour
         clickCount = 0;
         signal.SetActive(false);
         isScoreAdded = false;
+        wonUI.SetActive(false);
 
         currentScene = SceneManager.GetActiveScene();
 
@@ -184,6 +199,7 @@ public class PlayHelp : MonoBehaviour
                     panickedController.Health = panickedStats.Health / 1.5f;
                     playerMovement.IsPlayHelp = false;
                     qte.SetActive(false);
+                    StartCoroutine(WonRoutine());
 
                     if(!isScoreAdded)
                     {
@@ -238,5 +254,18 @@ public class PlayHelp : MonoBehaviour
         {
             isInside = false;
         }
+    }
+
+    private IEnumerator WonRoutine()
+    {
+        WaitForSeconds wfs = new WaitForSeconds(wonTime);
+
+        wonUI.SetActive(true);
+
+        yield return wfs;
+
+        wonUI.SetActive(false);
+
+        StopCoroutine(WonRoutine());
     }
 }
