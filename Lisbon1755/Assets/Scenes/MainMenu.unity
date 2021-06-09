@@ -5449,6 +5449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621ff77e87880424eb3e72f231d94c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreStats: {fileID: 0}
 --- !u!1 &156792828
 GameObject:
   m_ObjectHideFlags: 0
@@ -114093,6 +114094,7 @@ MonoBehaviour:
   lockUI:
   - {fileID: 95007865}
   loadGame: {fileID: 2070803468}
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!1001 &2080643375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114520,6 +114522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621ff77e87880424eb3e72f231d94c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreStats: {fileID: 11400000, guid: c80be7dbc5ae20d49852287265ec53bb, type: 2}
 --- !u!1 &2114993208
 GameObject:
   m_ObjectHideFlags: 0

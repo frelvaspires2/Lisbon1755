@@ -18,6 +18,9 @@ public class LockController : MonoBehaviour
     [SerializeField]
     private LoadGame loadGame;
 
+    [SerializeField]
+    private ScoreStats scoreStats;
+
     /// <summary>
     /// To be played in the first frame of the game.
     /// </summary>
@@ -41,6 +44,7 @@ public class LockController : MonoBehaviour
         if (!lockUI[0].activeSelf)
         {
             loadGame.LoadTheGame();
+            scoreStats.Level2Score = default;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
     }
@@ -50,6 +54,7 @@ public class LockController : MonoBehaviour
     /// </summary>
     public void PlayLevel1()
     {
+        scoreStats.Level1Score = default;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
