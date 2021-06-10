@@ -27,7 +27,7 @@ public class SetPanickVoice : MonoBehaviour
     /// To be played in the first frame of the game.
     /// Initialize the voices.
     /// </summary>
-    private void Start()
+    private void Awake()
     {
         InitializeVoices();
     }
