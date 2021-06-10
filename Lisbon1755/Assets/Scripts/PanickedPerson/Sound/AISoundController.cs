@@ -51,7 +51,7 @@ public class AISoundController : MonoBehaviour
     /// To be played in the first frame of the game.
     /// Initialize the sounds.
     /// </summary>
-    private void Start()
+    private void Awake()
     {
         InitializeSounds();
     }

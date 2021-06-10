@@ -1654,6 +1654,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3267667413103722551, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267667413103722551, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3494422056810739424, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -22166,7 +22174,7 @@ MonoBehaviour:
   selectedAgent:
   - selectedAgent: {fileID: 359682535}
     isDMG: 0
-  dmg: 70
+  changeLife: 10
 --- !u!4 &985055477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 173703946898641550, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}

@@ -12,10 +12,10 @@ public class WoundAgent : MonoBehaviour
     private WoundAgentStats[] selectedAgent;
 
     /// <summary>
-    /// Set the damage points to be given.
+    /// Change the agent life.
     /// </summary>
     [SerializeField]
-    private float dmg;
+    private float changeLife;
 
     /// <summary>
     /// To be played in the first frame of the game.
@@ -74,7 +74,7 @@ public class WoundAgent : MonoBehaviour
                 if (!selectedAgent[i].IsDMG)
                 {
                     selectedAgent[i].SelectedAgent
-                        .GetComponent<PanickedController>().Health -= dmg;
+                        .GetComponent<PanickedController>().Health = changeLife;
                     selectedAgent[i].IsDMG = true;
                 }
             }

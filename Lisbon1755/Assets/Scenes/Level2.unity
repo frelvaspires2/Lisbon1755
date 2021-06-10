@@ -2245,6 +2245,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 3267667413103722551, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267667413103722551, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3808672211789068841, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -42576,7 +42584,7 @@ MonoBehaviour:
   selectedAgent:
   - selectedAgent: {fileID: 1090653338}
     isDMG: 0
-  dmg: 70
+  changeLife: 10
 --- !u!1001 &984074577
 PrefabInstance:
   m_ObjectHideFlags: 0
