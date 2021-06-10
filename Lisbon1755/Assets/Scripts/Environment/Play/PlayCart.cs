@@ -24,13 +24,19 @@ public class PlayCart : MonoBehaviour
     private GameObject player;
 
     /// <summary>
+    /// Check whether the mark is active.
+    /// </summary>
+    private bool isMarkerActive;
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize stuff.
     /// </summary>
-    private void Start()
+    private void Awake()
     {
         cartAnimator.enabled = false;
         cartMarker.SetActive(false);
+        isMarkerActive = false;
     }
 
     /// <summary>
@@ -41,7 +47,11 @@ public class PlayCart : MonoBehaviour
     {
         if(other.gameObject == player)
         {
-            cartMarker.SetActive(true);
+            if (!isMarkerActive)
+            {
+                cartMarker.SetActive(true);
+                isMarkerActive = true;
+            }
             cartAnimator.enabled = true;
         }
     }

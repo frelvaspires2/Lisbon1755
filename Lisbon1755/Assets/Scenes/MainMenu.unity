@@ -450,6 +450,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3129015247506188658, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_Text
+      value: "N\xE9lio Codices\nDiogo Andrade\nNuno Fachada\nIvan barroso"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015247664505020, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 34.652412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015247664505020, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 11.550802
+      objectReference: {fileID: 0}
     - target: {fileID: 3129015248074148576, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -541,6 +553,50 @@ PrefabInstance:
     - target: {fileID: 3129015248074148580, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
       propertyPath: m_Name
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015248353608559, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 23.101599
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015248353608559, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 11.550802
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015248441727815, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 23.101618
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015248441727815, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 11.550803
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015248545376244, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 28.876999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015248545376244, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 11.550802
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015249124866358, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015249124866358, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.000000026893808
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015249124866358, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 60.641716
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015249124866358, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 34.65241
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129015249124866358, guid: 78f122295d043e24b8a63e3708260fad, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.000000026893808
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f122295d043e24b8a63e3708260fad, type: 3}

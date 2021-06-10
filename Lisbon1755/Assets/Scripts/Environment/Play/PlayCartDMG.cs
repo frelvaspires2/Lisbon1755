@@ -56,7 +56,7 @@ public class PlayCartDMG : MonoBehaviour
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// </summary>
-    private void Start()
+    private void Awake()
     {
         isPlayerHit = false;
         isNPCHit = false;
