@@ -1,83 +1,17 @@
 ﻿using UnityEngine;
 
-/// <summary>
-/// Give damage to the selected agent.
-/// </summary>
 public class WoundAgent : MonoBehaviour
 {
     /// <summary>
-    /// Access the agent.
+    /// Check if something entered on the trigger.
     /// </summary>
-    [SerializeField]
-    private WoundAgentStats[] selectedAgent;
-
-    /// <summary>
-    /// Change the agent life.
-    /// </summary>
-    [SerializeField]
-    private float changeLife;
-
-    /// <summary>
-    /// To be played in the first frame of the game.
-    /// Set the selected agent/s IsDMG bool to false.
-    /// </summary>
-    private void Start()
+    /// <param name="other"> Collider</param>
+    private void OnTriggerEnter(Collider other)
     {
-        for(int i = 0; i < selectedAgent.Length; i++)
+        if (other.gameObject.tag == "NPC")
         {
-            selectedAgent[i].IsDMG = false;
-        }
-    }
-
-    /// <summary>
-    /// To be played in every frame of the game.
-    /// Give damage to the selected agent/s.
-    /// </summary>
-    private void Update()
-    {
-        GiveDamage();
-    }
-
-    /// <summary>
-    /// Check whether the selected agent is active.
-    /// </summary>
-    /// <param name="agent"> The selected agent.</param>
-    /// <returns> True if he's active and false if not.</returns>
-    private bool CheckIfActive(GameObject agent)
-    {
-        if (agent != null)
-        {
-            if (agent.activeSelf)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    /// <summary>
-    /// Give damage to the agent/s.
-    /// </summary>
-    private void GiveDamage()
-    {
-        for (int i = 0; i < selectedAgent.Length; i++)
-        {
-            if (CheckIfActive(selectedAgent[i].SelectedAgent))
-            {
-                if (!selectedAgent[i].IsDMG)
-                {
-                    selectedAgent[i].SelectedAgent
-                        .GetComponent<PanickedController>().Health = changeLife;
-                    selectedAgent[i].IsDMG = true;
-                }
-            }
+            other.GetComponent<PanickedController>().Health = 10;
+            Destroy(this.gameObject);
         }
     }
 }

@@ -37240,7 +37240,7 @@ GameObject:
   - component: {fileID: 833564125}
   - component: {fileID: 833564124}
   m_Layer: 0
-  m_Name: teste
+  m_Name: woundAgent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37278,7 +37278,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833564123}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -42602,7 +42602,6 @@ GameObject:
   - component: {fileID: 980935085}
   - component: {fileID: 980935087}
   - component: {fileID: 980935088}
-  - component: {fileID: 980935089}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -42677,22 +42676,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 1160161013}
   slider: {fileID: 1616940785}
---- !u!114 &980935089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980935084}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95163692207f7754284fb63eddca55ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedAgent:
-  - selectedAgent: {fileID: 1090653338}
-    isDMG: 0
-  changeLife: 10
 --- !u!1001 &984074577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47119,11 +47102,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
---- !u!1 &1090653338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 173703946898641548, guid: c9fe30d0ebd19454890717770d6668b9, type: 3}
-  m_PrefabInstance: {fileID: 553545718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1090890297
 PrefabInstance:
   m_ObjectHideFlags: 0
