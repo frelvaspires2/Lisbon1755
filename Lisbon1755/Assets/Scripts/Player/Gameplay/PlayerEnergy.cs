@@ -7,6 +7,12 @@ using UnityEngine;
 public class PlayerEnergy : MonoBehaviour
 {
     /// <summary>
+    /// Access the PauseMenu script.
+    /// </summary>
+    [SerializeField]
+    private PauseMenu pauseMenu;
+
+    /// <summary>
     /// Access PlayerStats scriptableobject.
     /// </summary>
     [SerializeField]
@@ -52,9 +58,13 @@ public class PlayerEnergy : MonoBehaviour
         }
 
         // If eny energy is lost, recover it.
-        if (energy < playerStats.Energy)
+        if (energy < playerStats.Energy && !pauseMenu.GameIsPaused)
         {
             StartCoroutine(RecoveringRoutine());
+        }
+        else if(energy < playerStats.Energy && pauseMenu.GameIsPaused)
+        {
+            energy = energy;
         }
         // Make sure the energy doesn't go up more than it was set.
         else
