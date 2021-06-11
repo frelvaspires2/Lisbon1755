@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 /// <summary>
 /// Manage the pause menu.
@@ -20,7 +21,16 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     [SerializeField]
     private LevelLoader levelLoader;
-     
+
+
+    /// <summary>
+    /// Yo be played before start method.
+    /// </summary>
+    private void Awake()
+    {
+        AudioListener.volume = 1f;
+    }
+
     /// <summary>
     /// To be played in every frame of the game.
     /// Check whether the player wants to pause the game.
@@ -47,6 +57,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        AudioListener.volume = 1f;
         GameIsPaused = false;
     }
 
@@ -57,6 +68,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.volume = 0f;
         GameIsPaused = true;
     }
 

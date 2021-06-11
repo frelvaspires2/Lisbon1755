@@ -25,6 +25,14 @@ public class Score : MonoBehaviour
     private Text saved;
 
     /// <summary>
+    /// To be played before the start method.
+    /// </summary>
+    private void Awake()
+    {
+        AudioListener.volume = 1f;
+    }
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Calculate and set the results.
     /// </summary>
