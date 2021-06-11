@@ -67,7 +67,7 @@
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\UI\UI_GotHitScreen.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\HelpNPC\PlayHelp.cs" />
-    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Events\Global\PlayEvent.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimTypes.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\IState.cs" />
@@ -82,11 +82,11 @@
     <Compile Include="Assets\Scripts\PanickedPerson\AI\FSMs\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Menus\Score\Score.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\DeadState.cs" />
-    <Compile Include="Assets\Scripts\UI\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\Score\ScoreMenu.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\PlayerAnimController.cs" />
     <Compile Include="Assets\Scripts\Events\Specific\EndAnim.cs" />
-    <Compile Include="Assets\Scripts\UI\ChangeOnHover.cs" />
+    <Compile Include="Assets\Scripts\Menus\ChangeOnHover.cs" />
     <Compile Include="Assets\Scripts\Environment\FallingMark\MarkStats.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\PanickModelTypes.cs" />
     <Compile Include="Assets\Scripts\Player\Gameplay\PlayerMovement.cs" />
@@ -134,7 +134,7 @@
     <Compile Include="Assets\Scripts\PanickedPerson\Animations\SetPanickModel.cs" />
     <Compile Include="Assets\Scripts\Environment\Play\PlayDMGAnim.cs" />
     <Compile Include="Assets\Scripts\Player\Sound\SoundStats.cs" />
-    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PanickedPerson\AI\States\WoundedState.cs" />
     <Compile Include="Assets\Scripts\Events\Global\EventState.cs" />
     <Compile Include="Assets\Scripts\Player\Animations\SetAnimations.cs" />

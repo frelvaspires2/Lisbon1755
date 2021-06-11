@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Main menu controller.
@@ -25,7 +24,6 @@ public class MainMenu : MonoBehaviour
     {
         scoreStats.Level1Score = default;
         scoreStats.Level2Score = default;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         levelLoader.LoadLevel(1);
     }
 
