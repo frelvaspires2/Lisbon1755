@@ -53,6 +53,8 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        audioMixer.SetFloat("volume", 0f);
     }
 
     /// <summary>
