@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 375, y: -597}
+  m_AnchoredPosition: {x: 370, y: -597}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58251348
@@ -332,19 +332,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6511953
+      value: -0.6532815
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.2755807
+      value: 0.27059805
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.2755807
+      value: -0.27059805
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6511953
+      value: 0.6532815
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_RootOrder
@@ -352,15 +352,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 45.875
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 5554441166702165359, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: m_LocalScale.x
@@ -376,7 +376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5748376333793477781, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
       propertyPath: prewarm
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ba8899fc73d36447ade10b21e654bd4, type: 3}
@@ -568,8 +568,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 600, y: 80, z: 200}
-  m_Center: {x: 100, y: 0, z: 0}
+  m_Size: {x: 500, y: 80, z: 100}
+  m_Center: {x: -20, y: 0, z: 0}
 --- !u!1 &815096323
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +738,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3857586425472392756, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -600
+      value: -650
       objectReference: {fileID: 0}
     - target: {fileID: 3857586425472392756, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -802,7 +802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: ShapeModule.m_Scale.z
@@ -1407,7 +1407,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3857586425472392756, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 600
+      value: 650
       objectReference: {fileID: 0}
     - target: {fileID: 3857586425472392756, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1471,7 +1471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: ShapeModule.m_Scale.z
