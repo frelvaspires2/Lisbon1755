@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 
 /// <summary>
 /// Manage the pause menu.
@@ -9,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     /// <summary>
     /// Checks whether the game is paused.
     /// </summary>
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused;
 
     /// <summary>
     /// Access the pause menu UI gameobject.
@@ -29,6 +28,7 @@ public class PauseMenu : MonoBehaviour
     private void Awake()
     {
         AudioListener.volume = 1f;
+        GameIsPaused = false;
     }
 
     /// <summary>

@@ -1275,7 +1275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6612b3a0a0bec9644a925cad7138349e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenuUI: {fileID: 3494422056810739424}
+  levelLoader: {fileID: 0}
 --- !u!1 &892208229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1463,7 @@ MonoBehaviour:
   minWaitTime: 5
   maxWaitTime: 10
   waitTime: 0
+  pauseMenu: {fileID: 0}
 --- !u!114 &1601251973
 MonoBehaviour:
   m_ObjectHideFlags: 0
