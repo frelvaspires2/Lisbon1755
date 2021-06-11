@@ -24,6 +24,12 @@ public class SettingsMenu : MonoBehaviour
     private Resolution[] resolutions;
 
     /// <summary>
+    /// Access the volume slider.
+    /// </summary>
+    [SerializeField]
+    private Slider volumeSlider;
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize stuff.
     /// </summary>
@@ -54,7 +60,9 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        audioMixer.SetFloat("volume", 0f);
+        audioMixer.GetFloat("volume", out float vol);
+
+        volumeSlider.value = vol;
     }
 
     /// <summary>
