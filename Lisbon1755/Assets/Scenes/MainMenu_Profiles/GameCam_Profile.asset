@@ -18,10 +18,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.7
+    value: 0.12
   threshold:
     overrideState: 1
-    value: 1.125
+    value: 1.05
   softKnee:
     overrideState: 0
     value: 0.5
@@ -30,13 +30,13 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 8
+    value: 7.5
   anamorphicRatio:
     overrideState: 0
     value: 0
   color:
     overrideState: 1
-    value: {r: 16.94838, g: 3.371929, b: 0, a: 1}
+    value: {r: 11.984314, g: 2.3843138, b: 0, a: 1}
   fastMode:
     overrideState: 0
     value: 0
@@ -57,12 +57,85 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: MainMenuCam_Profile
+  m_Name: GameCam_Profile
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -6589770334122284408}
   - {fileID: 4829000096702720812}
   - {fileID: 4376596375681629983}
+  - {fileID: 1613678532699219854}
+  - {fileID: 3474961880012705321}
+--- !u!114 &1613678532699219854
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  shutterAngle:
+    overrideState: 1
+    value: 4
+  sampleCount:
+    overrideState: 1
+    value: 4
+--- !u!114 &3474961880012705321
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 1.2
+  color:
+    overrideState: 1
+    value: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  ambientOnly:
+    overrideState: 0
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 1
+    value: 1.2
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 0
+    value: 0.25
+  quality:
+    overrideState: 0
+    value: 2
 --- !u!114 &4376596375681629983
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -136,7 +209,7 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   contrast:
-    overrideState: 1
+    overrideState: 0
     value: 5
   mixerRedOutRedIn:
     overrideState: 0
@@ -1398,10 +1471,10 @@ MonoBehaviour:
     value: {r: 0.15686275, g: 0.039215688, b: 0, a: 1}
   center:
     overrideState: 1
-    value: {x: 0.6, y: 0.6}
+    value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.25
+    value: 0.08
   smoothness:
     overrideState: 1
     value: 1
