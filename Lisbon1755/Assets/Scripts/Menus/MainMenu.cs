@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Main menu controller.
@@ -19,13 +18,20 @@ public class MainMenu : MonoBehaviour
     private LevelLoader levelLoader;
 
     /// <summary>
+    /// To be player before the start method.
+    /// </summary>
+    private void Awake()
+    {
+        AudioListener.volume = 1f;
+    }
+
+    /// <summary>
     /// Play the game (starts at level 1).
     /// </summary>
     public void PlayGame()
     {
         scoreStats.Level1Score = default;
         scoreStats.Level2Score = default;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         levelLoader.LoadLevel(1);
     }
 

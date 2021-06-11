@@ -1275,7 +1275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6612b3a0a0bec9644a925cad7138349e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenuUI: {fileID: 3494422056810739424}
+  levelLoader: {fileID: 0}
 --- !u!1 &892208229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1463,7 @@ MonoBehaviour:
   minWaitTime: 5
   maxWaitTime: 10
   waitTime: 0
+  pauseMenu: {fileID: 0}
 --- !u!114 &1601251973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5130,6 +5133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30d6410683d51a4aadf948574ec2b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 4197549235641636336}
   playerStats: {fileID: 11400000, guid: 264f649e038935348a5eaeefbdda9063, type: 2}
   health: 0
 --- !u!114 &563203120
@@ -5144,6 +5148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b8b70eea7e32746aa40405dc1e35d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 4197549235641636336}
   playerStats: {fileID: 11400000, guid: 264f649e038935348a5eaeefbdda9063, type: 2}
   energy: 0
 --- !u!114 &263751570

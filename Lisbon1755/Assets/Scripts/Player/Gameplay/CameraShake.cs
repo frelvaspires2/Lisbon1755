@@ -75,6 +75,12 @@ public class CameraShake : MonoBehaviour
     private float waitTime;
 
     /// <summary>
+    /// Access the PauseMenu script.
+    /// </summary>
+    [SerializeField]
+    private PauseMenu pauseMenu;
+
+    /// <summary>
     /// To be played in the first frame of the game.
     /// Initialize variables.
     /// </summary>
@@ -100,11 +106,11 @@ public class CameraShake : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (canShake)
+        if (canShake && !pauseMenu.GameIsPaused)
         {
             InfiniteShake();
         }
-        else if (canRandomShake)
+        else if (canRandomShake && !pauseMenu.GameIsPaused)
         {
             RandomTime();
             RandomShake();

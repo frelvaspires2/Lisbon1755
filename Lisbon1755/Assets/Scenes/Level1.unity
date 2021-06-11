@@ -1566,6 +1566,10 @@ PrefabInstance:
       propertyPath: maxWaitTime
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1296370480, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 168481502}
     - target: {fileID: 1336253213, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -1662,17 +1666,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3267667413103722551, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3494422056810739424, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3808672211789068841, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3810474371794700055, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4197549235641636336, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: levelLoader
@@ -1688,11 +1696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5712816504544177627, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5818079349780858537, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5836773529354667976, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
@@ -1712,7 +1720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7366560059329940836, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8871617511939630472, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4455,6 +4463,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165282667}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &168481502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4197549235641636336, guid: f1cd789d7a1169d4f882494f84f623a0, type: 3}
+  m_PrefabInstance: {fileID: 43134257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6612b3a0a0bec9644a925cad7138349e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &168722814
 GameObject:
   m_ObjectHideFlags: 0
