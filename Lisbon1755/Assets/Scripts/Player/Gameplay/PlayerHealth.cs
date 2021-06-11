@@ -7,6 +7,12 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     /// <summary>
+    /// Access PauseMenu script.
+    /// </summary>
+    [SerializeField]
+    private PauseMenu pauseMenu;
+
+    /// <summary>
     /// Access playerStats scriptableobject.
     /// </summary>
     [SerializeField]
@@ -66,7 +72,15 @@ public class PlayerHealth : MonoBehaviour
             {
                 IsInjured = false;
             }
-            StartCoroutine(HealingRoutine());
+
+            if (!pauseMenu.GameIsPaused)
+            {
+                StartCoroutine(HealingRoutine());
+            }
+            else if(pauseMenu.GameIsPaused)
+            {
+                health = health;
+            }
         }
         // Make sure the health doesn't go up more than it was set.
         else
