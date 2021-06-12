@@ -16,7 +16,7 @@ RenderSettings:
   serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_FogMode: 2
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: c82a334cf5a5e47978749c210cee72a7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_Sun: {fileID: 1911042653}
+  m_IndirectSpecularColor: {r: 0.15609458, g: 0.113279976, b: 0.14899799, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 618903aea0035bf438ab9123999d4c08, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9427506, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.9427506, g: 0.98039216, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -568,8 +568,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 500, y: 80, z: 100}
-  m_Center: {x: -20, y: 0, z: 0}
+  m_Size: {x: 300, y: 100, z: 500}
+  m_Center: {x: -120, y: 0, z: 0}
 --- !u!1 &815096323
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,9 +682,9 @@ RectTransform:
   - {fileID: 58251347}
   - {fileID: 1154134046}
   - {fileID: 1027204454}
+  - {fileID: 1379215711}
   - {fileID: 1198502054}
   - {fileID: 917418084}
-  - {fileID: 1379215711}
   - {fileID: 684335415}
   - {fileID: 3763782066740948732}
   - {fileID: 106576126171472919}
@@ -766,7 +766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3857586425472392756, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3857586425472392756, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -932,6 +932,42 @@ PrefabInstance:
       propertyPath: ColorModule.gradient.maxGradient.atime1
       value: 32908
       objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.50980395
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
 --- !u!4 &917418084 stripped
@@ -958,7 +994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1027204454
 Transform:
   m_ObjectHideFlags: 0
@@ -1241,7 +1277,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   m_CapsuleColliders: []
   m_SphereColliders: []
-  m_SelfCollisionDistance: 1
+  m_SelfCollisionDistance: 2
   m_SelfCollisionStiffness: 0.2
   m_SelfAndInterCollisionIndices: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000
   m_VirtualParticleWeights:
@@ -1299,7 +1335,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 34.747948, y: 0.000007647281, z: 32.075024}
+    m_Extent: {x: 34.718502, y: 0.0000076408005, z: 32.04784}
   m_DirtyAABB: 0
 --- !u!64 &1027204457
 MeshCollider:
@@ -1340,7 +1376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1154134046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1435,7 +1471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3857586425472392756, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3857586425472392756, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1600,6 +1636,42 @@ PrefabInstance:
     - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime1
       value: 32908
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988846509589472616, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.50980395
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c1a9bac6fc1bf40a0ae4275e992ef4, type: 3}
@@ -1783,7 +1855,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 815096328}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1947,7 +2019,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.75
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2304,10 +2376,10 @@ MonoBehaviour:
   volumeTrigger: {fileID: 2069252929137453484}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 33
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 0
+  antialiasingMode: 1
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25
@@ -2316,8 +2388,8 @@ MonoBehaviour:
   subpixelMorphologicalAntialiasing:
     quality: 2
   fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
+    fastMode: 1
+    keepAlpha: 1
   fog:
     enabled: 1
     excludeSkybox: 1
